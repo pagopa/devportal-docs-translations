@@ -144,10 +144,3 @@ Contiene:
 #### TransferModel
 
 Dettagli del trasferimento economico, compresi `idTransfer`, `iban`, `amount`, `category`.
-
-***
-
-### Contatti e Termini
-
-Per maggiori dettagli: [https://www.pagopa.gov.it](https://www.pagopa.gov.it)
-
