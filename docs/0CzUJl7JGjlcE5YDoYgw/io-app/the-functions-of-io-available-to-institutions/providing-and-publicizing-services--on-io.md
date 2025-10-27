@@ -1,0 +1,6 @@
+# Providing and publicizing services with IO
+
+The functions institutions can use to **provide and publicize their services** with IO are:
+
+<table><thead><tr><th>Function</th><th width="385.3333333333333">Description</th><th>Available</th></tr></thead><tbody><tr><td><strong>Services section</strong></td><td>Section that contains the list of all services available in app, grouped by institution</td><td>✅</td></tr><tr><td><strong>Service tabs</strong></td><td>Information pages that contain the description of each service, external links and any calls to action</td><td>✅</td></tr><tr><td><strong>Service models</strong></td><td>Models and examples to follow for providing the most common services</td><td>✅</td></tr><tr><td><strong>New services section</strong></td><td>Users can apply filters and see services grouped by topic and geographical area</td><td>✅</td></tr><tr><td><strong>&ldquo;Highlighted&rdquo; services</strong></td><td>Services of particular relevance or interest will be displayed in a dedicated area</td><td>✅</td></tr><tr><td><strong>Services in webview requested by the user</strong></td><td>In the services section, users can perform specific actions - such as registration- which will be carried out on the website of the service provider and presented in the IO app with a uniform user experience</td><td>✅</td></tr></tbody></table>
+

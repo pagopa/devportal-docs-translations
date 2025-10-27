@@ -1,28 +1,28 @@
 # Table of contents
 
-## IL PRODOTTO
+## THE PRODUCT
 
-* [Introduzione](README.md)
-* [A chi è rivolto il prodotto](il-prodotto/a-chi-e-rivolto-il-prodotto.md)
+* [Introduction](README.md)
+* [Who is the product intended for](the-product/who-is-the-product-intended-for.md)
 
-## GUIDA TECNICA
+## TECHNICAL GUIDE
 
-* [I servizi disponibili](guida-tecnica/i-servizi-disponibili.md)
-* [Definizione di E-service](guida-tecnica/definizione-di-e-service.md)
-* [Glossario dei termini](guida-tecnica/glossario-dei-termini.md)
-* [API](guida-tecnica/api.md)
+* [The available services](technical-guide/the-available-services.md)
+* [Definition of e-service](technical-guide/definition-of-an-e-service.md)
+* [Glossary of terms](technical-guide/glossary-of-terms.md)
+* [API](technical-guide/technical-guide/api.md)
 
 ## HOW TO
 
-* [Come preparare l'Ambiente di Attestazione](how-to/come-preparare-lambiente-di-attestazione.md)
-* [Come effettuare la Data Preparation](how-to/come-effettuare-la-data-preparation.md)
-* [Come invocare un E-service](how-to/come-invocare-un-e-service.md)
+* [How to prepare the certification environment](how-to/how-to-prepare-the-certification-environment.md)
+* [How to perform data preparation](how-to/how-to-perform-data-preparation.md)
+* [How to invoke an e-service](how-to/how-to-invoke-an-e-service.md)
 
 ## TUTORIAL
 
-* [Verifichiamo la correttezza delle informazioni di residenza](tutorial/verifichiamo-la-correttezza-delle-informazioni-di-residenza.md)
-* [Verifichiamo la correttezza dell'Organization Id](tutorial/verifichiamo-la-correttezza-dellorganization-id.md)
-* [Verifichiamo la correttezza del Codice Fiscale](tutorial/verifichiamo-la-correttezza-del-codice-fiscale.md)
-* [Richiediamo informazioni sull'indirizzo digitale](tutorial/richiediamo-informazioni-sullindirizzo-digitale.md)
-* [Richiediamo informazioni sullo stato di famiglia](tutorial/richiediamo-informazioni-sullo-stato-di-famiglia.md)
-* [E-service con funzionalità "portachiavi": Trial Keychain](tutorial/e-service-con-funzionalita-portachiavi-trial-keychain.md)
+* [Checking the correctness of the residence information](tutorial/checking-the-correctness-of-the-residence-information.md)
+* [Checking the correctness of the Organization Id](tutorial/checking-the-correctness-of-the-organization-id.md)
+* [Checking the correctness of the fiscal code](tutorial/checking-the-correctness-of-the-fiscal-code.md)
+* [Requesting information about the digital address](tutorial/requesting-information-about-the-digital-address.md)
+* [Requesting information about the family status](tutorial/requesting-information-about-the-family-status.md)
+* [E-service with “keychain” functionality: Trial Keychain](tutorial/e-service-with-trial-keychain-functionality.md)

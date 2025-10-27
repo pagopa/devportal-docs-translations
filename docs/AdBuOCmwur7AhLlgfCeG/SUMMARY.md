@@ -1,56 +1,56 @@
 # Table of contents
 
-* [🎬 Per iniziare](README.md)
+* [🎬 Getting started](README.md)
 * [🕗 Changelog](changelog.md)
 
-## 🖊️ FIRMA CON IO
+## 🖊️ SIGN WITH IO
 
 ***
 
-* [🖊️ Cos'è Firma con IO?](cose-firma-con-io.md)
-* [Come funziona?](come-funziona.md)
+* [🖊️ What is Sign with IO?](what-is-sign-with-io.md)
+* [How does it work?](how-it-works.md)
 
 ## 🖱️ BACK OFFICE
 
-* [👩‍💻 Primi passi](back-office/primi-passi.md)
+* [👩‍💻 Getting started](back-office/first-steps.md)
 
-## ⚙️ IL PROCESSO DI FIRMA
+## ⚙️ THE SIGNATURE PROCESS
 
-* [📄 Preparare i documenti](il-processo-di-firma/preparare-i-documenti/README.md)
-  * [Identificare i campi firma](il-processo-di-firma/preparare-i-documenti/identificare-i-campi-firma/README.md)
-    * [↗️ Tramite coordinate](il-processo-di-firma/preparare-i-documenti/identificare-i-campi-firma/tramite-coordinate.md)
-  * [Validare i documenti](il-processo-di-firma/preparare-i-documenti/validare-i-documenti.md)
+* [📄 Prepare the documents](the-signature-process/prepare-the-documents/README.md)
+  * [Identify the signature fields](the-signature-process/prepare-the-documents/identify-the-signature-fields/README.md)
+    * [↗️ Via coordinates](the-signature-process/prepare-the-documents/identify-the-signature-fields/via-coordinates.md)
+  * [Validate the documents](the-signature-process/prepare-the-documents/validate-documents.md)
 
 ***
 
-* [💼 Creare il Dossier](creare-il-dossier.md)
-* [✍️ Richiedere una firma](richiedere-una-firma/README.md)
-  * [Recupero ID del cittadino](richiedere-una-firma/recupero-id-del-cittadino.md)
-  * [Creazione di una Signature request](richiedere-una-firma/creazione-di-una-signature-request.md)
-  * [Upload dei documenti](richiedere-una-firma/upload-dei-documenti.md)
-  * [Pubblicazione della richiesta di firma](richiedere-una-firma/pubblicazione-della-richiesta-di-firma.md)
-  * [Invio della richiesta di firma](richiedere-una-firma/invio-della-richiesta-di-firma/README.md)
-    * [🏁 Tramite pulsante Firma con IO o QR Code](richiedere-una-firma/invio-della-richiesta-di-firma/tramite-pulsante-firma-con-io-o-qr-code.md)
-    * [📳 Tramite messaggio su IO](richiedere-una-firma/invio-della-richiesta-di-firma/tramite-messaggio-su-io.md)
-  * [Cancellazione della richiesta di firma](richiedere-una-firma/cancellazione-della-richiesta-di-firma.md)
-* [✅ Verificare lo stato di una firma](verificare-lo-stato-di-una-firma.md)
-* [📃 Ottenere i documenti firmati](ottenere-i-documenti-firmati.md)
+* [💼 Create the dossier](create-the-dossier.md)
+* [✍️ Request a signature](request-a-signature/README.md)
+  * [Recovery of the ID of the citizen](request-a-signature/recovery-of-citizen-id.md)
+  * [Creation of a signature request](request-a-signature/creation-of-a-signature-request.md)
+  * [Upload of documents](request-a-signature/upload-of-documents.md)
+  * [Publication of the request for a signature](request-a-signature/publication-of-request-for-signature.md)
+  * [Send the request for a signature](request-a-signature/send-the-request-for-a-signature/README.md)
+    * [🏁 With the Sign with IO button or QR Code](request-a-signature/send-the-request-for-a-signature/tramite-sign-with-io-button-o-qr-code.md)
+    * [📳 Via message on IO](request-a-signature/send-the-request-for-a-signature/via-message-on-io.md)
+  * [Cancellation of the request for a signature](request-a-signature/deletion-of-request-for-signature.md)
+* [✅ Check the status of a signature](verify-the-status-of-a-signature.md)
+* [📃 Obtain the signed documents](obtain-signed-documents.md)
 
 ## 👨‍💻 API
 
-* [⚒️ Ambienti: Test & Produzione](api/ambienti-test-and-produzione.md)
-* [API Rest](api/api-rest.md)
+* [⚒️ Environments: Test \& Production](api/test-and-production-environments.md)
+* [Rest API](api/rest-api.md)
 * [Swagger UI](https://editor.swagger.io/?url=https://raw.githubusercontent.com/pagopa/io-sign/main/apps/io-func-sign-issuer/openapi.yaml)
-* [Specifica OpenAPI](https://raw.githubusercontent.com/pagopa/io-sign/main/apps/io-func-sign-issuer/openapi.yaml)
+* [OpenAPI specification](https://raw.githubusercontent.com/pagopa/io-sign/main/apps/io-func-sign-issuer/openapi.yaml)
 
-## 🧑‍💻 Pulsante Firma con IO
+## 🧑‍💻 Sign with IO button
 
-* [💡 Il Pulsante Firma con IO](pulsante-firma-con-io/il-pulsante-firma-con-io.md)
-* [🔌 Installazione e uso](pulsante-firma-con-io/installazione-e-uso.md)
-* [🗂️ Linee guida di utilizzo](pulsante-firma-con-io/linee-guida-di-utilizzo.md)
-* [🎗️ Standard grafici](pulsante-firma-con-io/standard-grafici.md)
+* [💡 The sign with IO button](sign-with-io-button/il-sign-with-io-button.md)
+* [🔌 Installation and use](sign-with-io-button/installation-and-use.md)
+* [🗂️ Use guidelines](sign-with-io-button/use-guidelines.md)
+* [🎗️ Graphic standards](sign-with-io-button/graphic-standards.md)
 
-## ⬇️ RISORSE UTILI
+## ⬇️ USEFUL RESOURCES
 
-* [Glossario](risorse-utili/glossario.md)
-* [Contatti](risorse-utili/contatti.md)
+* [Glossary](useful-resources/glossary.md)
+* [Contacts](useful-resources/contacts.md)

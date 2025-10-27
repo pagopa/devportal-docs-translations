@@ -1,0 +1,3 @@
+# Multiple recipients
+
+There are cases in which the notification must be addressed to more than one recipient (e.g. in the case of jointly liable parties). In this case, the timeline contains information on the notification processes undertaken for each recipient, each of them is reached using the methods deriving from the information indicated on the Notification Platform regarding digital domiciles. The notification is completed independently for each recipient.

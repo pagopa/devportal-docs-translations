@@ -1,11 +1,11 @@
-# Introduzione
+# Introduction
 
-Ambiente di Attestazione nasce come un ambiente in cui è possibile **sperimentare e utilizzare le funzionalità messe a disposizione dalla piattaforma di Interoperabilità**, mediante l’utilizzo di servizi e dati fittizi.
+The certification environment is an environment where it is possible to **test and use the functions provided by the interoperability platform**, using fictitious services and data.
 
-L’accesso all’ambiente è aperto a tutti i soggetti di cui all’articolo 2, comma 2, lettera a), b) e c) del CAD e cioè Pubbliche amministrazioni, Gestori di pubblici servizi e Società a controllo pubblico.\
-\
-Sono stati anche abilitati previa autorizzazione del Dipartimento per la trasformazione digitale:
+The environment can be accessed by all subjects pursuant to article 2(2) a), b) and c) of the CAD, therefore public administrators, public service operators and public service operators.  
+  
+The following are also enabled subject to authorization by Digital transformation department:
 
-* i gestori privati di piattaforma e-procurement che hanno completato il [processo](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) di certificazione dei componenti delle piattaforme pubblicato da AgID;
-* le imprese / gruppi assicurativi presenti all'interno [dell'Albo](https://infostat-ivass.bancaditalia.it/RIGAInquiry-public/ng/#/home);&#x20;
-* le aziende private presenti su Infocamere.
+* private e-procurement platform operators that have completed the [process](https://www.agid.gov.it/it/piattaforme/procurement/certificazione-componenti-piattaforme) for the certification of the platform components published by AgID;
+* insurance companies/groups included in the [register](https://infostat-ivass.bancaditalia.it/RIGAInquiry-public/ng/#/home); 
+* private companies registered with Infocamere.

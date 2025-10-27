@@ -1,17 +1,17 @@
-# Introduzione
+# Introduction
 
-Gli scambi di informazioni tra erogatore e fruitore avvengono al di fuori del perimetro dell'infrastruttura tecnica di PDND Interoperabilità, che non ne ha visibilità. Una volta che PDND Interoperabilità ha rilasciato un voucher valido al fruitore, questo può contattare direttamente l'erogatore. Attraverso il servizio di tracing è possibile raccogliere informazioni quantitative relative a queste transazioni.
+The information exchange between the provider and user takes place outside of the perimeter of the technical infrastructure of PDND Interoperability, which is not visible. Once PDND Interoperability has issued a valid voucher to the user, they can directly contact the provider. The tracing service makes it possible to collect quantitative information retarding these transactions.
 
-Come definito nelle Linee Guida per l'Interoperabilità al paragrafo 13, "Raccolta delle informazioni relative agli accessi e alle transazioni", il tracing è
+As defined in the guidelines for interoperability in paragraph 13, "Collection of information regarding accesses and transactions", tracing is
 
-> un servizio di raccolta dei tracciati che descrivono l’andamento esclusivamente quantitativo delle transazioni avvenute tra ciascun Erogatore e ciascun Fruitore.
+> a service that collects the traces that describe exclusively the quantitative trend of the transactions that take place between each provider and each user.
 
-### Cosa fa il tracing
+### What tracing does
 
-* Fornisce supporto per il tracciamento e l’osservazione delle interazioni tra aderenti;
-* colleziona alcune informazioni utili a misurare l’efficacia dell’interoperabilità nel tempo.
+* It provides support for the tracing and observation of interactions between members;
+* It collects information used for measuring the effectiveness of interoperability over time.
 
-### Cosa non fa il tracing
+### What tracing does not do
 
-* Non fornisce supporto alla valutazione degli SLA eventualmente concordati tra aderenti;
-* non impone blocchi automatici se un determinato fruitore supera la soglia di chiamate API/giorno dichiarata all'interno delle finalità.
+* It does not provide support for assessing any SLAs agreed upon between members;
+* It does not set automatic blocks if a certain user exceeds the threshold of API calls/day declared in the purpose.

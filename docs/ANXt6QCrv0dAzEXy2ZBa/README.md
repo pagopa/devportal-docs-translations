@@ -1,47 +1,35 @@
 ---
-description: >-
-  Questo documento è una guida tecnica all'utilizzo delle API di IO e
-  all’integrazione dei servizi pubblici.
+
+description: \>-  
+This document is a technical guide for the use of the IO APIs and the integration of public services.
 ---
 
-# 🏠 Guida tecnica
+# 🏠 Technical guide
 
-### Primi passi
+### Getting started
 
-{% content-ref url="setup-iniziale/" %}
-[setup-iniziale](setup-iniziale/)
-{% endcontent-ref %}
+{% content-ref url="initial-setup/" %} [initial-setup](initial-setup/) {% endcontent-ref %}
 
-### Funzionalità
+### Function
 
-{% content-ref url="funzionalita/pubblicare-un-servizio/" %}
-[pubblicare-un-servizio](funzionalita/pubblicare-un-servizio/)
-{% endcontent-ref %}
+{% content-ref url="function/publish-a-service/" %} [publish-a-service](function/publish-a-service/) {% endcontent-ref %}
 
-{% content-ref url="funzionalita/inviare-un-messaggio/" %}
-[inviare-un-messaggio](funzionalita/inviare-un-messaggio/)
-{% endcontent-ref %}
+{% content-ref url="function/send-a-message/" %} [send-a-message](function/send-a-message/) {% endcontent-ref %}
 
-{% content-ref url="funzionalita/inviare-un-messaggio/aggiungere-allegati.md" %}
-[aggiungere-allegati.md](funzionalita/inviare-un-messaggio/aggiungere-allegati.md)
-{% endcontent-ref %}
+{% content-ref url="function/send-a-message/add-attachments.md" %} [add-attachments.md](function/send-a-message/add-attachments.md) {% endcontent-ref %}
 
 ### API
 
-{% content-ref url="api-e-specifiche/openapi.md" %}
-[openapi.md](api-e-specifiche/openapi.md)
-{% endcontent-ref %}
+{% content-ref url="api-and-specifications/openapi.md" %} [openapi.md](api-and-specifications/openapi.md) {% endcontent-ref %}
 
-### Abilitazioni
+### Authorizations
 
-{% content-ref url="abilitazioni/" %}
-[abilitazioni](abilitazioni/)
-{% endcontent-ref %}
+{% content-ref url="enabling/" %} [authorizations](enabling/) {% endcontent-ref %}
 
-### Risorse utili
+### Useful resources
 
-[**Specifiche API ->** ](https://developer.io.italia.it/openapi.html)
+[**API specifications ->** ](https://developer.io.italia.it/openapi.html)
 
-[**Supporto agli Enti ->**](https://docs.pagopa.it/kb-enti)
+[**Support for institutions ->**](https://docs.pagopa.it/kb-enti)
 
-[**Glossario ->**](risorse-utili/glossario.md)
+[**Glossary ->**](useful-resources/glossary.md)

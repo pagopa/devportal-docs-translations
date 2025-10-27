@@ -1,0 +1,7 @@
+# Consumption of the signals
+
+The consumer must perform operations for the (1) recovery of signals, (2) processing of signals to (3) obtain the update of the data. 
+
+<figure><img src="../.gitbook/assets/recupero elaborazione aggiornamento segnale sh.png" alt=""><figcaption><p>Signal recovery diagram</p></figcaption></figure>
+
+`{% embed url="https://mermaid.live/edit#pako:eNqVVE1v2zAM_SuEdlgLOIXtfPvQw7wUO3TDgKA7DL4oNuMQkKVMloM1Rf_7KDtOkyY9TAdDkh_Jx0eKLyI3BYpEDAaDTDtyChOwmDdbtAZqLLVUGAAquTJW7slo7G8BQZYlGatlhdoZKFBBIZ3JdG70msok0wBugxW7XMkaj8df0pJcKaxbBMDWUiXtc2qUsQlk4tPDw5eHMMxEpltama7xT4M6x68kSyurTMvGGd1UK7QHF9I6ymkrtYN0CbKG1Oi6qZiO7RnTJfTn0-OjBy_JA-Bbs2qvLoGL1icOarQ7yhEKAtIOLdZdXgA_jEMwO7QcP2B8wk7Zhjkg5BsE9VkWjGcjqElCoyE_Ycj-zkhyCRzYcnUTzaMA4njIn_H4tvvplzJmC1wkMKU-cNlJpYz35LDaGlbVeK2qtiK92RlLn-pFtekNnC4H9_cdSKFzjZWXGJk72kl2-qabX_7ExinLoKh2VwwL_MD0eJ0ur_NOztuxQLr0fi7PoWNPYigHVHAxaE255HgsV41NYTRVtN-zZL50Jqd2B7UpSxbA-JJ5XXMsqOt50uBbwOI71TzLdwEYmm9I2u6h_JdL1MVV4U4VOsOcldn34kcv9Yy0B1pikugrdvMR_9srtVqcMFn0AhSteofIp9FOUlhcS6HdiEBUaCtJBY-nF_8jE-34yIQfEgWuZaOcHxKvDPUDYfmsc5E422Agmi1H7-dFf8ka82v73k28dvAFgp_3b2OOED6K5EX8FUk0j--Gk-lwPh3HkziKokA8i2QwGt6F4SycTSaz0WQynI1Gr4HYtx6iuygOZ-N4PprGw3EUTkeBsKYpNyJZS1UfWS1aGn3E0voMuz3PBx4SqWm0E8n89R_ijM39" %}`signal consumption `{% endembed %}`

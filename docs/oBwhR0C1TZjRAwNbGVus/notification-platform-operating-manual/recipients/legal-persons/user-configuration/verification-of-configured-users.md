@@ -1,0 +1,3 @@
+# Verification of configured users
+
+the NP requires the verification of the list of users associated with the sending physical person every TBD days. When the NP identifies the need for verification, it sends a request to the digital domicile of the legal person. Starting from that moment, a “Confirm user” button will appear in the user management section only for administrative users. When pressing the button, a request is made to confirm that users associated with the PA were verified. The positive answer to the question is recorded by NP and the button disappears until the next request.

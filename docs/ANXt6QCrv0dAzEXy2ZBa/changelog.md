@@ -1,66 +1,64 @@
 # 🕗 Changelog
 
-{% hint style="info" %}
-I cambiamenti indicati come versione `minor` (la cifra a destra del punto) non sono da ritenersi sostanziali, hanno lo scopo di migliorare l'esperienza.
-{% endhint %}
+{% hint style="info" %} The changes indicated as a `minor` version (the number to the right of the dot) are not considered substantial and serve the purpose of improving the experience. {% endhint %}
 
-### Versione 6.0 (31 marzo 2024)
+### Version 6.0 (March 31, 2024)
 
-* Cambio indirizzo [indirizzo-ip-pubblico.md](api-e-specifiche/indirizzo-ip-pubblico.md "mention")
-* Aggiunta sezione [gestire-laccesso-ai-servizi-tramite-i-gruppi.md](funzionalita/pubblicare-un-servizio/gestire-laccesso-ai-servizi-tramite-i-gruppi.md "mention")
-* Aggiunta sezione [chiave-manage](funzionalita/pubblicare-un-servizio/chiave-manage/ "mention")
-* Rinominata sezione **Chiave manage** in [chiave-manage.md](funzionalita/pubblicare-un-servizio/chiave-manage/chiave-manage.md "mention") e spostata come sottosezione di [chiave-manage](funzionalita/pubblicare-un-servizio/chiave-manage/ "mention")
-* Aggiunta sezione [chiave-manage-1.md](funzionalita/pubblicare-un-servizio/chiave-manage/chiave-manage-1.md "mention")
+* Change of address [public-ip-address.md](api-and-specifications/public-ip-address.md "mention")
+* Added session [manage access to services via groups.md](function/publish-a-service/manage-access-to-services-via-groups.md "mention")
+* Added session [manage-key](function/publish-a-service/manage-key/ "mention")
+* Renamed section **Manage key** to [manage-key.md](function/publish-a-service/manage-key/manage-key.md "mention") and moved as a subsection of [manage-key](function/publish-a-service/manage-key/ "mention")
+* Added session [manage-key-1.md](function/publish-a-service/manage-key/manage-key-1.md "mention")
 
-### Versione 5.1 (13 maggio 2024)
+### Version 5.1 (May 13, 2024)
 
-* Aggiunta del campo `configuration_id` alla struttura `third_party_data` nella sezione [API Messaggi](api-e-specifiche/api-messaggi/)
-* Aggiornata la sezione [Inviare un messaggio a contenuto remoto](funzionalita/inviare-un-messaggio/inviare-un-messaggio-a-contenuto-remoto.md)
-* Aggiunta la sezione [CRU Configurazioni remote](api-e-specifiche/api-messaggi/cru-configurazioni-remote.md)
-* Aggiunta la sezione [Guida al Markdown](risorse-utili/guida-al-markdown.md)
-* Correzioni minori
+* Addition of the field `configuration_id` to the structure `third_party_data` in the section [API Messages](api-and-specifications/message-api/)
+* Updated the section [Send a message with remote content](function/send-a-message/send-a-message-a-contenuto-remoto.md)
+* Added the section [CRUs, remote configurations](api-and-specifications/message-api/cru-remote-configurations.md)
+* Added the section [Guide to the Markdown](useful-resources/guide-to-markdown.md)
+* Minor corrections
 
-### Versione 5.0 (2 gennaio 2024)
+### Version 5.0 (January 2, 2024)
 
-* Aggiunta modello "[Remote Content](funzionalita/inviare-un-messaggio/inviare-un-messaggio-a-contenuto-remoto.md)" per i Messaggi
-* Aggiunta sezione "[Argomento del servizio](funzionalita/pubblicare-un-servizio/argomento-del-servizio.md)" nella sezione [Pubblicare un servizio](funzionalita/pubblicare-un-servizio/)
-* Rimozione "version" nella sezione [Pubblicare un servizio](funzionalita/pubblicare-un-servizio/)
-* Aggiunta api [Service Topics: Get all service topics](api-e-specifiche/api-servizi/service-topics-get-all-service-topics.md) nella sezione [API Servizi](api-e-specifiche/api-servizi/)
-* Aggiornamento esempi [Manage Service: Get](api-e-specifiche/api-servizi/manage-service-get.md) e [Manage Service: Create](api-e-specifiche/api-servizi/manage-service-create.md)
-* Rimozione della procedura di [test dei messaggi](funzionalita/inviare-un-messaggio/messaggi-di-test.md) verso codici fiscali fittizi (non più supportata)
-* Correzioni minori
+* Model added "[Remote Content](function/send-a-message/send-a-message-a-contenuto-remoto.md)" for messages
+* Section added "[Service topic](function/publish-a-service/service-topic.md)" in the section [Publish a service](function/publish-a-service/)
+* Removal of "version" in the section [Publish a service](function/publish-a-service/)
+* API added [Service Topics: Get all service topics](api-and-specifications/service-api/service-topics-get-all-service-topics.md) in the section [API Services](api-and-specifications/service-api/)
+* Update examples [Manage Service: Get](api-and-specifications/service-api/manage-service-get.md) and [Manage Service: Create](api-and-specifications/service-api/manage-service-create.md)
+* Removal of the procedure for [test of messages](function/send-a-message/test-messages.md) to fictitious fiscal codes (no longer supported)
+* Minor corrections
 
-### Versione 4.0 (30 settembre 2023)
+### Version 4.0 (September 30, 2023)
 
-* Rimozione delle API di gestione dei servizi legacy
-* Nuova sezione che riguarda i servizi che veicolano [informazioni sensibili](funzionalita/pubblicare-un-servizio/informazioni-sensibili.md)
+* Removal of the API managing legacy services
+* New section that concerns the services that send [sensitive information](function/publish-a-service/sensitive-information.md)
 
-### Versione 3.0 (30 giugno 2023)
+### Version 3.0 (June 30, 2023)
 
-* [Nuovo flusso con revisione obbligatoria nella pubblicazione di un servizio](funzionalita/pubblicare-un-servizio/)
-* Deprecate le API di gestione dei servizi
-* Pubblicate le nuove [API di gestione dei servizi](api-e-specifiche/api-servizi/), ovvero i servizi `manage`
+* [New flow with mandatory review for publishing a service](function/publish-a-service/)
+* Deprecation of the API managing the services
+* Publication of the new [API managing the services](api-and-specifications/service-api/), i.e. the `manage` services
 
-### Versione 2.4 (giugno 2023)
+### Version 2.4 (June 2023)
 
-* [Nuova sezione molto più ricca per le Domande Frequenti](https://docs.pagopa.it/kb-enti)
-* [Chiave specifica per la gestione dei servizi](funzionalita/pubblicare-un-servizio/creare-un-servizio.md#tramite-api)
+* [New section with more Frequently Asked Questions](https://docs.pagopa.it/kb-enti)
+* [Specific key for managing services](function/publish-a-service/create-a-service.md#tramite-api)
 
-### Versione 2.3 (marzo 2023)
+### Version 2.3 (March 2023)
 
-* [Gestione dei servizi tramite Area Riservata](funzionalita/pubblicare-un-servizio/creare-un-servizio.md#tramite-area-riservata)
-* [Importazione dei servizi in Area Riservata](funzionalita/pubblicare-un-servizio/importare-servizi-nellarea-riservata.md)
-* [Adesione tramite Area Riservata](setup-iniziale/adesione-tramite-larea-riservata.md)
-* [Adesione per enti aggregatori](setup-iniziale/)
-* [Come variare i delegati](https://docs.pagopa.it/kb-enti-adesione/domande-frequenti/domande-e-risposte-sulladesione-a-io#come-posso-variare-referente-e-o-delegati-del-mio-ente)
+* [Management of services via the Reserved Area](function/publish-a-service/create-a-service.md#tramite-area-riservata)
+* [Import of services in the Reserved Area](function/publish-a-service/import-services-in-reserved-area.md)
+* [Registration via the Reserved Area](initial-setup/registration-via-reserved-area.md)
+* [Registration for aggregators](initial-setup/)
+* [How to change the representatives](https://docs.pagopa.it/kb-enti-adesione/domande-frequenti/domande-e-risposte-sulladesione-a-io#come-posso-variare-referente-e-o-delegati-del-mio-ente)
 
-### Versione 2.2 (novembre 2022)
+### Version 2.2 (November 2022)
 
-* Nuovo programma IO Premium
+* New IO Premium program
 
-### [Versione 1.3 (settembre 2022)](https://docs.pagopa.it/io-guida-tecnica-1.3/)
+### [Version 1.3 (September 2022)](https://docs.pagopa.it/io-guida-tecnica-1.3/)
 
-* Nuova esperienza di lettura
-* Migliore formattazione dei testi e semplificazione del linguaggio
+* New reading experience
+* Improved text formatting and simplification of the language
 
-### [Versione 1.2 (17 luglio 2022) ->](https://io.italia.it/assets/download/it/onboarding/220725_guida_tecnica_all_integrazione_dei_servizi_in_app_io-v_1.2.pdf)
+### [Version 1.2 (July 17, 2022) ->](https://io.italia.it/assets/download/it/onboarding/220725_guida_tecnica_all_integrazione_dei_servizi_in_app_io-v_1.2.pdf)

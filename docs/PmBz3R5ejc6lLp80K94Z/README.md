@@ -1,36 +1,36 @@
-# Premessa
+# Preamble
 
-**Allegato B alle "Linee guida per l'effettuazione dei pagamenti elettronici a favore delle pubbliche amministrazioni e dei gestori di pubblici servizi" edite da PagoPA SpA - versione 3.9.1 - dicembre 2024**
+**Annex B to the "Guidelines for making electronic payments to public administrations and public service providers" published by PagoPA SpA - version 3.9.1 - December 2024**
 
-Il sistema dei pagamenti elettronici a favore della Pubblica Amministrazione, il sistema pagoPA, garantisce agli utilizzatori finali di effettuare pagamenti elettronici alla Pubblica Amministrazione, alle Società a controllo pubblico e ai Gestori dei Pubblici servizi in modo sicuro, affidabile, semplice e in totale trasparenza nei costi di commissione.
+The electronic payment systems for the Public Administration, the pagoPA system, guarantees that end users can make electronic payments to the Public administration, state-owned companies and Public Service Operators in a safe, reliable and simple manner with fully transparent commission costs.
 
-L’Introduzione della piattaforma pagoPA porta benefici per i cittadini, per la Pubblica Amministrazione, per i Prestatori Servizi di Pagamento e per l’intero sistema Paese:
+The introduction of the pagoPA platform provides benefits to citizens, the Public administration, Payment Service Providers and for the entire country system:
 
-* benefici per i Cittadini
-  * trasparenza e minori costi;
-  * possibilità di usufruire dei servizi pubblici in maniera più immediata;
-  * semplificazione del processo di pagamento che consente di usufruire del maggior numero di canali e servizi possibili;
-  * standardizzazione dell’esperienza utente per i pagamenti verso la Pubblica Amministrazione, le Società a controllo pubblico e i Gestori dei Pubblici servizi;
-  * standardizzazione delle comunicazioni di avviso di pagamento;
-* benefici per la Pubblica Amministrazione
-  * riduzione dei tempi di incasso attraverso l’accredito delle somme direttamente sui propri conti entro il giorno successivo al pagamento;
-  * riduzione dei costi di gestione del contante;
-  * miglioramento dell’efficienza della gestione degli incassi attraverso la riconciliazione automatica;
-  * superamento della necessità di bandire gare per l’acquisizione di servizi di incasso, con conseguenti riduzioni di inefficienze e costi di commissione fuori mercato;
-  * riduzione dei costi e tempi di sviluppo delle applicazioni online (riuso soluzioni);
-  * eliminazione della necessità di molteplici accordi di riscossione;
-  * maggiori controlli automatici per evitare i doppi pagamenti e le conseguenti procedure di rimborso;
-* benefici per i Prestatori Servizi di Pagamento (PSP)
-  * eliminazione della necessità di molteplici accordi con le PA;
-  * riduzione dei costi di gestione del contante;
-  * miglioramento dei servizi resi;
-  * fidelizzazione della clientela;
-* benefici per il Sistema Paese
-  * completa aderenza agli standard della PSD2;
-  * incentivazione all’utilizzo dei pagamenti elettronici a livello nazionale per le transazioni verso la Pubblica Amministrazione, che consente di stimolare il mercato e favorire una maggiore concorrenza tra i servizi di pagamento e, di conseguenza, un livellamento delle commissioni.
+* benefits for citizens
+  * transparency and lower costs;
+  * possibility to use public services in a more direct manner;
+  * simplification of the payment process that makes it possible to use a greater number of possible channels and services;
+  * standardization of the user experiences for payments to the Public administration, state-owned companies and Public Service Operators;
+  * standardization of payment notice communications;
+* benefits for the Public administration
+  * reduction in collection times through the direct credit of amounts to their accounts by the day following the payment;
+  * reduction in cash management costs;
+  * improvement in the efficiency of managing collections through automatic reconciliation;
+  * elimination of the need to call for tenders for the procurement of collection services, resulting in reduced inefficiencies and commission costs not in line with market conditions;
+  * reduction in costs and times for developing online applications (reuse of solutions);
+  * elimination of the need for multiple collection agreements;
+  * greater automatic checks to prevent double payments and the resulting reimbursement procedures;
+* benefits for the Payment Service Providers (PSP)
+  * elimination of the need for multiple agreements with the PAs;
+  * reduction in cash management costs;
+  * improvement in the provided services;
+  * increased customer loyalty;
+* benefits for the Country system
+  * complete compliance with the PSD2 standards;
+  * incentives for the use of electronic payments on a national level for transactions with the Public administration that make it possible to stimulate the market and promote increased competition among payment services and, as a result, a leveling of commissions.
 
-La piattaforma pagoPA è stata realizzata dall’Agenzia per l’Italia Digitale (AgID) in attuazione dell’art. 5 del CAD, il quale precisa che al fine di dare attuazione a quanto disposto dallo stesso articolo, "la Presidenza del Consiglio dei ministri mette a disposizione, attraverso il Sistema pubblico di connettività, una piattaforma tecnologica per l'interconnessione e l'interoperabilità tra le pubbliche amministrazioni e i prestatori di servizi di pagamento abilitati". Lo stesso articolo 5 del CAD, inoltre, ha affidato all’Agenzia per l’Italia Digitale, sentita la Banca d’Italia, il compito di definire le Linee guida per l'attuazione dello stesso articolo 5 del CAD e per la specifica dei codici identificativi del pagamento e le modalità attraverso le quali il prestatore dei servizi di pagamento mette a disposizione dell'ente le informazioni relative al pagamento medesimo.
+The pagoPA platform was established by the Agency for Digital Italy (AgID) in implementation of art. 5 of the CAD (Digital Administration Code), which specifies that in order to implement what is required by the article in question, "the President of the Council of Ministers must provide a technical platform, through the public connectivity system, for interconnection and interoperability between Public administrations and authorized payment service providers". Article 5 of the CAD also assigned. upon consultation with the Banca d'Italia, the Agency for Digital Italy with the task of defining the guidelines for the actuation of article 5 of CAD and for the specification of the payment identifier codes and the methods with which the payment service operators provide the institution with information regarding the payment itself.
 
-Il [D.L. 135/2018](https://www.gazzettaufficiale.it/eli/id/2018/12/14/18G00163/sg) ha trasferito la gestione della piattaforma pagoPA, nonché i compiti relativi a tale piattaforma svolti dall’Agenzia per l’Italia digitale alla Presidenza del Consiglio e ha disposto la costituzione di una società per azioni partecipata dallo Stato che opera sotto l’indirizzo del Presidente del Consiglio, quale la PagoPA SpA.
+[Leg. Decree 135/2018](https://www.gazzettaufficiale.it/eli/id/2018/12/14/18G00163/sg) transferred the management of the pagoPA platform, as well as the tasks related to this platform performed by the Agency for Digital Italy to the President of the Council and ordered the establishment of a state-owned limited company that operates under the guidance of the President of the Council, such as PagoPA SpA.
 
-Il presente documento denominato “Specifiche Attuative del Nodo dei Pagamenti-SPC” rappresenta l’Allegato B alle “Linee guida per l’effettuazione dei pagamenti a favore delle pubbliche amministrazioni e dei gestori di pubblici servizi” (di seguito, Linee guida) e deve essere utilizzato in combinazione con il documento “Specifiche attuative dei codici identificativi di versamento, riversamento e rendicontazione” (Allegato A), nonché con le stesse Linee guida; documenti ai quali si rimanda per tutte le voci e gli argomenti non specificatamente qui indicati.
+This document called “Implementary specifications for the SPC payment node” is Annex B to the “Guidelines for making electronic payments to public administrations and public service providers” (hereafter, the guidelines) and must be used in combination with the document “Specifications for the implementation of identifier codes for payments, repayment and reporting” (Annex A), as well as with the same guidelines, documents to which reference is made for all the items and topics not specifically indicated here.

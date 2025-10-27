@@ -1,24 +1,22 @@
-# Introduzione
+# Introduction
 
-## Contesto <a href="#contesto" id="contesto"></a>
+## Context <a href="#contesto" id="contesto"></a>
 
-Per un ente, sia una pubblica amministrazione (PA) sia un soggetto privato, sono oggetto di interesse sia i dati sia le loro _variazioni_. Per variazione di un dato si intende ad esempio il cambio di residenza di un soggetto o un rinnovo della patente di guida.
+For an institution, both a public administration (PA) or a private subject, the data as well as their _variations_ are of interest. Data variation means, for example, a change in the residence of a subject or the renewal of a driver's license.
 
-Nel contesto delle PA, per dare seguito ad un procedimento amministrativo è indispensabile conoscere le variazioni dei dati dei soggetti coinvolti, la cui titolarità sia di altre PA, nel periodo in cui lo stesso procedimento amministrativo è in essere. Per un soggetto privato è ugualmente importante poter accedere a un dato sempre aggiornato.
+Within the context of the PAs, to follow up on an administrative procedure it is necessary to know the variations to the data of the involved subjects owned by other PAs, during the period in which the administrative procedure is current. For a private subject it is just as important to be able to access data that is always updated.
 
-**Signal Hub** è un servizio di PDND Interoperabilità che _**concentra**_**&#x20;(hub)** le variazioni dei dati e ne distribuisce le notifiche. Il _**segnale**_**&#x20;(signal)** è la notifica della variazione di un dato.  Il servizio è pensato per assicurare ai soggetti aderenti la distribuzione dei segnali di variazione dei dati.
+**Signal Hub** is a PDND Interoperability service that _**concentrates**_\*\* (hub)\*\* the variation of data and distributes the notifications. The _**signal**_ is the notification that data was changed.  The service is designed to ensure member subjects the distribution of data variation signals.
 
-## Motivo <a href="#motivo" id="motivo"></a>
+## Reason <a href="#motivo" id="motivo"></a>
 
-La concentrazione degli aggiornamenti dei dati in un unico servizio di piattaforma garantisce:
+The concentration of data updates in a single platform service guarantees:
 
-* sicurezza all’interno del perimetro delle Linee Guida PDND Interoperabilità
-* economicità: riduzione del numero di chiamate e di risorse a cui l’erogatore di un e-service deve far fronte
-* riservatezza: dati conosciuti solo da produttori e consumatori
-* uniformità amministrativa: non è necessario stipulare nuovi accordi tra aderenti
-* standardizzazione tecnica: soluzione tecnica omogenea per accedere alle variazioni dei dati
-
-
+* security within the perimeter of the PDND Interoperability guidelines
+* cost effectiveness: reduction in the number of calls and resources an e-service provider must handle
+* confidentiality: data known only by the producers and consumers
+* administrative uniformity: it is not necessary to stipulate new agreements between members
+* technical standardization: homogeneous technical solution to access data variations
 
 <figure><img src=".gitbook/assets/diagramma.contesto.drawio2.png" alt=""><figcaption></figcaption></figure>
 

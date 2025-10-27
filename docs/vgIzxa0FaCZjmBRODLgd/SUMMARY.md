@@ -1,41 +1,41 @@
 # Table of contents
 
-* [⬅️ Torna a pagoPA.gov.it](https://pagopa.gov.it)
+* [⬅️ Back to pagoPA.gov.it](https://pagopa.gov.it)
 
-## Per iniziare
+## Getting started
 
-* [👋 Introduzione](README.md)
-* [🕘 Changelog](per-iniziare/changelog.md)
+* [👋 Introduction](README.md)
+* [🕘 Changelog](getting-started/changelog.md)
 
-## Allegato 1
+## Attachment 1
 
-* [📄 Modelli base](allegato-1/modelli-base.md)
-* [🍭 Varianti](allegato-1/varianti/README.md)
-  * [Violazioni Codice della Strada](allegato-1/varianti/violazioni-codice-della-strada.md)
-  * [Avviso con molte rate](allegato-1/varianti/avviso-con-molte-rate.md)
-  * [Avviso senza scadenza](allegato-1/varianti/avviso-senza-scadenza.md)
-  * [Traduzioni](allegato-1/varianti/traduzioni/README.md)
-    * [Avviso con seconda lingua](allegato-1/varianti/traduzioni/avviso-con-seconda-lingua.md)
-    * [Avviso bilingue](allegato-1/varianti/traduzioni/avviso-bilingue.md)
-    * [Avviso in altra lingua](allegato-1/varianti/traduzioni/avviso-in-altra-lingua.md)
-* [✨ Esempi](allegato-1/esempi.md)
+* [📄 Base models](attachment-1/base.models.md)
+* [🍭 Variants](attachment-1/variants/README.md)
+  * [Traffic code violations](attachment-1/variants/traffic-code-violations.md)
+  * [Notice with multiple installments](attachment-1/variants/notice-with-multiple-installations.md)
+  * [Notice without due date](attachment-1/variants/notice-without-expiration.md)
+  * [Translations](attachment-1/variants/translations/README.md)
+    * [Notice with a second language](attachment-1/variants/translations/notice-with-second-language.md)
+    * [Bilingual notice](attachment-1/variants/translations/bilingual-notice.md)
+    * [Notice in another language](attachment-1/variants/translations/notice-in-another-language.md)
+* [✨ Examples](attachment-1/examples.md)
 
-## Allegato 2
+## Attachment 2
 
-* [📐 Specifiche Tecniche](allegato-2/specifiche-tecniche/README.md)
-  * [Intestazione](allegato-2/specifiche-tecniche/intestazione.md)
-  * [Informazioni sull'Ente Creditore](allegato-2/specifiche-tecniche/informazioni-sullente-creditore.md)
-  * [Informazioni sul Destinatario](allegato-2/specifiche-tecniche/informazioni-sul-destinatario.md)
-  * [Importo e scadenza](allegato-2/specifiche-tecniche/importo-e-scadenza.md)
-  * [Dove pagare](allegato-2/specifiche-tecniche/dove-pagare.md)
-  * [Dati per il pagamento](allegato-2/specifiche-tecniche/dati-per-il-pagamento/README.md)
-    * [Rata unica](allegato-2/specifiche-tecniche/dati-per-il-pagamento/rata-unica.md)
-    * [Rate multiple](allegato-2/specifiche-tecniche/dati-per-il-pagamento/rate-multiple.md)
-    * [Bollettino Postale PA](allegato-2/specifiche-tecniche/dati-per-il-pagamento/bollettino-postale-pa.md)
-    * [Codice QR](allegato-2/specifiche-tecniche/dati-per-il-pagamento/codice-qr.md)
-* [🔤 Elementi di design](allegato-2/elementi-di-design/README.md)
-  * [Tipografia](allegato-2/elementi-di-design/tipografia.md)
-  * [Colori](allegato-2/elementi-di-design/colori.md)
-  * [Margini e spazi](allegato-2/elementi-di-design/margini-e-spazi.md)
-  * [Elementi grafici](allegato-2/elementi-di-design/elementi-grafici.md)
-* [❓ Come usare i file](allegato-2/come-usare-i-file.md)
+* [📐Technical-specifications](attachment-2/technical-specifications/README.md)
+  * [Header](attachment-2/technical-specifications/header.md)
+  * [Information about the creditor](attachment-2/technical-specifications/information-about-the-creditor.md)
+  * [Information about the recipient](attachment-2/technical-specifications/information-about-the-recipient.md)
+  * [Amount and due date](attachment-2/technical-specifications/amount-and-due-date.md)
+  * [Where to pay](attachment-2/technical-specifications/where-to-pay.md)
+  * [Payment data](attachment-2/technical-specifications/payment-data/README.md)
+    * [Single installment](attachment-2/technical-specifications/payment-data/single-installment.md)
+    * [Multiple installments](attachment-2/technical-specifications/payment-data/multiple-rates.md)
+    * [PA postal payment slip](attachment-2/technical-specifications/payment-data/postal-payment-slip.md)
+    * [QR code](attachment-2/technical-specifications/payment-data/qr-code.md)
+* [🔤 Design elementsù](attachment-2/design-elements/README.md)
+  * [Typography](attachment-2/design-elements/typography.md)
+  * [Colors](attachment-2/design-elements/colors.md)
+  * [Margins and spaces](attachment-2/design-elements/margins-and-spaces.md)
+  * [Graphic elements](attachment-2/design-elements/graphic-elements.md)
+* [❓ How to use the files](attachment-2/how-to-use-the-files.md)

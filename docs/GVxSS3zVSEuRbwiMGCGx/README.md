@@ -1,13 +1,13 @@
 ---
-description: >-
-  Condizioni e istruzioni tecniche e attuative del programma Carta Giovani
-  Nazionale per gli Operatori.
+
+description: \>-  
+Technical and implementary conditions and instructions for the National Youth Card for operators.
 ---
 
-# 🏠 Carta Giovani Nazionale - Documentazione Tecnica
+# 🏠 National Youth Card - technical documentation
 
-Queste istruzioni si rivolgono agli Operatori che intendono aderire al Programma Carta Giovani Nazionale, istituito dal Dipartimento per le politiche giovanili e il Servizio civile universale e sviluppato da PagoPA S.p.A.
+These instructions are directed to operators who intend to join the National Youth Card program created by the Department of Youth Policies and the Universal civil service and developed by PagoPA S.p.A.
 
-La documentazione tecnica descrive i processi di adesione e attuazione della convenzione al Programma attraverso il Portale dedicato, disponibile al seguente [link](https://portal.cgnonboardingportal.pagopa.it/).
+The technical documentation describes the processes for registering for and implementing the program through the dedicated portal, available at the following [link](https://portal.cgnonboardingportal.pagopa.it/).
 
-La documentazione tecnica potrà essere aggiornata nel corso della realizzazione del Programma. Le diverse versioni sono sempre disponibili in questa _repository_.
+The technical documentation could be updated while the program is offered. The various versions are always available in this _repository_.

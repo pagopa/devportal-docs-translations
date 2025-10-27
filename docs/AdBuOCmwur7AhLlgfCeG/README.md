@@ -1,65 +1,47 @@
-# 🎬 Per iniziare
+# 🎬 Getting started
 
-Questo manuale si rivolge agli **enti pubblici e gestori di pubblici servizi** che intendono integrare il servizio **Firma con IO** per richiedere ai cittadini la firma di documenti e contratti tramite l'**app IO**.&#x20;
+This manual is intended for **public institutions and public service operators** who want to integrate the **Sign with IO** service to request citizens to sign documents and contracts with the **IO app**. 
 
-Il documento vuole:
+The purpose of this document is to:
 
-* raccontare la **funzionalità** e i suoi **benefici**;
-* illustrare le modalità di **integrazione** per gli enti;
-* spiegare come **preparare** un documento e **richiederne la firma**;
-* dare indicazioni su come verificare lo **stato** di una firma e scaricare i **documenti firmati**.
+* indicate the **functions** and their **benefits**;
+* illustrate the **integration** methods for the institutes;
+* explain how to **prepare** a document and **request the signature**;
+* provide instructions on how to check the **status** of a signature and download the **signed documents**.
 
-{% hint style="danger" %}
-**Fase di sperimentazione**
+{% hint style="danger" %} **Testing phase**
 
-Questo manuale riguarda le API di Firma con IO per la fase di sperimentazione: le informazioni contenute al suo interno potrebbero subire delle modifiche.
-{% endhint %}
+This manual concerns the Sign with IO APIs for the testing phase: the information it contains is subject to change. {% endhint %}
 
-{% hint style="warning" %}
-Solo dopo la firma dell’**accordo di sperimentazione** si potrà testare il servizio generando le **API Key** di test direttamente dall'[Area Riservata](https://selfcare.pagopa.it/auth/login).\
-Se l’Ente è già integrato ad App IO, non potrà utilizzare le API key che già possiede, ma dovrà generare delle API Key specifiche per il prodotto.
-{% endhint %}
+{% hint style="warning" %} Only after signing the **testing agreement** will it be possible to test the service by generating the test **API keys** directly from the [Reserved Area](https://selfcare.pagopa.it/auth/login).  
+If the institution is already integrated with the IO app, they cannot use the API keys they already have, but must generate specific API keys for the product. {% endhint %}
 
-Consigliamo di leggere il documento nella sua interezza, ma ecco **qualche scorciatoia** agli argomenti principali:
+We recommend reading the document in its entirety, but here are **some shortcuts** to the main topics:
 
-### Firma con IO
+### Sign with IO
 
-{% content-ref url="cose-firma-con-io.md" %}
-[cose-firma-con-io.md](cose-firma-con-io.md)
-{% endcontent-ref %}
+{% content-ref url="what-is-sign-with-io.md" %} [what-is-sign-with-io.md](what-is-sign-with-io.md) {% endcontent-ref %}
 
-### Funzionalità
+### Function
 
-{% content-ref url="il-processo-di-firma/preparare-i-documenti/" %}
-[preparare-i-documenti](il-processo-di-firma/preparare-i-documenti/)
-{% endcontent-ref %}
+{% content-ref url="the-signature-process/prepare-the-documents/" %} [prepare-the-documents](the-signature-process/prepare-the-documents/) {% endcontent-ref %}
 
-{% content-ref url="richiedere-una-firma/" %}
-[richiedere-una-firma](richiedere-una-firma/)
-{% endcontent-ref %}
+{% content-ref url="request-a-signature/" %} [request-a-signature](request-a-signature/) {% endcontent-ref %}
 
-{% content-ref url="verificare-lo-stato-di-una-firma.md" %}
-[verificare-lo-stato-di-una-firma.md](verificare-lo-stato-di-una-firma.md)
-{% endcontent-ref %}
+{% content-ref url="verify-the-status-of-a-signature.md" %} [verify-the-status-of-a-signature.md](verify-the-status-of-a-signature.md) {% endcontent-ref %}
 
-{% content-ref url="ottenere-i-documenti-firmati.md" %}
-[ottenere-i-documenti-firmati.md](ottenere-i-documenti-firmati.md)
-{% endcontent-ref %}
+{% content-ref url="obtain-signed-documents.md" %} [obtain-signed-documents.md](obtain-signed-documents.md) {% endcontent-ref %}
 
 ### API
 
-{% content-ref url="api/ambienti-test-and-produzione.md" %}
-[ambienti-test-and-produzione.md](api/ambienti-test-and-produzione.md)
-{% endcontent-ref %}
+{% content-ref url="api/test-and-production-environments.md" %} [test-and-production-environments.md](api/test-and-production-environments.md) {% endcontent-ref %}
 
-**Pulsante Firma con IO**
+**Sign with IO button**
 
-{% content-ref url="pulsante-firma-con-io/il-pulsante-firma-con-io.md" %}
-[il-pulsante-firma-con-io.md](pulsante-firma-con-io/il-pulsante-firma-con-io.md)
-{% endcontent-ref %}
+{% content-ref url="sign-with-io-button/il-sign-with-io-button.md" %} [il-sign-with-io-button.md](sign-with-io-button/il-sign-with-io-button.md) {% endcontent-ref %}
 
-###
+### 
 
-### Risorse utili&#x20;
+### Useful resources 
 
-[**Glossario ->** ](risorse-utili/glossario.md)
+[**Glossary ->** ](useful-resources/glossary.md)

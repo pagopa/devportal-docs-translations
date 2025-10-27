@@ -1,42 +1,35 @@
 ---
-description: >-
-  Questa documentazione fornisce indicazioni per la produzione dell’avviso
-  analogico di pagamento pagoPA. Il documento è di riferimento per gli Enti
-  Creditori ed i Prestatori di Servizi di Pagamento.
-cover: .gitbook/assets/avvisi3_0.png
+
+description: \>-  
+This documentation provides information about producing the pagoPA analog payment notice The document is for reference for the creditors and payment service providers.  
+cover: .gitbook/assets/avvisi3_0.png  
 coverY: 276
 ---
 
-# 👋 Introduzione
+# 👋 Introduction
 
-## A cosa serve l'avviso di pagamento pagoPA?
+## What is the purpose of the pagoPA payment notice?
 
-L'avviso di pagamento consente a tutti i cittadini di avere un unico strumento (cartaceo o digitale) per effettuare i pagamenti tramite la piattaforma pagoPA in maniera facile e immediata.
+The payment notice allows all citizens to have a unique instrument (paper or digital) to perform payments via the pagoPA platform in an easy and direct manner.
 
-Lo scopo di questo documento è uniformare la produzione di tali avvisi da parte degli Enti Creditori, usando le stesse regole di progettazione, in modo da:
+The purpose of this document is to uniform the production of these notices by the creditors, using the same design rules, in order to:
 
-1. **fornire la stessa esperienza utente** a tutti gli utenti del sistema;
-2. **assicurare leggibilità**, coerenza e completezza dei contenuti;
-3. **garantire la multi-canalità,** massimizzando la possibilità che l'avviso sia pagabile presso tutti i canali autorizzati.&#x20;
+1. **Provide the same user experience** to all system users;
+2. **Ensure legibility**, coherence and completeness of contents;
+3. **Guarantee multi-channels,** maximizing the possibility that the notice is payable through all authorized channels. 
 
-## Qual è il modello da utilizzare?
+## What is the model to use?
 
-Sono previsti diversi modelli di riferimento per supportare al meglio le varie tipologie di pagamento. I modelli devono essere utilizzati obbligatoriamente da parte degli Enti Creditori aderenti a pagoPA che offrono servizi di pagamento attivati presso il PSP.
+There are different models of reference to best support the various payment types. The models must be used by the creditors affiliated with pagoPA who offer payment services activated at the PSP.
 
 {% include ".gitbook/includes/novita-e-ora-possibile-gen....md" %}
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Modelli base</strong></td><td>I modelli più utilizzati: avviso di pagamento con rata unica e/o con rate multiple.</td><td><a href="allegato-1/modelli-base.md">Inizia da qui --></a></td><td><a href="allegato-1/modelli-base.md">modelli-base.md</a></td></tr><tr><td><strong>Varianti</strong></td><td>Una raccolta di template basati sul modello base per supportare meglio  casi d'uso specifici.</td><td><a href="allegato-1/varianti/">Vedi tutte --></a></td><td><a href="allegato-1/varianti/">varianti</a></td></tr><tr><td><strong>Esempi</strong></td><td>Alcuni esempi di avvisi già realizzati, così da aiutare gli Enti Creditori che devono progettare il loro avviso di pagamento.</td><td><a href="allegato-1/esempi.md">Guarda gli esempi --></a></td><td><a href="allegato-1/esempi.md">esempi.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Base models</strong></td><td>The most commonly used models: payment notice with a single installment and/or multiple installments.</td><td><a href="attachment-1/base.models.md">Start here --&gt;</a></td><td><a href="attachment-1/base.models.md">base.models.md</a></td></tr><tr><td><strong>Variants</strong></td><td>A collection of templates based on bas models to best support specific use cases.</td><td><a href="attachment-1/variants/">See all --&gt;</a></td><td><a href="attachment-1/variants/">variants</a></td></tr><tr><td><strong>Examples</strong></td><td>Some examples of notices that were already created, in order to help creditors who must design their payment notice.</td><td><a href="attachment-1/examples.md">See the examples --&gt;</a></td><td><a href="attachment-1/examples.md">examples.md</a></td></tr></tbody></table>
 
-### Per approfondire
+### More information
 
-{% content-ref url="allegato-2/specifiche-tecniche/" %}
-[specifiche-tecniche](allegato-2/specifiche-tecniche/)
-{% endcontent-ref %}
+{% content-ref url="attachment-2/technical-specifications/" %} [technical-specifications](attachment-2/technical-specifications/) {% endcontent-ref %}
 
-{% content-ref url="allegato-2/elementi-di-design/" %}
-[elementi-di-design](allegato-2/elementi-di-design/)
-{% endcontent-ref %}
+{% content-ref url="attachment-2/design-elements/" %} [design elements](attachment-2/design-elements/) {% endcontent-ref %}
 
-{% content-ref url="allegato-2/come-usare-i-file.md" %}
-[come-usare-i-file.md](allegato-2/come-usare-i-file.md)
-{% endcontent-ref %}
+{% content-ref url="attachment-2/how-to-use-the-files.md" %} [how-to-use-the-files.md](attachment-2/how-to-use-the-files.md) {% endcontent-ref %}

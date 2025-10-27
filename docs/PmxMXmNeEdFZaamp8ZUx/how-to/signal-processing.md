@@ -1,0 +1,17 @@
+# Signal processing
+
+1. the consumer accesses the list of variation signals
+2. If the signals include a _SeedUpdate_ type of signal (see the section on [types of signals](../the-technical-guide/signals.md)), the consumer must update the cryptographic information
+3. The consumer searches in the received signals for the associated pseudonymized identifiers related to subjects for which there are current procedures. The search determines if the pseudonymized identifier is attributable to a subject with a current procedure by comparing
+   1. the pseudonymized identifier contained in the message
+   2. the pseudonymized identifier precalculated or calculated at runtime of each subject for which there is a current procedure
+4. the consumer finds a pseudonymized identifier associated with one of the precalculated pseudonymized identifiers and identifies the identifier in clear text of the data subject to variation
+5. after examining all the signals, the consumer has the list of identifiers in clear text of data subject to change, necessary for invoking the e-service of interest
+
+<figure><img src="../.gitbook/assets/elaborazione dei segnali.png" alt=""><figcaption></figcaption></figure>
+
+`{% embed url="https://mermaid.live/edit#pako:eNqVVc1um0AQfpXR9pJIdgTYjgxqI_mnuVRVD2l7qLgsMMYjwS5dFqt2lPfpe_TFOgvGsWP7EA6I3fn7Zuab4VmkOkMRieFwGCtLtsAIsJCJNnJHWiFkSFBjrmRBsUq1WlEexQrArrFk3UTWeDj-lIZkUmDdagBUhkpptgtdaBNBLD48Ps4fPS8WsWrjxarG3w2qFJckcyPLWMnGatWUCZpYVdJYSqmSysISZA04rNFsKMW9-yP5zMkXWtVNKa02-Ir5reb8iubHxDwUVFsJtc5ztJaA0-UcdIoZlaisBlKANWO4AGDxPrcbVypX4T3C7m0wtWDy5MYP_QEEwYhfk8ltJ1TaIugNGpgNFhE8EUfkaAjpGoEK5_YQXCYJSdDWouKCQqMkdCAyOq2MLCwUB-Frrzmagn9_YdNoKztV9xRaV1AxBJ2rXhdfxe7RlYWanOD7tkL4BE-I2Y8qk_aN4mlOywhknpM2Sna1doXjbJDrVHCOhqzVzJEVpfrcz2z48MAeDKVrQk7FGa8a1VH42FbCzVrWa1I5uBaVeHvubMnOZhF8-wJDuOKks72MY3Ypk3f64SJedZ7KIuWJYltuRM2NQ7VrE-b-5dw5yjgqOfeWNtQ1dU-9c5-ostPL9uL0ysWdR45fK6PbMTiOoKGqscmYySXtdkw_jlhcpoYjG3OKu6RV1qSUEHdWMjt7gPps5M4Rz7sqMJ-oi9Sb8nBy96W5SI_OiKvG5Ogh9oaO5m4c7RViLbqGNirHs9TdKLgp453QQepb_7bYWNTYD9VJAa6jPQB0ZtbozRnCk-4dDoePo2OsxECUaEpJGa_7ZyeKRbu1Y-F2c4Yr2RTW7eYXVnV7-GmrUhFZ0-BANO0A79e0iFaS0xkI7hKvm6_dL6T9kwwEb8NfWpe9IR9F9Cz-iMj3_LvA88eTYOJ7k_vJeDIQWxENg_FdeB-MR-HIC0dhMJq-DMSu9eDfeSNv6vne2LsPp-NpyBZGN_n6AKCD9bmF0UfMjUux-zacPJqFbpQVUeCPwpf_XB4y2g" %}`
+
+<figure><img src="../.gitbook/assets/elaborazione del segnale.png" alt=""><figcaption><p>signal processing</p></figcaption></figure>
+
+`{% embed url="https://mermaid.live/edit#pako:eNqVVc1um0AQfpXR9pJIOALbtDZqI_mnuVRVD2l7qLgsMMYjwS5dFqt2lPfpe_TFOgvGsWP7EA6I3fn7Zuab4UmkOkMRicFgECtLtsAIsJCJNnJHWiFkSFBjrmRBsUq1WlEexQrArrFk3UTWeDj-lIZkUmDdagBUhkpptgtdaBNBLN49PMwffD8WsWrjxarG3w2qFJckcyPLWMnGatWUCZpYVdJYSqmSysISZA04qNFsKMW9-yP5zMkXWtVNKa02-IL5teb8iubHxNwXVFsJtc5ztJaA0-UcdIoZlaisBlKANWO4AGDxNrcbVypX4T3C7m0wtWDy5CaYBh4MhyN-heFtJ1TaIugNGph5iwgeiSNyNIR0jUCFc3sILpOEJGhrUXFBoVESOhAZnVZGFhaKg_Cl1xxNwb-_sGm0lZ2qewqtK6gYgs5Vr4svYvfoykJNTvB9WyF8gkfE7EeVSftK8TSnZQQyz0kbJbtau8JxNsh1KjhHQ9Zq5siKUn3uZza4v2cPhtI1IafijFeN6ih8bCvhZi3rNakcXItKvD13tmRnswi-fYEBXHHS2V7GMbuUyRv9cBGvOk9lkfJEsS03oubGodq1CXP_cu4cZRyVnHtLG-qauqfeuU9U2elle3F65eLOI8evldHtGBxH0FDV2GTM5JJ2O6YfRywuU8ORjTnFXdIqa1JKiDsrmZ09QH02cueI510VmE_URepNeTi5-9JcpEdnxFVjcvQQe0NHczeO9gqxFl1DG5XjWepuFNyU8U7oIPWtf11sLGrsh-qkANfRHgA6M2v05gzhSfcOh8PH0TFWwhMlmlJSxuv-yYli0W7tWLjdnOFKNoV1u_mZVd0eftyqVETWNOiJph3g_ZruL7lJvG2-dn-Q9kfiCV6Gv7Q-qPBRRE_ij4gCP7gb-sE4HIaBH74Px6EntiIaDMd30_fD8Wg68qej6XA0efbErvUQ3Pkjf-Kz9odJEIZhMPGE0U2-FtFKcjl7VJ9bGH3E3LgMu2_DuaNZ6EZZEU2f_wORYDHx" %}`signal processing `{% endembed %}`

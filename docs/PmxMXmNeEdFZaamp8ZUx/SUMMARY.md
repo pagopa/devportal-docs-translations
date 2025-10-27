@@ -1,34 +1,34 @@
 # Table of contents
 
-## IL PRODOTTO
+## THE PRODUCT
 
-* [Introduzione](README.md)
-* [Target del prodotto](il-prodotto/target-del-prodotto.md)
-* [Norme che regolano il prodotto](il-prodotto/norme-che-regolano-il-prodotto.md)
-* [Funzione Generale](il-prodotto/funzione-generale.md)
+* [Introduction](README.md)
+* [Product target](the-product/product-target.md)
+* [Standards that regulate the product](the-product/standards-that-regulate-the-product.md)
+* [General function](the-product/general-function.md)
 
-## La guida tecnica
+## The technical guide
 
-* [Glossario](la-guida-tecnica/glossario.md)
-* [Segnali](la-guida-tecnica/segnali.md)
-* [Documentazione del produttore](la-guida-tecnica/documentazione-del-produttore.md)
-* [Retention Period](la-guida-tecnica/retention-period.md)
-* [Limite di utilizzo del servizio: rate limiting](la-guida-tecnica/limite-di-utilizzo-del-servizio-rate-limiting.md)
-* [Documenti specifica OpenAPI](la-guida-tecnica/documenti-specifica-openapi.md)
+* [Glossary](the-technical-guide/glossary.md)
+* [Signals](the-technical-guide/signals.md)
+* [Producer documentation](the-technical-guide/producer-documentation.md)
+* [Retention Period](the-technical-guide/retention-period.md)
+* [Service use limit: rate limiting](the-technical-guide/service-use-limit-rate-limiting.md)
+* [OpenAPI specification documents](the-technical-guide/openapi-specification-documentation.md)
 
 ## HOW TO
 
-* [Prerequisiti](how-to/prerequisiti.md)
-* [Scambio o aggiornamento delle informazioni crittografiche](how-to/scambio-o-aggiornamento-delle-informazioni-crittografiche.md)
-* [Produzione dei segnali](how-to/produzione-dei-segnali.md)
-* [Consumo dei segnali](how-to/consumo-dei-segnali.md)
-* [Recupero dei segnali](how-to/recupero-dei-segnali.md)
-* [Elaborazione dei segnali](how-to/elaborazione-dei-segnali.md)
-* [Aggiornamento del dato](how-to/aggiornamento-del-dato.md)
+* [Prerequisites](how-to/prerequisites.md)
+* [Exchange or update of cryptographic information](how-to/exchange-or-update-of-cryptographic-information.md)
+* [Signal production](how-to/production-of-signals.md)
+* [Signal consumption](how-to/signal-consumption.md)
+* [Signal recovery](how-to/signal-recovery.md)
+* [Signal processing](how-to/signal-processing.md)
+* [Data update](how-to/update-data.md)
 
 ## TUTORIAL
 
-* [Come esporre le informazioni crittografiche - pseudonimizzazione](tutorial/come-esporre-le-informazioni-crittografiche-pseudonimizzazione.md)
-* [Come ottenere le informazioni crittografiche](tutorial/come-ottenere-le-informazioni-crittografiche.md)
-* [Come depositare un segnale](tutorial/come-depositare-un-segnale.md)
-* [Come recuperare i segnali](tutorial/come-recuperare-i-segnali.md)
+* [How to present the cryptographic information - pseudonymization](tutorial/how-to-present-the-cryptographic-information-pseudonymization.md)
+* [How to obtain cryptographic information](tutorial/how-to-obtain-cryptographic-information.md)
+* [How to deposit a signal](tutorial/how-to-deposit-a-signal.md)
+* [How to recover signals](tutorial/how-to-recover-signals.md)

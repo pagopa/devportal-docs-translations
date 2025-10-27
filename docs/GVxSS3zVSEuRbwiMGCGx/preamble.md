@@ -1,0 +1,11 @@
+# 📑 Preamble
+
+The decree of the Ministry for youth policies and sport dated February 27, 2020 established the National Youth Card (“**CGN"**) as provided by art.1(413) of law 27 December 2019 no.160, with the purpose of promoting a better quality of life for young generations, supporting the growth process and providing incentives for opportunities targeted toward promoting growth and participation in cultural, sports and recreational activities, also for educational purposes. 
+
+The owner of the initiative is the Department for youth policies and the Universal Civil Service of the President of the Council of Ministers (“**Department**”), which uses PagoPA S.p.A. And Eutalia S.r.l. For the operational and IT activities concerning the CGN. 
+
+The CGN is a virtual, individual and nominative instrument dedicated to young Italian and European residents in Italy, between ages of 18 and 35 (“**Beneficiaries**”), which can be requested exclusively through the IO app provided by PagoPA S.p.A., and used in order to take advantage of the opportunities offered by public and private entities that joined the initiative (“**Operators**”) for the purchase of or access to goods and services. 
+
+This document and further documents referenced here (for example the API specifications) constitute the “**Technical Documentation**” that will become an integral and substantial part of the agreement for the operators (“**Agreement**”) for registering with the National Youth Card program (“**Program**”). These documents define the minimum technical requirements necessary, the accreditation methods, the conditions and instructions for the generation and recognition of the opportunities in favor of the Beneficiaries and, more in general, technical information regarding how the Operators can correctly implement the Agreement. 
+
+The CGN belongs to the youth card network for European Countries associated with the EYCA (European Youth Cards Association), dedicated to age range between 18 and 30, and therefore the opportunities offered by the Operator can also be extended to holders of the EYCA youth card, according to the methods indicated in the[dedicated paragraph](the-opportunities/riconoscimento-delthe-opportunities-ai-titolari-di-eyca.md) of this document.

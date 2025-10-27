@@ -1,54 +1,54 @@
 # Table of contents
 
-* [🏠 Carta Giovani Nazionale - Documentazione Tecnica](README.md)
-* [🕐 Storico delle modifiche](storico-delle-modifiche.md)
-* [📑 Premessa](premessa.md)
+* [🏠 National Youth Card - technical documentation](README.md)
+* [🕐 Change history](history-of-the-changes.md)
+* [📑 Preamble](preamble.md)
 
-## 🤝 aderire al programma
+## 🤝 join the program
 
-* [Come si diventa Partner](aderire-al-programma/come-si-diventa-partner.md)
-* [I requisiti](aderire-al-programma/i-requisiti.md)
+* [How to become a partner](join-the-program/how-to-become-a-partner.md)
+* [The requirements](join-the-program/the-requirements.md)
 
-## ✍️ il convenzionamento
+## ✍️ The agreement
 
-* [Il convenzionamento](il-convenzionamento/il-convenzionamento/README.md)
-  * [Dettaglio dati: Operatore](il-convenzionamento/il-convenzionamento/dettaglio-dati-operatore.md)
-* [Firma della convenzione](il-convenzionamento/firma-della-convenzione.md)
-* [Esito della richiesta di convenzionamento](il-convenzionamento/esito-della-richiesta-di-convenzionamento.md)
+* [The agreement](the-agreement/the-agreement/README.md)
+  * [Data details: Operator](the-agreement/the-agreement/operator-data-details.md)
+* [Agreement signature](the-agreement/agreement-signature.md)
+* [Result of the agreement request](the-agreement/result-of-the-agreement-request.md)
 
-## 🪄 Le opportunità
+## 🪄 The opportunities
 
-* [Cos'è un'opportunità](le-opportunita/cose-unopportunita.md)
-* [Come creare un'opportunità](le-opportunita/come-creare-unopportunita/README.md)
-  * [Dettaglio dati: opportunità](le-opportunita/come-creare-unopportunita/dettaglio-dati-opportunita.md)
-* [Le modalità di riconoscimento e validazione delle opportunità](le-opportunita/le-modalita-di-riconoscimento-e-validazione-delle-opportunita/README.md)
-  * [1️⃣ Presenza fisica del Beneficiario](le-opportunita/le-modalita-di-riconoscimento-e-validazione-delle-opportunita/presenza-fisica-del-beneficiario.md)
-  * [2️⃣ Modalità API](le-opportunita/le-modalita-di-riconoscimento-e-validazione-delle-opportunita/modalita-api.md)
-  * [3️⃣ Modalità codice sconto statico](le-opportunita/le-modalita-di-riconoscimento-e-validazione-delle-opportunita/modalita-codice-sconto-statico.md)
-  * [4️⃣ Modalità lista di codici statici](le-opportunita/le-modalita-di-riconoscimento-e-validazione-delle-opportunita/modalita-lista-di-codici-statici.md)
-  * [5️⃣ Modalità landing page](le-opportunita/le-modalita-di-riconoscimento-e-validazione-delle-opportunita/modalita-landing-page.md)
-* [Stati delle opportunità](le-opportunita/stati-delle-opportunita.md)
-* [Riconoscimento delle opportunità ai titolari di EYCA](le-opportunita/riconoscimento-delle-opportunita-ai-titolari-di-eyca.md)
+* [What is an opportunity](the-opportunities/what-is-an-opportunity.md)
+* [How to create an opportunity](the-opportunities/how-to-create-an-opportunity/README.md)
+  * [Data details: opportunities](the-opportunities/how-to-create-an-opportunity/opportunity-data-details.md)
+* [The methods for recognizing and validating opportunities](the-opportunities/the-methods-for-recognizing-and-validating-opportunities/README.md)
+  * [1️⃣ Physical presence of the beneficiary](the-opportunities/the-methods-for-recognizing-and-validating-opportunities/physical-presence-of-the-beneficiary.md)
+  * [2️⃣ API mode](the-opportunities/the-methods-for-recognizing-and-validating-opportunities/api-mode.md)
+  * [3️⃣ Static discount code mode](the-opportunities/the-methods-for-recognizing-and-validating-opportunities/static-discount-code-mode.md)
+  * [4️⃣ Static code list mode](the-opportunities/the-methods-for-recognizing-and-validating-opportunities/static-code-list-mode.md)
+  * [5️⃣ Landing page mode](the-opportunities/the-methods-for-recognizing-and-validating-opportunities/landing-page-mode.md)
+* [Statuses of the opportunities](the-opportunities/opportunity-statuses.md)
+* [Recognition of the opportunities to holders of EYCA](recognition-of-the-opportunities-to-holders-of-eyca.md)
 
-## 🖍️ Manuale di scrittura per gli operatori
+## 🖍️ Writing manual for operators
 
-* [Guida alla scrittura](manuale-di-scrittura-per-gli-operatori/guida-alla-scrittura.md)
-* [La scheda dell'Operatore](manuale-di-scrittura-per-gli-operatori/la-scheda-delloperatore.md)
-* [La scheda dell'opportunità](manuale-di-scrittura-per-gli-operatori/la-scheda-dellopportunita.md)
+* [Guide to writing](writing-manual-for-operators/writing-guide.md)
+* [The Operator tab](writing-manual-for-operators/the-operator-tab.md)
+* [The opportunity tab](writing-manual-for-operators/the-opportunity-tab.md)
 
-## 🔄 RICHIESTE DI MODIFICA
+## 🔄 CHANGE REQUESTS
 
-* [Come modificare la scheda operatore e delle opportunità](richieste-di-modifica/come-modificare-la-scheda-operatore-e-delle-opportunita.md)
-* [Come aggiungere, sostituire e/o cancellare un Referente](richieste-di-modifica/come-aggiungere-sostituire-e-o-cancellare-un-referente.md)
+* [How to change the operator and the opportunities tab](change-requests/how-to-change-the-operator-and-opportunities-tab.md)
+* [How to add, replace and/or delete a representative](change-requests/how-to-add-replace-and-or-delete-a-representative.md)
 
-## 🔵 l'app IO
+## 🔵 the IO APP
 
-* [La Carta Giovani Nazionale nell'App IO](lapp-io/la-carta-giovani-nazionale-nellapp-io.md)
-* [Lista delle opportunità visibile su App IO](lapp-io/lista-delle-opportunita-visibile-su-app-io.md)
+* [The National Youth Card in the IO app](io-app/the-national-youth-card-in-the-io-app.md)
+* [List of the opportunities available on the IO app](io-app/list-of-the-opportunities-available-on-the-io-app.md)
 
-## ⬇️ appendice
+## ⬇️ appendix
 
-* [Assistenza](appendice/assistenza.md)
-* [Glossario](appendice/glossario.md)
-* [Branding](appendice/branding.md)
-* [Ulteriori termini e condizioni d'uso del Portale](appendice/ulteriori-termini-e-condizioni-duso-del-portale.md)
+* [Assistance](appendix/support.md)
+* [Glossary](appendix/glossary.md)
+* [Branding](appendix/branding.md)
+* [Additional portal use terms and conditions](appendix/additional-portal-use-terms-and-conditions.md)
