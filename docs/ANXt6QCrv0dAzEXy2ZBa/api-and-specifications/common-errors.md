@@ -1,5 +1,5 @@
 ---
-description: \>-
+description: >-
   In this section you will find some of the possible errors when sending a request to the APIs.
 ---
 
