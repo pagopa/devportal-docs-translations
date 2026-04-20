@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This section guides you through the configuration of the “Groups” function in the Reserved area, which allows you to define the visibility of services with respect to one or more users (operators).
+description: >- 
+   This section guides you through the configuration of the “Groups” function in the Reserved area, which allows you to define the visibility      of services with respect to one or more users (operators).
 ---
 
 # Manage access to services via groups
