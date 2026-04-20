@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-To provide services on IO, a standard contract must first be signed.
+description: >-
+  To provide services on IO, a standard contract must first be signed.
 ---
 
 # 🔢 Initial setup
