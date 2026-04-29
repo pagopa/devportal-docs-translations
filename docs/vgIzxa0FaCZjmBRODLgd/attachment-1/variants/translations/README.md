@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-The guidelines for the payment notices also include versions to support languages different than Italian, depending on the various contexts of use.
+description: >-
+  The guidelines for the payment notices also include versions to support languages different than Italian, depending on the various contexts of use.
 ---
 
 # Translations
