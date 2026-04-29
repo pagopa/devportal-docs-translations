@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This page contains the instructions for correctly viewing the various models and inspecting the specifications
+description: \>
+  This page contains the instructions for correctly viewing the various models and inspecting the specifications
 ---
 
 # ❓ How to use the files
