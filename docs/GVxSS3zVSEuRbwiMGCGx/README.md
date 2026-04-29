@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-Technical and implementary conditions and instructions for the National Youth Card for operators.
+description: >-
+  Technical and implementary conditions and instructions for the National Youth Card for operators.
 ---
 
 # 🏠 National Youth Card - technical documentation
