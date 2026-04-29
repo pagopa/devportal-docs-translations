@@ -1,9 +1,8 @@
 ---
-
-description: \>-  
-This documentation provides information about producing the pagoPA analog payment notice The document is for reference for the creditors and payment service providers.  
-cover: .gitbook/assets/avvisi3_0.png  
-coverY: 276
+description: \>
+  This documentation provides information about producing the pagoPA analog payment notice The document is for reference for the creditors and payment service providers.
+  cover: .gitbook/assets/avvisi3_0.png
+  coverY: 276
 ---
 
 # 👋 Introduction
