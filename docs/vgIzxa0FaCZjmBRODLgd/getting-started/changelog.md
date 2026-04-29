@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This page contains a summary of the changes and new features introduced over time.
+description: >-
+  This page contains a summary of the changes and new features introduced over time.
 ---
 
 # 🕘 Changelog
