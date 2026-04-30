@@ -23,5 +23,5 @@ Platform updates are communicated to all participating PSPs through a dedicated 
 This version of the SACI (Implementation specifications of payment, remittance and reporting identification codes) describes the features that are current or that are part of the aforementioned evolution path.
 
 {% hint style="info" %}
-For all specifications related to existing or previous features and not covered in this document \[refer to version 2.0.0]\(https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/E6d6iTzjBzUfzNoZjadZ/)
+For all specifications related to existing or previous features and not covered in this document \[refer to version 2.0.0 (in Italian)]\(https://developer.pagopa.it/it/pago-pa/guides/saci/2.0.0)
 {% endhint %}
