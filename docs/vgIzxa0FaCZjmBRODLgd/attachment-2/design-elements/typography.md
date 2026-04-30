@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This page describes the characters used in the notice and the various text styles necessary to maintain the correct information hierarchy.
+description: >-
+  This page describes the characters used in the notice and the various text styles necessary to maintain the correct information hierarchy.
 ---
 
 # Typography

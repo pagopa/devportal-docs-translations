@@ -1,5 +1,6 @@
 ---
-description: Aggiornamento versione ambiente UAT 15/11/2024, produzione 27/11/2024
+description: >-
+    Aggiornamento versione ambiente UAT 15/11/2024, produzione 27/11/2024
 ---
 
 # API VERSIONE GA24Q4.B

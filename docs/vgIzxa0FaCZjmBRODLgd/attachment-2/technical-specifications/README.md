@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-In this section (“Annex 2") you can find specific information in order to create a payment notice in all foreseen cases.
+description: >-
+  In this section (“Annex 2") you can find specific information in order to create a payment notice in all foreseen cases.
 ---
 
 # 📐 Technical specifications

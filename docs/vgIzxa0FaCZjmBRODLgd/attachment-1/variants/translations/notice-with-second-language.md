@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This model makes it possible to include a second language, such as English, without requiring additional pages.
+description: >-
+  This model makes it possible to include a second language, such as English, without requiring additional pages.
 ---
 
 # Notice with a second language

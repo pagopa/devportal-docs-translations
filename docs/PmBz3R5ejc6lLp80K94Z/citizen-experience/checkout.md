@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-With pagoPA Checkout, users can make payments via the pagoPA platform without registering, selecting the PSP most convenient for them each time.
+description: >-
+  With pagoPA Checkout, users can make payments via the pagoPA platform without registering, selecting the PSP most convenient for them each time.
 ---
 
 # Checkout

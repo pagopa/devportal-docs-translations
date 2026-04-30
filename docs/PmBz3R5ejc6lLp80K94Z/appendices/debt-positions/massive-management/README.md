@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This section provides all the information necessary for using the functions for the massive management of the debt positions on the GPD platform
+description: >-
+  This section provides all the information necessary for using the functions for the massive management of the debt positions on the GPD platform
 ---
 
 # Massive management

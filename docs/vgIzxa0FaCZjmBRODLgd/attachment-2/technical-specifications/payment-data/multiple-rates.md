@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-Use this portion to indicate the details regarding making a payment in installments, if applicable.
+description: >-
+  Use this portion to indicate the details regarding making a payment in installments, if applicable.
 ---
 
 # Multiple installments

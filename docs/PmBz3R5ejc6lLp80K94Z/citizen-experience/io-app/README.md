@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-With IO, users can use the methods saved in their Wallet and pay all the pagoPA notices, selecting the PSP most convenient for them each time.
+description: >-
+  With IO, users can use the methods saved in their Wallet and pay all the pagoPA notices, selecting the PSP most convenient for them each time.
 ---
 
 # IO app

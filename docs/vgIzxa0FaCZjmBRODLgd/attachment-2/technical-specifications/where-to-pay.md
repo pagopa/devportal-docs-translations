@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This section presents the various channels where it is possible to pay a pagoPA notice, online and in person.
+description: >-
+  This section presents the various channels where it is possible to pay a pagoPA notice, online and in person.
 ---
 
 # Where to pay

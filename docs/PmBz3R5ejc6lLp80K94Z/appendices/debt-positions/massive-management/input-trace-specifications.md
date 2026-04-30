@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-Specifications related to files to be used as input for massive loading services
+description: >-
+ Specifications related to files to be used as input for massive loading services
 ---
 
 # 📄 Input trace specifications

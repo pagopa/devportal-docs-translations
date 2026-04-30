@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This page describes how to use margins and spacing to prepare the print layout.
+description: >-
+  This page describes how to use margins and spacing to prepare the print layout.
 ---
 
 # Margins and spaces

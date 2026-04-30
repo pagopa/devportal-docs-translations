@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-It is also possible to produce the payment notice in only once language—other than Italian—if the institution knows the nationality of the notice recipient.
+description: >-
+  It is also possible to produce the payment notice in only once language—other than Italian—if the institution knows the nationality of the notice recipient.
 ---
 
 # Notice in another language

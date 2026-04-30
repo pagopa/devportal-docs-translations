@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This page shows the various versions based on a base model to best support the various use cases.
+description: >-
+  This page shows the various versions based on a base model to best support the various use cases.
 ---
 
 # 🍭 Variants

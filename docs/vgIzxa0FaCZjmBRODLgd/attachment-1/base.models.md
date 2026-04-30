@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This page contains the pagoPA payment notice models. You can view them in Figma or download them in SVG format.
+description: >-
+  This page contains the pagoPA payment notice models. You can view them in Figma or download them in SVG format.
 ---
 
 # 📄 Base models

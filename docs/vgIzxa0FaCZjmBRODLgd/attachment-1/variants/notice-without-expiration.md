@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-If the payment notice does not have a due date, you can omit some fields.
+description: >-
+  If the payment notice does not have a due date, you can omit some fields.
 ---
 
 # Notice without due date

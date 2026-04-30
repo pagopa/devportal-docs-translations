@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-The notice header is the area that makes it possible to see the subject of the payment and compatibility with the pagoPA platform at a glance.
+description: >-
+  The notice header is the area that makes it possible to see the subject of the payment and compatibility with the pagoPA platform at a glance.
 ---
 
 # Header

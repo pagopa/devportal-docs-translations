@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This model takes into account payment notices whose due date depend on the notification date, and explain better how to calculate the amounts to be paid.
+description: >-
+  This model takes into account payment notices whose due date depend on the notification date, and explain better how to calculate the amounts to be paid.
 ---
 
 # Traffic code violations

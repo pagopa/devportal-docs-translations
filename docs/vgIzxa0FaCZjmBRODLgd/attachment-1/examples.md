@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This page contains various examples of notices that were already created, in order to help creditors who must design their payment notice.
+description: >-
+  This page contains various examples of notices that were already created, in order to help creditors who must design their payment notice.
 ---
 
 # ✨ Examples

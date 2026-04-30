@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This page defines the structure of the string to code in the QR code
+description: >-
+  This page defines the structure of the string to code in the QR code
 ---
 
 # QR code

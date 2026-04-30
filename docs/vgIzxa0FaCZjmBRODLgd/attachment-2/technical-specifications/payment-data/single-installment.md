@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-Use this portion to indicate the details regarding making a single payment, if applicable.
+description: >-
+  Use this portion to indicate the details regarding making a single payment, if applicable.
 ---
 
 # Single installment

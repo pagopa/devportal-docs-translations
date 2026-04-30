@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-This section contains information about how much to pay, how to pay and the relative due dates.
+description: >-
+  This section contains information about how much to pay, how to pay and the relative due dates.
 ---
 
 # Amount and due date

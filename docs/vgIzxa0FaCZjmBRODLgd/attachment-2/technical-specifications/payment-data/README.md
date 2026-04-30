@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-It is the section that contains all the information necessary to make the payment.
+description: >-
+  It is the section that contains all the information necessary to make the payment.
 ---
 
 # Payment data

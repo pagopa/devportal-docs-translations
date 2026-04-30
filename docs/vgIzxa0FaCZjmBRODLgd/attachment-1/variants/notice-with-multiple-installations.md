@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-If the payment notice includes multiple installments, for example in the case of a fine, a model can be used that is designed to optimize printing and include multiple installments on the same page.
+description: >-
+  If the payment notice includes multiple installments, for example in the case of a fine, a model can be used that is designed to optimize printing and include multiple installments on the same page.
 ---
 
 # Notice with multiple installments

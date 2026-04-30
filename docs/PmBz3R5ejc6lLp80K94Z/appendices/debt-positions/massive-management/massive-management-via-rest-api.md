@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-Procedure for loading, changing and massive deletion of the debt positions on GPD
+description: >-
+  Procedure for loading, changing and massive deletion of the debt positions on GPD
 ---
 
 # ⚙️ Massive management via API REST

@@ -1,7 +1,6 @@
 ---
-
-description: \>-  
-With IO, it is possible to add debit, credit and prepaid cards (enabled for e-commerce transactions) to your Wallet and pay pagoPA notices.
+description: >-
+  With IO, it is possible to add debit, credit and prepaid cards (enabled for e-commerce transactions) to your Wallet and pay pagoPA notices.
 ---
 
 # Cards
