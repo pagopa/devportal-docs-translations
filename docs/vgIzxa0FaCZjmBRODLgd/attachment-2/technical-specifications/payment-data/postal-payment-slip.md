@@ -1,7 +1,6 @@
 ---
-
-description: >-  
-If the creditor has a postal current account for collections, also the PA postal payment slip must be included.
+description: >-
+  If the creditor has a postal current account for collections, also the PA postal payment slip must be included.
 ---
 
 # PA postal payment slip
