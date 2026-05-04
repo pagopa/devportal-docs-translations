@@ -1,0 +1,2 @@
+# Display of received notifications
+

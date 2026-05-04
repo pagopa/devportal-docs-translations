@@ -1,0 +1,3 @@
+# Generation of certificates enforceable against third parties
+
+A certificate enforceable against third parties is generated in the case of particular events. If the event occurs, a PDF document is produced with the previously described content. The qualified digital seal of PagoPA S.p.A. and the certified time stamp are applied to the document. This guarantees the immutability and non-repudiation of the document. It also guarantees the date of document generation. The document is then stored as previously described.

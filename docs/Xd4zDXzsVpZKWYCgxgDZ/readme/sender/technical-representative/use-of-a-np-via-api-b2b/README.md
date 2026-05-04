@@ -1,0 +1,3 @@
+# Use of the NP via B2B API
+
+NP provides a set of APIs that permit the integration of the sending PA's operational systems with NP to obtain, if necessary, the automatic management of the notifications. The APIs that permit sending and managing notifications are documented [here](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/pagopa/pn-delivery/develop/docs/openapi/api-external-b2b-pa-v1.yaml), whereas those to use to obtain information regarding the change in status are documented [here](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/pagopa/pn-delivery-push/develop/docs/openapi/api-external-b2b-webhook-v1.yaml).
