@@ -1,0 +1,7 @@
+# How to change the operator and the opportunities tab
+
+When joining the program, by accessing the portal, the operator can integrate, add or change the data on the operator tab and create and publish new opportunities or change and delete the offered opportunities. Only if it is necessary to change the name of the operator and/or the company data, the operator must request the Department for approval and if necessary stipulate a new agreement. The changes indicated above can be made autonomously on the portal, which the operator can access using the SPID credentials of the assigned representative. It remains understood that it is necessary to pass the technical tests and the abusive or fraudulent modification of opportunities that have already been published and have not yet expired is prohibited.
+
+The Department reserves the right to suspend the new opportunity if it is considered non-compliant with these technical rules or the agreement. In that case, the operator will receive a notification with the reason for the suspension and will be able to delete the opportunity or change its details in accordance with the instructions of the Department.
+
+{% hint style="warning" %} The Department also reserves the right to interrupt the relationship with operators who do not offer opportunities for a prolonged period of time within a period of one year of the agreement. {% endhint %}
