@@ -1,6 +1,6 @@
 ---
 description: >-
-This model is used to respect perfect administrative bilingualism, such as for example between Italian and German in the autonomous province of Bolzano-Alto Adige.
+ This model is used to respect perfect administrative bilingualism, such as for example between Italian and German in the autonomous province of Bolzano-Alto Adige.
 ---
 
 # Bilingual notice
