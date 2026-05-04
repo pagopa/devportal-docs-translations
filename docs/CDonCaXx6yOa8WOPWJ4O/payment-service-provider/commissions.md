@@ -1,0 +1,11 @@
+# Commissions
+
+The services offered by the various PSPs registered with the pagoPA platform, with particular reference to the cost of payment commissions, must be presented to the end user via the PagoPA S.p.A. touch points, ensuring the same opportunities of competition, equality of treatment and non-discrimination to all registered PSPs. This means that the order of display of the PSPs must be random and the logo of the provided service must be shown, together with the logo of the PSP that displays it, next to the text that identifies the service itself. 
+
+The information regarding the commissions applied by the PSPs are sent to the pagoPA platform via the Information Data Catalog support data structure within the valoreCommissione element. 
+
+To permit all the PSPs to comply with the regulations regarding banking transparency towards the payers who do not have a framework contract in force with that specific PSP selected on the platform, it is necessary that:
+
+* every individual PSP completes an informational sheet template for the payment services made available on the pagoPA platform, this template is prepared by PagoPA S.p.A.;
+* the product website of the pagoPA platform provides an active link to the respective information sheet for every PSP so that information regarding the payment operation is available on the pagoPA platform in pre and/or post contractual mode for the individual remote transaction;
+* In order to verify that there is constant compliance between what is indicated on the individual information sheet and what is indicated by PagoPA S.p.A. on the pagoPA platform, and specifically in the Checkout component and to avoid that PagoPA S.p.A. presents information that is different than what is indicated by the PSP on its information sheet, the information sheet for the information present in the Information Data Catalog related to the commission costs will refer to a different section of the product site of the pagoPA platform, and this information will be displayed to potential payers via a specific function.
