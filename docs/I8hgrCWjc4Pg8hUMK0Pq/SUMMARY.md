@@ -1,0 +1,78 @@
+# Table of contents
+
+* [🏠 Technical guide](README.md)
+* [🕗 Changelog](changelog.md)
+* [🔢 Initial setup](initial-setup/README.md)
+  * [Registration via the Reserved Area](initial-setup/registration-via-reserved-area.md)
+  * [Registration with the Developer Portal](initial-setup/registration-as-a-portal-developer.md)
+  * [Remote configuration](initial-setup/remote-configuration.md)
+
+## Function
+
+* [📦 Publish a service](function/publish-a-service.md)
+* [Create a service](function/create-a-service.md)
+* [Try a service being tested](function/try-a-service-being-tested.md)
+* [Service review](function/service-review.md)
+* [Visibility of the service in app](function/visibility-of-the-service.md)
+* [Import of services in the Reserved Area](function/import-services-in-reserved-area.md)
+* [Mandatory data](function/mandatory-data.md)
+* [Attributes](function/attributes.md)
+* [Service metadata](function/service-metadata.md)
+* [Sensitive information](function/sensitive-information.md)
+* [Service topic](function/service-topic.md)
+* [Service status](function/service-status.md)
+* [API key](function/manage-key.md)
+* [Manage API key](function/manage-key-1.md)
+* [Use API key](function/manage-key-1-1.md)
+* [Manage access to services via groups](function/manage-access-to-services-via-groups.md)
+* [✉️ Send a message](function/send-a-message.md)
+* [Test messages](function/test-messages.md)
+* [Send a traditional message](function/send-a-traditional-message.md)
+* [Send a message with remote content](function/send-a-message-with-remote-content.md)
+* [Add attachments](function/add-attachments.md)
+
+## APIs and specifications
+
+* [📐 OpenAPI](apis-and-specifications/openapi.md)
+* [Service APIs](apis-and-specifications/service-api/README.md)
+  * [Manage Service: Get](apis-and-specifications/service-api/manage-service-get.md)
+  * [Manage Service: Get keys](apis-and-specifications/service-api/manage-service-get-keys.md)
+  * [Manage Service: Get User Services](apis-and-specifications/service-api/manage-service-get-user-services.md)
+  * [Manage Service: Create](apis-and-specifications/service-api/manage-service-create.md)
+  * [Manage Service: Delete](apis-and-specifications/service-api/manage-service-delete.md)
+  * [Manage Service: Update](apis-and-specifications/service-api/manage-service-update.md)
+  * [Manage Service: Request Review](apis-and-specifications/service-api/manage-service-request-review.md)
+  * [Manage Service: Release](apis-and-specifications/service-api/manage-service-release.md)
+  * [Manage Service: Get Released](apis-and-specifications/service-api/manage-service-get-released.md)
+  * [Manage Service: Unpublish](apis-and-specifications/service-api/manage-service-unpublish.md)
+  * [Manage Service: Regenerate api key](apis-and-specifications/service-api/manage-service-regenerate-api-key.md)
+  * [Manage Service: Upload service logo](apis-and-specifications/service-api/manage-service-upload-service-logo.md)
+  * [Upload organization logo](apis-and-specifications/service-api/upload-organization-logo.md)
+  * [Service Topics: Get all service topics](apis-and-specifications/service-api/service-topics-get-all-service-topics.md)
+  * [Message APIs](apis-and-specifications/service-api/message-api.md)
+  * [Get a User Profile using POST](apis-and-specifications/service-api/get-a-user-profile-using-post.md)
+  * [Submit a Message passing the user fiscal\_code in the request body](apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md)
+  * [Get Message](apis-and-specifications/service-api/get-message.md)
+  * [CRUs, remote configurations](apis-and-specifications/service-api/cru-remote-configurations.md)
+  * [Get Subscriptions Feed](apis-and-specifications/service-api/get-subscriptions-feed.md)
+  * [⚠️ Get a User Profile](apis-and-specifications/service-api/get-a-user-profile.md)
+  * [⚠️ Submit a Message passing the user fiscal\_code as path parameter](apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-as-path-parameter.md)
+* [Common errors](apis-and-specifications/common-errors.md)
+* [API specifications](https://developer.io.italia.it/openapi.html)
+* [OpenAPI recovery endpoint of remote content](apis-and-specifications/openapi-recovery-endpoint-of-remote-content.md)
+* [Public IP address](apis-and-specifications/public-ip-address.md)
+
+***
+
+* [🔑 Authorizations](enabling/README.md)
+  * [Test with real fiscal codes](enabling/test-with-real-fiscal-codes.md)
+  * [Test sending pagoPA notices](enabling/test-sending-pagopa-notices.md)
+  * [Subscription feed](enabling/subscription-feed.md)
+  * [Management of services](enabling/manage-services.md)
+  * [Premium functions](enabling/premium-function.md)
+
+## Useful resources
+
+* [#️⃣ Guide to the Markdown](useful-resources/guide-to-markdown.md)
+* [❓ Support for institutions (tutorials, FAQ)](https://docs.pagopa.it/kb-enti)
+* [📘 Glossary](useful-resources/glossary.md)
