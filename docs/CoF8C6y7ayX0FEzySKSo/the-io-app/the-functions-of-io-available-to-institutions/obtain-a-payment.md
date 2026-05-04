@@ -1,0 +1,6 @@
+# Obtaining a payment
+
+The following functions can be used to **obtain a payment** from citizens via IO: 
+
+<table><thead><tr><th>Function</th><th width="385.3333333333333">Description</th><th>Available</th></tr></thead><tbody><tr><td><strong>Sending a payment request</strong></td><td>A message containing information about the amount due can be sent in app. The user can proceed with the payment without having to enter any data.</td><td>✅</td></tr><tr><td><strong>Payment status</strong></td><td>Every time a payment request message is opened in app, the status is displayed.</td><td>✅</td></tr><tr><td><strong>&ldquo;Green&rdquo; check mark</strong></td><td>The sending institution can know if and when the users make a payment following a notice contained in a message</td><td>✅</td></tr><tr><td><strong>Payment reminder</strong></td><td>Push notifications and emails that remind users of any payments that are due</td><td>✅</td></tr><tr><td><strong>New payment methods for citizens</strong></td><td>Users can pay in app with the payment systems offered by their device and via their bank account</td><td><em>pending</em></td></tr><tr><td><strong>Payment receipts</strong></td><td>The user automatically receives a message proof of payment attached in a pdf file, even if it has been made on other pagoPA channels.</td><td>✅</td></tr></tbody></table>
+
