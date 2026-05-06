@@ -33,7 +33,7 @@
     * [Multiple installments](attachment-2/technical-specifications/payment-data/multiple-rates.md)
     * [PA postal payment slip](attachment-2/technical-specifications/payment-data/postal-payment-slip.md)
     * [QR code](attachment-2/technical-specifications/payment-data/qr-code.md)
-* [🔤 Design elementsù](attachment-2/design-elements/README.md)
+* [🔤 Design elements](attachment-2/design-elements/README.md)
   * [Typography](attachment-2/design-elements/typography.md)
   * [Colors](attachment-2/design-elements/colors.md)
   * [Margins and spaces](attachment-2/design-elements/margins-and-spaces.md)
