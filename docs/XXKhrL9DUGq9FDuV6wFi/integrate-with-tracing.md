@@ -109,14 +109,15 @@ indicates that on row 4, with respect to the purpose with id `3fa85f64-5717-4562
 
 The warnings returned for a specific `tracingId` contain details of the purpose of reference (`purposeId`). A warning marks a record where the `purpose_id` exists in the PDND ecosystem but is not linkable to the producer or consumer specified in the upload. Files with WARNINGS only will trigger a `WARNING` upload status; these do not need a `/recover` action and are considered valid. Following an example:
 
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "purposeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+```json
+{
+  "purposeId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
   "severity": "WARNING",
   "errorCode": "TENANT_IS_NOT_PRODUCER_OR_CONSUMER",
   "message": "purpose_id: Invalid purpose id f47ac10b-58cc-4372-a567-0e02b2c3d479",
   "rowNumber": 1
 }
-</code></pre>
+```
 
 ### How can I load data for a prior date?
 
