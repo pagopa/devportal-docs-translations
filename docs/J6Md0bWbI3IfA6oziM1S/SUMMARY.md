@@ -3,7 +3,6 @@
 ## THE PRODUCT
 
 * [Introduction](README.md)
-* [Product target](the-product/product-target.md)
 * [Standards that regulate the product](the-product/standards-that-regulate-the-product.md)
 * [General function](the-product/general-function.md)
 
