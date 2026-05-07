@@ -12,4 +12,61 @@ To be able to access the service, the following preliminary operations must be p
   * creation of a client connected to the purpose
 * the user subjects have created an interop API client necessary for using the signal deposit and recovery service by means of vouchers.
 
-`{% embed url="https://mermaid.live/edit#pako:eNqtVcFum0AQ_ZXR9tBEsiMbhzigKlLrOGoPraJY6qHissCAV4IduixRkyj_0n_pj3UWbGwnlpNW4YBh_ebN25m3zINIKEURiuFwGGmrbIEhGPzZqFpZBQuVa1nA5yaOdEI6U3kYaQC7xJJxsayxf_0ujZJxgXWLAKiMKqW5m1FBJoRIvLu6-nQ1GkUi0m2uSNecBnWCl0rmRpaRlo0l3ZQxGvd3JY1ViaqktnB9A7KGjyka1BZhbiiXlgzuomaLHdSMdN2Ue3DXl98uHbL9_cJQQ9UuYt4y4bBGc6sSdHIMJhZMHh-Ng_EAPG_CN98_7jarifMVmFmgrKUNgXRM0qRK54AbuQ58fTO8uOhACZWVKuS9Io0DyJQpJSCkWBGXn_ihKN7LJCGT8osCmWLtoJFGnb5GklH5stN0E0LVxHGhki5bx93vED7E5sKlaMuBdb3SekAvpJIdslWjPXgZq0LZFX7bTHuwh-RtBTCWQ-aLcJO6D-WSSeAfWVBOry7Sbt8SgysJSaHYRyAr9bxve0H_lW_LJ5lp1MYms8Ub2cSR_YNVZlxap-RwHzp17CqjkqXC2kqX-eW4toguhawqQ7erKvYkexJkil2j7J_fvGXpHmvl2Dmm5iB6iboPf0q9v5EbUx31kcebUHdRZXcXtvi2qsESb6lJlu5rBk-uTTumrh0jn2-T4Pg5sCCqoEIDBTM2Rr5E3MtxB2QjRu6cdf6Su8NLjrgm3iSC0sBYaWg_5XwxXNWWvw08JZpNk11sRuxIt6T6nPiciM0IsLvc-3Mb06288eE91PP14XU4MRAl8m5UykPxwcVGop1vkXBTLMVMNoV1U-yRoW5iLe50IkJrGhyIpuK6rgfaehFTd6q_dnO2HbcDwVPmB1EP4VcRPohfIvTG45NJEExPz_1zfxr4Y28g7nh5cjIOvOBsdDryvDNvOp48DsR9yzA6CbrrdDQJ_Invc4ShJl-KMJNF3auatzLWGXPjdtg987jkmTmjRlsRBo9_AQcviwU" %}` Signal Hub prerequisites `{% endembed %}`
+```mermaid
+---
+title: requisiti Signal Hub
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#FFBF00"
+---
+
+sequenceDiagram
+autonumber
+
+participant PR as Aderente Erogatore
+participant CS as Aderente Consumatore
+participant PDND as PDND Interop
+participant ES as e-service
+
+rect rgb(191, 223, 255)
+    note left of PDND: onboarding erogatore
+    PR->>PDND: compilazione, firma e deposito dell'accordo di adesione
+end
+rect rgb(191, 223, 255)
+    note right of PR: pubblicazione dell'e-service <br> di Interesse
+        PR->>PDND: compilazione dati e-service
+        PR->>PDND: abilitazione Signal Hub
+        PR->>PDND: pubblicazione dell'e-service
+        PDND->>ES: e-service pubblicato a catalogo
+end
+rect rgb(191, 223, 255)
+    note left of PDND: creazione client api
+    PR->>PDND: creazione client api
+end
+rect rgb(191, 223, 255)
+    note left of PDND: onboarding fruitore
+    CS->>PDND: compilazione, firma e deposito dell'accordo di adesione
+end
+    rect rgb(191, 223, 255)
+    note right of CS: fruizione dell'e-service
+        CS->>PR: richiesta di fruizione dell'e-service
+        PR->>CS: approvazione richiesta
+        CS->>PR: finalità e analisi del rischio
+        PR->>CS: approvazione finalità
+        CS->>PDND: creazione client e-service (finalità)
+            opt
+            CS->>PDND: richiesta del voucher
+                rect rgb(171, 205, 239)
+                loop per la durata del voucher
+                    CS->>ES: richiesta all'e-service con dato personale in chiaro
+                    ES-->>CS: restituzione delle informazioni richieste
+                end  
+            end
+            end 
+    end
+rect rgb(191, 223, 255)
+    note left of PDND: creazione client api
+    CS->>PDND: creazione client api
+end    
+```
