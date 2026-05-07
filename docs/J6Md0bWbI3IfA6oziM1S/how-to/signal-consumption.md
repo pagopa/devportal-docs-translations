@@ -1,5 +1,44 @@
 # Signal consumption
 
-The consumer must perform operations for the (1) recovery of signals, (2) processing of signals to (3) obtain the update of the data.
+The consumer must perform operations for the (1) recovery of signals, (2) processing of signals to (3) obtain the update of the&#x20;
 
-`{% embed url="https://mermaid.live/edit#pako:eNqVVE1v2zAM_SuEdlgLOIXtfPvQw7wUO3TDgKA7DL4oNuMQkKVMloM1Rf_7KDtOkyY9TAdDkh_Jx0eKLyI3BYpEDAaDTDtyChOwmDdbtAZqLLVUGAAquTJW7slo7G8BQZYlGatlhdoZKFBBIZ3JdG70msok0wBugxW7XMkaj8df0pJcKaxbBMDWUiXtc2qUsQlk4tPDw5eHMMxEpltama7xT4M6x68kSyurTMvGGd1UK7QHF9I6ymkrtYN0CbKG1Oi6qZiO7RnTJfTn0-OjBy_JA-Bbs2qvLoGL1icOarQ7yhEKAtIOLdZdXgA_jEMwO7QcP2B8wk7Zhjkg5BsE9VkWjGcjqElCoyE_Ycj-zkhyCRzYcnUTzaMA4njIn_H4tvvplzJmC1wkMKU-cNlJpYz35LDaGlbVeK2qtiK92RlLn-pFtekNnC4H9_cdSKFzjZWXGJk72kl2-qabX_7ExinLoKh2VwwL_MD0eJ0ur_NOztuxQLr0fi7PoWNPYigHVHAxaE255HgsV41NYTRVtN-zZL50Jqd2B7UpSxbA-JJ5XXMsqOt50uBbwOI71TzLdwEYmm9I2u6h_JdL1MVV4U4VOsOcldn34kcv9Yy0B1pikugrdvMR_9srtVqcMFn0AhSteofIp9FOUlhcS6HdiEBUaCtJBY-nF_8jE-34yIQfEgWuZaOcHxKvDPUDYfmsc5E422Agmi1H7-dFf8ka82v73k28dvAFgp_3b2OOED6K5EX8FUk0j--Gk-lwPh3HkziKokA8i2QwGt6F4SycTSaz0WQynI1Gr4HYtx6iuygOZ-N4PprGw3EUTkeBsKYpNyJZS1UfWS1aGn3E0voMuz3PBx4SqWm0E8n89R_ijM39" %}`signal consumption `{% endembed %}`
+```mermaid
+---
+title: recupero segnale, elaborazione segnale e aggiornamento del dato
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#FFBF00"
+---
+
+sequenceDiagram
+autonumber
+    participant CS as Consumatore segnali
+    participant PULL as Signal Hub PULL
+    participant ES as e-service di interesse
+    Note over CS, ES: Si assume che l'aderente sia un consumatore di segnali
+    rect rgb(191, 223, 255)
+        loop per ogni intervallo di tempo programmato
+        Note over CS,PULL: recupero segnali
+        CS->>PULL: lettura segnali
+        activate PULL
+        PULL->>CS: lista segnali
+        deactivate PULL
+        activate CS
+        Note over CS: elaborazione dei segnali
+        loop per ogni segnale
+        alt identificativo pseudonimizzato associato a soggetto con procedimento in essere
+        CS->>CS: identificativo in chiaro del soggetto con procedimento in essere
+        end
+        deactivate CS
+        end
+        Note over CS,ES: aggiornamento del dato
+        CS->>ES: richiesta (identificativo in chiaro)
+        activate ES
+        ES->>CS: dato aggiornato
+        deactivate ES
+        end
+    end
+
+```
+
