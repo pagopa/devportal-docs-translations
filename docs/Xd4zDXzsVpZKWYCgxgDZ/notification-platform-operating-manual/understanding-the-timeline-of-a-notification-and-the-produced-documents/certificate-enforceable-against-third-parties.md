@@ -6,16 +6,20 @@ The certificates are generated upon occurrence of some events relevant for the n
 
 #### **Certificate enforceable against third parties: notification accepted** <a href="#attestazione-opponibile-a-terzi-notifica-presa-in-carico" id="attestazione-opponibile-a-terzi-notifica-presa-in-carico"></a>
 
-!\[]\(../../.gitbook/assets/image (2).png)
+<figure><img src="../../.gitbook/assets/opponibile_2.png" alt=""><figcaption></figcaption></figure>
 
 #### **Certificate enforceable against third parties: digital notification** <a href="#attestazione-opponibile-a-terzi-notifica-digitale" id="attestazione-opponibile-a-terzi-notifica-digitale"></a>
 
-!\[]\(../../.gitbook/assets/image (13).png)
+<figure><img src="../../.gitbook/assets/opponibile_3.png" alt=""><figcaption></figcaption></figure>
 
 #### **Certificate enforceable against third parties: no digital address** <a href="#attestazione-opponibile-a-terzi-mancato-recapito-digitale" id="attestazione-opponibile-a-terzi-mancato-recapito-digitale"></a>
 
-!\[]\(../../.gitbook/assets/image (22).png)
+<figure><img src="../../.gitbook/assets/opponibile_4.png" alt=""><figcaption></figcaption></figure>
 
 #### **Certificate enforceable against third parties: access took place** <a href="#attestazione-opponibile-a-terzi-avvenuto-accesso" id="attestazione-opponibile-a-terzi-avvenuto-accesso"></a>
 
+<figure><img src="../../.gitbook/assets/opponibile_5.png" alt=""><figcaption></figcaption></figure>
+
 **Certificate enforceable against third parties: malfunction and recovery**
+
+<figure><img src="../../.gitbook/assets/opponibile6.png" alt=""><figcaption></figcaption></figure>
