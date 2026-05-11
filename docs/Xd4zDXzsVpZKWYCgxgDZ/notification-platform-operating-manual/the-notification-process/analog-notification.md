@@ -6,6 +6,8 @@ If the sender did not specify a physical domicile address for the recipient, NP 
 
 NP will receive updates from the postal operator regarding the status of the delivery and the certified digital copy of each document generated during the notification (e.g. receipt signed by the recipient). These documents are stored in NP in an immutable manner and connected to the IUN to be able to find them through the NP portal.
 
+<figure><img src="../../.gitbook/assets/analog-notif.png" alt=""><figcaption></figcaption></figure>
+
 If the recipient cannot be reached at the physical address that was provided, the postal operator will try to determine a second physical forwarding address provided to NP. NP will try at this point to determine a second address for sending the notification as follows:
 
 If a new physical address is identified, NP attempts the notification a second time using the same methods, except for the absence of the verification of existence of a new physical address.

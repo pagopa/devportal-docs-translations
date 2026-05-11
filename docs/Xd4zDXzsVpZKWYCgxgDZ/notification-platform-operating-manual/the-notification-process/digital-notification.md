@@ -6,6 +6,8 @@ If there is at least one digital domicile, NP notifies the NCR via PEC or SERCQ.
 2. Special digital domicile (indicated by the sending institution when creating the notification)
 3. General digital domicile (provided by IniPEC or INAD)
 
+<figure><img src="../../.gitbook/assets/noti_process.png" alt=""><figcaption></figcaption></figure>
+
 NP will interrupt the sending attempt at the first success. In case of failure of the first digital sending attempt (e.g. inbox full or temporary unavailability due to a disruption in the PEC or SERCQ service), the digital notification will be attempted again after at least 7 days from the first failed attempt. The time between the first and second attempt can vary between 7 and 9 days based on the system load.
 
 If the notification process via PEC or SERCQ fails also at the second attempt, a notice of failed delivery (NFD) will be created and connected to the IUN in order to be visible to the recipient if they access the NP portal. The NFD is a timeline element that is visible to all recipients of the notification. The NCR is also sent to the recipient by registered mail.

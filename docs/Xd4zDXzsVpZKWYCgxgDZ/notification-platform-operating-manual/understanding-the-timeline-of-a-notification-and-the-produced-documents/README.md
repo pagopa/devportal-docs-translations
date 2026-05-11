@@ -2,6 +2,8 @@
 
 The notification follows a life cycle whereby it passes through a series of statuses that are tracked and displayed on the NP portal through the notification timeline.
 
+<figure><img src="../../.gitbook/assets/timeline.png" alt=""><figcaption></figcaption></figure>
+
 The various statuses of the notification can generate certificates enforceable against third parties that can be accessed and downloaded using the relative links.
 
 ATTENTION: in some cases, multiple statuses refer to the same certificate enforceable against third parties. For example, all the various attempts to forward the PEC are grouped into a single certificate enforceable against third parties.

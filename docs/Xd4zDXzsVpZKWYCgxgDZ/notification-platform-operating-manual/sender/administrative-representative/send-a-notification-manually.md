@@ -14,6 +14,8 @@ The operator must also select: the method specified by the PA for sending the pa
 
 Entering the requested data enables the “Continue” button to go to the next section.
 
+<figure><img src="../../../.gitbook/assets/send_not1.png" alt=""><figcaption></figcaption></figure>
+
 The second section includes the following mandatory fields for each of the recipients: identification of the recipient legal entity (physical person/legal person), first and last name, fiscal code of the recipient, fiscal code of the creditor and notice code for the payment.
 
 The digital domicile and the physical address of the recipient are optional information.
@@ -21,6 +23,8 @@ The digital domicile and the physical address of the recipient are optional info
 If the notification concerns multiple recipients, the required information must be provided for each of them, clicking on “Add a recipient”.
 
 Entering the requested data enables the “Continue” button to go to the next section.
+
+<figure><img src="../../../.gitbook/assets/send_not2.png" alt=""><figcaption></figcaption></figure>
 
 The third section requires uploading as an attachment at least one digitally signed PDF document, possibly also containing the payment notice.
 
@@ -30,8 +34,14 @@ Once the files are attached, the hashes SHA-256 of the documents that will be se
 
 Entering the requested data enables the “Continue” button to go to the next section.
 
+<figure><img src="../../../.gitbook/assets/send_notif3.png" alt=""><figcaption></figcaption></figure>
+
 The forth and last section requires attaching the document related to the previously selected payment method.
 
 Entering the required data enables the “Send” button to complete the notification creation session.
 
+<figure><img src="../../../.gitbook/assets/send_not4.png" alt=""><figcaption></figcaption></figure>
+
 The notification was created and at the end of the verification process (within 5 minutes from its creation), NP displays the notification and the relative IUN in the list of sent notifications. At this point, the user can view additional details on the notification display page.
+
+<figure><img src="../../../.gitbook/assets/send_not5.png" alt=""><figcaption></figcaption></figure>
