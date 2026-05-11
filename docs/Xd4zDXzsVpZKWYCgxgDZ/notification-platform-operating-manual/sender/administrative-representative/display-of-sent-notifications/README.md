@@ -14,6 +14,6 @@ The documentation related to the display of sent notifications can be found here
 [access-to-documents-related-to-a-notification.md](access-to-documents-related-to-a-notification.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../../../oBwhR0C1TZjRAwNbGVus/notification-platform-operating-manual/recipients/physical-persons/display-of-notifications/accesso-agli-atti-opponibili-ai-terzi-ed-ai-documenti-della-notificazione-analogica-o-digitale.md" %}
-[accesso-agli-atti-opponibili-ai-terzi-ed-ai-documenti-della-notificazione-analogica-o-digitale.md](../../../../../oBwhR0C1TZjRAwNbGVus/notification-platform-operating-manual/recipients/physical-persons/display-of-notifications/accesso-agli-atti-opponibili-ai-terzi-ed-ai-documenti-della-notificazione-analogica-o-digitale.md)
+{% content-ref url="../../../recipients/physical-persons/display-of-notifications/access-to-certificates-enforceable-against-third-parties-and-documents-for-analog-of-digital-notific.md" %}
+[access-to-certificates-enforceable-against-third-parties-and-documents-for-analog-of-digital-notific.md](../../../recipients/physical-persons/display-of-notifications/access-to-certificates-enforceable-against-third-parties-and-documents-for-analog-of-digital-notific.md)
 {% endcontent-ref %}
