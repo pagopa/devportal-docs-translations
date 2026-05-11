@@ -1,6 +1,6 @@
 # 🏠 The service manual for the IO app
 
-This manual targets **public and private** **bodies** that provide their services on IO pursuant to the relative [guidelines](https://www.agid.gov.it/sites/default/files/repository\_files/lg\_punto\_accesso\_telematico\_servizi\_pa\_3112021.pdf). The purpose of this document is to:
+This manual targets **public and private** **bodies** that provide their services on IO pursuant to the relative [guidelines](https://www.agid.gov.it/sites/default/files/repository_files/lg_punto_accesso_telematico_servizi_pa_3112021.pdf). The purpose of this document is to:
 
 * clarify **what is meant by a service** in the context of IO;
 * explain what are the **types of services** that can be provided on IO and **which functions** can be used;
@@ -8,7 +8,7 @@ This manual targets **public and private** **bodies** that provide their service
 * provide **service models** that can be used.
 
 {% hint style="info" %}
-This information accounts for the [Design guidelines for websites and digital services of the PA (Public Administration)](https://www.agid.gov.it/sites/default/files/repository\_files/lg\_punto\_accesso\_telematico\_servizi\_pa\_3112021.pdf) issued by AgID (Agency for Digital Italy).
+This information accounts for the \[Design guidelines for websites and digital services of the PA (Public Administration)  ] [Linee guida di design per i siti internet e i servizi digitali della PA](https://www.agid.gov.it/sites/default/files/repository_files/lg_punto_accesso_telematico_servizi_pa_3112021.pdf) issued by AgID (Agency for Digital Italy).
 {% endhint %}
 
 We recommend reading the document in its entirety, but here are **some shortcuts** to the main topics:
