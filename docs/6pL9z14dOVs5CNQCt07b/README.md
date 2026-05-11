@@ -8,18 +8,18 @@ description: >-
 
 ### Getting started
 
-{% content-ref url="https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/setup-iniziale/README.md" %}
-[https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/setup-iniziale/README.md](https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/setup-iniziale/README.md)
+{% content-ref url="initial-setup/" %}
+[initial-setup](initial-setup/)
 {% endcontent-ref %}
 
 ### Function
 
-{% content-ref url="https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/funzionalita/pubblicare-un-servizio/README.md" %}
-[https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/funzionalita/pubblicare-un-servizio/README.md](https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/funzionalita/pubblicare-un-servizio/README.md)
+{% content-ref url="function/publish-a-service/" %}
+[publish-a-service](function/publish-a-service/)
 {% endcontent-ref %}
 
-{% content-ref url="https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/funzionalita/inviare-un-messaggio/README.md" %}
-[https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/funzionalita/inviare-un-messaggio/README.md](https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/funzionalita/inviare-un-messaggio/README.md)
+{% content-ref url="function/send-a-message/" %}
+[send-a-message](function/send-a-message/)
 {% endcontent-ref %}
 
 {% content-ref url="function/send-a-message/add-attachments.md" %}
@@ -34,8 +34,8 @@ description: >-
 
 ### Authorizations
 
-{% content-ref url="https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/abilitazioni/README.md" %}
-[https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/abilitazioni/README.md](https://github.com/pagopa/devportal-docs/blob/docs/from-gitbook/docs/zF3c54RkRPgTmqLF0IKo/abilitazioni/README.md)
+{% content-ref url="enabling/" %}
+[enabling](enabling/)
 {% endcontent-ref %}
 
 ### Useful resources
