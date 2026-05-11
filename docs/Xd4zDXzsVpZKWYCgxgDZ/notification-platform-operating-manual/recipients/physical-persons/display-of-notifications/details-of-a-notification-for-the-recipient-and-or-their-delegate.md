@@ -6,4 +6,4 @@ The page shows the information displayed previously, with the addition of the fi
 
 ATTENTION: Notification Platform stores the moment in which the user views the details of the notification for the first time as the moment the notification is completed for the recipient, if completion did not happen previously due to another event (e.g. lapsing of the time limits).
 
-This event generates a certificate enforceable against third parties.\\
+This event generates a certificate enforceable against third parties.
