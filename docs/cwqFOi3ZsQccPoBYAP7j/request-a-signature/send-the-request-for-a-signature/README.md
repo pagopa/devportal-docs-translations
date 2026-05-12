@@ -8,8 +8,8 @@ Once the signature request has been published, it will no longer be possible to 
 
 At this point, the signature request is **ready to be sent** to the user. There are two options to do so, via **QR code** to be shared with the user via your channels or by directly sending a **message on the IO app**.
 
-{% content-ref url="../../../AdBuOCmwur7AhLlgfCeG/request-a-signature/send-the-request-for-a-signature/tramite-sign-with-io-button-o-qr-code.md" %}
-[tramite-sign-with-io-button-o-qr-code.md](../../../AdBuOCmwur7AhLlgfCeG/request-a-signature/send-the-request-for-a-signature/tramite-sign-with-io-button-o-qr-code.md)
+{% content-ref url="with-the-sign-with-io-button-or-qr-code.md" %}
+[with-the-sign-with-io-button-or-qr-code.md](with-the-sign-with-io-button-or-qr-code.md)
 {% endcontent-ref %}
 
 {% content-ref url="via-message-on-io.md" %}
