@@ -1,6 +1,6 @@
 # Access to the Notification Platform by an employee of a legal person
 
-The employee of the legal person accesses NP at the address [https://pn-pg.pagopa.it](https://pn.pagopa.it/), authenticating themselves with their digital identity.
+The employee of the legal person accesses NP at the address [https://imprese.notifichedigitali.it](https://imprese.notifichedigitali.it) (in Italian), authenticating themselves with their digital identity.
 
 At the first access, the user must confirm acknowledgment of the terms of service (ToS) and the privacy policy.
 
