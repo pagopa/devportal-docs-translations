@@ -1,5 +1,7 @@
 # List of the opportunities available on the IO app
 
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
 The youth who is a beneficiary of the CGN and wants to access the list of opportunities accesses the CGN section of the IO app, touching "_Discover the opportunities_" and will land on a screen presenting the product categories and opportunities offered by the partners (operators) of the initiative (tab "_By category_")
 
 By selecting a category, the beneficiary will land on a screen with a list that displays all the operators who joined the initiative, who have at least one currently valid opportunity that belongs to the selected category.
@@ -29,3 +31,5 @@ Selecting an opportunity open a _bottom sheet_ that presents the details:
 * The period of validity;
 * Any conditions applicable to the opportunity;
 * In the case of an online operator, the methods of accessing the opportunity, for which sample screens are shown here.
+
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>

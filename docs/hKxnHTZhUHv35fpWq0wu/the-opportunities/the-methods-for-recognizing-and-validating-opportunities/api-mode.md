@@ -29,7 +29,11 @@ As soon as the API keys are regenerated the previous ones can no longer be used.
 
 <div align="left"><img src="https://lh4.googleusercontent.com/_iR6quYVoorF1pW26p1O228-EUEZ5gkyMmkBXliPOUvsw23P7STZjajQHnkgNKSPjHHof0CyqA8O8dQWnGTPF7rp0KrNIFeCsbFPitqSlubXg7CYmS1JIyfHXgv8OYWsr27mUMA" alt="Example of an operator&#x27;s cart with the text field for entering the discount code"></div>
 
-!\[]\(../../.gitbook/assets/OTP\_02 (2).png)
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 The OTP code can be pasted directly into the e-commerce field. If valid, the discount is applied to the cart
 

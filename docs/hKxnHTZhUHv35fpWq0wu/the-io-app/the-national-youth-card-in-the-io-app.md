@@ -9,6 +9,8 @@ The request flow consists only in the age verification of the requester, and if 
 
 Once the National Youth Card is activated, it will always be accessible in the Wallet section.
 
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
 The detailed screen of the CGN includes:
 
 * **The graphic of the National Youth Card (CGN)**\
@@ -25,6 +27,8 @@ Remember that the CGN \*\*does not have a card number displayed\*\* or visible i
 {% endhint %}
 
 ## Statuses of the CGN
+
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 The card can have the following statuses:
 

@@ -33,3 +33,7 @@ The check of the header names must NOT be performed in a \_case-sensitive\_ mann
 {% endhint %}
 
 ## User experience
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>

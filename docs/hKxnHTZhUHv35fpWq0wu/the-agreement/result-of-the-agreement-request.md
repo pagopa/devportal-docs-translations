@@ -5,3 +5,5 @@
 The operator will receive a communication informing of the reasons the request was rejected or, if appropriate, what should be changed or how to correct the data already entered.
 
 **Positive assessment**: if the agreement request is approved the Department will communicate this to the operator by sending an email with the approval.
+
+<figure><img src="../.gitbook/assets/cgn_esito.png" alt=""><figcaption></figcaption></figure>

@@ -1,5 +1,7 @@
 # The agreement
 
+<figure><img src="../../.gitbook/assets/cgm_agrrement.png" alt=""><figcaption></figcaption></figure>
+
 The agreement process, upon invitation of the Department, includes the following steps:
 
 * Acknowledgment of the privacy policy and the technical documentation;

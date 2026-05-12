@@ -28,13 +28,13 @@ To join the program via an **online channel (e-commerce and/or web page)** the f
 
 The model generates a temporary code (OTP) for the beneficiary via the IO APP, which must be validated by means of integration of the operator's e-commerce systems with the API system exposed by the IO platform. The operator must therefore have and/or acquire the technical knowledge necessary to make these changes to their own systems.
 
-[**Go to the compete explanation ->**](../../GVxSS3zVSEuRbwiMGCGx/the-opportunities/le-modalita-di-riconoscimento-e-validazione-delthe-opportunities/api-mode.md)
+[**Go to the compete explanation ->**](the-methods-for-recognizing-and-validating-opportunities/api-mode.md)
 
 ### Static discount code model
 
 With this model, the operator communicates a static discount code when creating the opportunity that is accepted by its systems for the entire duration of the opportunity.
 
-[**Go to the compete explanation ->**](../../GVxSS3zVSEuRbwiMGCGx/the-opportunities/le-modalita-di-riconoscimento-e-validazione-delthe-opportunities/static-discount-code-mode.md)
+[**Go to the compete explanation ->**](the-methods-for-recognizing-and-validating-opportunities/static-discount-code-mode.md)
 
 ### Static code list model
 

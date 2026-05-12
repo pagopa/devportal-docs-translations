@@ -4,6 +4,8 @@ If the operator decided to join the Program via its own website and/or e-commerc
 
 An example of correct formatting is shown below:
 
+{% file src="../../.gitbook/assets/test-codes.csv" %}
+
 {% hint style="info" %}
 The codes that make up the list:
 

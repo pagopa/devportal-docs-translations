@@ -3,11 +3,16 @@
 The operator can use the **IO Brand**, which consists of the following assets:
 
 * The individual logo that distinguishes the IO APP and the platform specified in art. 64-bis of the CAD (Digital Administration Code)
+
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
 * The official graphic material released by PagoPA S.p.A.
 
 The operator can also use the CGN Brand, which consists of the following assets:
 
 * The logo that identifies CGN overall, meaning the initiative and the virtual card
+
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 The use of the IO Brand and the CGN Brand (hereafter jointly the “**Brand of the initiative**”) involves a limited, non-exclusive, revocable, non-transferable license in favor of the operator.
 

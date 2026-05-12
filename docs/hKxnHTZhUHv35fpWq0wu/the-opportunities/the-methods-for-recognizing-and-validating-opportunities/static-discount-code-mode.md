@@ -18,3 +18,7 @@ Different opportunities can be associated with different static codes for greate
 {% endhint %}
 
 ## User experience
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>

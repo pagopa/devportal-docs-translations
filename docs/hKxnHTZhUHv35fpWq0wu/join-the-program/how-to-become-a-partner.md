@@ -1,5 +1,7 @@
 # How to become a partner
 
+<figure><img src="../.gitbook/assets/cgn_partner.png" alt=""><figcaption></figcaption></figure>
+
 The registration flow has three phases:
 
 1. Publishing a notice
