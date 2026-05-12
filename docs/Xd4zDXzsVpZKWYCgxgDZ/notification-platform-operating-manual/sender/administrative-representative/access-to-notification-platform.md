@@ -8,3 +8,5 @@ The following can be performed in the Notification Platform area:
 * view all the notifications sent by the institution and check their status based on the provided timeline,
 * download documents related to a notification,
 * view the monitoring dashboard.
+
+<figure><img src="../../../.gitbook/assets/acces_pn.png" alt=""><figcaption></figcaption></figure>

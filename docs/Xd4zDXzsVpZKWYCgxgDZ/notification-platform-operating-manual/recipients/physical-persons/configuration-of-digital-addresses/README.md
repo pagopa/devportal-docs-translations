@@ -10,4 +10,8 @@ ATTENTION: in the absence of a PEC/SERCQ address in the “Legal address” box 
 
 NP permits a single configuration for each of the digital addresses: therefore it is not possible to add additional addresses, in addition to those already indicated, as a legal address and/or an additional email address/cell phone number.
 
+<figure><img src="../../../../.gitbook/assets/rec_conf.png" alt=""><figcaption></figcaption></figure>
+
 The user can access “Your data” in the “Your addresses” section and view the data obtained from SPID/CIE.
+
+<figure><img src="../../../../.gitbook/assets/rec_conf2.png" alt=""><figcaption></figcaption></figure>

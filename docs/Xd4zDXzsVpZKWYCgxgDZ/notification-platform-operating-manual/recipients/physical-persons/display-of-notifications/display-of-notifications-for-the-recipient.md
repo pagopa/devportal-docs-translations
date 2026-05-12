@@ -7,3 +7,5 @@ The display shows the notifications, starting from the most recent one, in table
 The user can set filters to reduce the number of notifications displayed by setting a display time interval, or by setting a specific IUN.
 
 The user can also select the size of the page to display 10, 20 or 50 elements.
+
+<figure><img src="../../../../.gitbook/assets/display_not_rec.png" alt=""><figcaption></figcaption></figure>

@@ -2,7 +2,11 @@
 
 A button located on the page under “To be paid” that shows the details of a specific notification that was not canceled but not yet paid activates the payment path for the payment notice associated with the notification, using pagoPA.
 
+<figure><img src="../../../../.gitbook/assets/rec_pay.png" alt=""><figcaption></figcaption></figure>
+
 The user is addressed by a screen where the data necessary for proceeding with the payment must be uploaded. The path is the one used by pagoPA for every type of payment.
+
+<figure><img src="../../../../.gitbook/assets/rec_pay2.png" alt=""><figcaption></figcaption></figure>
 
 In case of a positive result, when reloading the page, the payment will be shown as completed and the event of the completed payment will be visible on the timeline.
 

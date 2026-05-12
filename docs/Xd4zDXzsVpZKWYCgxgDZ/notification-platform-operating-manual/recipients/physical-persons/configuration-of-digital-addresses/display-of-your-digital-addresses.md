@@ -6,3 +6,5 @@ The page shows the digital addresses configured by the user, divided among:
 * “IO app” - by activating the “Courtesy notice” service - to receive a message from NP in app that permits direct access to the notification present on NP to read it and make any payments.
 * “Email or SMS”, the email address and/or cell phone number to which NP sends a message with a notice of the presence on NP of a notification, in order to access it to read it and make any payments.
 * “Other addresses”, any additional PEC/SERCQ addresses, emails or cell phone numbers to be associated with notifications coming from specific institutions, that NP will therefore use as an address for the recipient only for the communications originating from one of them.
+
+<figure><img src="../../../../.gitbook/assets/indirizzo.png" alt=""><figcaption></figcaption></figure>

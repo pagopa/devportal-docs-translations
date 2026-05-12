@@ -8,4 +8,6 @@ The display shows the notifications, starting from the most recent one, in table
 
 The user can set filters to change the view of the list, the available filters are: Recipient fiscal code, IUN code, time interval and status of the notification.
 
-The notifications are present on pages of 10, 20, 50 elements each. The page size can be selected by the user.\\
+The notifications are present on pages of 10, 20, 50 elements each. The page size can be selected by the user.
+
+<figure><img src="../../../../.gitbook/assets/display_not.png" alt=""><figcaption></figcaption></figure>
