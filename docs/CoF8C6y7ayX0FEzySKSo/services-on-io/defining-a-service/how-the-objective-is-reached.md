@@ -1,6 +1,6 @@
 # 3️⃣ How is the objective reached?
 
-Once the service is defined, you have to ask yourself: **what steps do citizens have to take to reach the final objective of the service?** To answer this question, it can be useful to outline the steps citizens must take to reach the defined objective. To do so, we recommend using the model [user journey outline](https://designers.italia.it/kit/esperienza-utente/).
+Once the service is defined, you have to ask yourself: **what steps do citizens have to take to reach the final objective of the service?** To answer this question, it can be useful to outline the steps citizens must take to reach the defined objective. To do so, we recommend using the model [user journey schema](https://designers.italia.it/kit/esperienza-utente/).
 
 For example, as regards the TARI (tax on waste) service, the essential steps can be as follows:
 

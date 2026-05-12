@@ -13,6 +13,8 @@ Therefore IO must be considered a **platform** that provides institutions with a
 * payments;
 * services and external links.
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 IO is a project that is **continuously evolving**: its functions and integration with other PagoPA S.p.A products and services will **increase over the years** to meet the new needs of institutions in a structured manner, without making the app more complex with customized developments.
 
 {% hint style="info" %}

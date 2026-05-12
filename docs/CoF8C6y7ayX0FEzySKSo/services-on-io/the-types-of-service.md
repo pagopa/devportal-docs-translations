@@ -24,6 +24,8 @@ Subscribing to these services involves the “automatic” activation of the “
 The National Youth Card is a special service. The button “Request CGN” is located on its tab. After requesting and obtaining the CGN, the “Contact you in-app” option and the button on the service tab will become “Deactivate the card". From that moment, the option “Contact you in-app” cannot be deactivated unless the card is deactivated.
 {% endhint %}
 
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
 Once published, all services can be found in the “Services” section of IO, such as the items of the lists of the National or Local services and are associated with the name of the institution that provides them. By pressing the name of a service, the user can view the service tab that contains information about the service and can manage the communication.
 
 [<mark style="color:blue;">**To discover how to create a service, read the technical guide ->**</mark>](https://app.gitbook.com/s/coSKRte21UjDBRWKLtEs/funzionalita/creare-un-servizio)

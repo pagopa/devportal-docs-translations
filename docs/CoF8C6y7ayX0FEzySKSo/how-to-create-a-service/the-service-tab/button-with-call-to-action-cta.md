@@ -4,14 +4,16 @@ The services offered by the institutions on IO often refer the user to **website
 
 To make this easier, the service card and messages can contain a **button with action** (called _**Call To Action**_\*\* or CTA\*\*). When the user presses the button, they are directed to the website or portal defined by the institution.
 
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
 The button with Call to action can be:
 
 * A link that leads the user to a third-party website;
 *   A link that via Single Sign-On leads the user to a reserved area of a third-party website of the institution without having to perform another SPID/CIE authentication.
 
-    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Did you know?</strong></p></div>
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Did you know?</strong> <a href="../../the-io-app/the-functions-of-io-available-to-institutions/access-via-single-sign-on.md">Single Sign-On</a> is the function that makes it possible to directly access third-party websites using the IO SPID/CIE authentication.</p></div>
 
-[Single Sign-On](../../the-io-app/the-functions-of-io-available-to-institutions/access-via-single-sign-on.md) is the function that makes it possible to directly access third-party websites using the IO SPID/CIE authentication.
+
 
 **What is a Call to action?**\
 It is a clear and direct invitation that pushes the user to perform a specific and immediate action.

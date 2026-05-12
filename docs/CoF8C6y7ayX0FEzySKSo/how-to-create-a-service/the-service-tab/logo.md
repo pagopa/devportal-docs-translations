@@ -5,10 +5,25 @@ If the service concerns a **particular and very extensive initiative**, such as 
 If you want to create a specific logo for the service, we recommend:
 
 * using a **square format** to avoid it being distorted or truncated;
+
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
 * add only a **few details** and make sure the information is not too “dense” and therefore is legible;
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
 * use a logo that fills up the **entire space of the image** so that it is not too small and therefore illegible;
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
 * If a colored background is used, make sure the logo is legible, as in the following example:
 
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
-For more information, read what is indicated in the \[Mandatory data]\(https://app.gitbook.com/s/aBQM7h48Vhhg8le4VIK8/funzionalita/pubblicare-un-servizio/dati-obbligatori "mention").
+For more information, read what is indicated in the \[[Mandatory data](https://app.gitbook.com/s/I8hgrCWjc4Pg8hUMK0Pq/function/mandatory-data)]
 {% endhint %}

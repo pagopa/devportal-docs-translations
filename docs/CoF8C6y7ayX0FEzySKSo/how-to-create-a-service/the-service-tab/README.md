@@ -6,6 +6,8 @@ IO contains more than 230,000 services provided by more than 15,000 institutions
 For more information, \[read the usage statistics]\(https://io.italia.it/dashboard) for the app.
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
 Each institution has the services it offers on IO below its name. By touching a single service, a dedicated tab appears on which the user can find this information:
 
 * [**the name of the service**](service-name.md);

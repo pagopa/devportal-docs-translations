@@ -8,6 +8,8 @@ If the institution sends a message via IO to the legal representatives of legal 
 
 Therefore **it is not permitted to send mass communications** to all IO users or to **send messages to users who are not direct recipients** of the provided services.
 
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
 ## Types of messages
 
 The messages that are sent on IO can be of different types and enriched depending on:
@@ -26,7 +28,7 @@ In general, the messages can be:
 * [**messages that indicate a deadline**](messages-that-indicate-a-due-date.md): messages that contain a deadline or a reminder (a reminder for the expiration date of a document to be renewed or the deadline for signing up for a service). For these types of messages, the `due_date` field must be used in the message payload.
 
 {% hint style="info" %}
-With \[ Single Sign-On ]\(../../io-app/the-functions-of-io-available-to-institutions/access-via-single-sign-on.md)it is possible to include a link in the messages that refers the citizen to third-party sites, using the SPID/CIE authentication already used on IO, without having to login again.
+With Single Sign-On it is possible to include a link in the messages that refers the citizen to third-party sites, using the SPID/CIE authentication already used on IO, without having to login again.
 {% endhint %}
 
 With respect to the basic messages, it is possible to enrich the messages with some additional **functions**. If required, with additional integration it is possible to:

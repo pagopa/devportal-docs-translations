@@ -30,6 +30,8 @@ Institutions can send messages via IO also to citizens who are a **Legal Represe
 3. The messages the institution sends to the legal representative of the legal person are not a legal notice.
 {% endhint %}
 
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
 ### What can citizens do with the services on IO?
 
 Starting from their first access, app users must give their consent to be contacted by the services present on IO. The app provides two options:

@@ -2,6 +2,8 @@
 
 Messages that indicate a payment are messages that contain a **payment notice** and that give the user the possibility to pay it in-app by pressing the "See notice" button.
 
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+
 These messages must:
 
 * explain **what the payment is for** and provide any additional information;

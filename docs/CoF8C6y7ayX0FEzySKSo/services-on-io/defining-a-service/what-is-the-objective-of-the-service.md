@@ -28,6 +28,8 @@ A service **never coincides with a single function or type of communication**: t
 
 Let's imagine that the municipality of Ipazia joins IO with the “Day care” service dedicated to residents in the municipality who are also the parents of preschool age children.
 
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
 This service sends **two types of communications**: it informs the parents that registration is open for day care and sends a payment notification to those who already registered their child.
 
 {% tabs %}

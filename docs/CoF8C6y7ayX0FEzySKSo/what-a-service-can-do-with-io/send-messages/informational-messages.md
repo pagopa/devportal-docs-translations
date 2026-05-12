@@ -2,6 +2,8 @@
 
 Informational messages are **text-only messages** that provide the user with information about a service, such as an update, a new feature or the result of a request presented to the institution.
 
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+
 These messages must:
 
 * be **relevant** for the recipients;
