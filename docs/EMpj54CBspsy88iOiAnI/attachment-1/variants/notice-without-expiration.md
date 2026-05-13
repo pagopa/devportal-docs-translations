@@ -10,12 +10,12 @@ description: If the payment notice does not have a due date, you can omit some f
 
 ### “Amount and due date” section
 
-* [x] Remove the block """by"" [#avviso-data](../../attachment-2/technical-specifications/amount-and-due-date.md#avviso-data "mention")"
-* [x] Change the header to ""Payment amount?""
+* [x] Remove the block "by" [#avviso-data](../../attachment-2/technical-specifications/amount-and-due-date.md#avviso-data "mention")"
+* [x] Change the header to "Payment amount?"
 
 ### "Payment information" section
 
-* [x] Remove the block """by"" from the header [#avviso-data](../../attachment-2/technical-specifications/amount-and-due-date.md#avviso-data "mention")"
-* [x] If you have multiple installments, also remove the """by"” block [#avviso.rate.n.data](../../attachment-2/technical-specifications/payment-data/multiple-rates.md#avviso.rate.n.data "mention")"
+* [x] Remove the block "by" from the header [#avviso-data](../../attachment-2/technical-specifications/amount-and-due-date.md#avviso-data "mention")"
+* [x] If you have multiple installments, also remove the "by" block [#avviso.rate.n.data](../../attachment-2/technical-specifications/payment-data/multiple-rates.md#avviso.rate.n.data "mention")"
 
 ### Available resources

@@ -8,11 +8,11 @@ description: >-
 # Notice with multiple installments
 
 {% hint style="danger" %}
-Use this model only if your notice has a high number of installments, \*\*minimum of 9.\*\* In all other cases, refer to the layout described in \[#rate-multiple]\(../../attachment-2/technical-specifications/payment-data/#rate-multiple "mention").
+Use this model only if your notice has a high number of installments, \*\*minimum of 9.\*\* In all other cases, refer to the layout described in [rate-multiple](../../attachment-2/technical-specifications/payment-data/).
 {% endhint %}
 
 {% hint style="warning" %}
-If the creditor has a postal current account for collections, also the installments must be included in the format \[postal-payment-slip.md]\(../../attachment-2/technical-specifications/payment-data/postal-payment-slip.md "mention"). For more information, refer to \[#layout-con-multipli-di-3]\(../../attachment-2/technical-specifications/payment-data/postal-payment-slip.md#layout-con-multipli-di-3 "mention").
+If the creditor has a postal current account for collections, also the installments must be included in the format [postal payment](../../attachment-2/technical-specifications/payment-data/postal-payment-slip.md).&#x20;
 {% endhint %}
 
 {% @figma/embed url="https://www.figma.com/file/CtqIoS6ZTATNxFJtcARhbQ/Avviso-con-molte-rate?node-id=0%3A1" fileId="CtqIoS6ZTATNxFJtcARhbQ" nodeId="0:1" %}
