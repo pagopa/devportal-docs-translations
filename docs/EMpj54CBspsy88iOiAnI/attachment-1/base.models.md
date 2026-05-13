@@ -7,7 +7,7 @@ description: >-
 # 📄 Base models
 
 {% hint style="info" %}
-Any questions? consult the \[technical specifications]\(../attachment-2/technical-specifications/) and discover \[how to use the files]\(../attachment-2/how-to-use-the-files.md).
+Any questions? consult the [technical specifications](../attachment-2/technical-specifications/) and discover[ how to use the files](../attachment-2/how-to-use-the-files.md)
 {% endhint %}
 
 ## Single installment

@@ -13,7 +13,7 @@ You can use this model for all the notices whose due date depends on the date of
 {% endhint %}
 
 {% hint style="warning" %}
-If the creditor has a postal current account for collections, also the \[postal-payment-slip.md]\(../../attachment-2/technical-specifications/payment-data/postal-payment-slip.md "mention") must be included. In this case, you must use two different pages: one for the amount discounted 30%, the other for the reduced amount.
+If the creditor has a postal current account for collections, also the [postal-payment-slip](../../attachment-2/technical-specifications/payment-data/postal-payment-slip.md) must be included. In this case, you must use two different pages: one for the amount discounted 30%, the other for the reduced amount.
 {% endhint %}
 
 {% @figma/embed url="https://www.figma.com/file/os2kysGJOwD5GwyZIRsG5O/Violazioni-CDS?node-id=0%3A1" fileId="os2kysGJOwD5GwyZIRsG5O" nodeId="0:1" %}
@@ -33,7 +33,7 @@ The model also includes a variant that uses the system font, which can be used i
 {% endhint %}
 
 {% hint style="warning" %}
-The information contained in the section \[where-to-pay.md]\(../../attachment-2/technical-specifications/where-to-pay.md "mention") is standard and must not be changed, or repeated in other sectiosn managed by the institution.
+The information contained in the section[ where to pay](../../attachment-2/technical-specifications/where-to-pay.md) is standard and must not be changed, or repeated in other sectiosn managed by the institution.
 {% endhint %}
 
 {% @figma/embed url="https://www.figma.com/file/K9NAcE1wiZJvRiGh1FLAMC/Violazione-CDS---Stampante-Termica?node-id=0%3A1" fileId="K9NAcE1wiZJvRiGh1FLAMC" nodeId="0:1" %}

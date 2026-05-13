@@ -8,7 +8,7 @@ description: >-
 
 ### 3.4 (May 2025)
 
-* Inserted references to the notice generation APIs ([https://developer.pagopa.it/pago-pa/guides/stampa-avvisi-pagamento](https://developer.pagopa.it/pago-pa/guides/stampa-avvisi-pagamento))
+* Inserted references to the notice generation APIs ([https://developer.pagopa.it/pago-pa/guides/stampa-avvisi-pagamento](https://developer.pagopa.it/pago-pa/guides/stampa-avvisi-pagamento) - Italian Language)
 * Specified better the use of the sample files provided on the page [how-to-use-the-files.md](../attachment-2/how-to-use-the-files.md "mention")
 * Specified the front-back printing methods, on page [technical-specifications](../attachment-2/technical-specifications/ "mention")
 * Corrected some sample files

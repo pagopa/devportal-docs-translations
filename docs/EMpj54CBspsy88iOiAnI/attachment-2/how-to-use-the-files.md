@@ -1,7 +1,7 @@
 ---
 description: >-
-  \> This page contains the instructions for correctly viewing the various
-  models and inspecting the specifications
+  This page contains the instructions for correctly viewing the various models
+  and inspecting the specifications
 ---
 
 # ❓ How to use the files
@@ -29,7 +29,7 @@ A free account is necessary to consult the read-only specifications and access t
 {% endhint %}
 
 {% hint style="info" %}
-It is not possible to request access for editing purposes. If you want, you can download a local copy from the menu \_(F) Figma > File > Save a local copy...\_
+It is not possible to request access for editing purposes. If you want, you can download a local copy from the menu _(F) Figma > File > Save a local copy..._
 {% endhint %}
 
 ## Download files in SVG format
@@ -43,5 +43,5 @@ It is an open format used to open and inspect the model in any vector graphics s
 Open the file in your vector graphics software and click on the various elements to see their properties, such as text dimensions and colors.
 
 {% hint style="info" %}
-Before opening a model, make sure to have installed the various \[fonts]\(design-elements/typography.md).
+Before opening a model, make sure to have installed the various [fonts](design-elements/typography.md)
 {% endhint %}
