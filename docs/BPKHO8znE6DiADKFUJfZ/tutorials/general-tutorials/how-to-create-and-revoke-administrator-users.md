@@ -40,7 +40,7 @@ Technical staff, identified as “API operator” and “security operator”, a
 
 An administrator can also be revoked by completing the form available for download below and sending it via CEM to PagoPA.
 
-{% file src="../../.gitbook/assets/Revoca Operatore Amministativo_PDND.pdf" %}
+{% file src="../../../pdnd-interoperabilita/PDND-Interoperability-Operating-Manual/v1.0/.gitbook/assets/Revoca Operatore Amministativo_PDND.pdf" %}
 
 {% hint style="info" %}
 Please, note that the form is in Italian.

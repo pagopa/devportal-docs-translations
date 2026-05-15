@@ -47,7 +47,7 @@ Select the type of party you are operating for, in accordance with Articles 2, p
 
 When the information is available via IPA, the type is preselected, but it can still be modified by choosing a different option.
 
-<figure><img src="../.gitbook/assets/interop_guida_adesione.png" alt=""><figcaption><p>Screen for selecting the organization type</p></figcaption></figure>
+<figure><img src="../../pdnd-interoperabilita/PDND-Interoperability-Operating-Manual/v1.0/.gitbook/assets/interop_guida_adesione.png" alt=""><figcaption><p>Screen for selecting the organization type</p></figcaption></figure>
 
 Next, confirm that the displayed information is correct to proceed.
 
@@ -55,9 +55,9 @@ Next, confirm that the displayed information is correct to proceed.
 
 Only for Public Administrations (PA), Public Service Managers (GSP), Publicly Controlled Companies (SCP), and Companies within the Consolidated Economic Account (SCEC).
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-10-09 alle 09.36.09.png" alt="" width="375"><figcaption><p>Screen for selecting the party for SCPs</p></figcaption></figure>
+<figure><img src="../../pdnd-interoperabilita/PDND-Interoperability-Operating-Manual/v1.0/.gitbook/assets/Screenshot 2024-10-09 alle 09.36.09.png" alt="" width="375"><figcaption><p>Screen for selecting the party for SCPs</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/selfcare.pagopa.it_onboarding_prod-interop(Macbook Pro – Screenshot).png" alt="" width="375"><figcaption><p>Screen for selecting the party for PAs and GSPs</p></figcaption></figure>
+<figure><img src="../../pdnd-interoperabilita/PDND-Interoperability-Operating-Manual/v1.0/.gitbook/assets/selfcare.pagopa.it_onboarding_prod-interop(Macbook Pro – Screenshot).png" alt="" width="375"><figcaption><p>Screen for selecting the party for PAs and GSPs</p></figcaption></figure>
 
 #### Public Administrations (PA) and Public Service Managers (GSP)
 
@@ -72,7 +72,7 @@ Only for Public Administrations (PA), Public Service Managers (GSP), Publicly Co
 
 ### 4. Enter party data
 
-<figure><img src="../.gitbook/assets/uat.selfcare.pagopa.it_onboarding_prod-interop(Macbook Pro – Screenshot) (2).png" alt=""><figcaption><p>The screen where the party’s data must be entered, usually prefilled with information retrieved from the IPA Catalog.</p></figcaption></figure>
+<figure><img src="../../pdnd-interoperabilita/PDND-Interoperability-Operating-Manual/v1.0/.gitbook/assets/uat.selfcare.pagopa.it_onboarding_prod-interop(Macbook Pro – Screenshot) (2).png" alt=""><figcaption><p>The screen where the party’s data must be entered, usually prefilled with information retrieved from the IPA Catalog.</p></figcaption></figure>
 
 * The fields above are prefilled when available, based on official sources.
 * When the source is the IPA Catalog, the fields Legal name, Registered office, PEC address, Tax code, and VAT number are locked to ensure consistency with IPA data.
@@ -81,7 +81,7 @@ Only for Public Administrations (PA), Public Service Managers (GSP), Publicly Co
 
 ### 5. Enter the Legal Representative
 
-<figure><img src="../.gitbook/assets/uat.selfcare.pagopa.it_onboarding_prod-interop(Macbook Pro – Screenshot) (3).png" alt=""><figcaption><p>The screen where the Legal Representative’s information of the party is entered</p></figcaption></figure>
+<figure><img src="../../pdnd-interoperabilita/PDND-Interoperability-Operating-Manual/v1.0/.gitbook/assets/uat.selfcare.pagopa.it_onboarding_prod-interop(Macbook Pro – Screenshot) (3).png" alt=""><figcaption><p>The screen where the Legal Representative’s information of the party is entered</p></figcaption></figure>
 
 * Fill in the required details in the Legal Representative section.
 * For subscription purposes, this person may be either the current representative or an attorney-in-fact with the necessary signing authority.
@@ -89,7 +89,7 @@ Only for Public Administrations (PA), Public Service Managers (GSP), Publicly Co
 
 ### 6. Appointment of administrators
 
-<figure><img src="../.gitbook/assets/uat.selfcare.pagopa.it_onboarding_prod-interop(Macbook Pro – Screenshot) (4).png" alt=""><figcaption><p>The screen where the data of users with administrative privileges are entered.</p></figcaption></figure>
+<figure><img src="../../pdnd-interoperabilita/PDND-Interoperability-Operating-Manual/v1.0/.gitbook/assets/uat.selfcare.pagopa.it_onboarding_prod-interop(Macbook Pro – Screenshot) (4).png" alt=""><figcaption><p>The screen where the data of users with administrative privileges are entered.</p></figcaption></figure>
 
 The next step is to appoint one or more Administrators. These users will be the main operators of the PDND front office and will manage the platform on behalf of the party.
 
@@ -110,7 +110,7 @@ The party must:
 
 ### 8. Upload the agreement and finalize
 
-<figure><img src="../.gitbook/assets/Screenshot 2022-07-28 at 17.15.59.png" alt=""><figcaption><p>The screen where the membership agreement received at the digital domicile and signed by the party’s Legal Representative is uploaded.</p></figcaption></figure>
+<figure><img src="../../pdnd-interoperabilita/PDND-Interoperability-Operating-Manual/v1.0/.gitbook/assets/Screenshot 2022-07-28 at 17.15.59.png" alt=""><figcaption><p>The screen where the membership agreement received at the digital domicile and signed by the party’s Legal Representative is uploaded.</p></figcaption></figure>
 
 The final step is to return to the platform and upload the signed `.p7m` file. The system will automatically verify the signature’s validity.
 
