@@ -17,7 +17,7 @@ description: >-
 
 ## Notice with multiple installments
 
-The multi-installment layouts make it possible to insert multiples of 2 or 3 installments in a single row. Depending on the configuration of the tax and the creditor’s collection method, it is possible to condense all the information on a single sheet, as done by [ANAS S.p.A.](https://www.stradeanas.it/it) and l'[Unione dei Comuni Adige Gua'](http://www.unioneadigegua.it/).
+The multi-installment layouts make it possible to insert multiples of 2 or 3 installments in a single row. Depending on the configuration of the tax and the creditor’s collection method, it is possible to condense all the information on a single sheet, as done by [ANAS S.p.A.](https://www.stradeanas.it/it) and [Unione dei Comuni Adige Gua'](http://www.unioneadigegua.it/).
 
 ### 2 installments
 
