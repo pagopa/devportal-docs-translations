@@ -8,7 +8,7 @@ description: >-
 # Bilingual notice
 
 {% hint style="warning" %}
-If the creditor has a postal current account for collections, also the \[postal-payment-slip.md]\(../../../attachment-2/technical-specifications/payment-data/postal-payment-slip.md "mention") must be included.
+If the creditor has a postal current account for collections, also the [postal-payment-slip.md](../../../attachment-2/technical-specifications/payment-data/postal-payment-slip.md "mention") must be included.
 {% endhint %}
 
 {% @figma/embed url="https://www.figma.com/file/YzDj4uIEKYdukuGEOkJZ1K/Avviso-bilingue?node-id=0:1&t=EbiFcJrGUOGjnOFq-1" fileId="YzDj4uIEKYdukuGEOkJZ1K" nodeId="0:1" %}
