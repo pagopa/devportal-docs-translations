@@ -40,7 +40,7 @@ Starting from their first access, app users must give their consent to be contac
 * **Manual configuration**: no service can send messages to the user. The user must activate communication individually by activating the “Contact you in-app” option that is located on every service tab.
 
 {% hint style="info" %}
-\*\*The advantages of quick configuration\*\*
+**The advantages of quick configuration**
 
 In the app we recommend choosing the quick configuration in order to not miss any message that is sent.
 {% endhint %}
