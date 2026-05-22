@@ -7,7 +7,7 @@ description: >-
 # Margins and spaces
 
 {% hint style="success" %}
-The \[\*\*provided models\*\*]\(../../attachment-1/base.models.md) already account for optimal margins and spacing.
+The [**provided models** ](../../attachment-1/base.models.md) already account for optimal margins and spacing.
 {% endhint %}
 
 ## Print margins
