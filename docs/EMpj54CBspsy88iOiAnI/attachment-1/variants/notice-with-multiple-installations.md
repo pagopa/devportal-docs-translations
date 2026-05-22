@@ -8,7 +8,7 @@ description: >-
 # Notice with multiple installments
 
 {% hint style="danger" %}
-Use this model only if your notice has a high number of installments, \*\*minimum of 9.\*\* In all other cases, refer to the layout described in [rate-multiple](../../attachment-2/technical-specifications/payment-data/).
+Use this model only if your notice has a high number of installments, **minimum of 9.** In all other cases, refer to the layout described in [rate-multiple](../../attachment-2/technical-specifications/payment-data/).
 {% endhint %}
 
 {% hint style="warning" %}
