@@ -6,13 +6,6 @@ description: >-
 
 # 🕘 Changelog
 
-### 3.4 (May 2025)
-
-* Inserted references to the notice generation APIs ([https://developer.pagopa.it/pago-pa/guides/stampa-avvisi-pagamento](https://developer.pagopa.it/pago-pa/guides/stampa-avvisi-pagamento) - Italian Language)
-* Specified better the use of the sample files provided on the page [how-to-use-the-files.md](../attachment-2/how-to-use-the-files.md "mention")
-* Specified the front-back printing methods, on page [technical-specifications](../attachment-2/technical-specifications/ "mention")
-* Corrected some sample files
-
 ### 3.3 (May 2024)
 
 * Better specified the obligation of the [#codifica-dei-testi](../attachment-2/technical-specifications/#codifica-dei-testi "mention") in UTF-8 format to support the characteristics required for languages such as German and Slovenian
