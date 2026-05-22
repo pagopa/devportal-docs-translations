@@ -6,7 +6,7 @@ Opportunities are specific functional technical and/or economical benefits offer
 
 The operator who joins the initiative following an agreement - as well as during the agreement relationship - must create and recognize one or more opportunities proposed and dedicated to the beneficiaries.
 
-The opportunities defined by the operator will be published in the [specific section of the IO app](../../GVxSS3zVSEuRbwiMGCGx/io-app/la-carta-giovani-nazionale-nelio-app.md), after passing technical tests using the dedicated portal.
+The opportunities defined by the operator will be published in [the specific section of the IO app](../), after passing technical tests using the dedicated portal.
 
 The recognition to the beneficiaries of the opportunities assumes possession of the CGN as well as the use of the IO app by the beneficiaries, and can take place in different ways depending on if the operator operates in physical sales locations and/or online.
 
