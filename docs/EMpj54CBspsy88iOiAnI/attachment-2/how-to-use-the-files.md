@@ -7,7 +7,7 @@ description: >-
 # ❓ How to use the files
 
 {% hint style="info" %}
-The provided files \*\*are not to be considered files ready for direct printing\*\*. Their use is limited to the design and development phase by those who create the actual executive files, optimized for the printing process.
+The provided files **are not to be considered files ready for direct printing**. Their use is limited to the design and development phase by those who create the actual executive files, optimized for the printing process.
 {% endhint %}
 
 ## View the files online with Figma
