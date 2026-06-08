@@ -1,0 +1,5 @@
+base_path: .
+preserve_hierarchy: true
+files:
+  - source: docs-structure.json
+    translation: docs/%locale%/_meta/doc_structure.json
