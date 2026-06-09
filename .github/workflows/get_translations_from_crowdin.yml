@@ -22,7 +22,7 @@ jobs:
   get_translations_from_crowdin:
     runs-on: ubuntu-latest
     env:
-      SOURCE_DOCS_REPOSITORY: Uqido/PagopaTranslationsPOC
+      SOURCE_DOCS_REPOSITORY: pagopa/devportal-docs
       SOURCE_DOCS_BRANCH: main
       SOURCE_DOCS_ROOT: docs
       GIT_USER_NAME: 'github-actions[bot]'
