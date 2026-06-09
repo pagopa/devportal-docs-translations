@@ -1,5 +1,5 @@
 {
-  "name": "pagopatranslationpoctarget",
+  "name": "devportal-docs-translations",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,15 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Uqido/PagopaTranslationPocTarget.git"
+    "url": "git+https://github.com/pagopa/devportal-docs-translations.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Uqido/PagopaTranslationPocTarget/issues"
+    "url": "https://github.com/pagopa/devportal-docs-translations/issues"
   },
-  "homepage": "https://github.com/Uqido/PagopaTranslationPocTarget#readme",
+  "homepage": "https://github.com/pagopa/devportal-docs-translations/blob/main/README.md",
   "dependencies": {
     "js-yaml": "^4.1.1"
   },
