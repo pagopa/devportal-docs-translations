@@ -7,6 +7,7 @@ import {
   type GitBookAssetEntry,
   type GitBookAssetManifest
 } from './buildGitBookAssetManifest';
+import { fail } from './getTranslationsWorkflowIo';
 
 const DEFAULT_MANIFEST_PATH = 'gitbook-assets-manifest.json';
 
@@ -21,16 +22,6 @@ export interface CopyGitBookAssetsResult {
   skippedEntries: number;
   copiedPaths: string[];
   skippedPaths: string[];
-}
-
-function fail(message: string, error?: unknown): never {
-  if (error) {
-    console.error(message, error);
-  } else {
-    console.error(message);
-  }
-
-  process.exit(1);
 }
 
 export function copyGitBookAssets({

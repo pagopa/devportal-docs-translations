@@ -9,12 +9,12 @@ import {
   METADATA_DIRECTORY,
   SOURCE_STRUCTURE_FILE_NAME,
   collectPrunableStructureEntries,
-  discoverLocalizedStructures,
   getStructureRootNode,
   type StructureDocument,
   type StructureNode,
   type TranslatedStructureEntry
 } from './translationStructure';
+import { discoverLocalizedStructuresOrFail } from './getTranslationsWorkflowIo';
 
 interface ExecFileSyncFailure extends Error {
   status?: number | null;
@@ -29,14 +29,7 @@ export interface PruneSummary {
 
 export function main() {
   const docsRoot = path.resolve(DOCS_DIRECTORY);
-  const localizedStructures = discoverLocalizedStructures(docsRoot);
-
-  if (localizedStructures.length === 0) {
-    console.error(
-      `❌ No ${SOURCE_STRUCTURE_FILE_NAME} file found in ${DOCS_DIRECTORY}/*/_meta.`
-    );
-    process.exit(1);
-  }
+  const localizedStructures = discoverLocalizedStructuresOrFail(docsRoot);
 
   localizedStructures.forEach((structure) => {
     processLocaleDirectory(docsRoot, structure.locale, structure.rootNode);

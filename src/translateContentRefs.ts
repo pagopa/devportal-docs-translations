@@ -5,15 +5,14 @@ import * as path from 'path';
 
 import {
   DOCS_DIRECTORY,
-  SOURCE_STRUCTURE_FILE_NAME,
   assertUniqueTranslatedTargets,
   collectTranslatedStructureEntries,
-  discoverLocalizedStructures,
   normalizeRequestedDocsPath,
   normalizeSourceDocsFilePath,
   type StructureNode,
   type TranslatedStructureEntry
 } from './translationStructure';
+import { discoverLocalizedStructuresOrFail } from './getTranslationsWorkflowIo';
 
 const CONTENT_REF_BLOCK_PATTERN = /\{%\s*content-ref\s+url=(["'])(.*?)\1\s*%\}[\s\S]*?\{%\s*endcontent-ref\s*%\}/g;
 
@@ -253,14 +252,7 @@ function getErrorMessage(error: unknown): string {
 
 export function main() {
   const docsRoot = path.resolve(DOCS_DIRECTORY);
-  const localizedStructures = discoverLocalizedStructures(docsRoot);
-
-  if (localizedStructures.length === 0) {
-    console.error(
-      `❌ No ${SOURCE_STRUCTURE_FILE_NAME} file found in ${DOCS_DIRECTORY}/*/_meta.`
-    );
-    process.exit(1);
-  }
+  const localizedStructures = discoverLocalizedStructuresOrFail(docsRoot);
 
   localizedStructures.forEach((structure) => {
     console.log(`🔗 Processing content refs for locale ${structure.locale}`);

@@ -1,0 +1,286 @@
+name: Get Translations From Crowdin
+
+on:
+  workflow_dispatch:
+    inputs:
+      paths_to_download:
+        description: 'Optional comma-separated list of partial docs paths or markdown files to process. When omitted, the whole docs/ tree is downloaded.'
+        required: false
+        type: string
+        default: ''
+      debug:
+        description: 'Enable debug logging for generated workflow artifacts'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  get_translations_from_crowdin:
+    runs-on: ubuntu-latest
+    env:
+      SOURCE_DOCS_REPOSITORY: Uqido/PagopaTranslationsPOC
+      SOURCE_DOCS_BRANCH: main
+      SOURCE_DOCS_ROOT: docs
+      GIT_USER_NAME: 'github-actions[bot]'
+      GIT_USER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
+    steps:
+      - name: Log input
+        run: |
+          echo "Received requested paths: ${{ inputs.paths_to_download }}"
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Setup Node.JS
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Parse workflow input
+        id: parse-input
+        env:
+          REQUESTED_PATHS_INPUT: ${{ inputs.paths_to_download }}
+        run: npm run parse_workflow_input
+
+      - name: Build source checkout manifest and return the sparse checkout file
+        id: source-checkout
+        if: steps.parse-input.outputs.has_paths == 'true'
+        env:
+          REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
+        run: npm run build_source_checkout_manifest
+
+      - name: Fetch requested source docs and assets
+        if: steps.source-checkout.outputs.has_sources == 'true'
+        env:
+          SOURCE_DOCS_CHECKOUT_PATH: .source-docs
+          SOURCE_DOCS_TOKEN: ${{ secrets.SOURCE_DOCS_TOKEN }}
+          SPARSE_CHECKOUT_FILE: ${{ steps.source-checkout.outputs.sparse_checkout_file }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SOURCE_DOCS_REPOSITORY:-}" ]; then
+            echo '❌ SOURCE_DOCS_REPOSITORY must be configured in the workflow env.'
+            exit 1
+          fi
+
+          clone_url="https://github.com/${SOURCE_DOCS_REPOSITORY}.git"
+          if [ -n "${SOURCE_DOCS_TOKEN:-}" ]; then
+            clone_url="https://x-access-token:${SOURCE_DOCS_TOKEN}@github.com/${SOURCE_DOCS_REPOSITORY}.git"
+          fi
+
+          rm -rf "$SOURCE_DOCS_CHECKOUT_PATH"
+          if ! git clone --depth 1 --filter=blob:none --sparse --branch "$SOURCE_DOCS_BRANCH" \
+            "$clone_url" \
+            "$SOURCE_DOCS_CHECKOUT_PATH"; then
+            if [ -n "${SOURCE_DOCS_TOKEN:-}" ]; then
+              echo "❌ Unable to clone ${SOURCE_DOCS_REPOSITORY} with SOURCE_DOCS_TOKEN. Verify that the secret exists and has at least read access to the source repository."
+            else
+              echo "❌ Unable to clone ${SOURCE_DOCS_REPOSITORY} anonymously. If the source repository is private, add a SOURCE_DOCS_TOKEN secret with read access to that repository."
+            fi
+            exit 1
+          fi
+
+          git -C "$SOURCE_DOCS_CHECKOUT_PATH" sparse-checkout set --no-cone --stdin < "$SPARSE_CHECKOUT_FILE"
+
+      - name: Stage requested source docs and assets
+        if: steps.source-checkout.outputs.has_sources == 'true'
+        env:
+          SOURCE_DOCS_CHECKOUT_PATH: .source-docs
+        run: |
+          set -euo pipefail
+          source_docs_path="$SOURCE_DOCS_CHECKOUT_PATH/$SOURCE_DOCS_ROOT"
+          if [ ! -d "$source_docs_path" ]; then
+            echo "❌ Source docs root not found after sparse checkout: $source_docs_path"
+            exit 1
+          fi
+          mkdir -p docs
+          cp -Rn "$source_docs_path"/. docs/
+
+      - name: Debug staged docs tree
+        if: steps.source-checkout.outputs.has_sources == 'true' && inputs.debug == true
+        run: |
+          set -euo pipefail
+          echo 'Staged docs tree:'
+          find docs | sort
+
+      - name: Generate crowdin.yml to get only requested paths
+        if: steps.parse-input.outputs.has_paths == 'true'
+        env:
+          REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
+        run: npm run generate_crowdin_config
+
+      - name: Debug generated crowdin.yml
+        if: steps.parse-input.outputs.has_paths == 'true' && inputs.debug == true
+        run: |
+          echo 'Generated crowdin.yml:'
+          cat crowdin.yml
+
+      - name: Download translations from Crowdin
+        if: steps.parse-input.outputs.has_paths == 'true'
+        uses: crowdin/github-action@8868a33591d21088edfc398968173a3b98d51706
+        with:
+          upload_sources: false
+          upload_translations: false
+          export_only_approved: true
+          download_translations: true
+          create_pull_request: false
+          push_sources: false
+          push_translations: false
+          base_url: 'https://pagopa.crowdin.com'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+      - name: Fix permissions on downloaded files
+        if: steps.parse-input.outputs.has_paths == 'true'
+        run: sudo chown -R "$(id -u):$(id -g)" docs
+
+      - name: Remove stale files and folders from repository
+        if: steps.parse-input.outputs.has_paths == 'true'
+        run: npm run prune_removed_translated_paths
+
+      - name: Rename translated files and folders
+        if: steps.parse-input.outputs.has_paths == 'true'
+        run: npm run rename_translated_files_and_folders
+
+      - name: Translate markdown content refs
+        if: steps.parse-input.outputs.has_paths == 'true'
+        run: npm run translate_content_refs
+
+      - name: Build GitBook asset manifest
+        id: gitbook-assets
+        if: steps.parse-input.outputs.has_paths == 'true'
+        env:
+          REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
+        run: npm run build_gitbook_asset_manifest
+
+      - name: Copy GitBook assets
+        if: steps.gitbook-assets.outputs.has_assets == 'true'
+        env:
+          SOURCE_DOCS_REPO_PATH: .
+        run: npm run copy_gitbook_assets
+
+      - name: Cleanup artifacts
+        if: steps.parse-input.outputs.has_paths == 'true'
+        env:
+          REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
+        run: |
+          set -euo pipefail
+          # Drop the generated crowdin.yml so it is not part of the PR.
+          git checkout -- crowdin.yml 2>/dev/null || true
+
+          locale_roots=()
+          while IFS= read -r structure_path; do
+            [ -z "$structure_path" ] && continue
+            locale_roots+=("$(dirname "$(dirname "$structure_path")")")
+          done < <(find docs -mindepth 3 -maxdepth 3 -type f -path 'docs/*/_meta/docs-structure.json' | sort -u)
+
+          while IFS= read -r untracked_path; do
+            [ -z "$untracked_path" ] && continue
+
+            keep_path='false'
+            for locale_root in "${locale_roots[@]:-}"; do
+              case "$untracked_path" in
+                "$locale_root"|"$locale_root"/*)
+                  keep_path='true'
+                  break
+                  ;;
+              esac
+            done
+
+            if [ "$keep_path" = 'true' ]; then
+              continue
+            fi
+
+            echo "🧹 Removing staged source artifact: $untracked_path"
+            rm -rf "$untracked_path"
+          done < <(git ls-files --others --exclude-standard -- docs)
+
+          # Drop now-empty source directories left behind by the staged-source cleanup.
+          find docs -mindepth 1 -type d -empty -delete 2>/dev/null || true
+          # Drop temporary asset sync artifacts outside the docs tree.
+          rm -rf \
+            .source-docs \
+            .source-docs-sparse-checkout.txt \
+            gitbook-assets-manifest.json \
+            .gitbook-asset-sparse-checkout.txt
+
+      - name: Compute PR metadata
+        id: pr-meta
+        if: steps.parse-input.outputs.has_paths == 'true'
+        env:
+          REQUESTED_PATHS_INPUT: ${{ inputs.paths_to_download }}
+          SOURCE_CHECKOUT_MANIFEST_PATH: ${{ steps.source-checkout.outputs.manifest_path }}
+        run: |
+          set -euo pipefail
+          input_hash=$(printf '%s' "$REQUESTED_PATHS_INPUT" | sha1sum | cut -c1-8)
+          run_date=$(date -u +'%Y%m%d-%H%M%S')
+          suffix="${run_date}-${input_hash}"
+          echo "branch=l10n_crowdin_translations-${suffix}" >> "$GITHUB_OUTPUT"
+          echo "title=New Crowdin Translations (${suffix})" >> "$GITHUB_OUTPUT"
+
+          retrieved_paths=$(node <<'NODE'
+          const fs = require('fs');
+          const manifestPath = process.env.SOURCE_CHECKOUT_MANIFEST_PATH;
+
+          if (!manifestPath || !fs.existsSync(manifestPath)) {
+            process.exit(0);
+          }
+
+          const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+          const requestedPaths = Array.isArray(manifest.requestedPaths) ? manifest.requestedPaths : [];
+          process.stdout.write(requestedPaths.join('\n'));
+          NODE
+          )
+          rm -f "$SOURCE_CHECKOUT_MANIFEST_PATH"
+
+          {
+            echo 'body<<EOF'
+            echo 'New Crowdin translations downloaded by [Crowdin GH Action](https://github.com/crowdin/github-action) and renamed using the localized docs structure.'
+            echo ''
+            echo "**Run date (UTC):** ${run_date}"
+            echo "**Input hash:** \`${input_hash}\`"
+            echo ''
+            echo '**Retrieved requested paths:**'
+            if [ -z "$retrieved_paths" ]; then
+              echo '- _no requested paths retrieved_'
+            else
+              while IFS= read -r requested_path; do
+                [ -z "$requested_path" ] && continue
+                echo "- \`${requested_path}\`"
+              done <<< "$retrieved_paths"
+            fi
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create Pull Request with translations
+        if: steps.parse-input.outputs.has_files == 'true'
+        env:
+          BRANCH_NAME: ${{ steps.pr-meta.outputs.branch }}
+          PR_TITLE: ${{ steps.pr-meta.outputs.title }}
+          PR_BODY: ${{ steps.pr-meta.outputs.body }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git checkout -B "$BRANCH_NAME"
+          git add -A -- docs
+
+          if git diff --cached --quiet; then
+            echo 'No docs changes to commit; skipping PR creation.'
+            exit 0
+          fi
+
+          git config user.name "$GIT_USER_NAME"
+          git config user.email "$GIT_USER_EMAIL"
+          git commit -m 'chore: update Crowdin translations'
+          git push --set-upstream origin "$BRANCH_NAME"
+          gh pr create --base main --head "$BRANCH_NAME" --title "$PR_TITLE" --body "$PR_BODY"

@@ -9,12 +9,14 @@ import {
   getRequestedDocsStaticDirectory,
   matchesRequestedSourcePath,
   normalizeRequestedDocsPath,
+  normalizeSourceDocsRoot,
   resolveTranslatedDirectoryRelativePath,
   type LocalizedStructure,
   type NormalizedRequestedDocsPath,
   type TranslatedStructureEntry,
   collectTranslatedStructureEntries
 } from './translationStructure';
+import { fail, readRequestedPaths, writeTextFile } from './getTranslationsWorkflowIo';
 
 const DEFAULT_MANIFEST_PATH = 'gitbook-assets-manifest.json';
 const DEFAULT_SPARSE_PATHS_FILE = '.gitbook-asset-sparse-checkout.txt';
@@ -42,16 +44,6 @@ export interface BuildGitBookAssetManifestOptions {
   docsRoot: string;
   requestedPaths: string[];
   sourceDocsRoot?: string;
-}
-
-function fail(message: string, error?: unknown): never {
-  if (error) {
-    console.error(message, error);
-  } else {
-    console.error(message);
-  }
-
-  process.exit(1);
 }
 
 export function buildGitBookAssetManifest({
@@ -197,64 +189,6 @@ function collectAncestorDirectories(sourceDirectory: string, rootDirectory: stri
   });
 
   return directories;
-}
-
-function normalizeSourceDocsRoot(sourceDocsRoot: string): string {
-  const trimmedRoot = sourceDocsRoot.trim();
-
-  if (trimmedRoot.length === 0) {
-    return DOCS_DIRECTORY;
-  }
-
-  const normalizedRoot = path.posix.normalize(trimmedRoot.replace(/\\/g, '/'));
-
-  if (path.posix.isAbsolute(normalizedRoot)) {
-    throw new Error(`The source docs root ${sourceDocsRoot} must be relative to the repository.`);
-  }
-
-  if (normalizedRoot === '..' || normalizedRoot.startsWith('../')) {
-    throw new Error(`The source docs root ${sourceDocsRoot} leaves the repository directory.`);
-  }
-
-  return normalizedRoot === '.' ? DOCS_DIRECTORY : normalizedRoot;
-}
-
-function readRequestedPaths(): string[] {
-  const inputJson =
-    process.env.REQUESTED_PATHS ?? process.env.NORMALIZED_PATHS ?? process.env.DIRECTORIES_LIST;
-
-  if (!inputJson) {
-    return [];
-  }
-
-  try {
-    const parsedPaths = JSON.parse(inputJson);
-
-    if (!Array.isArray(parsedPaths)) {
-      throw new Error('The payload must be a JSON array.');
-    }
-
-    return [...new Set(parsedPaths.map((entry) => {
-      if (typeof entry !== 'string') {
-        throw new Error('Each requested path item must be a string.');
-      }
-
-      return entry.trim();
-    }))].filter((entry) => entry.length > 0);
-  } catch (error) {
-    console.error('❌ Error parsing input JSON:', error);
-    process.exit(1);
-  }
-}
-
-function writeTextFile(filePath: string, content: string) {
-  const directoryPath = path.dirname(filePath);
-
-  if (directoryPath !== '.' && !fs.existsSync(directoryPath)) {
-    fs.mkdirSync(directoryPath, { recursive: true });
-  }
-
-  fs.writeFileSync(filePath, content, 'utf8');
 }
 
 export function main() {

@@ -13,6 +13,7 @@ import {
   normalizeRequestedDocsPath,
   normalizeSourceDocsFilePath
 } from './translationStructure';
+import { readRequestedPaths } from './getTranslationsWorkflowIo';
 
 const CONFIG_FILE = 'crowdin.yml';
 const STRUCTURE_SOURCE_PATH = toPosixPath(path.posix.join(SOURCE_STRUCTURE_FILE_NAME));
@@ -51,36 +52,6 @@ function main() {
   console.log(
     `✅ File ${CONFIG_FILE} generated with 1 structure entry + ${contentEntries.length} content entries.`
   );
-}
-
-function readRequestedPaths(): string[] {
-  const inputJson =
-    process.env.REQUESTED_PATHS ?? process.env.NORMALIZED_PATHS ?? process.env.DIRECTORIES_LIST;
-
-  if (!inputJson) {
-    return [];
-  }
-
-  try {
-    const parsedPaths = JSON.parse(inputJson);
-
-    if (!Array.isArray(parsedPaths)) {
-      throw new Error('The payload must be a JSON array.');
-    }
-
-    const normalizedPaths = parsedPaths.map((entry) => {
-      if (typeof entry !== 'string') {
-        throw new Error('Each requested path item must be a string.');
-      }
-
-      return entry.trim();
-    });
-
-    return [...new Set(normalizedPaths)].filter((entry) => entry.length > 0);
-  } catch (error) {
-    console.error('❌ Error parsing input JSON:', error);
-    process.exit(1);
-  }
 }
 
 export function toCrowdinFileEntry(sourcePath: string): CrowdinFileEntry {

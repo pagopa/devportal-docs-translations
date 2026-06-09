@@ -2,15 +2,7 @@
 
 import * as fs from 'fs';
 
-function fail(message: string, error?: unknown): never {
-  if (error) {
-    console.error(message, error);
-  } else {
-    console.error(message);
-  }
-
-  process.exit(1);
-}
+import { fail } from './getTranslationsWorkflowIo';
 
 function isStringArray(value: unknown): value is string[] {
   return Array.isArray(value) && value.every((file) => typeof file === 'string');

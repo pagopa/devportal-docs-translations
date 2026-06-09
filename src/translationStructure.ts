@@ -379,6 +379,26 @@ export function joinRelativePath(segments: string[]): string {
   return path.posix.join(...segments);
 }
 
+export function normalizeSourceDocsRoot(sourceDocsRoot: string): string {
+  const trimmedRoot = sourceDocsRoot.trim();
+
+  if (trimmedRoot.length === 0) {
+    return DOCS_DIRECTORY;
+  }
+
+  const normalizedRoot = path.posix.normalize(trimmedRoot.replace(/\\/g, '/'));
+
+  if (path.posix.isAbsolute(normalizedRoot)) {
+    throw new Error(`The source docs root ${sourceDocsRoot} must be relative to the repository.`);
+  }
+
+  if (normalizedRoot === '..' || normalizedRoot.startsWith('../')) {
+    throw new Error(`The source docs root ${sourceDocsRoot} leaves the repository directory.`);
+  }
+
+  return normalizedRoot === '.' ? DOCS_DIRECTORY : normalizedRoot;
+}
+
 function isMarkdownSegment(segment: string): boolean {
   return segment.toLowerCase().endsWith(MARKDOWN_EXTENSION);
 }

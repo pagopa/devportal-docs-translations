@@ -5,12 +5,12 @@ import * as path from 'path';
 
 import {
   DOCS_DIRECTORY,
-  SOURCE_STRUCTURE_FILE_NAME,
   StructureNode,
+  assertUniqueTranslatedTargets,
   collectTranslatedStructureEntries,
-  discoverLocalizedStructures,
   type TranslatedStructureEntry
 } from './translationStructure';
+import { discoverLocalizedStructuresOrFail } from './getTranslationsWorkflowIo';
 
 interface RenameOperation {
   sourceRelativePath: string;
@@ -20,14 +20,7 @@ interface RenameOperation {
 
 export function main() {
   const docsRoot = path.resolve(DOCS_DIRECTORY);
-  const localizedStructures = discoverLocalizedStructures(docsRoot);
-
-  if (localizedStructures.length === 0) {
-    console.error(
-      `❌ No ${SOURCE_STRUCTURE_FILE_NAME} file found in ${DOCS_DIRECTORY}/*/_meta.`
-    );
-    process.exit(1);
-  }
+  const localizedStructures = discoverLocalizedStructuresOrFail(docsRoot);
 
   localizedStructures.forEach((structure) => {
     processLocaleDirectory(docsRoot, structure.locale, structure.rootNode);
@@ -42,7 +35,7 @@ function processLocaleDirectory(
   const localeRoot = path.join(docsRoot, localeDirectoryName);
   const translatedEntries = collectTranslatedStructureEntries(rootNode);
 
-  assertUniqueTargets(localeDirectoryName, translatedEntries);
+  assertUniqueTranslatedTargets(localeDirectoryName, translatedEntries);
 
   console.log(`🌍 Processing locale ${localeDirectoryName}`);
   renameLocaleEntries(localeRoot, translatedEntries);
@@ -73,22 +66,6 @@ function toRenameOperation(entry: TranslatedStructureEntry): RenameOperation {
   };
 }
 
-
-function assertUniqueTargets(localeDirectoryName: string, entries: TranslatedStructureEntry[]) {
-  const seenTargets = new Map<string, string>();
-
-  entries.forEach((entry) => {
-    const existingSource = seenTargets.get(entry.targetRelativePath);
-
-    if (existingSource && existingSource !== entry.sourceRelativePath) {
-      throw new Error(
-        `Conflict in locale ${localeDirectoryName}: ${entry.sourceRelativePath} and ${existingSource} both point to ${entry.targetRelativePath}.`
-      );
-    }
-
-    seenTargets.set(entry.targetRelativePath, entry.sourceRelativePath);
-  });
-}
 
 function applyDirectoryRenames(localeRoot: string, operations: RenameOperation[]) {
   operations
