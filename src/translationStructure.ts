@@ -78,7 +78,7 @@ export function getStructureRootNode(
 
 export function discoverLocalizedStructures(docsRoot: string): LocalizedStructure[] {
   if (!fs.existsSync(docsRoot)) {
-    throw new Error(`❌ Directory ${DOCS_DIRECTORY} not found.`);
+    throw new Error(`❌ Directory ${docsRoot} not found.`);
   }
 
   return fs
