@@ -1,0 +1,11 @@
+name: Get translations from Crowdin
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-translations-from-crowdin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder
+        run: echo "No sync steps implemented yet."
