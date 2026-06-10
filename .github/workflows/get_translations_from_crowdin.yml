@@ -145,7 +145,7 @@ jobs:
         if: steps.parse-input.outputs.has_paths == 'true'
         run: npm run rename_translated_files_and_folders
 
-      - name: Translate content-ref links in translated files
+      - name: Translate links in translated files
         if: steps.parse-input.outputs.has_paths == 'true'
         run: npm run translate_links
 
@@ -197,6 +197,20 @@ jobs:
             echo "🧹 Removing staged source artifact: $untracked_path"
             rm -rf "$untracked_path"
           done < <(git ls-files --others --exclude-standard -- docs)
+
+          # Flatten translated locale folders (e.g. docs/en-US/) into docs/.
+          # This workflow runs in the translation repository, so only translated
+          # docs must live under docs/ without the leading locale directory.
+          # Existing files are overwritten while other files and folders already
+          # present under docs/ are preserved.
+          for locale_root in "${locale_roots[@]:-}"; do
+            [ -z "$locale_root" ] && continue
+            [ -d "$locale_root" ] || continue
+
+            echo "📂 Flattening locale folder $locale_root into docs/"
+            cp -Rf "$locale_root"/. docs/
+            rm -rf "$locale_root"
+          done
 
           # Drop now-empty source directories left behind by the staged-source cleanup.
           find docs -mindepth 1 -type d -empty -delete 2>/dev/null || true
