@@ -69,7 +69,7 @@ function createLocalizedDocsFixture(rootNode: StructureNode) {
   };
 }
 
-test('translateContentRefsInLocale rewrites sibling content-ref targets and leaves plain links alone', () => {
+test('translateContentRefsInLocale rewrites content-ref targets and plain markdown links', () => {
   const { tempRoot, docsRoot } = createLocalizedDocsFixture(createLocalizedRootNode());
 
   try {
@@ -85,7 +85,11 @@ test('translateContentRefsInLocale rewrites sibling content-ref targets and leav
         '[faq.md](faq.md)',
         '{% endcontent-ref %}',
         '',
-        '[plain](faq.md)'
+        '[plain](faq.md)',
+        'See the [FAQ section](faq.md#section) for details.',
+        '[external](https://example.com/faq.md)',
+        '[anchor](#intro)',
+        '![diagram](diagram.png)'
       ].join('\n'),
       'utf8'
     );
@@ -102,7 +106,7 @@ test('translateContentRefsInLocale rewrites sibling content-ref targets and leav
 
     assert.deepEqual(warnings, []);
     assert.equal(result.updatedFiles, 1);
-    assert.equal(result.updatedBlocks, 1);
+    assert.equal(result.updatedLinks, 3);
     assert.equal(
       fs.readFileSync(readmePath, 'utf8'),
       [
@@ -111,7 +115,11 @@ test('translateContentRefsInLocale rewrites sibling content-ref targets and leav
         '[faq.md](Domande-Frequenti.md)',
         '{% endcontent-ref %}',
         '',
-        '[plain](faq.md)'
+        '[plain](Domande-Frequenti.md)',
+        'See the [FAQ section](Domande-Frequenti.md#section) for details.',
+        '[external](https://example.com/faq.md)',
+        '[anchor](#intro)',
+        '![diagram](diagram.png)'
       ].join('\n')
     );
   } finally {
@@ -142,7 +150,7 @@ test('translateContentRefsInLocale resolves parent-relative content-ref targets 
     const result = translateContentRefsInLocale(docsRoot, structure.locale, structure.rootNode);
 
     assert.equal(result.updatedFiles, 1);
-    assert.equal(result.updatedBlocks, 1);
+    assert.equal(result.updatedLinks, 1);
     assert.equal(
       fs.readFileSync(nestedPath, 'utf8'),
       [
@@ -180,7 +188,7 @@ test('translateContentRefsInLocale warns and preserves unresolved content-ref bl
     );
 
     assert.equal(result.updatedFiles, 0);
-    assert.equal(result.updatedBlocks, 0);
+    assert.equal(result.updatedLinks, 0);
     assert.equal(warnings.length, 1);
     assert.match(warnings[0], /was not downloaded/);
     assert.equal(fs.readFileSync(readmePath, 'utf8'), originalContent);

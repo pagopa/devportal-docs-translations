@@ -250,36 +250,44 @@ flowchart TD
 If a target already exists or there is a target-name collision the script
 fails fast.
 
-### 9. Translate content-ref URLs
+### 9. Translate markdown links
 
 - Step: `Translate markdown content refs`
 - Script: [src/translateContentRefs.ts](../../src/translateContentRefs.ts)
   (npm script `translate_content_refs`).
 
-GitBook embeds cross-document references as:
+GitBook embeds cross-document references both as `content-ref` blocks and as
+plain markdown links:
 
 ```text
 {% content-ref url="some/path.md" %}
 [link text](some/path.md)
 {% endcontent-ref %}
+
+See the [related guide](some/path.md) for more details.
 ```
 
 After renaming, those URLs still point at the original source-named paths.
 This script rewrites them per locale so they point at the translated
-counterpart.
+counterpart. Both `content-ref` URLs and standard `[text](url)` links are
+translated. External URLs (e.g. `https://`), pure anchors (`#...`), image
+embeds (`![]()`) and links that do not point to a localized markdown file are
+left untouched.
 
 ```mermaid
 flowchart TD
     A[for each locale] --> B[markdown entries from structure]
     B --> C[build sourcePath -&gt; targetRelativePath map]
     C --> D[for each translated .md on disk]
-    D --> E[regex match content-ref blocks]
-    E --> F[resolve raw URL to source path<br/>(absolute or relative to current file)]
-    F --> G{found in map &&<br/>translated file exists?}
-    G -- no --> H[warn, leave block unchanged]
-    G -- yes --> I[compute relative translated URL]
-    I --> J[rewrite url= attribute and<br/>matching markdown link]
-    J --> K[write file if anything changed]
+    D --> E[regex match content-ref blocks<br/>and markdown links]
+    E --> F{translatable target?<br/>(local .md, not external/anchor/image)}
+    F -- no --> L[leave match unchanged]
+    F -- yes --> G[resolve raw URL to source path<br/>(absolute or relative to current file)]
+    G --> H{found in map &&<br/>translated file exists?}
+    H -- no --> I[warn, leave match unchanged]
+    H -- yes --> J[compute relative translated URL]
+    J --> K[rewrite content-ref url= and/or<br/>markdown link target]
+    K --> M[write file if anything changed]
 ```
 
 Query strings and fragments (`?...`, `#...`) on the URL are preserved.

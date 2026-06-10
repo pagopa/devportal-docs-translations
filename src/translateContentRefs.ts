@@ -14,14 +14,19 @@ import {
 } from './translationStructure';
 import { discoverLocalizedStructuresOrFail } from './getTranslationsWorkflowIo';
 
-const CONTENT_REF_BLOCK_PATTERN = /\{%\s*content-ref\s+url=(["'])(.*?)\1\s*%\}[\s\S]*?\{%\s*endcontent-ref\s*%\}/g;
+// Matches either a GitBook {% content-ref %} block or a standard markdown link
+// (including image embeds). Content-ref blocks are listed first so the whole
+// block is consumed as a single match, preventing the link inside it from being
+// matched a second time by the markdown-link alternative.
+const CONTENT_REF_OR_LINK_PATTERN =
+  /\{%\s*content-ref\s+url=(["'])(.*?)\1\s*%\}[\s\S]*?\{%\s*endcontent-ref\s*%\}|(!?)\[([^\]]*)\]\(([^)]+)\)/g;
 
 type WarningReporter = (message: string) => void;
 
 export interface ContentRefTranslationResult {
   scannedFiles: number;
   updatedFiles: number;
-  updatedBlocks: number;
+  updatedLinks: number;
   warnings: number;
 }
 
@@ -36,7 +41,7 @@ interface RewriteContext {
 
 interface RewriteResult {
   content: string;
-  updatedBlocks: number;
+  updatedLinks: number;
 }
 
 export function translateContentRefsInLocale(
@@ -56,7 +61,7 @@ export function translateContentRefsInLocale(
 
   let scannedFiles = 0;
   let updatedFiles = 0;
-  let updatedBlocks = 0;
+  let updatedLinks = 0;
   let warnings = 0;
 
   markdownEntries.forEach((entry) => {
@@ -81,19 +86,19 @@ export function translateContentRefsInLocale(
       }
     });
 
-    if (rewriteResult.updatedBlocks === 0) {
+    if (rewriteResult.updatedLinks === 0) {
       return;
     }
 
     fs.writeFileSync(translatedFilePath, rewriteResult.content, 'utf8');
     updatedFiles += 1;
-    updatedBlocks += rewriteResult.updatedBlocks;
+    updatedLinks += rewriteResult.updatedLinks;
   });
 
   return {
     scannedFiles,
     updatedFiles,
-    updatedBlocks,
+    updatedLinks,
     warnings
   };
 }
@@ -102,26 +107,55 @@ export function rewriteContentRefsInDocument(
   content: string,
   context: RewriteContext
 ): RewriteResult {
-  let updatedBlocks = 0;
+  let updatedLinks = 0;
 
   const rewrittenContent = content.replace(
-    CONTENT_REF_BLOCK_PATTERN,
-    (block: string, quote: string, rawUrl: string) => {
-      const translatedUrl = resolveTranslatedContentRefUrl(rawUrl, context);
+    CONTENT_REF_OR_LINK_PATTERN,
+    (
+      match: string,
+      contentRefQuote: string | undefined,
+      contentRefUrl: string | undefined,
+      imageFlag: string | undefined,
+      linkText: string | undefined,
+      linkTarget: string | undefined
+    ) => {
+      if (contentRefQuote !== undefined && contentRefUrl !== undefined) {
+        const translatedUrl = resolveTranslatedTargetUrl(contentRefUrl, context);
 
-      if (!translatedUrl) {
-        return block;
+        if (!translatedUrl) {
+          return match;
+        }
+
+        updatedLinks += 1;
+
+        return rewriteContentRefBlock(match, contentRefQuote, contentRefUrl, translatedUrl);
       }
 
-      updatedBlocks += 1;
+      if (linkTarget === undefined) {
+        return match;
+      }
 
-      return rewriteContentRefBlock(block, quote, rawUrl, translatedUrl);
+      // Leave image embeds and links that do not point to localized markdown
+      // files (external URLs, anchors, assets, ...) untouched.
+      if (imageFlag === '!' || !isTranslatableLinkTarget(linkTarget)) {
+        return match;
+      }
+
+      const translatedUrl = resolveTranslatedTargetUrl(linkTarget, context);
+
+      if (!translatedUrl) {
+        return match;
+      }
+
+      updatedLinks += 1;
+
+      return `[${linkText ?? ''}](${translatedUrl})`;
     }
   );
 
   return {
     content: rewrittenContent,
-    updatedBlocks
+    updatedLinks
   };
 }
 
@@ -132,7 +166,7 @@ function getMarkdownEntries(rootNode: StructureNode): TranslatedStructureEntry[]
   );
 }
 
-function resolveTranslatedContentRefUrl(
+function resolveTranslatedTargetUrl(
   rawUrl: string,
   context: RewriteContext
 ): string | null {
@@ -163,11 +197,33 @@ function resolveTranslatedContentRefUrl(
     return `${translatedBasePath}${suffix}`;
   } catch (error) {
     context.warn(
-      `⚠️ [${context.locale}] ${context.currentFileSourcePath}: unable to translate content-ref "${rawUrl}": ${getErrorMessage(error)}`
+      `⚠️ [${context.locale}] ${context.currentFileSourcePath}: unable to translate link "${rawUrl}": ${getErrorMessage(error)}`
     );
 
     return null;
   }
+}
+
+/**
+ * Determines whether a markdown link target should be rewritten to its
+ * localized counterpart. Only links that point to markdown files within the
+ * docs tree are translated; external URLs, anchors and asset links are skipped.
+ */
+function isTranslatableLinkTarget(rawUrl: string): boolean {
+  const trimmedUrl = rawUrl.trim();
+
+  if (trimmedUrl.length === 0 || trimmedUrl.startsWith('#') || trimmedUrl.startsWith('//')) {
+    return false;
+  }
+
+  // Skip absolute URLs with a scheme such as http:, https:, mailto: or tel:.
+  if (/^[a-z][a-z0-9+.-]*:/i.test(trimmedUrl)) {
+    return false;
+  }
+
+  const { pathPart } = splitUrlSuffix(trimmedUrl);
+
+  return path.posix.extname(pathPart).toLowerCase() === '.md';
 }
 
 export function resolveContentRefSourcePath(
@@ -260,7 +316,7 @@ export function main() {
     const result = translateContentRefsInLocale(docsRoot, structure.locale, structure.rootNode);
 
     console.log(
-      `✅ Updated ${result.updatedBlocks} content-ref block(s) across ${result.updatedFiles} file(s) for locale ${structure.locale}.`
+      `✅ Updated ${result.updatedLinks} link(s) across ${result.updatedFiles} file(s) for locale ${structure.locale}.`
     );
   });
 }
