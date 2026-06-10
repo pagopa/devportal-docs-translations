@@ -123,6 +123,7 @@ jobs:
           upload_translations: false
           export_only_approved: true
           download_translations: true
+          download_translations_args: --skip-untranslated-files
           create_pull_request: false
           push_sources: false
           push_translations: false
