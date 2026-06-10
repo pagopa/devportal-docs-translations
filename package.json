@@ -12,7 +12,7 @@
     "prune_removed_translated_paths": "npx ts-node src/pruneRemovedTranslatedPaths.ts",
     "rename_translated_files_and_folders": "npx ts-node src/renameTranslatedFilesAndFolders.ts",
     "parse_workflow_input": "npx ts-node src/parseWorkflowInput.ts",
-    "translate_content_refs": "npx ts-node src/translateContentRefs.ts",
+    "translate_links": "npx ts-node src/translateLinks.ts",
     "build_source_checkout_manifest": "npx ts-node src/buildSourceCheckoutManifest.ts",
     "build_gitbook_asset_manifest": "npx ts-node src/buildGitBookAssetManifest.ts",
     "copy_gitbook_assets": "npx ts-node src/copyGitBookAssets.ts"

@@ -11,7 +11,7 @@ import {
   type StructureDocument,
   type StructureNode
 } from '../src/translationStructure';
-import { translateContentRefsInLocale } from '../src/translateContentRefs';
+import { translateContentRefsInLocale } from '../src/translateLinks';
 
 function createLocalizedRootNode(): StructureNode {
   return {
