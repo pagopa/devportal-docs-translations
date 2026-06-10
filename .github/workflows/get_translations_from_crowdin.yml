@@ -4,15 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       paths_to_download:
-        description: 'Optional comma-separated list of partial docs paths or markdown files to process. When omitted, the whole docs/ tree is downloaded.'
+        description: 'Comma separated list of paths to export from Crowdin. Leave empty to export all. (e.g. app-io/io-guida-tecnica/v7.2)'
         required: false
         type: string
         default: ''
-      debug:
-        description: 'Enable debug logging for generated workflow artifacts'
-        required: false
-        type: boolean
-        default: false
 
 permissions:
   contents: write
@@ -103,8 +98,7 @@ jobs:
           mkdir -p docs
           cp -Rn "$source_docs_path"/. docs/
 
-      - name: Debug staged docs tree
-        if: steps.source-checkout.outputs.has_sources == 'true' && inputs.debug == true
+      - name: Log staged docs tree
         run: |
           set -euo pipefail
           echo 'Staged docs tree:'
@@ -116,8 +110,7 @@ jobs:
           REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
         run: npm run generate_crowdin_config
 
-      - name: Debug generated crowdin.yml
-        if: steps.parse-input.outputs.has_paths == 'true' && inputs.debug == true
+      - name: Log generated crowdin.yml
         run: |
           echo 'Generated crowdin.yml:'
           cat crowdin.yml
