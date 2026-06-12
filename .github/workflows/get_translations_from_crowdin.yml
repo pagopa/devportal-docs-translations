@@ -47,7 +47,6 @@ jobs:
 
       - name: Build source checkout manifest and return the sparse checkout file
         id: source-checkout
-        if: steps.parse-input.outputs.has_paths == 'true'
         env:
           REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
         run: npm run build_source_checkout_manifest
@@ -105,7 +104,6 @@ jobs:
           find docs | sort
 
       - name: Generate crowdin.yml to get only requested paths
-        if: steps.parse-input.outputs.has_paths == 'true'
         env:
           REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
         run: npm run generate_crowdin_config
@@ -116,7 +114,6 @@ jobs:
           cat crowdin.yml
 
       - name: Download translations from Crowdin
-        if: steps.parse-input.outputs.has_paths == 'true'
         uses: crowdin/github-action@8868a33591d21088edfc398968173a3b98d51706
         with:
           upload_sources: false
@@ -134,24 +131,19 @@ jobs:
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
       - name: Fix permissions on downloaded files
-        if: steps.parse-input.outputs.has_paths == 'true'
         run: sudo chown -R "$(id -u):$(id -g)" docs
 
       - name: Remove stale files and folders from repository
-        if: steps.parse-input.outputs.has_paths == 'true'
         run: npm run prune_removed_translated_paths
 
       - name: Rename translated files and folders
-        if: steps.parse-input.outputs.has_paths == 'true'
         run: npm run rename_translated_files_and_folders
 
       - name: Translate links in translated files
-        if: steps.parse-input.outputs.has_paths == 'true'
         run: npm run translate_links
 
       - name: Build GitBook asset manifest
         id: gitbook-assets
-        if: steps.parse-input.outputs.has_paths == 'true'
         env:
           REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
         run: npm run build_gitbook_asset_manifest
@@ -163,7 +155,6 @@ jobs:
         run: npm run copy_gitbook_assets
 
       - name: Cleanup artifacts
-        if: steps.parse-input.outputs.has_paths == 'true'
         env:
           REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
         run: |
@@ -223,7 +214,6 @@ jobs:
 
       - name: Compute PR metadata
         id: pr-meta
-        if: steps.parse-input.outputs.has_paths == 'true'
         env:
           REQUESTED_PATHS_INPUT: ${{ inputs.paths_to_download }}
           SOURCE_CHECKOUT_MANIFEST_PATH: ${{ steps.source-checkout.outputs.manifest_path }}
@@ -270,7 +260,6 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Create Pull Request with translations
-        if: steps.parse-input.outputs.has_files == 'true'
         env:
           BRANCH_NAME: ${{ steps.pr-meta.outputs.branch }}
           PR_TITLE: ${{ steps.pr-meta.outputs.title }}

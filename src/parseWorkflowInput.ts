@@ -57,14 +57,7 @@ function main() {
   if (parsedPaths.length === 0) {
     console.log(`ℹ️ No requested paths provided; defaulting to the whole docs tree ("${DEFAULT_FULL_DOCS_PATH}").`);
   }
-  const outputs = [
-    `normalized_paths=${JSON.stringify(normalizedPaths)}`,
-    `normalized_files=${JSON.stringify(normalizedPaths)}`,
-    `has_paths=${normalizedPaths.length > 0 ? 'true' : 'false'}`,
-    `has_files=${normalizedPaths.length > 0 ? 'true' : 'false'}`
-  ].join('\n');
-
-  fs.appendFileSync(githubOutputPath, `${outputs}\n`);
+  fs.appendFileSync(githubOutputPath, `normalized_paths=${JSON.stringify(normalizedPaths)}\n`);
   console.log(`📥 Received ${normalizedPaths.length} requested paths to process.`);
 }
 

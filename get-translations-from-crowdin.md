@@ -81,8 +81,7 @@ Standard setup: `actions/checkout`, the local composite action
 - Script: [src/parseWorkflowInput.ts](../../src/parseWorkflowInput.ts) (npm
   script `parse_workflow_input`).
 - Inputs: env `REQUESTED_PATHS_INPUT` (from `inputs.paths_to_download`).
-- Outputs: step outputs `normalized_paths` (JSON array), `has_paths`,
-  `has_files`.
+- Outputs: step output `normalized_paths` (JSON array).
 
 The script accepts three shapes of input and normalizes them to a deduplicated
 JSON array of non-empty trimmed strings. When the input is empty or omitted it
@@ -100,11 +99,7 @@ flowchart LR
     E --> F
     F --> G[normalized_paths JSON]
     Z --> G
-    G --> H[has_paths / has_files outputs]
 ```
-
-`has_paths` is always `'true'` because the default fallback ensures at least one
-path is always present.
 
 ### 3. Build source checkout manifest
 
@@ -389,8 +384,7 @@ manifest file.
 
 ### 14. Create Pull Request
 
-- Step: `Create Pull Request with translations` (guarded by
-  `has_files == 'true'`)
+- Step: `Create Pull Request with translations`
 
 Stages only `docs/`, exits cleanly if there are no staged changes, otherwise
 commits using the identity configured in `GIT_USER_NAME` / `GIT_USER_EMAIL`,
