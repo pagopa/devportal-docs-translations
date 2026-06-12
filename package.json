@@ -1,0 +1,42 @@
+{
+  "name": "devportal-docs-translations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest",
+    "generate_crowdin_config": "npx ts-node src/generateCrowdinConfig.ts",
+    "prune_removed_translated_paths": "npx ts-node src/pruneRemovedTranslatedPaths.ts",
+    "rename_translated_files_and_folders": "npx ts-node src/renameTranslatedFilesAndFolders.ts",
+    "parse_workflow_input": "npx ts-node src/parseWorkflowInput.ts",
+    "translate_links": "npx ts-node src/translateLinks.ts",
+    "build_source_checkout_manifest": "npx ts-node src/buildSourceCheckoutManifest.ts",
+    "build_gitbook_asset_manifest": "npx ts-node src/buildGitBookAssetManifest.ts",
+    "copy_gitbook_assets": "npx ts-node src/copyGitBookAssets.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pagopa/devportal-docs-translations.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pagopa/devportal-docs-translations/issues"
+  },
+  "homepage": "https://github.com/pagopa/devportal-docs-translations/blob/main/README.md",
+  "dependencies": {
+    "js-yaml": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^25.2.3",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
