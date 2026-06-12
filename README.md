@@ -12,7 +12,7 @@ The `get_translations_from_crowdin` workflow now performs a single Crowdin downl
    - every requested partial docs path into `docs/%locale%/<requested-relative-path>/**/*.md` from the docs-relative translation path `%locale%/<requested-relative-path>/**/*.md`.
 3. The `crowdin/github-action@v2` step downloads translations once, with no PR creation and no localization branch.
 4. `npm run rename_translated_files_and_folders` reads each `docs/<locale>/_meta/docs-structure.json` and renames folders/files inside `docs/<locale>/` to match the localized labels. File extensions are preserved when the localized label omits them.
-5. `npm run translate_content_refs` rewrites GitBook content-ref blocks and standard markdown links so they point to the renamed localized markdown targets.
+5. `npm run translate_links` rewrites GitBook content-ref blocks and standard markdown links so they point to the renamed localized markdown targets.
 6. `npm run build_gitbook_asset_manifest` inspects the requested source paths together with the markdown files that were actually downloaded for each locale and computes which source `.gitbook` directories must be fetched.
 7. The workflow sparsely clones the configured source docs repository, fetches only those `.gitbook` directories, and `npm run copy_gitbook_assets` mirrors them into `docs/<locale>/.../.gitbook` so the translated markdown keeps its relative asset links.
 8. `peter-evans/create-pull-request` opens a PR on the `l10n_crowdin_translations` branch with the renamed translations and localized `.gitbook` assets.
