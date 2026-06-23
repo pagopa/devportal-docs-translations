@@ -243,7 +243,16 @@ jobs:
             rm -rf "$locale_root"
           done
 
-          # Drop now-empty source directories left behind by the staged-source cleanup.
+          # Move the localized docs-structure.json out of docs/_meta/ to the
+          # repository root (overwriting the transient placeholder written by
+          # generate_crowdin_config) so it can be diffed against the next run.
+          if [ -f docs/_meta/docs-structure.json ]; then
+            echo '📦 Moving docs-structure.json to the repository root.'
+            mv -f docs/_meta/docs-structure.json docs-structure.json
+          fi
+
+          # Drop now-empty source directories left behind by the staged-source
+          # cleanup (including docs/_meta/ once the structure file is relocated).
           find docs -mindepth 1 -type d -empty -delete 2>/dev/null || true
           # Drop temporary asset sync artifacts outside the docs tree.
           # Note: source-checkout-manifest.json is intentionally left for the
@@ -313,6 +322,11 @@ jobs:
           set -euo pipefail
           git checkout -B "$BRANCH_NAME"
           git add -A -- docs
+          # Stage the relocated docs-structure.json at the repository root. The
+          # -s guard skips the empty placeholder so it is never committed.
+          if [ -s docs-structure.json ]; then
+            git add -- docs-structure.json
+          fi
 
           if git diff --cached --quiet; then
             echo 'No docs changes to commit; skipping PR creation.'
