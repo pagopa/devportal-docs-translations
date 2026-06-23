@@ -11,16 +11,22 @@ import {
   NormalizedRequestedDocsPath,
   matchesRequestedSourcePath,
   normalizeRequestedDocsPath,
-  normalizeSourceDocsFilePath
+  normalizeSourceDocsFilePath,
+  toRequestedMarkdownSourcePattern,
+  toRequestedMarkdownTranslationPattern
 } from './translationStructure';
 import { readRequestedPaths } from './getTranslationsWorkflowIo';
 
 const CONFIG_FILE = 'crowdin.yml';
 const STRUCTURE_SOURCE_PATH = toPosixPath(path.posix.join(SOURCE_STRUCTURE_FILE_NAME));
+// Markdown that lives under .gitbook holds asset content synced separately, so
+// keep it out of the wildcard source patterns Crowdin downloads.
+const GITBOOK_IGNORE_PATTERN = '**/.gitbook/**';
 
 export interface CrowdinFileEntry {
   source: string;
   translation: string;
+  ignore?: string[];
 }
 
 interface CrowdinConfig {
@@ -44,7 +50,7 @@ function main() {
     translation: toPosixPath(path.posix.join('docs/', '%locale%', METADATA_DIRECTORY, SOURCE_STRUCTURE_FILE_NAME))
   };
 
-  const contentEntries = buildCrowdinContentEntries(normalizedPaths, sourceMarkdownPaths);
+  const contentEntries = buildCrowdinContentEntries(normalizedPaths);
 
   const files: CrowdinFileEntry[] = [structureEntry, ...contentEntries];
 
@@ -54,30 +60,27 @@ function main() {
   );
 }
 
-export function toCrowdinFileEntry(sourcePath: string): CrowdinFileEntry {
-  const normalizedSourcePath = normalizeSourceDocsFilePath(sourcePath);
-
-  return {
-    source: normalizedSourcePath.normalizedPath,
-    translation: toPosixPath(
-      path.posix.join('docs/', '%locale%', normalizedSourcePath.relativePath)
-    )
+export function toCrowdinFileEntry(
+  requestedPath: NormalizedRequestedDocsPath
+): CrowdinFileEntry {
+  const source = toRequestedMarkdownSourcePattern(requestedPath);
+  const entry: CrowdinFileEntry = {
+    source,
+    translation: toRequestedMarkdownTranslationPattern(requestedPath)
   };
+
+  // Only directory-recursive patterns can reach into .gitbook folders.
+  if (source.includes('**')) {
+    entry.ignore = [GITBOOK_IGNORE_PATTERN];
+  }
+
+  return entry;
 }
 
 export function buildCrowdinContentEntries(
-  requestedPaths: NormalizedRequestedDocsPath[],
-  sourceMarkdownPaths: string[]
+  requestedPaths: NormalizedRequestedDocsPath[]
 ): CrowdinFileEntry[] {
-  const concreteSourcePaths = requestedPaths.flatMap((requestedPath) =>
-    sourceMarkdownPaths.filter(
-      (sourcePath) =>
-        !isGitBookSourcePath(sourcePath) &&
-        matchesRequestedSourcePath(sourcePath, requestedPath)
-    )
-  );
-
-  return dedupeEntriesBySource(concreteSourcePaths.map(toCrowdinFileEntry));
+  return dedupeEntriesBySource(requestedPaths.map(toCrowdinFileEntry));
 }
 
 function dedupeEntriesBySource(entries: CrowdinFileEntry[]): CrowdinFileEntry[] {

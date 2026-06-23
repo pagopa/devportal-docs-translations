@@ -21,6 +21,7 @@ import {
   resolveTranslatedDirectoryRelativePath,
   resolveTranslatedRelativePath,
   toRequestedMarkdownSourcePattern,
+  toRequestedMarkdownTranslationPattern,
   type StructureDocument,
   type StructureNode
 } from '../src/translationStructure';
@@ -178,6 +179,29 @@ test('toRequestedMarkdownSourcePattern resolves roots and globs to markdown sour
   assert.equal(
     toRequestedMarkdownSourcePattern(normalizeRequestedDocsPath('/guide/*.md')),
     'docs/guide/*.md'
+  );
+});
+
+test('toRequestedMarkdownTranslationPattern mirrors the source pattern under docs/%locale%', () => {
+  assert.equal(
+    toRequestedMarkdownTranslationPattern(normalizeRequestedDocsPath('**')),
+    'docs/%locale%/**/%original_file_name%'
+  );
+  assert.equal(
+    toRequestedMarkdownTranslationPattern(normalizeRequestedDocsPath('guide')),
+    'docs/%locale%/guide/**/%original_file_name%'
+  );
+  assert.equal(
+    toRequestedMarkdownTranslationPattern(normalizeRequestedDocsPath('/guide/*.md')),
+    'docs/%locale%/guide/%original_file_name%'
+  );
+  assert.equal(
+    toRequestedMarkdownTranslationPattern(normalizeRequestedDocsPath('guide/README.md')),
+    'docs/%locale%/guide/README.md'
+  );
+  assert.equal(
+    toRequestedMarkdownTranslationPattern(normalizeRequestedDocsPath('guide/**/README.md')),
+    'docs/%locale%/guide/**/README.md'
   );
 });
 

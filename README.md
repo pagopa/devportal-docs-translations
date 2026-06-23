@@ -5,7 +5,9 @@ This repository contains the translations of the developer portal documentation
 
 The `get_translations_from_crowdin` workflow now performs a single Crowdin download, renames the translated folders and files in place using the localized docs structure, and then mirrors the matching `.gitbook` asset folders from the source docs repository into the localized tree:
 
-1. `npm run parse_workflow_input` reads the workflow input and emits the normalized requested paths for the downstream steps.
+1. `npm run parse_workflow_input` reads the workflow input and emits the normalized requested paths for the downstream steps, plus a `full_export` flag that is `true` when no paths were requested.
+   - **Full export** (`full_export=true`): the workflow first sparsely clones the source docs repository to fetch only the root `docs-structure.json`, then `npm run build_structure_checkout_manifest` turns that structure into the source sparse-checkout list, so the export pulls only the documentation actually synced to Crowdin instead of the entire repository.
+   - **Specific paths** (`full_export=false`): `npm run build_source_checkout_manifest` builds the source sparse-checkout list directly from the requested paths.
 2. `npm run generate_crowdin_config` reads the normalized requested paths and produces a `crowdin.yml` that downloads, in one shot:
    - the localized `docs-structure.json` into `docs/%locale%/_meta/docs-structure.json` from the docs-relative translation path `%locale%/_meta/docs-structure.json`;
    - every requested markdown file into `docs/%locale%/<source-relative-path>` from the docs-relative translation path `%locale%/<source-relative-path>`;

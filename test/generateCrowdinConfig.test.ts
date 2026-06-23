@@ -7,33 +7,54 @@ import {
 } from '../src/generateCrowdinConfig';
 import { normalizeRequestedDocsPath } from '../src/translationStructure';
 
-test('buildCrowdinContentEntries expands requested paths into concrete file pairs', () => {
+test('buildCrowdinContentEntries maps each requested path to a single wildcard entry', () => {
   assert.deepEqual(
-    buildCrowdinContentEntries(
-      [
-        normalizeRequestedDocsPath('guide'),
-        normalizeRequestedDocsPath('guide/**/README.md'),
-        normalizeRequestedDocsPath('/guide/*.md')
-      ],
-      [
-        'docs/guide/.gitbook/ignored.md',
-        'docs/guide/README.md',
-        'docs/guide/intro.md',
-        'docs/guide/nested/README.md'
-      ]
-    ),
+    buildCrowdinContentEntries([
+      normalizeRequestedDocsPath('**'),
+      normalizeRequestedDocsPath('guide'),
+      normalizeRequestedDocsPath('guide/**/README.md'),
+      normalizeRequestedDocsPath('/guide/*.md'),
+      normalizeRequestedDocsPath('product/intro.md')
+    ]),
     [
       {
-        source: 'docs/guide/README.md',
-        translation: 'docs/%locale%/guide/README.md'
+        source: 'docs/**/*.md',
+        translation: 'docs/%locale%/**/%original_file_name%',
+        ignore: ['**/.gitbook/**']
       },
       {
-        source: 'docs/guide/intro.md',
-        translation: 'docs/%locale%/guide/intro.md'
+        source: 'docs/guide/**/*.md',
+        translation: 'docs/%locale%/guide/**/%original_file_name%',
+        ignore: ['**/.gitbook/**']
       },
       {
-        source: 'docs/guide/nested/README.md',
-        translation: 'docs/%locale%/guide/nested/README.md'
+        source: 'docs/guide/**/README.md',
+        translation: 'docs/%locale%/guide/**/README.md',
+        ignore: ['**/.gitbook/**']
+      },
+      {
+        source: 'docs/guide/*.md',
+        translation: 'docs/%locale%/guide/%original_file_name%'
+      },
+      {
+        source: 'docs/product/intro.md',
+        translation: 'docs/%locale%/product/intro.md'
+      }
+    ]
+  );
+});
+
+test('buildCrowdinContentEntries dedupes identical source patterns', () => {
+  assert.deepEqual(
+    buildCrowdinContentEntries([
+      normalizeRequestedDocsPath('guide'),
+      normalizeRequestedDocsPath('guide/**')
+    ]),
+    [
+      {
+        source: 'docs/guide/**/*.md',
+        translation: 'docs/%locale%/guide/**/%original_file_name%',
+        ignore: ['**/.gitbook/**']
       }
     ]
   );

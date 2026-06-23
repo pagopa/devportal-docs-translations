@@ -45,18 +45,58 @@ jobs:
           REQUESTED_PATHS_INPUT: ${{ inputs.paths_to_download }}
         run: npm run parse_workflow_input
 
-      - name: Build source checkout manifest and return the sparse checkout file
+      # Full export only: derive the source checkout from docs-structure.json so
+      # we fetch exactly the docs synced to Crowdin instead of the whole repo.
+      - name: Fetch docs-structure.json for full export
+        id: fetch-structure
+        if: steps.parse-input.outputs.full_export == 'true'
+        env:
+          SOURCE_STRUCTURE_CHECKOUT_PATH: .source-structure
+          SOURCE_DOCS_TOKEN: ${{ secrets.SOURCE_DOCS_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SOURCE_DOCS_REPOSITORY:-}" ]; then
+            echo '❌ SOURCE_DOCS_REPOSITORY must be configured in the workflow env.'
+            exit 1
+          fi
+
+          clone_url="https://github.com/${SOURCE_DOCS_REPOSITORY}.git"
+          if [ -n "${SOURCE_DOCS_TOKEN:-}" ]; then
+            clone_url="https://x-access-token:${SOURCE_DOCS_TOKEN}@github.com/${SOURCE_DOCS_REPOSITORY}.git"
+          fi
+
+          rm -rf "$SOURCE_STRUCTURE_CHECKOUT_PATH"
+          git clone --depth 1 --filter=blob:none --sparse --branch "$SOURCE_DOCS_BRANCH" \
+            "$clone_url" \
+            "$SOURCE_STRUCTURE_CHECKOUT_PATH"
+          git -C "$SOURCE_STRUCTURE_CHECKOUT_PATH" sparse-checkout set --no-cone docs-structure.json
+
+          if [ ! -f "$SOURCE_STRUCTURE_CHECKOUT_PATH/docs-structure.json" ]; then
+            echo "❌ docs-structure.json not found at the root of ${SOURCE_DOCS_REPOSITORY}@${SOURCE_DOCS_BRANCH}."
+            exit 1
+          fi
+
+      - name: Build source checkout manifest from docs-structure.json
+        id: structure-checkout
+        if: steps.parse-input.outputs.full_export == 'true'
+        env:
+          SOURCE_STRUCTURE_PATH: .source-structure/docs-structure.json
+        run: npm run build_structure_checkout_manifest
+
+      # Specific paths only: derive the source checkout from the requested paths.
+      - name: Build source checkout manifest from requested paths
         id: source-checkout
+        if: steps.parse-input.outputs.full_export != 'true'
         env:
           REQUESTED_PATHS: ${{ steps.parse-input.outputs.normalized_paths }}
         run: npm run build_source_checkout_manifest
 
       - name: Fetch requested source docs and assets
-        if: steps.source-checkout.outputs.has_sources == 'true'
+        if: steps.structure-checkout.outputs.has_sources == 'true' || steps.source-checkout.outputs.has_sources == 'true'
         env:
           SOURCE_DOCS_CHECKOUT_PATH: .source-docs
           SOURCE_DOCS_TOKEN: ${{ secrets.SOURCE_DOCS_TOKEN }}
-          SPARSE_CHECKOUT_FILE: ${{ steps.source-checkout.outputs.sparse_checkout_file }}
+          SPARSE_CHECKOUT_FILE: ${{ steps.structure-checkout.outputs.sparse_checkout_file || steps.source-checkout.outputs.sparse_checkout_file }}
         run: |
           set -euo pipefail
           if [ -z "${SOURCE_DOCS_REPOSITORY:-}" ]; then
@@ -84,7 +124,7 @@ jobs:
           git -C "$SOURCE_DOCS_CHECKOUT_PATH" sparse-checkout set --no-cone --stdin < "$SPARSE_CHECKOUT_FILE"
 
       - name: Stage requested source docs and assets
-        if: steps.source-checkout.outputs.has_sources == 'true'
+        if: steps.structure-checkout.outputs.has_sources == 'true' || steps.source-checkout.outputs.has_sources == 'true'
         env:
           SOURCE_DOCS_CHECKOUT_PATH: .source-docs
         run: |
@@ -127,7 +167,7 @@ jobs:
           base_url: 'https://pagopa.crowdin.com'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PROJECT_ID: ${{ vars.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
       - name: Fix permissions on downloaded files
@@ -206,8 +246,11 @@ jobs:
           # Drop now-empty source directories left behind by the staged-source cleanup.
           find docs -mindepth 1 -type d -empty -delete 2>/dev/null || true
           # Drop temporary asset sync artifacts outside the docs tree.
+          # Note: source-checkout-manifest.json is intentionally left for the
+          # "Compute PR metadata" step, which reads it and removes it itself.
           rm -rf \
             .source-docs \
+            .source-structure \
             .source-docs-sparse-checkout.txt \
             gitbook-assets-manifest.json \
             .gitbook-asset-sparse-checkout.txt
@@ -216,7 +259,7 @@ jobs:
         id: pr-meta
         env:
           REQUESTED_PATHS_INPUT: ${{ inputs.paths_to_download }}
-          SOURCE_CHECKOUT_MANIFEST_PATH: ${{ steps.source-checkout.outputs.manifest_path }}
+          SOURCE_CHECKOUT_MANIFEST_PATH: ${{ steps.structure-checkout.outputs.manifest_path || steps.source-checkout.outputs.manifest_path }}
         run: |
           set -euo pipefail
           input_hash=$(printf '%s' "$REQUESTED_PATHS_INPUT" | sha1sum | cut -c1-8)
