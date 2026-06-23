@@ -1,0 +1,78 @@
+# Table of contents
+
+- [🏠 Technical guide](README.md)
+- [🕗 Changelog](Changelog.md)
+- [🔢 Initial setup](Initial-setup/README.md)
+  - [Onboarding via the Reserved Area](Initial-setup/Onboarding-via-the-private-area.md)
+  - [Registration to the Developer Portal](Initial-setup/Developer-Portal-registration.md)
+  - [Remote configuration](Initial-setup/Remote-configuration.md)
+
+## Features
+
+- [📦 Publishing a service](Features/Publishing-a-service/README.md)
+  - [Creating a service](Features/Publishing-a-service/Creating-a-service.md)
+  - [Testing a service](Features/Publishing-a-service/Testing-a-service.md)
+  - [Service review](Features/Publishing-a-service/Service-review.md)
+  - [Service visibility in the App](Features/Publishing-a-service/Service-visibility.md)
+  - [Importing services into the Reserved Area](Features/Publishing-a-service/Importing-services-into-the-private-area.md)
+  - [Mandatory data](Features/Publishing-a-service/Required-data/README.md)
+    - [Attributes](Features/Publishing-a-service/Required-data/Attributes.md)
+    - [Service Metadata](Features/Publishing-a-service/Required-data/Service-metadata.md)
+  - [Sensitive information](Features/Publishing-a-service/Sensitive-information.md)
+  - [Service topic](Features/Publishing-a-service/Service-topic.md)
+  - [Service status](Features/Publishing-a-service/Service-status.md)
+  - [API Key](Features/Publishing-a-service/Manage-key/README.md)
+    - [Manage API Key](Features/Publishing-a-service/Manage-key/Manage-key.md)
+    - [API Key Usage](Features/Publishing-a-service/Manage-key/Manage-key-1.md)
+  - [Managing access to services via groups](Features/Publishing-a-service/Managing-service-access-via-groups.md)
+- [✉️ Sending a message](Features/Sending-a-message/README.md)
+  - [Test messages](Features/Sending-a-message/Test-messages.md)
+  - [Sending a standard message](Features/Sending-a-message/Sending-a-traditional-message.md)
+  - [Sending a remote content message](Features/Sending-a-message/Sending-a-message-with-remote-content.md)
+  - [Adding attachments](Features/Sending-a-message/Adding-attachments.md)
+
+## APIs and specifications
+
+- [📐 OpenAPI](APIs-and-specifications/OpenAPI.md)
+- [Service APIs](APIs-and-specifications/Service-APIs/README.md)
+  - [Manage Service: Get](APIs-and-specifications/Service-APIs/Manage-service-get.md)
+  - [Manage Service: Get Keys](APIs-and-specifications/Service-APIs/Manage-service-get-keys.md)
+  - [Manage Service: Get User Services](APIs-and-specifications/Service-APIs/Manage-service-get-user-services.md)
+  - [Manage Service: Create](APIs-and-specifications/Service-APIs/Manage-service-create.md)
+  - [Manage Service: Delete](APIs-and-specifications/Service-APIs/Manage-service-delete.md)
+  - [Manage Service: Update](APIs-and-specifications/Service-APIs/Manage-service-update.md)
+  - [Manage Service: Request Review](APIs-and-specifications/Service-APIs/Manage-service-request-review.md)
+  - [Manage Service: Release](APIs-and-specifications/Service-APIs/Manage-service-release.md)
+  - [Manage Service: Get Released Service](APIs-and-specifications/Service-APIs/Manage-service-get-released.md)
+  - [Manage Service: Unpublish](APIs-and-specifications/Service-APIs/Manage-service-unpublish.md)
+  - [Manage Service: Regenerate API Key](APIs-and-specifications/Service-APIs/Manage-service-regenerate-API-key.md)
+  - [Manage Service: Upload Service Logo](APIs-and-specifications/Service-APIs/Manage-service-upload-service-logo.md)
+  - [Upload Organization Logo](APIs-and-specifications/Service-APIs/Upload-organization-logo.md)
+  - [Service Topics: Get All Service Topics](APIs-and-specifications/Service-APIs/Service-topics-get-all-service-topics.md)
+- [Message APIs](APIs-and-specifications/Message-APIs/README.md)
+  - [Get a User Profile using POST](APIs-and-specifications/Message-APIs/Get-a-user-profile-using-POST.md)
+  - [Submit a Message passing the user fiscal_code in the request body](APIs-and-specifications/Message-APIs/Submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md)
+  - [Get Message](APIs-and-specifications/Message-APIs/Get-message.md)
+  - [CRU Remote configurations](APIs-and-specifications/Message-APIs/CRU-remote-configurations.md)
+  - [Get Subscriptions Feed](APIs-and-specifications/Message-APIs/Get-subscriptions-feed.md)
+  - [⚠️ Get a User Profile](APIs-and-specifications/Message-APIs/Get-a-user-profile.md)
+  - [⚠️ Submit a Message passing the user fiscal_code as path parameter](APIs-and-specifications/Message-APIs/Submit-a-message-passing-the-user-fiscal-code-as-path-parameter.md)
+- [Common errors](APIs-and-specifications/Common-errors.md)
+- [API specifications](https://developer.pagopa.it/app-io/api/app-io-main)
+- [OpenAPI endpoint for retrieving remote content](APIs-and-specifications/OpenAPI-endpoint-for-retrieving-remote-content.md)
+- [Public IP address](APIs-and-specifications/Public-IP-address.md)
+
+***
+
+- [🔑 Authorizations](Authorizations/README.md)
+  - [Test with real Tax Codes](Authorizations/Test-with-real-fiscal-codes.md)
+  - [Test sending pagoPA notices](Authorizations/Test-sending-pagoPA-notices.md)
+  - [Subscription Feed](Authorizations/Subscription-feed.md)
+  - [Service management](Authorizations/Service-management.md)
+  - [Premium features](Authorizations/Premium-features.md)
+
+## Useful resources
+
+- [#️⃣ Markdown guide](Useful-resources/Markdown-guide.md)
+- [❓ Support for Institutions (tutorial, FAQ)](https://docs.pagopa.it/kb-enti)
+- [📘 Glossary](Useful-resources/Glossary.md)

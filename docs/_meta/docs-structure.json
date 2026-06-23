@@ -1,0 +1,625 @@
+{
+  "version": 1,
+  "tree": {
+    "docs": {
+      "label": "docs",
+      "directory": true,
+      "children": {
+        "app-io": {
+          "label": "io app",
+          "directory": true,
+          "children": {
+            "io-guida-tecnica": {
+              "label": "io technical guide",
+              "directory": true,
+              "children": {
+                "v7.1": {
+                  "label": "v7.1",
+                  "directory": true,
+                  "children": {
+                    "abilitazioni": {
+                      "label": "Authorizations",
+                      "directory": true,
+                      "children": {
+                        "funzionalita-premium.md": {
+                          "label": "Premium features",
+                          "directory": false
+                        },
+                        "gestione-dei-servizi.md": {
+                          "label": "Service management",
+                          "directory": false
+                        },
+                        "README.md": {
+                          "label": "README",
+                          "directory": false
+                        },
+                        "subscription-feed.md": {
+                          "label": "Subscription feed",
+                          "directory": false
+                        },
+                        "test-con-codici-fiscali-reali.md": {
+                          "label": "Test with real fiscal codes",
+                          "directory": false
+                        },
+                        "test-invio-avvisi-pagopa.md": {
+                          "label": "Test sending pagoPA notices",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "api-e-specifiche": {
+                      "label": "APIs and specifications",
+                      "directory": true,
+                      "children": {
+                        "api-messaggi": {
+                          "label": "Message APIs",
+                          "directory": true,
+                          "children": {
+                            "cru-configurazioni-remote.md": {
+                              "label": "CRU remote configurations",
+                              "directory": false
+                            },
+                            "get-a-user-profile-using-post.md": {
+                              "label": "Get a user profile using POST",
+                              "directory": false
+                            },
+                            "get-a-user-profile.md": {
+                              "label": "Get a user profile",
+                              "directory": false
+                            },
+                            "get-message.md": {
+                              "label": "Get message",
+                              "directory": false
+                            },
+                            "get-subscriptions-feed.md": {
+                              "label": "Get subscriptions feed",
+                              "directory": false
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            },
+                            "submit-a-message-passing-the-user-fiscal_code-as-path-parameter.md": {
+                              "label": "Submit a message passing the user fiscal code as path parameter",
+                              "directory": false
+                            },
+                            "submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md": {
+                              "label": "Submit a message passing the user fiscal code in the request body",
+                              "directory": false
+                            }
+                          }
+                        },
+                        "api-servizi": {
+                          "label": "Service APIs",
+                          "directory": true,
+                          "children": {
+                            "manage-service-create.md": {
+                              "label": "Manage service create",
+                              "directory": false
+                            },
+                            "manage-service-delete.md": {
+                              "label": "Manage service delete",
+                              "directory": false
+                            },
+                            "manage-service-get-keys.md": {
+                              "label": "Manage service get keys",
+                              "directory": false
+                            },
+                            "manage-service-get-released.md": {
+                              "label": "Manage service get released",
+                              "directory": false
+                            },
+                            "manage-service-get-user-services.md": {
+                              "label": "Manage service get user services",
+                              "directory": false
+                            },
+                            "manage-service-get.md": {
+                              "label": "Manage service get",
+                              "directory": false
+                            },
+                            "manage-service-regenerate-api-key.md": {
+                              "label": "Manage service regenerate API key",
+                              "directory": false
+                            },
+                            "manage-service-release.md": {
+                              "label": "Manage service release",
+                              "directory": false
+                            },
+                            "manage-service-request-review.md": {
+                              "label": "Manage service request review",
+                              "directory": false
+                            },
+                            "manage-service-unpublish.md": {
+                              "label": "Manage service unpublish",
+                              "directory": false
+                            },
+                            "manage-service-update.md": {
+                              "label": "Manage service update",
+                              "directory": false
+                            },
+                            "manage-service-upload-service-logo.md": {
+                              "label": "Manage service upload service logo",
+                              "directory": false
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            },
+                            "service-topics-get-all-service-topics.md": {
+                              "label": "Service topics get all service topics",
+                              "directory": false
+                            },
+                            "upload-organization-logo.md": {
+                              "label": "Upload organization logo",
+                              "directory": false
+                            }
+                          }
+                        },
+                        "errori-comuni.md": {
+                          "label": "Common errors",
+                          "directory": false
+                        },
+                        "indirizzo-ip-pubblico.md": {
+                          "label": "Public IP address",
+                          "directory": false
+                        },
+                        "openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md": {
+                          "label": "OpenAPI endpoint for retrieving remote content",
+                          "directory": false
+                        },
+                        "openapi.md": {
+                          "label": "OpenAPI",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "changelog.md": {
+                      "label": "Changelog",
+                      "directory": false
+                    },
+                    "funzionalita": {
+                      "label": "Features",
+                      "directory": true,
+                      "children": {
+                        "inviare-un-messaggio": {
+                          "label": "Sending a message",
+                          "directory": true,
+                          "children": {
+                            "aggiungere-allegati.md": {
+                              "label": "Adding attachments",
+                              "directory": false
+                            },
+                            "inviare-un-messaggio-a-contenuto-remoto.md": {
+                              "label": "Sending a message with remote content",
+                              "directory": false
+                            },
+                            "inviare-un-messaggio-tradizionale.md": {
+                              "label": "Sending a traditional message",
+                              "directory": false
+                            },
+                            "messaggi-di-test.md": {
+                              "label": "Test messages",
+                              "directory": false
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            }
+                          }
+                        },
+                        "pubblicare-un-servizio": {
+                          "label": "Publishing a service",
+                          "directory": true,
+                          "children": {
+                            "argomento-del-servizio.md": {
+                              "label": "Service topic",
+                              "directory": false
+                            },
+                            "chiave-manage": {
+                              "label": "Manage key",
+                              "directory": true,
+                              "children": {
+                                "chiave-manage-1.md": {
+                                  "label": "Manage key 1",
+                                  "directory": false
+                                },
+                                "chiave-manage.md": {
+                                  "label": "Manage key",
+                                  "directory": false
+                                },
+                                "README.md": {
+                                  "label": "README",
+                                  "directory": false
+                                }
+                              }
+                            },
+                            "creare-un-servizio.md": {
+                              "label": "Creating a service",
+                              "directory": false
+                            },
+                            "dati-obbligatori": {
+                              "label": "Required data",
+                              "directory": true,
+                              "children": {
+                                "attributi.md": {
+                                  "label": "Attributes",
+                                  "directory": false
+                                },
+                                "README.md": {
+                                  "label": "README",
+                                  "directory": false
+                                },
+                                "service-metadata.md": {
+                                  "label": "Service metadata",
+                                  "directory": false
+                                }
+                              }
+                            },
+                            "gestire-laccesso-ai-servizi-tramite-i-gruppi.md": {
+                              "label": "Managing service access via groups",
+                              "directory": false
+                            },
+                            "importare-servizi-nellarea-riservata.md": {
+                              "label": "Importing services into the private area",
+                              "directory": false
+                            },
+                            "informazioni-sensibili.md": {
+                              "label": "Sensitive information",
+                              "directory": false
+                            },
+                            "provare-un-servizio-in-test.md": {
+                              "label": "Testing a service",
+                              "directory": false
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            },
+                            "revisione-del-servizio.md": {
+                              "label": "Service review",
+                              "directory": false
+                            },
+                            "stato-del-servizio.md": {
+                              "label": "Service status",
+                              "directory": false
+                            },
+                            "visibilita-del-servizio.md": {
+                              "label": "Service visibility",
+                              "directory": false
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "README.md": {
+                      "label": "README",
+                      "directory": false
+                    },
+                    "risorse-utili": {
+                      "label": "Useful resources",
+                      "directory": true,
+                      "children": {
+                        "glossario.md": {
+                          "label": "Glossary",
+                          "directory": false
+                        },
+                        "guida-al-markdown.md": {
+                          "label": "Markdown guide",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "setup-iniziale": {
+                      "label": "Initial setup",
+                      "directory": true,
+                      "children": {
+                        "adesione-tramite-larea-riservata.md": {
+                          "label": "Onboarding via the private area",
+                          "directory": false
+                        },
+                        "configurazione-remota.md": {
+                          "label": "Remote configuration",
+                          "directory": false
+                        },
+                        "iscrizione-al-developer-portal.md": {
+                          "label": "Developer Portal registration",
+                          "directory": false
+                        },
+                        "README.md": {
+                          "label": "README",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "SUMMARY.md": {
+                      "label": "SUMMARY",
+                      "directory": false
+                    }
+                  }
+                }
+              }
+            },
+            "manuale-gruppi-io": {
+              "label": "IO Groups manual",
+              "directory": true,
+              "children": {
+                "1.0": {
+                  "label": "1.0",
+                  "directory": true,
+                  "children": {
+                    "funzionalita-per-utente-amministratore": {
+                      "label": "Functionality for administrator users",
+                      "directory": true,
+                      "children": {
+                        "associazione-dei-servizi-a-un-gruppo.md": {
+                          "label": "Associating services with a group",
+                          "directory": false
+                        },
+                        "creazione-di-un-gruppo.md": {
+                          "label": "Creating a group",
+                          "directory": false
+                        },
+                        "generazione-e-gestione-delle-api-key-manage-group.md": {
+                          "label": "Generating and managing 'manage group' API keys",
+                          "directory": false
+                        },
+                        "README.md": {
+                          "label": "README",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "funzionalita-per-utente-operatore": {
+                      "label": "Functionality for operator users",
+                      "directory": true,
+                      "children": {
+                        "accesso-ai-servizi-dei-miei-gruppi.md": {
+                          "label": "Accessing my groups' services",
+                          "directory": false
+                        },
+                        "README.md": {
+                          "label": "README",
+                          "directory": false
+                        },
+                        "utilizzo-delle-api-key-manage-group.md": {
+                          "label": "Using 'manage group' API keys",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "README.md": {
+                      "label": "README",
+                      "directory": false
+                    },
+                    "SUMMARY.md": {
+                      "label": "SUMMARY",
+                      "directory": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "firma-con-io": {
+          "label": "Sign with IO",
+          "directory": true,
+          "children": {
+            "guida-scelta-firma": {
+              "label": "Signature selection guide",
+              "directory": true,
+              "children": {
+                "v1.0": {
+                  "label": "v1.0",
+                  "directory": true,
+                  "children": {
+                    "README.md": {
+                      "label": "README",
+                      "directory": false
+                    },
+                    "SUMMARY.md": {
+                      "label": "SUMMARY",
+                      "directory": false
+                    }
+                  }
+                }
+              }
+            },
+            "manuale-operativo": {
+              "label": "Operating manual",
+              "directory": true,
+              "children": {
+                "v2.0": {
+                  "label": "v2.0",
+                  "directory": true,
+                  "children": {
+                    "api": {
+                      "label": "API",
+                      "directory": true,
+                      "children": {
+                        "ambienti-test-and-produzione.md": {
+                          "label": "Test and production environments",
+                          "directory": false
+                        },
+                        "api-rest.md": {
+                          "label": "REST API",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "back-office": {
+                      "label": "Back office",
+                      "directory": true,
+                      "children": {
+                        "primi-passi.md": {
+                          "label": "First steps",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "changelog.md": {
+                      "label": "Changelog",
+                      "directory": false
+                    },
+                    "creare-il-dossier.md": {
+                      "label": "Creating the dossier",
+                      "directory": false
+                    },
+                    "firma-con-io": {
+                      "label": "Sign with IO",
+                      "directory": true,
+                      "children": {
+                        "come-funziona.md": {
+                          "label": "How it works",
+                          "directory": false
+                        },
+                        "cose-firma-con-io.md": {
+                          "label": "What is 'Sign with IO'",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "il-processo-di-firma": {
+                      "label": "The signing process",
+                      "directory": true,
+                      "children": {
+                        "preparare-i-documenti": {
+                          "label": "Preparing documents",
+                          "directory": true,
+                          "children": {
+                            "identificare-i-campi-firma": {
+                              "label": "Identifying signature fields",
+                              "directory": true,
+                              "children": {
+                                "README.md": {
+                                  "label": "README",
+                                  "directory": false
+                                },
+                                "tramite-coordinate.md": {
+                                  "label": "Using coordinates",
+                                  "directory": false
+                                }
+                              }
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            },
+                            "validare-i-documenti.md": {
+                              "label": "Validating documents",
+                              "directory": false
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ottenere-i-documenti-firmati.md": {
+                      "label": "Getting signed documents",
+                      "directory": false
+                    },
+                    "pulsante-firma-con-io": {
+                      "label": "'Sign with IO' button",
+                      "directory": true,
+                      "children": {
+                        "il-pulsante-firma-con-io.md": {
+                          "label": "The 'Sign with IO' button",
+                          "directory": false
+                        },
+                        "installazione-e-uso.md": {
+                          "label": "Installation and use",
+                          "directory": false
+                        },
+                        "linee-guida-di-utilizzo.md": {
+                          "label": "Usage guidelines",
+                          "directory": false
+                        },
+                        "standard-grafici.md": {
+                          "label": "Graphic standards",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "README.md": {
+                      "label": "README",
+                      "directory": false
+                    },
+                    "richiedere-una-firma": {
+                      "label": "Requesting a signature",
+                      "directory": true,
+                      "children": {
+                        "cancellazione-della-richiesta-di-firma.md": {
+                          "label": "Canceling the signature request",
+                          "directory": false
+                        },
+                        "creazione-di-una-signature-request.md": {
+                          "label": "Creating a signature request",
+                          "directory": false
+                        },
+                        "invio-della-richiesta-di-firma": {
+                          "label": "Sending the signature request",
+                          "directory": true,
+                          "children": {
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            },
+                            "tramite-messaggio-su-io.md": {
+                              "label": "Via message on IO",
+                              "directory": false
+                            },
+                            "tramite-pulsante-firma-con-io-o-qr-code.md": {
+                              "label": "Via 'Sign with IO' button or QR code",
+                              "directory": false
+                            }
+                          }
+                        },
+                        "pubblicazione-della-richiesta-di-firma.md": {
+                          "label": "Publishing the signature request",
+                          "directory": false
+                        },
+                        "README.md": {
+                          "label": "README",
+                          "directory": false
+                        },
+                        "recupero-id-del-cittadino.md": {
+                          "label": "Retrieving the citizen's ID",
+                          "directory": false
+                        },
+                        "upload-dei-documenti.md": {
+                          "label": "Uploading documents",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "risorse-utili": {
+                      "label": "Useful resources",
+                      "directory": true,
+                      "children": {
+                        "contatti.md": {
+                          "label": "Contacts",
+                          "directory": false
+                        },
+                        "glossario.md": {
+                          "label": "Glossary",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "SUMMARY.md": {
+                      "label": "SUMMARY",
+                      "directory": false
+                    },
+                    "verificare-lo-stato-di-una-firma.md": {
+                      "label": "Checking the status of a signature",
+                      "directory": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
