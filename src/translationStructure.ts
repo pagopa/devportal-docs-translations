@@ -8,6 +8,8 @@ export const METADATA_DIRECTORY = '_meta';
 export const SOURCE_STRUCTURE_FILE_NAME = 'docs-structure.json';
 const REQUESTED_PATH_WILDCARD_PATTERN = /\*/;
 const MARKDOWN_EXTENSION = '.md';
+const LOCALE_PLACEHOLDER = '%locale%';
+const ORIGINAL_FILE_NAME_PLACEHOLDER = '%original_file_name%';
 
 export interface StructureNode {
   label: string;
@@ -219,6 +221,31 @@ export function toRequestedMarkdownSourcePattern(
   }
 
   return path.posix.join(requestedPath.normalizedPath, '**', `*${MARKDOWN_EXTENSION}`);
+}
+
+/**
+ * Builds the Crowdin `translation` pattern that matches the wildcard `source`
+ * returned by {@link toRequestedMarkdownSourcePattern}.
+ *
+ * A wildcard file name (e.g. `*.md`) becomes Crowdin's `%original_file_name%`
+ * placeholder because the concrete name is only known at download time.
+ * Directory wildcards (`**`) are kept verbatim so Crowdin maps the `**` in the
+ * translation onto the `**` in the source, preserving the nested folder
+ * structure under `docs/%locale%/`.
+ */
+export function toRequestedMarkdownTranslationPattern(
+  requestedPath: NormalizedRequestedDocsPath
+): string {
+  const sourcePattern = toRequestedMarkdownSourcePattern(requestedPath);
+  const docsRelativeSegments = sourcePattern.split('/').slice(1);
+
+  const translationSegments = docsRelativeSegments.map((segment, index) =>
+    index === docsRelativeSegments.length - 1 && segmentContainsWildcard(segment)
+      ? ORIGINAL_FILE_NAME_PLACEHOLDER
+      : segment
+  );
+
+  return path.posix.join(DOCS_DIRECTORY, LOCALE_PLACEHOLDER, ...translationSegments);
 }
 
 export function getRequestedDocsStaticDirectory(

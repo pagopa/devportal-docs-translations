@@ -14,6 +14,7 @@
     "parse_workflow_input": "npx ts-node src/parseWorkflowInput.ts",
     "translate_links": "npx ts-node src/translateLinks.ts",
     "build_source_checkout_manifest": "npx ts-node src/buildSourceCheckoutManifest.ts",
+    "build_structure_checkout_manifest": "npx ts-node src/buildStructureCheckoutManifest.ts",
     "build_gitbook_asset_manifest": "npx ts-node src/buildGitBookAssetManifest.ts",
     "copy_gitbook_assets": "npx ts-node src/copyGitBookAssets.ts"
   },

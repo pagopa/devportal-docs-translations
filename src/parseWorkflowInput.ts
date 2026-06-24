@@ -52,12 +52,14 @@ function main() {
   }
 
   const parsedPaths = normalizeRequestedPathsInput(rawInput);
-  const normalizedPaths = parsedPaths.length > 0 ? parsedPaths : [DEFAULT_FULL_DOCS_PATH];
+  const isFullExport = parsedPaths.length === 0;
+  const normalizedPaths = isFullExport ? [DEFAULT_FULL_DOCS_PATH] : parsedPaths;
 
-  if (parsedPaths.length === 0) {
+  if (isFullExport) {
     console.log(`ℹ️ No requested paths provided; defaulting to the whole docs tree ("${DEFAULT_FULL_DOCS_PATH}").`);
   }
   fs.appendFileSync(githubOutputPath, `normalized_paths=${JSON.stringify(normalizedPaths)}\n`);
+  fs.appendFileSync(githubOutputPath, `full_export=${isFullExport ? 'true' : 'false'}\n`);
   console.log(`📥 Received ${normalizedPaths.length} requested paths to process.`);
 }
 
