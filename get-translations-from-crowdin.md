@@ -15,7 +15,9 @@ workflow:
 
 1. Parses and normalizes the requested paths.
 2. Sparsely clones only the matching source markdown and GitBook assets from the
-   upstream source-docs repository (`SOURCE_DOCS_REPOSITORY`).
+   upstream source-docs repository (`SOURCE_DOCS_REPOSITORY`). For a full export
+   the checkout is derived from the source repo's root `docs-structure.json`; for
+   a specific-paths export it is derived from the requested paths.
 3. Generates a Crowdin configuration scoped to those sources.
 4. Downloads approved translations from Crowdin.
 5. Prunes translated paths that no longer exist in the latest localized
@@ -26,15 +28,20 @@ workflow:
    the new translated paths.
 8. Copies the matching `.gitbook` asset directories from the staged source into
    each locale.
-9. Cleans up staging artifacts and opens a PR with only the localized changes.
+9. Cleans up staging artifacts, flattens the translated locale folders into
+   `docs/`, relocates `docs-structure.json` to the repository root, and opens a
+   PR with only the localized changes.
 
 ### High-level pipeline
 
 ```mermaid
 flowchart TD
-    A[workflow_dispatch<br/>inputs.paths_to_download] --> B[Parse workflow input]
-    B --> C[Build source checkout manifest]
-    C --> D[Sparse clone source repo<br/>git clone --filter --sparse]
+    A[workflow_dispatch<br/>inputs.paths_to_download] --> B[Parse workflow input<br/>normalized_paths + full_export]
+    B --> C{full_export?}
+    C -- yes --> C1[Fetch docs-structure.json<br/>build_structure_checkout_manifest]
+    C -- no --> C2[build_source_checkout_manifest<br/>from requested paths]
+    C1 --> D[Sparse clone source repo<br/>git clone --filter --sparse]
+    C2 --> D
     D --> E[Stage source docs into docs/]
     E --> F[Generate crowdin.yml]
     F --> G[Download translations<br/>crowdin/github-action@v2]
@@ -43,7 +50,7 @@ flowchart TD
     I --> J[Translate content-ref URLs]
     J --> K[Build GitBook asset manifest]
     K --> L[Copy GitBook assets from staged source]
-    L --> M[Cleanup staging artifacts]
+    L --> M[Cleanup artifacts<br/>flatten locale dirs + relocate structure]
     M --> N[Compute PR metadata]
     N --> O[Create Pull Request]
 ```
@@ -52,8 +59,7 @@ flowchart TD
 
 | Name | Source | Purpose |
 | --- | --- | --- |
-| `inputs.paths_to_download` | `workflow_dispatch` | Optional. Comma-separated / newline-separated / JSON array of partial docs paths or markdown files to process. When omitted, the whole `docs/` tree is downloaded. |
-| `inputs.debug` | `workflow_dispatch` | When `true`, prints staged docs tree and generated `crowdin.yml`. |
+| `inputs.paths_to_download` | `workflow_dispatch` | Optional. Comma-separated / newline-separated / JSON array of partial docs paths or markdown files to process. When omitted, the whole `docs/` tree is downloaded (full export). |
 | `SOURCE_DOCS_REPOSITORY` | job `env` | Upstream source-docs repository (`owner/name`). |
 | `SOURCE_DOCS_BRANCH` | job `env` | Branch of the source repo to clone. |
 | `SOURCE_DOCS_ROOT` | job `env` | Root directory inside the source repo holding the docs. |
@@ -81,12 +87,14 @@ Standard setup: `actions/checkout`, the local composite action
 - Script: [src/parseWorkflowInput.ts](../../src/parseWorkflowInput.ts) (npm
   script `parse_workflow_input`).
 - Inputs: env `REQUESTED_PATHS_INPUT` (from `inputs.paths_to_download`).
-- Outputs: step output `normalized_paths` (JSON array).
+- Outputs: step outputs `normalized_paths` (JSON array) and `full_export`
+  (`true`/`false`).
 
 The script accepts three shapes of input and normalizes them to a deduplicated
 JSON array of non-empty trimmed strings. When the input is empty or omitted it
-defaults to `["**"]`, which causes all downstream steps to download the entire
-`docs/` tree.
+defaults to `["**"]` and sets `full_export=true`, which switches the workflow to
+the full-export branch (download the entire `docs/` tree). Any explicit input
+sets `full_export=false` (specific-paths export).
 
 ```mermaid
 flowchart LR
@@ -101,9 +109,32 @@ flowchart LR
     Z --> G
 ```
 
-### 3. Build source checkout manifest
+### 3. Build the source-checkout manifest (two mutually-exclusive branches)
 
-- Step: `Build source checkout manifest and return the sparse checkout file`
+The workflow computes the sparse-checkout paths differently depending on
+`steps.parse-input.outputs.full_export`. Both branches produce the same step
+outputs — `has_sources`, `manifest_path`, `sparse_checkout_file` — which the
+later fetch and PR-metadata steps select with a `||` fallback.
+
+#### 3a. Full export (`full_export == 'true'`)
+
+Two steps run only when `full_export == 'true'`:
+
+- `Fetch docs-structure.json for full export`: shallow sparse-clones just the
+  source repo's **root** `docs-structure.json` into `.source-structure/`
+  (env `SOURCE_STRUCTURE_CHECKOUT_PATH`), failing if it is missing.
+- `Build source checkout manifest from docs-structure.json`
+  (id `structure-checkout`):
+  [src/buildStructureCheckoutManifest.ts](../../src/buildStructureCheckoutManifest.ts)
+  (npm script `build_structure_checkout_manifest`). Reads
+  `SOURCE_STRUCTURE_PATH=.source-structure/docs-structure.json` and derives the
+  checkout from the docs actually synced to Crowdin, so a full export fetches
+  exactly those docs rather than the whole repo.
+
+#### 3b. Specific-paths export (`full_export != 'true'`)
+
+- Step: `Build source checkout manifest from requested paths`
+  (id `source-checkout`)
 - Script: [src/buildSourceCheckoutManifest.ts](../../src/buildSourceCheckoutManifest.ts)
   (npm script `build_source_checkout_manifest`).
 - Inputs: env `REQUESTED_PATHS` (the normalized JSON array), env
@@ -121,8 +152,8 @@ flowchart TD
     A[requestedPaths] --> B[normalizeRequestedDocsPath]
     B --> C{kind?}
     C -- markdown-file --> D[source/&lt;file&gt;.md<br/>+ siblings/.gitbook]
-    C -- directory --> E[source/&lt;dir&gt;/**<br/>+ static dir/.gitbook<br/>+ static dir/**/.gitbook]
-    C -- glob-pattern --> F[same as directory<br/>(unless trailing `**`)]
+    C -- partial-root --> E[source/&lt;dir&gt;/**<br/>+ static dir/.gitbook<br/>+ static dir/**/.gitbook]
+    C -- glob-pattern --> F[same as partial-root<br/>(unless trailing `**`)]
     D --> G[dedupe + sort]
     E --> G
     F --> G
@@ -133,7 +164,9 @@ flowchart TD
 
 ### 4. Sparse clone and stage source docs
 
-Two shell steps, guarded by `has_sources == 'true'`:
+Two shell steps, guarded by
+`steps.structure-checkout.outputs.has_sources == 'true' || steps.source-checkout.outputs.has_sources == 'true'`
+(whichever manifest branch from step 3 ran):
 
 - `Fetch requested source docs and assets`: clones
   `SOURCE_DOCS_REPOSITORY@SOURCE_DOCS_BRANCH` with
@@ -147,8 +180,8 @@ Two shell steps, guarded by `has_sources == 'true'`:
   committed files are not overwritten. This makes the requested source
   markdown available to `generate_crowdin_config` for matching.
 
-When `inputs.debug == true`, the optional `Debug staged docs tree` step prints
-the resulting `docs/` tree.
+A `Log staged docs tree` step then always prints the resulting `docs/` tree
+(`find docs | sort`); there is no separate `debug` input gating it.
 
 ### 5. Generate `crowdin.yml`
 
@@ -178,11 +211,12 @@ flowchart TD
 
 ### 6. Download translations from Crowdin
 
-The `crowdin/github-action@v2` step runs in download-only mode
-(`download_translations: true`, all upload/push options off,
-`export_only_approved: true`, `create_pull_request: false`). Crowdin writes
-translated files into `docs/<locale>/...` using the source-relative paths from
-`crowdin.yml`.
+The `crowdin/github-action` step runs in download-only mode
+(`download_translations: true` with
+`download_translations_args: --skip-untranslated-files`, all upload/push options
+off, `export_only_approved: true`, `create_pull_request: false`,
+`base_url: https://pagopa.crowdin.com`). Crowdin writes translated files into
+`docs/<locale>/...` using the source-relative paths from `crowdin.yml`.
 
 A subsequent `Fix permissions on downloaded files` step `chown`s `docs/` back
 to the workflow user.
@@ -247,9 +281,9 @@ fails fast.
 
 ### 9. Translate markdown links
 
-- Step: `Translate markdown content refs`
-- Script: [src/translateContentRefs.ts](../../src/translateContentRefs.ts)
-  (npm script `translate_content_refs`).
+- Step: `Translate links in translated files`
+- Script: [src/translateLinks.ts](../../src/translateLinks.ts)
+  (npm script `translate_links`).
 
 GitBook embeds cross-document references both as `content-ref` blocks and as
 plain markdown links:
@@ -339,19 +373,33 @@ flowchart LR
     D --> H[count skipped]
 ```
 
-### 12. Cleanup staging artifacts
+### 12. Cleanup artifacts
 
-A shell step that removes everything that should not appear in the PR:
+- Step: `Cleanup artifacts`
+
+A shell step that removes everything that should not appear in the PR and
+reshapes the tree into the translation-repo layout:
 
 - `git checkout -- crowdin.yml` to discard the generated config.
 - Removes any **untracked** files under `docs/` that are not under a locale
   root (i.e., the staged source markdown that did not get a translation). A
   locale root is detected by the presence of
   `docs/<locale>/_meta/docs-structure.json`.
-- Deletes empty directories left behind.
+- **Flattens each translated locale folder** (e.g. `docs/en-US/`) into `docs/`
+  with `cp -Rf` and removes the locale folder, so on `main` translations live
+  directly under `docs/` with no leading locale directory. Existing files are
+  overwritten; other content already under `docs/` is preserved.
+- **Relocates the localized structure file**: if `docs/_meta/docs-structure.json`
+  exists (after flattening), `mv -f` moves it to the repository root as
+  `docs-structure.json`, overwriting the transient placeholder
+  `generate_crowdin_config` wrote, so it can be diffed against the next run.
+- Deletes empty directories left behind (including `docs/_meta/` once the
+  structure file is relocated).
 - Removes the staging artifacts at the repo root: `.source-docs`,
-  `.source-docs-sparse-checkout.txt`, `gitbook-assets-manifest.json`,
-  `.gitbook-asset-sparse-checkout.txt`.
+  `.source-structure`, `.source-docs-sparse-checkout.txt`,
+  `gitbook-assets-manifest.json`, `.gitbook-asset-sparse-checkout.txt`. The
+  source-checkout manifest JSON is intentionally **left** for the
+  `Compute PR metadata` step, which reads and removes it itself.
 
 ```mermaid
 flowchart TD
@@ -361,9 +409,11 @@ flowchart TD
     D --> E{path under any<br/>locale_root?}
     E -- yes --> F[keep]
     E -- no --> G[rm -rf path]
-    F --> H[find -empty -delete]
+    F --> H[flatten each locale_root<br/>into docs/]
     G --> H
-    H --> I[remove .source-docs and manifests]
+    H --> I[mv docs/_meta/docs-structure.json<br/>-&gt; ./docs-structure.json]
+    I --> J[find -empty -delete]
+    J --> K[remove .source-docs, .source-structure<br/>and sparse/asset manifests]
 ```
 
 ### 13. Compute PR metadata
@@ -378,22 +428,28 @@ branch  = l10n_crowdin_translations-<YYYYMMDD-HHMMSS>-<input_hash>
 title   = New Crowdin Translations (<YYYYMMDD-HHMMSS>-<input_hash>)
 ```
 
-The PR body lists the `requestedPaths` field from the source-checkout manifest
-written in step 3 (read with an inline Node snippet), then deletes the
-manifest file.
+The PR body lists the `requestedPaths` field from whichever step-3 manifest ran
+(`steps.structure-checkout.outputs.manifest_path || steps.source-checkout.outputs.manifest_path`,
+read with an inline Node snippet), then deletes the manifest file.
 
 ### 14. Create Pull Request
 
 - Step: `Create Pull Request with translations`
 
-Stages only `docs/`, exits cleanly if there are no staged changes, otherwise
-commits using the identity configured in `GIT_USER_NAME` / `GIT_USER_EMAIL`,
-pushes the branch, and runs `gh pr create --base main --head $BRANCH_NAME`.
+Stages `docs/` plus the relocated root `docs-structure.json` (added only when it
+is non-empty, via a `[ -s docs-structure.json ]` guard, so the empty placeholder
+is never committed), exits cleanly if there are no staged changes, otherwise
+commits as `chore: update Crowdin translations` using the identity configured in
+`GIT_USER_NAME` / `GIT_USER_EMAIL`, pushes the branch, and runs
+`gh pr create --base main --head $BRANCH_NAME`.
 
 ```mermaid
 flowchart TD
     A[git checkout -B branch] --> B[git add -A -- docs]
-    B --> C{anything staged?}
+    B --> B2{docs-structure.json<br/>non-empty?}
+    B2 -- yes --> B3[git add docs-structure.json]
+    B2 -- no --> C
+    B3 --> C{anything staged?}
     C -- no --> D[exit 0, no PR]
     C -- yes --> E[git commit as bot]
     E --> F[git push --set-upstream]
@@ -407,11 +463,12 @@ flowchart TD
 | Script | npm command | Step in workflow |
 | --- | --- | --- |
 | [src/parseWorkflowInput.ts](../../src/parseWorkflowInput.ts) | `parse_workflow_input` | Parse workflow input |
-| [src/buildSourceCheckoutManifest.ts](../../src/buildSourceCheckoutManifest.ts) | `build_source_checkout_manifest` | Build source checkout manifest |
+| [src/buildSourceCheckoutManifest.ts](../../src/buildSourceCheckoutManifest.ts) | `build_source_checkout_manifest` | Build source checkout manifest from requested paths (specific-paths export) |
+| [src/buildStructureCheckoutManifest.ts](../../src/buildStructureCheckoutManifest.ts) | `build_structure_checkout_manifest` | Build source checkout manifest from `docs-structure.json` (full export) |
 | [src/generateCrowdinConfig.ts](../../src/generateCrowdinConfig.ts) | `generate_crowdin_config` | Generate `crowdin.yml` |
 | [src/pruneRemovedTranslatedPaths.ts](../../src/pruneRemovedTranslatedPaths.ts) | `prune_removed_translated_paths` | Remove stale files |
 | [src/renameTranslatedFilesAndFolders.ts](../../src/renameTranslatedFilesAndFolders.ts) | `rename_translated_files_and_folders` | Rename translated files and folders |
-| [src/translateContentRefs.ts](../../src/translateContentRefs.ts) | `translate_content_refs` | Translate markdown content refs |
+| [src/translateLinks.ts](../../src/translateLinks.ts) | `translate_links` | Translate links in translated files |
 | [src/buildGitBookAssetManifest.ts](../../src/buildGitBookAssetManifest.ts) | `build_gitbook_asset_manifest` | Build GitBook asset manifest |
 | [src/copyGitBookAssets.ts](../../src/copyGitBookAssets.ts) | `copy_gitbook_assets` | Copy GitBook assets |
 
