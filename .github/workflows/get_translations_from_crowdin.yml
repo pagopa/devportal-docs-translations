@@ -251,6 +251,12 @@ jobs:
             mv -f docs/_meta/docs-structure.json docs-structure.json
           fi
 
+          # Drop folders that only hold GitBook assets (a .gitbook directory)
+          # and no documentation. These are left behind when a folder's markdown
+          # was not yet translated or approved on Crowdin — nothing was
+          # downloaded for it — while its source assets were still copied in.
+          npm run prune_orphaned_asset_directories
+
           # Drop now-empty source directories left behind by the staged-source
           # cleanup (including docs/_meta/ once the structure file is relocated).
           find docs -mindepth 1 -type d -empty -delete 2>/dev/null || true

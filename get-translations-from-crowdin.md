@@ -393,6 +393,11 @@ reshapes the tree into the translation-repo layout:
   exists (after flattening), `mv -f` moves it to the repository root as
   `docs-structure.json`, overwriting the transient placeholder
   `generate_crowdin_config` wrote, so it can be diffed against the next run.
+- **Prunes orphaned asset folders** (`prune_orphaned_asset_directories`):
+  removes any directory whose subtree holds only a `.gitbook` asset directory
+  and no documentation. These appear when a folder's markdown was not yet
+  translated or approved on Crowdin — so nothing was downloaded for it — while
+  its source `.gitbook` assets were still copied into the localized tree.
 - Deletes empty directories left behind (including `docs/_meta/` once the
   structure file is relocated).
 - Removes the staging artifacts at the repo root: `.source-docs`,
@@ -471,6 +476,7 @@ flowchart TD
 | [src/translateLinks.ts](../../src/translateLinks.ts) | `translate_links` | Translate links in translated files |
 | [src/buildGitBookAssetManifest.ts](../../src/buildGitBookAssetManifest.ts) | `build_gitbook_asset_manifest` | Build GitBook asset manifest |
 | [src/copyGitBookAssets.ts](../../src/copyGitBookAssets.ts) | `copy_gitbook_assets` | Copy GitBook assets |
+| [src/pruneOrphanedAssetDirectories.ts](../../src/pruneOrphanedAssetDirectories.ts) | `prune_orphaned_asset_directories` | Cleanup artifacts (remove asset-only folders) |
 
 Shared structure parsing and path normalization used by all scripts lives in
 [src/translationStructure.ts](../../src/translationStructure.ts).
