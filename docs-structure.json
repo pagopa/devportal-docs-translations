@@ -1,0 +1,347 @@
+{
+  "version": 1,
+  "tree": {
+    "docs": {
+      "label": "docs",
+      "directory": true,
+      "children": {
+        "app-io": {
+          "label": "io app",
+          "directory": true,
+          "children": {
+            "io-guida-tecnica": {
+              "label": "io technical guide",
+              "directory": true,
+              "children": {
+                "v7.2": {
+                  "label": "v7.2",
+                  "directory": true,
+                  "children": {
+                    "abilitazioni": {
+                      "label": "Authorizations",
+                      "directory": true,
+                      "children": {
+                        "funzionalita-premium.md": {
+                          "label": "Premium features",
+                          "directory": false
+                        },
+                        "gestione-dei-servizi.md": {
+                          "label": "Service management",
+                          "directory": false
+                        },
+                        "README.md": {
+                          "label": "README",
+                          "directory": false
+                        },
+                        "subscription-feed.md": {
+                          "label": "Subscription feed",
+                          "directory": false
+                        },
+                        "test-con-codici-fiscali-reali.md": {
+                          "label": "Test with real fiscal codes",
+                          "directory": false
+                        },
+                        "test-invio-avvisi-pagopa.md": {
+                          "label": "Test sending pagoPA notices",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "api-e-specifiche": {
+                      "label": "APIs and specifications",
+                      "directory": true,
+                      "children": {
+                        "api-messaggi": {
+                          "label": "Message APIs",
+                          "directory": true,
+                          "children": {
+                            "cru-configurazioni-remote.md": {
+                              "label": "CRU remote configurations",
+                              "directory": false
+                            },
+                            "get-a-user-profile-using-post.md": {
+                              "label": "Get a user profile using POST",
+                              "directory": false
+                            },
+                            "get-a-user-profile.md": {
+                              "label": "Get a user profile",
+                              "directory": false
+                            },
+                            "get-message.md": {
+                              "label": "Get message",
+                              "directory": false
+                            },
+                            "get-subscriptions-feed.md": {
+                              "label": "Get subscriptions feed",
+                              "directory": false
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            },
+                            "submit-a-message-passing-the-user-fiscal_code-as-path-parameter.md": {
+                              "label": "Submit a message passing the user fiscal code as path parameter",
+                              "directory": false
+                            },
+                            "submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md": {
+                              "label": "Submit a message passing the user fiscal code in the request body",
+                              "directory": false
+                            }
+                          }
+                        },
+                        "api-servizi": {
+                          "label": "Service APIs",
+                          "directory": true,
+                          "children": {
+                            "manage-service-create.md": {
+                              "label": "Manage service create",
+                              "directory": false
+                            },
+                            "manage-service-delete.md": {
+                              "label": "Manage service delete",
+                              "directory": false
+                            },
+                            "manage-service-get-keys.md": {
+                              "label": "Manage service get keys",
+                              "directory": false
+                            },
+                            "manage-service-get-released.md": {
+                              "label": "Manage service get released",
+                              "directory": false
+                            },
+                            "manage-service-get-user-services.md": {
+                              "label": "Manage service get user services",
+                              "directory": false
+                            },
+                            "manage-service-get.md": {
+                              "label": "Manage service get",
+                              "directory": false
+                            },
+                            "manage-service-regenerate-api-key.md": {
+                              "label": "Manage service regenerate API key",
+                              "directory": false
+                            },
+                            "manage-service-release.md": {
+                              "label": "Manage service release",
+                              "directory": false
+                            },
+                            "manage-service-request-review.md": {
+                              "label": "Manage service request review",
+                              "directory": false
+                            },
+                            "manage-service-unpublish.md": {
+                              "label": "Manage service unpublish",
+                              "directory": false
+                            },
+                            "manage-service-update.md": {
+                              "label": "Manage service update",
+                              "directory": false
+                            },
+                            "manage-service-upload-service-logo.md": {
+                              "label": "Manage service upload service logo",
+                              "directory": false
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            },
+                            "service-topics-get-all-service-topics.md": {
+                              "label": "Service topics get all service topics",
+                              "directory": false
+                            },
+                            "upload-organization-logo.md": {
+                              "label": "Upload organization logo",
+                              "directory": false
+                            }
+                          }
+                        },
+                        "errori-comuni.md": {
+                          "label": "Common errors",
+                          "directory": false
+                        },
+                        "indirizzo-ip-pubblico.md": {
+                          "label": "Public IP address",
+                          "directory": false
+                        },
+                        "openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md": {
+                          "label": "OpenAPI endpoint for retrieving remote content",
+                          "directory": false
+                        },
+                        "openapi.md": {
+                          "label": "OpenAPI",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "changelog.md": {
+                      "label": "Changelog",
+                      "directory": false
+                    },
+                    "funzionalita": {
+                      "label": "Features",
+                      "directory": true,
+                      "children": {
+                        "inviare-un-messaggio": {
+                          "label": "Sending a message",
+                          "directory": true,
+                          "children": {
+                            "aggiungere-allegati.md": {
+                              "label": "Adding attachments",
+                              "directory": false
+                            },
+                            "inviare-un-messaggio-a-contenuto-remoto.md": {
+                              "label": "Sending a message with remote content",
+                              "directory": false
+                            },
+                            "inviare-un-messaggio-tradizionale.md": {
+                              "label": "Sending a traditional message",
+                              "directory": false
+                            },
+                            "messaggi-di-test.md": {
+                              "label": "Test messages",
+                              "directory": false
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            }
+                          }
+                        },
+                        "pubblicare-un-servizio": {
+                          "label": "Publishing a service",
+                          "directory": true,
+                          "children": {
+                            "argomento-del-servizio.md": {
+                              "label": "Service topic",
+                              "directory": false
+                            },
+                            "chiave-manage": {
+                              "label": "Manage key",
+                              "directory": true,
+                              "children": {
+                                "chiave-manage-1.md": {
+                                  "label": "Manage key 1",
+                                  "directory": false
+                                },
+                                "chiave-manage.md": {
+                                  "label": "Manage key",
+                                  "directory": false
+                                },
+                                "README.md": {
+                                  "label": "README",
+                                  "directory": false
+                                }
+                              }
+                            },
+                            "creare-un-servizio.md": {
+                              "label": "Creating a service",
+                              "directory": false
+                            },
+                            "dati-obbligatori": {
+                              "label": "Required data",
+                              "directory": true,
+                              "children": {
+                                "attributi.md": {
+                                  "label": "Attributes",
+                                  "directory": false
+                                },
+                                "README.md": {
+                                  "label": "README",
+                                  "directory": false
+                                },
+                                "service-metadata.md": {
+                                  "label": "Service metadata",
+                                  "directory": false
+                                }
+                              }
+                            },
+                            "gestire-laccesso-ai-servizi-tramite-i-gruppi.md": {
+                              "label": "Managing service access via groups",
+                              "directory": false
+                            },
+                            "importare-servizi-nellarea-riservata.md": {
+                              "label": "Importing services into the private area",
+                              "directory": false
+                            },
+                            "informazioni-sensibili.md": {
+                              "label": "Sensitive information",
+                              "directory": false
+                            },
+                            "provare-un-servizio-in-test.md": {
+                              "label": "Testing a service",
+                              "directory": false
+                            },
+                            "README.md": {
+                              "label": "README",
+                              "directory": false
+                            },
+                            "revisione-del-servizio.md": {
+                              "label": "Service review",
+                              "directory": false
+                            },
+                            "stato-del-servizio.md": {
+                              "label": "Service status",
+                              "directory": false
+                            },
+                            "visibilita-del-servizio.md": {
+                              "label": "Service visibility",
+                              "directory": false
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "README.md": {
+                      "label": "README",
+                      "directory": false
+                    },
+                    "risorse-utili": {
+                      "label": "Useful resources",
+                      "directory": true,
+                      "children": {
+                        "glossario.md": {
+                          "label": "Glossary",
+                          "directory": false
+                        },
+                        "guida-al-markdown.md": {
+                          "label": "Markdown guide",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "setup-iniziale": {
+                      "label": "Initial setup",
+                      "directory": true,
+                      "children": {
+                        "adesione-tramite-larea-riservata.md": {
+                          "label": "Onboarding via the private area",
+                          "directory": false
+                        },
+                        "configurazione-remota.md": {
+                          "label": "Remote configuration",
+                          "directory": false
+                        },
+                        "iscrizione-al-developer-portal.md": {
+                          "label": "Developer Portal registration",
+                          "directory": false
+                        },
+                        "README.md": {
+                          "label": "README",
+                          "directory": false
+                        }
+                      }
+                    },
+                    "SUMMARY.md": {
+                      "label": "SUMMARY",
+                      "directory": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
