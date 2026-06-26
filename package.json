@@ -16,7 +16,8 @@
     "build_source_checkout_manifest": "npx ts-node src/buildSourceCheckoutManifest.ts",
     "build_structure_checkout_manifest": "npx ts-node src/buildStructureCheckoutManifest.ts",
     "build_gitbook_asset_manifest": "npx ts-node src/buildGitBookAssetManifest.ts",
-    "copy_gitbook_assets": "npx ts-node src/copyGitBookAssets.ts"
+    "copy_gitbook_assets": "npx ts-node src/copyGitBookAssets.ts",
+    "prune_orphaned_asset_directories": "npx ts-node src/pruneOrphanedAssetDirectories.ts"
   },
   "repository": {
     "type": "git",
