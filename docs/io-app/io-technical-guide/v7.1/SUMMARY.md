@@ -1,0 +1,78 @@
+# Table of contents
+
+- [🏠 Technical guide](README.md)
+- [🕗 Changelog](changelog.md)
+- [🔢 Initial setup](setup-iniziale/README.md)
+  - [Onboarding via the Reserved Area](setup-iniziale/adesione-tramite-larea-riservata.md)
+  - [Registration to the Developer Portal](setup-iniziale/iscrizione-al-developer-portal.md)
+  - [Remote configuration](setup-iniziale/configurazione-remota.md)
+
+## Features
+
+- [📦 Publishing a service](funzionalita/pubblicare-un-servizio/README.md)
+  - [Creating a service](funzionalita/pubblicare-un-servizio/creare-un-servizio.md)
+  - [Testing a service](funzionalita/pubblicare-un-servizio/provare-un-servizio-in-test.md)
+  - [Service review](funzionalita/pubblicare-un-servizio/revisione-del-servizio.md)
+  - [Service visibility in the App](funzionalita/pubblicare-un-servizio/visibilita-del-servizio.md)
+  - [Importing services into the Reserved Area](funzionalita/pubblicare-un-servizio/importare-servizi-nellarea-riservata.md)
+  - [Mandatory data](funzionalita/pubblicare-un-servizio/dati-obbligatori/README.md)
+    - [Attributes](funzionalita/pubblicare-un-servizio/dati-obbligatori/attributi.md)
+    - [Service Metadata](funzionalita/pubblicare-un-servizio/dati-obbligatori/service-metadata.md)
+  - [Sensitive information](funzionalita/pubblicare-un-servizio/informazioni-sensibili.md)
+  - [Service topic](funzionalita/pubblicare-un-servizio/argomento-del-servizio.md)
+  - [Service status](funzionalita/pubblicare-un-servizio/stato-del-servizio.md)
+  - [API Key](funzionalita/pubblicare-un-servizio/chiave-manage/README.md)
+    - [Manage API Key](funzionalita/pubblicare-un-servizio/chiave-manage/chiave-manage.md)
+    - [API Key Usage](funzionalita/pubblicare-un-servizio/chiave-manage/chiave-manage-1.md)
+  - [Managing access to services via groups](funzionalita/pubblicare-un-servizio/gestire-laccesso-ai-servizi-tramite-i-gruppi.md)
+- [✉️ Sending a message](funzionalita/inviare-un-messaggio/README.md)
+  - [Test messages](funzionalita/inviare-un-messaggio/messaggi-di-test.md)
+  - [Sending a standard message](funzionalita/inviare-un-messaggio/inviare-un-messaggio-tradizionale.md)
+  - [Sending a remote content message](funzionalita/inviare-un-messaggio/inviare-un-messaggio-a-contenuto-remoto.md)
+  - [Adding attachments](funzionalita/inviare-un-messaggio/aggiungere-allegati.md)
+
+## APIs and specifications
+
+- [📐 OpenAPI](api-e-specifiche/openapi.md)
+- [Service APIs](api-e-specifiche/api-servizi/README.md)
+  - [Manage Service: Get](api-e-specifiche/api-servizi/manage-service-get.md)
+  - [Manage Service: Get Keys](api-e-specifiche/api-servizi/manage-service-get-keys.md)
+  - [Manage Service: Get User Services](api-e-specifiche/api-servizi/manage-service-get-user-services.md)
+  - [Manage Service: Create](api-e-specifiche/api-servizi/manage-service-create.md)
+  - [Manage Service: Delete](api-e-specifiche/api-servizi/manage-service-delete.md)
+  - [Manage Service: Update](api-e-specifiche/api-servizi/manage-service-update.md)
+  - [Manage Service: Request Review](api-e-specifiche/api-servizi/manage-service-request-review.md)
+  - [Manage Service: Release](api-e-specifiche/api-servizi/manage-service-release.md)
+  - [Manage Service: Get Released Service](api-e-specifiche/api-servizi/manage-service-get-released.md)
+  - [Manage Service: Unpublish](api-e-specifiche/api-servizi/manage-service-unpublish.md)
+  - [Manage Service: Regenerate API Key](api-e-specifiche/api-servizi/manage-service-regenerate-api-key.md)
+  - [Manage Service: Upload Service Logo](api-e-specifiche/api-servizi/manage-service-upload-service-logo.md)
+  - [Upload Organization Logo](api-e-specifiche/api-servizi/upload-organization-logo.md)
+  - [Service Topics: Get All Service Topics](api-e-specifiche/api-servizi/service-topics-get-all-service-topics.md)
+- [Message APIs](api-e-specifiche/api-messaggi/README.md)
+  - [Get a User Profile using POST](api-e-specifiche/api-messaggi/get-a-user-profile-using-post.md)
+  - [Submit a Message passing the user fiscal_code in the request body](api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md)
+  - [Get Message](api-e-specifiche/api-messaggi/get-message.md)
+  - [CRU Remote configurations](api-e-specifiche/api-messaggi/cru-configurazioni-remote.md)
+  - [Get Subscriptions Feed](api-e-specifiche/api-messaggi/get-subscriptions-feed.md)
+  - [⚠️ Get a User Profile](api-e-specifiche/api-messaggi/get-a-user-profile.md)
+  - [⚠️ Submit a Message passing the user fiscal_code as path parameter](api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-as-path-parameter.md)
+- [Common errors](api-e-specifiche/errori-comuni.md)
+- [API specifications](https://developer.pagopa.it/app-io/api/app-io-main)
+- [OpenAPI endpoint for retrieving remote content](api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md)
+- [Public IP address](api-e-specifiche/indirizzo-ip-pubblico.md)
+
+***
+
+- [🔑 Authorizations](abilitazioni/README.md)
+  - [Test with real Tax Codes](abilitazioni/test-con-codici-fiscali-reali.md)
+  - [Test sending pagoPA notices](abilitazioni/test-invio-avvisi-pagopa.md)
+  - [Subscription Feed](abilitazioni/subscription-feed.md)
+  - [Service management](abilitazioni/gestione-dei-servizi.md)
+  - [Premium features](abilitazioni/funzionalita-premium.md)
+
+## Useful resources
+
+- [#️⃣ Markdown guide](risorse-utili/guida-al-markdown.md)
+- [❓ Support for Institutions (tutorial, FAQ)](https://docs.pagopa.it/kb-enti)
+- [📘 Glossary](risorse-utili/glossario.md)
