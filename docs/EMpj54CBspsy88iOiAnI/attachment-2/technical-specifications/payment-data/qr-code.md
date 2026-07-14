@@ -41,7 +41,7 @@ PAGOPA
 Fixed text
 {% endtab %}
 
-{% tab title="Lunghezza" %}
+{% tab title="Lenght" %}
 6 characters
 {% endtab %}
 {% endtabs %}
@@ -49,15 +49,15 @@ Fixed text
 ### Version
 
 {% tabs %}
-{% tab title="Contenuto" %}
+{% tab title="Content" %}
 002
 {% endtab %}
 
-{% tab title="Tipo" %}
+{% tab title="Type" %}
 Fixed text
 {% endtab %}
 
-{% tab title="Lunghezza" %}
+{% tab title="Lenght" %}
 3 characters
 {% endtab %}
 {% endtabs %}
@@ -65,15 +65,15 @@ Fixed text
 ### Notice code
 
 {% tabs %}
-{% tab title="Contenuto" %}
+{% tab title="Content" %}
 Notice code, comprised of a concatenation of AUX digits, Application Code and IUV (Univocal Payment Identifier) code
 {% endtab %}
 
-{% tab title="Tipo" %}
+{% tab title="Type" %}
 String
 {% endtab %}
 
-{% tab title="Lunghezza" %}
+{% tab title="Lenght" %}
 18 characters
 {% endtab %}
 {% endtabs %}
@@ -81,15 +81,15 @@ String
 ### Creditor fiscal code
 
 {% tabs %}
-{% tab title="Contenuto" %}
+{% tab title="Content" %}
 Fiscal code of the creditor
 {% endtab %}
 
-{% tab title="Tipo" %}
+{% tab title="Type" %}
 String
 {% endtab %}
 
-{% tab title="Lunghezza" %}
+{% tab title="Lenght" %}
 11 characters
 {% endtab %}
 {% endtabs %}
@@ -97,15 +97,15 @@ String
 ### Amount
 
 {% tabs %}
-{% tab title="Contenuto" %}
+{% tab title="Content" %}
 Payment amount in euro cents
 {% endtab %}
 
-{% tab title="Tipo" %}
+{% tab title="Type" %}
 String
 {% endtab %}
 
-{% tab title="Lunghezza" %}
+{% tab title="Lenght" %}
 Minimum 2, maximum 11 characters
 {% endtab %}
 {% endtabs %}

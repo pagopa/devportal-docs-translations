@@ -22,7 +22,7 @@
 
 ## Attachment 2
 
-* [📐 📐Technical-specifications](attachment-2/technical-specifications/README.md)
+* [📐 Technical-specifications](attachment-2/technical-specifications/README.md)
   * [Header](attachment-2/technical-specifications/header.md)
   * [Information about the creditor](attachment-2/technical-specifications/information-about-the-creditor.md)
   * [Information about the recipient](attachment-2/technical-specifications/information-about-the-recipient.md)

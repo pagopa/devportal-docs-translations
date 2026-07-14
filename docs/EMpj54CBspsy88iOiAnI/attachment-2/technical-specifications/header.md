@@ -10,7 +10,9 @@ description: >-
 If the notice has multiple pages, always show the header on each page.
 {% endhint %}
 
-### ""NOTICE.SUBJECT"" <a href="#avviso-oggetto" id="avviso-oggetto"></a>
+#### `AVVISO.OGGETTO` <a href="#avviso-oggetto" id="avviso-oggetto"></a>
+
+
 
 {% tabs %}
 {% tab title="Definizione" %}
@@ -44,7 +46,7 @@ Capitalize first letter
 {% endtab %}
 {% endtabs %}
 
-### ""INSTITUTE.LOGO"" <a href="#ente-logo" id="ente-logo"></a>
+### `ENTE.LOGO` <a href="#ente-logo" id="ente-logo"></a>
 
 {% tabs %}
 {% tab title="Definizione" %}
