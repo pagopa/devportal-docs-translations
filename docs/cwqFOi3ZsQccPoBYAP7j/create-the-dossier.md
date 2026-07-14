@@ -7,10 +7,10 @@ The `signature requests` for the same dossier can have in common the title, emai
 
 The **title of the dossier** will also be specified in the signature request message to the citizen:
 
-
+<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-\*\*How to write the title of the dossier\*\*
+**How to write the title of the dossier**
 
 The title of the dossier is comprised of three elements: the name of the institution, the title of the dossier, which is also the subject of the request, the test “Signature request".
 

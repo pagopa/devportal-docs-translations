@@ -10,7 +10,9 @@ Sign with IO exposes the **REST API** that:
 
 The base URL for all the APIs is [https://api.io.pagopa.it](https://api.io.pagopa.it/api/v1/sign)
 
-{% hint style="warning" %} During the testing phase, the number of API calls that can be made is subject to a threshold of 150 invocations within a period of five seconds. {% endhint %}
+{% hint style="warning" %}
+During the testing phase, the number of API calls that can be made is subject to a threshold of 150 invocations within a period of five seconds.
+{% endhint %}
 
 ### Authentication
 
@@ -18,6 +20,6 @@ The Sign with IO APIs use an **API Key** to authenticate the requests.
 
 For the test phase, you can generate the **API Key** by directly accessing the reserved area.
 
-The API Key must be included in every request using the header: 
+The API Key must be included in every request using the header:
 
-``` Ocp-Apim-Subscription-Key : "\<API_KEY_HERE>" ```
+`Ocp-Apim-Subscription-Key : "<API_KEY_HERE>"`

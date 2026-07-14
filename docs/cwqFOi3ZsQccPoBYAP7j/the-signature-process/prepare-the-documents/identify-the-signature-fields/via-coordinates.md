@@ -12,6 +12,8 @@ To be able to indicate a section in the PDF where to place the graphic signature
 * the box dimensions;
 * the page where to insert it (remember the pages start from 0).
 
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
 ### How to calculate the coordinates and dimension of the rectangle
 
 To be able to easily calculate the coordinates and dimensions of the rectangle, we recommend using [GIMP](https://www.gimp.org/downloads/), a free open source tool available for all operating systems.
@@ -27,7 +29,7 @@ Proceed as follows:
 The information to be indicated will be shown in the fields **Position** and **Dimensions**. Make sure that the unit of measure is set in **points (pt)** both for the position as well as the dimensions.
 
 {% hint style="info" %}
-Repeat this operation \*\*for each signature field\*\* you want to insert in every single page.
+Repeat this operation for each signature field you want to insert in every single page.
 {% endhint %}
 
 Based on the above example, the `attrs` property of the dossier will be as follows (the decimal part can be ignored):

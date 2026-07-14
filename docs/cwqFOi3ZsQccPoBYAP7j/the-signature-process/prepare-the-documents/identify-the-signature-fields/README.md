@@ -6,13 +6,13 @@ You must identify the **signature fields** for each document — meaning the poi
 * The type of clause associated: **mandatory, unfair or optional.**
 
 {% hint style="warning" %}
-The title must not exceed \*\*70 characters\*\*, spaces included. Write in \*\*uppercase\*\* only at the beginning of the phrase, for acronyms, proper names or names of institutions
+The title must not exceed **70 characters**, spaces included. Write in **uppercase** only at the beginning of the phrase, for acronyms, proper names or names of institutions
 
 (e.g.: Sign for contract acceptance)
 {% endhint %}
 
 {% hint style="info" %}
-You must enter this information in the dossier that you will create when requesting the signature: you can find all the information in \[Creation of a dossier]\(../../../create-the-dossier.md).
+You must enter this information in the dossier that you will create when requesting the signature: you can find all the information in [Creation of a dossier.](../../../create-the-dossier.md)
 {% endhint %}
 
 ### How to identify the signature fields

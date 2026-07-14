@@ -2,12 +2,14 @@
 
 To create the "Signature request", you must have the following available:
 
-* the [**dossier_id**](../create-the-dossier.md)
-* the [**signer_id**](recovery-of-citizen-id.md).
+* the [**dossier\_id**](../create-the-dossier.md)
+* the [**signer\_id**](recovery-of-citizen-id.md).
 
-You can also indicated the **expiration date** of the signature request, which is the maximum time the user has to sign. If you decide to send the signature request [ via a message on IO](send-the-request-for-a-signature/via-message-on-io.md), the expiration date will be included in the body of the message that is sent to the user. 
+You can also indicated the **expiration date** of the signature request, which is the maximum time the user has to sign. If you decide to send the signature request [via a message on IO](send-the-request-for-a-signature/via-message-on-io.md), the expiration date will be included in the body of the message that is sent to the user.
 
-{% hint style="info" %} If you do not indicate an expiration date, the signature request will be valid for **3 months**. {% endhint %}
+{% hint style="info" %}
+If you do not indicate an expiration date, the signature request will be valid for **3 months**.
+{% endhint %}
 
 #### Do you want to enter signature fields different than those in the dossier?
 
@@ -15,7 +17,7 @@ During the phase of creating a signature request, it may be necessary to have si
 
 An example of a call to the endpoint is shown below: `POST /api/v1/sign/signature-requests`
 
-With the message body: 
+With the message body:
 
 ```json
 {
@@ -49,8 +51,9 @@ With the message body:
 }
 ```
 
-{% hint style="warning" %} Pay attention to the **date format**!  
-The date and time follow the standard **ISO 8601.** You can ALWAYS indicate the date and time in the **UTC time zone** or by indicating the difference with respect to the UTC with the standard notation ("Z" or "+hh:mm"). {% endhint %}
+{% hint style="warning" %}
+Pay attention to the \*\*date format\*\*! The date and time follow the standard \*\*ISO 8601.\*\* You can ALWAYS indicate the date and time in the \*\*UTC time zone\*\* or by indicating the difference with respect to the UTC with the standard notation ("Z" or "+hh:mm").
+{% endhint %}
 
 The response will be as follows:
 
@@ -98,4 +101,6 @@ The response will be as follows:
 
 In the response you will receive the Signature request created with the associated `signature_request_id`.
 
-{% hint style="warning" %} Take note of the `signature_request_id`: you will need it in the following phases. {% endhint %}
+{% hint style="warning" %}
+Take note of the \`signature\_request\_id\`: you will need it in the following phases.
+{% endhint %}

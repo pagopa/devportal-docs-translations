@@ -42,10 +42,16 @@ It is possible to translate the “Sign with IO” text into the language select
 
 To the left, a color other than Main Blue #0073E6 is used incorrectly, the correct application is shown to the right.
 
+<figure><img src="../.gitbook/assets/Screenshot 2023-04-28 alle 15.59.22.png" alt=""><figcaption><p>Colore corretto pulsante</p></figcaption></figure>
+
 #### Logo
 
 The example to the left is not correct because the button does not have the IO logo. The correct use of the “Sign with IO” button is shown on the right.
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 #### Font
 
 The example to the left shows the incorrect use of the font, therefore the correct example is the one shown to the right, where the text has the correct font, Titilium Web Bold.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>

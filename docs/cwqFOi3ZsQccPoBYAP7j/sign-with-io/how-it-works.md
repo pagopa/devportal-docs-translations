@@ -30,7 +30,7 @@ Here are the steps that the institutions must follow to request the signature of
 
 <details>
 
-<summary><mark style="color:blue;">Step 3</mark>: Publish the request for a signature</summary>
+<summary><mark style="color:blue;">Step 4</mark>: Publish the request for a signature</summary>
 
 [Click here to discover how](../request-a-signature/publication-of-request-for-signature.md)
 
@@ -38,7 +38,7 @@ Here are the steps that the institutions must follow to request the signature of
 
 <details>
 
-<summary><mark style="color:blue;">Step 4</mark>: Send the request for a signature</summary>
+<summary><mark style="color:blue;">Step 5</mark>: Send the request for a signature</summary>
 
 [Click here to discover how](../request-a-signature/send-the-request-for-a-signature/)
 
@@ -46,15 +46,15 @@ Here are the steps that the institutions must follow to request the signature of
 
 <details>
 
-<summary><mark style="color:blue;">Step 5</mark>: Check the status of the signature</summary>
+<summary><mark style="color:blue;">Step 6</mark>: Check the status of the signature</summary>
 
-[Click here to discover how](../../AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md)
+[Click here to discover how](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md)
 
 </details>
 
 <details>
 
-<summary><mark style="color:blue;">Step 6</mark>: Obtain the signed documents</summary>
+<summary><mark style="color:blue;">Step 7</mark>: Obtain the signed documents</summary>
 
 [Click here to discover how](../obtain-signed-documents.md)
 

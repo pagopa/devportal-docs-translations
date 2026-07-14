@@ -17,3 +17,5 @@ The legal retention period - and the possible return to the user upon request - 
 The obtained documents will be **signed digitally** and can be verified using all the qualified signature verification instruments (such as [postecert](https://vol.postecert.poste.it/verificatore/it?type=0), [acrobat reader DC](https://www.adobe.com/it/))
 
 If [signature fields](the-signature-process/prepare-the-documents/identify-the-signature-fields/) were added to the documents, also a corresponding **graphic** is shown next to them.
+
+<figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>

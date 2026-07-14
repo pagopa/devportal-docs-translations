@@ -10,7 +10,7 @@ Sign with IO is a service that allows:
 * institutions to **manage all the signature processes** in a single place.
 
 {% hint style="success" %}
-Sign with IO generates a \*\*Qualified Electronic Signature\*\* (QES), with a "one shot" certificate. It has maximum probative legal value, equal to a wet signature, and does not have any regulatory exclusion.
+Sign with IO generates a **Qualified Electronic Signature** (QES), with a "one shot" certificate. It has maximum probative legal value, equal to a wet signature, and does not have any regulatory exclusion.
 {% endhint %}
 
 ### Benefits for citizens

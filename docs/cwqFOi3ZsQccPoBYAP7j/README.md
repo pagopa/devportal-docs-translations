@@ -10,13 +10,13 @@ The purpose of this document is to:
 * provide instructions on how to check the **status** of a signature and download the **signed documents**.
 
 {% hint style="danger" %}
-\*\*Testing phase\*\*
+**Testing phase**
 
 This manual concerns the Sign with IO APIs for the testing phase: the information it contains is subject to change.
 {% endhint %}
 
 {% hint style="warning" %}
-Only after signing the \*\*testing agreement\*\* will it be possible to test the service by generating the test \*\*API keys\*\* directly from the \[Reserved Area]\(https://selfcare.pagopa.it/auth/login). If the institution is already integrated with the IO app, they cannot use the API keys they already have, but must generate specific API keys for the product.
+Only after signing the **testing agreement** will it be possible to test the service by generating the test **API keys** directly from the \[Reserved Area]\(https://selfcare.pagopa.it/auth/login). If the institution is already integrated with the IO app, they cannot use the API keys they already have, but must generate specific API keys for the product.
 {% endhint %}
 
 We recommend reading the document in its entirety, but here are **some shortcuts** to the main topics:
@@ -37,8 +37,8 @@ We recommend reading the document in its entirety, but here are **some shortcuts
 [request-a-signature](request-a-signature/)
 {% endcontent-ref %}
 
-{% content-ref url="../AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md" %}
-[verify-the-status-of-a-signature.md](../AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md)
+{% content-ref url="https://github.com/pagopa/devportal-docs-translations/blob/main/docs/AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md" %}
+[https://github.com/pagopa/devportal-docs-translations/blob/main/docs/AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md)
 {% endcontent-ref %}
 
 {% content-ref url="obtain-signed-documents.md" %}
@@ -53,8 +53,8 @@ We recommend reading the document in its entirety, but here are **some shortcuts
 
 **Sign with IO button**
 
-{% content-ref url="../AdBuOCmwur7AhLlgfCeG/sign-with-io-button/il-sign-with-io-button.md" %}
-[il-sign-with-io-button.md](../AdBuOCmwur7AhLlgfCeG/sign-with-io-button/il-sign-with-io-button.md)
+{% content-ref url="https://github.com/pagopa/devportal-docs-translations/blob/main/docs/AdBuOCmwur7AhLlgfCeG/sign-with-io-button/il-sign-with-io-button.md" %}
+[https://github.com/pagopa/devportal-docs-translations/blob/main/docs/AdBuOCmwur7AhLlgfCeG/sign-with-io-button/il-sign-with-io-button.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/AdBuOCmwur7AhLlgfCeG/sign-with-io-button/il-sign-with-io-button.md)
 {% endcontent-ref %}
 
 ###

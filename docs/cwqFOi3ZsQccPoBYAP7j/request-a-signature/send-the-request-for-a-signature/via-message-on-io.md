@@ -17,21 +17,19 @@ If the user has **activated receiving messages** from the **Sign with IO** servi
 
 If you try to send a signature message to a user who decided to **not receive communications** from Sign with IO (the Sign with IO service tab does not have the **flag “Contact you in app” active**):
 
-
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 You will receive an **error message** that does not allow you to proceed with sending the message (the parameter "i**o\_message\_id**" will not be returned).
 
 In this case, we recommend:
 
 * Suggesting the user to **activate the communication** of the Sign with IO service **from the service tab** located in the “Services” section of the app;
-* Send the signature request via alternative channels — see [tramite-sign-with-io-button-o-qr-code.md](../../../AdBuOCmwur7AhLlgfCeG/request-a-signature/send-the-request-for-a-signature/tramite-sign-with-io-button-o-qr-code.md "mention")
+* Send the signature request via alternative channels — see [here](https://app.gitbook.com/s/cwqFOi3ZsQccPoBYAP7j/sign-with-io-button)
 
 If, instead, the user **deactivates only push notifications** on the Sign with IO service tab:
 
-!\[]\(../../.gitbook/assets/no\_push (1).png)
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 The recipient receives and can view the message in app, however without receiving the push notification; for this reason, you will receive the io\_message\_id and not an error.
 
-[<br>](via-message-on-io.md#user-content-fn-1)\[^1]
-
-\[^1]:
+[<br>](via-message-on-io.md#user-content-fn-1)![](<../../.gitbook/assets/image (7).png>)

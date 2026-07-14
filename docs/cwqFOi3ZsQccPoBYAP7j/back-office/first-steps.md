@@ -3,14 +3,14 @@
 Here are the steps you must follow after signing the standard contract to be able to start integrating Sign with IO.
 
 {% hint style="info" %}
-Keep in mind that you can always indicate a \*\*different support email address\*\* for each dossier, as shown in the section "\[Create the dossier]\(https://docs.pagopa.it/manuale-operativo-di-firma-con-io/creare-il-dossier#vuoi-aggiungere-una-email-di-assistenza-specifica-per-il-dossier)"
+Keep in mind that you can always indicate a **different support email address** for each dossier, as shown in the section "\[Create the dossier]\(https://docs.pagopa.it/manuale-operativo-di-firma-con-io/creare-il-dossier#vuoi-aggiungere-una-email-di-assistenza-specifica-per-il-dossier)"
 {% endhint %}
 
 <details>
 
 <summary>Step 1 - Log in to the Reserved Area</summary>
 
-
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Enter the [Reserved Area](https://selfcare.pagopa.it/auth/login) and select your institution in order to start creating the API keys you need to integrate with Sign with IO.
 
@@ -41,7 +41,7 @@ For each **new test API key** you must:
 2. **Add one or more IP addresses** of the machines that send requests;
 3. **Add one or more fiscal codes** of the people (already uses of the IO app) who will tests the various flows.
 
-<mark style="color:red;">**Remember that you cannot test the flow if you do not enter IP addresses or fiscal codes**</mark>[<mark style="color:red;">**!**</mark>](first-steps.md#user-content-fn-1)\[^1]
+<mark style="color:red;">**Remember that you cannot test the flow if you do not enter IP addresses or fiscal codes**</mark>[<mark style="color:red;">**!**</mark>](first-steps.md#user-content-fn-1)
 
 </details>
 
@@ -53,4 +53,3 @@ After generating and populating the API keys, all you have to do now is use them
 
 </details>
 
-\[^1]:

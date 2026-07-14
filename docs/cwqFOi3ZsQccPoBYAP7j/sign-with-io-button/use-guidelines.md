@@ -33,8 +33,10 @@ In this case, the institution is recommended to \[check the status of the signat
 
 ### **Signature in progress (user side completed but signature on the QTSP side in progress)**
 
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
-In this case, the institution is recommended to \[check the status of the signature]\(../verify-the-status-of-a-signature.md) and, \*\*if the signature is being completed (WAIT\_FOR\_QTSP)\*\* to offer the user an information page that refers to the IO app to check the status of the signature.
+In this case, the institution is recommended to [check the status of the signature ](../check-the-status-of-a-signature.md)and, **if the signature is being completed (WAIT\_FOR\_QTSP)** to offer the user an information page that refers to the IO app to check the status of the signature.
 {% endhint %}
 
 ### **Signature error (problems with the documents)**
@@ -43,8 +45,10 @@ The user proceeds correctly with the signature in app, but at the end of the sig
 
 If it was not possible to complete the signature, the reason is related to technical problems in the document(s) sent by the institution.
 
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
-The institution is recommended in this phase to [check the status of the signature](../../AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md) and, in the case of a **REJECTED** signature, to not permit the user to start a new signature request with the same CTA. It is recommended to inhibit/eliminate the CTA or to replace it with one linked to the correct documents. Before acceptance, it is recommended to provide an explanatory error page.
+The institution is recommended in this phase to [check the status of the signature](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/AdBuOCmwur7AhLlgfCeG/verify-the-status-of-a-signature.md) and, in the case of a **REJECTED** signature, to not permit the user to start a new signature request with the same CTA. It is recommended to inhibit/eliminate the CTA or to replace it with one linked to the correct documents. Before acceptance, it is recommended to provide an explanatory error page.
 {% endhint %}
 
 NB: institutions are provided with an endpoint for the validation of documents before sending the signature request to prevent this problem from occurring most of the time.
@@ -56,3 +60,5 @@ The user clicks the Sign with IO CTA but the IO app does not respond temporarily
 {% hint style="info" %}
 In this case, the institution is recommended to insert a temporary error page that suggests the user to wait a few minutes before trying to sign again.
 {% endhint %}
+
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
