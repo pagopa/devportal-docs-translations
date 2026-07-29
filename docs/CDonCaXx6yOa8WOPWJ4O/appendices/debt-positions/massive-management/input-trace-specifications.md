@@ -1,11 +1,12 @@
 ---
 description: >-
- Specifications related to files to be used as input for massive loading services
+  Specifications related to files to be used as input for massive loading
+  services
 ---
 
 # 📄 Input trace specifications
 
-In order to trigger the massive loading process for the debt positions, regardless of the selected method it is necessary to create a file in “”JSON”” format according to the specifications provided below in the document.
+In order to trigger the massive loading process for the debt positions, regardless of the selected method it is necessary to create a file in “JSON” format according to the specifications provided below in the document.
 
 ## REST creation and update file trace
 
@@ -183,14 +184,16 @@ The file trace is common to both loading methods `API` and `SFTP`, however parti
 
 ### SFTP (Secure File Transfer Protocol)
 
-* **file format** ->  `JSON`
+* **file format** -> `JSON`
 * **file dimensions** -> max `100MB` (circa 100K PD)
 * **nomenclature** -> there are no constraints regarding file nomenclature, however the name must be univocal, it is not possible to load two files with the same name
 
 ### API
 
-* **file format** ->  `ZIP` (only one `JSON` file in the archive)
+* **file format** -> `ZIP` (only one `JSON` file in the archive)
 * **file dimensions** -> max `5MB` (approx. 100K PD)
 * **nomenclature** -> there are no constraints
 
-{% hint style="info" %} In future versions of the platform, the file dimension limits will be increased. {% endhint %}
+{% hint style="info" %}
+In future versions of the platform, the file dimension limits will be increased.
+{% endhint %}
