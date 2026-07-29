@@ -6,16 +6,16 @@ It is assumed that the producer is a provider member that has an e-service enabl
 
 It is assumed that the signal producer has identified and exposed the data related to the pseudonymization method, for example:
 
-| **cryptographic hashing function**| **seed**|
-|----------|----------|
-| `sha256`| `f3a7f54e-8e57-4a06-8bca-ac1857b6b045`|
+| **cryptographic hashing function** | **seed**                               |
+| ---------------------------------- | -------------------------------------- |
+| `sha256`                           | `f3a7f54e-8e57-4a06-8bca-ac1857b6b045` |
 
 The deposit of the signals is related to every single e-service and their deposit is determined by the variation of at least one item of data related to the entity subject to the single e-service.
 
 When a status or a fact changes in the domain of the owner's data, the producer identifies the data that changed and calculates the pseudonymized identifier:
 
-`fiscalCode= FLZCRN65R02E202N`  
-`cryptoHashFunction = sha256`  
+`fiscalCode= FLZCRN65R02E202N`\
+`cryptoHashFunction = sha256`\
 `seed = f3a7f54e-8e57-4a06-8bca-ac1857b6b045`
 
 `pseudonym(fiscalCode, cryptoHashFunction, seed) = 701c4489d6ac7fdb7...`
@@ -59,7 +59,7 @@ The producer sends the signal to the signal deposit service of the Signal Hub:
 `"objectId": "701c4489d6ac7fdb7...",`\
 `"eserviceId": "b1817321-0486-4c75-89e5-4ee297250418",`\
 `"signalType": "UPDATE"`\
-`}'`\
+`}'`\\
 
 `$ { "signalId": 1 }`
 
@@ -88,20 +88,19 @@ The signal deposit service can be used both to send insert/update/delete signals
 
 For this purpose, the producer sends the signal to the signal deposit service of the Signal Hub:
 
-`$ curl --request POST `  
-`--url https://api.signalhub.interop.pagopa.it/v1/push/signals `  
-`--header 'Authorization: Bearer eyJ0eXAiOiJhdCtqd3Q...' `  
-`--header 'content-type: application/json' `  
-`--data '{`  
-`"signalId": 2,`  
-`"objectType": "-",`  
-`"objectId": "-",`  
-`"eserviceId": "b1817321-0486-4c75-89e5-4ee297250418",`  
-`"signalType": "SEEDUPDATE`"  
+`$ curl --request POST`\
+`--url https://api.signalhub.interop.pagopa.it/v1/push/signals`\
+`--header 'Authorization: Bearer eyJ0eXAiOiJhdCtqd3Q...'`\
+`--header 'content-type: application/json'`\
+`--data '{`\
+`"signalId": 2,`\
+`"objectType": "-",`\
+`"objectId": "-",`\
+`"eserviceId": "b1817321-0486-4c75-89e5-4ee297250418",`\
+`"signalType": "SEEDUPDATE`"\
 `}'`
 
 `$ { "signalId": 2 }`
 
 Also the cryptographic information update signal must have a `signalId` that respects the order of the messages. From the next `signalId` the pseudonymized ids must be calculated with the new hash + seed combination.
 
-\\

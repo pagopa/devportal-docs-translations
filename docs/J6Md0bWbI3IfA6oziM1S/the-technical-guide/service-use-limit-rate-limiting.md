@@ -2,14 +2,16 @@
 
 To guarantee service reliability and availability to users, there is a _rate limiting_ system that limits the number of requests that an be made within a specific period of time.
 
-**The **_**rate limit**_** is set to 25 requests per second, for member institutions**, for signal deposit and recovery.
+**The \_rate limit**\_\*\* is set to 25 requests per second, for member institutions\*\*, for signal deposit and recovery.
 
 Information on _rate limiting_ is available as headers of the HTTP response and is applied **per single member** (signal producer or consumer). For example, the following headers
 
-`x-rate-limit-interval: 1000`  
-`x-rate-limit-limit: 25`  
-`x-rate-limit-remaining: 24`  
-`x-rate-limit-reset: 1733419765156`
+```
+x-rate-limit-interval: 1000
+x-rate-limit-limit: 25
+x-rate-limit-remaining: 24
+x-rate-limit-reset: 1733419765156
+```
 
 mean that:
 

@@ -1,5 +1,7 @@
 # OpenAPI specification documents
 
-[ SignalHub Signal Deposit - PUSH](https://raw.githubusercontent.com/pagopa/interop-signalhub-core/refs/tags/1.0.1/docs/openAPI/push-signals.yaml)
+I documenti OpenAPI sono reperibili nella [pagina delle API di Interoperabilità](https://developer.pagopa.it/pdnd-interoperabilita/api).
 
-[ SignalHub Signal Recovery - PULL](https://raw.githubusercontent.com/pagopa/interop-signalhub-core/refs/tags/1.0.1/docs/openAPI/pull-signals.yaml)
+[SignalHub Deposito Segnali - PUSH](https://developer.pagopa.it/en/pdnd-interoperability/api/signal-hub-push-v-1%C3%B9)
+
+[SignalHub Recupero Segnali - PULL](https://developer.pagopa.it/it/pdnd-interoperabilita/api/signal-hub-pull-v1)

@@ -17,3 +17,5 @@ The concentration of data updates in a single platform service guarantees:
 * confidentiality: data known only by the producers and consumers
 * administrative uniformity: it is not necessary to stipulate new agreements between members
 * technical standardization: homogeneous technical solution to access data variations
+
+<figure><img src=".gitbook/assets/diagramma.contesto.drawio2.png" alt=""><figcaption></figcaption></figure>

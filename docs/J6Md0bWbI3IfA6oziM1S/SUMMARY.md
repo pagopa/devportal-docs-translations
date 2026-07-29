@@ -11,7 +11,7 @@
 * [Glossary](the-technical-guide/glossary.md)
 * [Signals](the-technical-guide/signals.md)
 * [Producer documentation](the-technical-guide/producer-documentation.md)
-* [Retention Period](the-technical-guide/retention-period.md)
+* [Retention Period and API Polling](the-technical-guide/retention-period.md)
 * [Service use limit: rate limiting](the-technical-guide/service-use-limit-rate-limiting.md)
 * [OpenAPI specification documents](the-technical-guide/openapi-specification-documentation.md)
 
