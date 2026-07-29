@@ -1,8 +1,10 @@
 # Option with multiple installment plans (with or without the total option)
 
-With this scenario, it is possible to manage various installment plans. 
+With this scenario, it is possible to manage various installment plans.
 
-{% hint style="info" %} The selection of an **OdP** (payment option) (of one specific installment plan) by the citizen, disables the **OdP** related to the other plans and/or a possible one-time payment option; the output returned must be only the OdP with the installments still to be paid. {% endhint %}
+{% hint style="info" %}
+The selection of an **OdP** (payment option) (of one specific installment plan) by the citizen, disables the **OdP** related to the other plans and/or a possible one-time payment option; the output returned must be only the OdP with the installments still to be paid.
+{% endhint %}
 
 Example of a response that the EC must provide for this case:
 

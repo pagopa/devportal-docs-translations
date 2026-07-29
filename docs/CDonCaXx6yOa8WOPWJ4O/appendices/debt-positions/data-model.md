@@ -7,28 +7,29 @@ The **debt position** **(PD)** has the following relationships
 * A **PD** is connected to a **debtor (Deb)** **.** If there is a **Deb**, _at least one_ **PD** is connected to it.
 * A **PD** can have multiple **payment options (OdP).** _At least one_ exists. One **OdP** is connected to only one **PD**.
 
-{% hint style="info" %} _For example, the most common payment options for a annual tax are:_
+{% hint style="info" %}
+\_For example, the most common payment options for a annual tax are:\_
 
 * _single installment_
-
 * _first installment_
-
 * _..._
-
-* _n-th installment_ {% endhint %}
+* _n-th installment_
+{% endhint %}
 
 * An **OdP** can have multiple **payments**, equal to the number of Creditors (EC) to which they refer. _At least one_ exists. One **payment** is connected to only one **OdP**.
 
-{% hint style="info" %} _For example, the following payment options are possible:_
+{% hint style="info" %}
+\_For example, the following payment options are possible:\_
 
 * _payment with a single beneficiary, with a single payment (1 EC, 1 payment)_
 * _payment with a single beneficiary, with multiple payments (1 EC, n payments)_
 * _multi-beneficiary payment (n ECs, n payments)_
-* _a combination of the previous points (n EC, m payments with m>n)_ {% endhint %}
+* _a combination of the previous points (n EC, m payments with m>n)_
+{% endhint %}
 
 ### Logical scheme (ER)
 
-![](../../.gitbook/assets/image (47).png)
+<figure><img src="../../.gitbook/assets/image_scehma_Er.png" alt=""><figcaption></figcaption></figure>
 
 #### Debt position (PD) <a href="#posizione-debitoria-pd" id="posizione-debitoria-pd"></a>
 
@@ -36,15 +37,19 @@ At a high-level the debt position has the following characteristics
 
 * **IUPD** : univocal debt position identifier
 
-{% hint style="info" %} A possible format for it is: < _**CodiceFiscale EC**_ + [UUID](https://tools.ietf.org/html/rfc4122) >
+{% hint style="info" %}
+A possible format for it is: < \_\*\*CodiceFiscale EC\*\*\_ + \[UUID]\(https://tools.ietf.org/html/rfc4122) >
 
-The EC is responsible for creating the IUPD and making sure it is univocal. The service is responsible for guaranteeing it (check that the IUPD is univocal in the _**pagoPa**_ system), informing the EC if it is not. {% endhint %}
+The EC is responsible for creating the IUPD and making sure it is univocal. The service is responsible for guaranteeing it (check that the IUPD is univocal in the _**pagoPa**_ system), informing the EC if it is not.
+{% endhint %}
 
 * **Creditor -** Fiscal code of the creditor “operator” of the PD.
 * **Creditor registry office** - (company name, department, office, …)
 * **Date of validity** (start)- date from which the PD is valid and payable
 
-{% hint style="info" %} The EC is responsible for managing the PD and all information associated with it, including the date of validity. {% endhint %}
+{% hint style="info" %}
+The EC is responsible for managing the PD and all information associated with it, including the date of validity.
+{% endhint %}
 
 * **Date of publication -** date on which the PD is published on the system
 * **Expiration**_\[flag]_: indicates if the PD must be invalidated upon expiration or no
@@ -84,7 +89,7 @@ At a high-level the payment has the following characteristics
 
 ## Spontaneous payment
 
-We can consider a **spontaneous payment** as a  _“special case”_ of a **Debt position** that is created at the moment of the request by the user.
+We can consider a **spontaneous payment** as a _“special case”_ of a **Debt position** that is created at the moment of the request by the user.
 
 In case of a spontaneous payment:
 
@@ -95,7 +100,7 @@ In case of a spontaneous payment:
 
 ### Enrollment to spontaneous payment services (logical scheme)
 
-![](../../.gitbook/assets/EnrollmentPS.drawio (3).png)
+<figure><img src="../../.gitbook/assets/EnrollmentPS.drawio (3).png" alt=""><figcaption></figcaption></figure>
 
 A **Creditor** who has registered for spontaneous payment management, can register with multiple **services.** The availability of the services depends on the service catalog of the pagoPA platform.
 
@@ -114,15 +119,17 @@ Some relevant properties of the relationships in question are provided below.
 * **service properties**: for managing the specific characteristics of the service
 * **taxonomy**: taxonomy of the service
 
-{% hint style="info" %} If the Creditor needs to manage particular payment options for a specific service that require specific actions for data recovery, the _GPS_ platform makes it possible for Creditors and Technological intermediaries to expose a service for the creation of ad-hoc payment options. This service will be invoked by the _GPS_ platform for recovering the payment option curing the creation of the debt position.
+{% hint style="info" %}
+If the Creditor needs to manage particular payment options for a specific service that require specific actions for data recovery, the \_GPS\_ platform makes it possible for Creditors and Technological intermediaries to expose a service for the creation of ad-hoc payment options. This service will be invoked by the \_GPS\_ platform for recovering the payment option curing the creation of the debt position.
 
-This service can be configured by setting two `properties` that are part of the _service_ entity:  
+This service can be configured by setting two `properties` that are part of the _service_ entity:
 
 **`endpoint`**: Service _URL_ for recovery of the payment option
 
 **`basePath`**: _context root_ of the service for the recovery of the payment option
 
-If it would become necessary, _PagoPA_ will provide the specifications for implementing the service. {% endhint %}
+If it would become necessary, _PagoPA_ will provide the specifications for implementing the service.
+{% endhint %}
 
 #### Enrollment
 
@@ -132,4 +139,4 @@ If it would become necessary, _PagoPA_ will provide the specifications for imple
 
 ## PA postal payment slip
 
-If the EC has at least one postal current account for collections, it is necessary that it follows what is indicated in [#bollettino-postale-pa](../../creditor/integration-methods/best-practice.md#bollettino-postale-pa "mention") for the creation of the **PD.** 
+If the EC has at least one postal current account for collections, it is necessary that it follows what is indicated in [#bollettino-postale-pa](../../creditor/integration-methods/best-practice.md#bollettino-postale-pa "mention") for the creation of the **PD.**

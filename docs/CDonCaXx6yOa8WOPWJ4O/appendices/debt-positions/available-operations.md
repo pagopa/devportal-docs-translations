@@ -1,7 +1,7 @@
 # Available operations
 
 {% hint style="info" %}
-All the indicated operations are divided by fiscal code of the creditor (\`organizationfiscalcode\`).
+All the indicated operations are divided by fiscal code of the creditor **organizationfiscalcode**.
 
 In the case of intermediation, it is possible to associate the intermediary's _subscription key_ with _1_ to _n_ fiscal codes of intermediated institutions, which allows the intermediaries to use a single _subscription key_ to invoke the APIs on behalf of all the intermediated institutions. This enabling operations must be requested from PagoPA at the same time as the creation of the _subscription key_ or afterward.
 
@@ -20,7 +20,7 @@ For details see [https://github.com/pagopa/pagopa-api/tree/SANP3.8.0/openapi](ht
 [https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.7.1/openapi/gpd.json](https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.7.1/openapi/gpd.json)
 {% endopenapi %}
 
-!\[]\(../../.gitbook/assets/createPD (1).png)
+<figure><img src="../../.gitbook/assets/createPD (1).png" alt=""><figcaption></figcaption></figure>
 
 When creating the debt position, the service will check the input data and check for duplicates.
 
@@ -42,7 +42,7 @@ The _query parameter_ `toPublish` makes it possible to automatically publish a d
 [https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.7.1/openapi/gpd.json](https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.7.1/openapi/gpd.json)
 {% endopenapi %}
 
-!\[]\(../../.gitbook/assets/readPDList (1).png)
+<figure><img src="../../.gitbook/assets/readPDList.png" alt=""><figcaption></figcaption></figure>
 
 Reading a list of debt positions always requires pagination. It is also possible to filter by `due_date` to limit the results.
 
@@ -50,7 +50,7 @@ Reading a list of debt positions always requires pagination. It is also possible
 [https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.7.1/openapi/gpd.json](https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.7.1/openapi/gpd.json)
 {% endopenapi %}
 
-!\[]\(../../.gitbook/assets/readPD (1).png)
+<figure><img src="../../.gitbook/assets/readPD.png" alt=""><figcaption></figcaption></figure>
 
 Reading a debt position is based on the input identifier (IUPD). If the IUPD does not exist, an error is output.
 
@@ -60,7 +60,7 @@ Reading a debt position is based on the input identifier (IUPD). If the IUPD doe
 [https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.7.1/openapi/gpd.json](https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.7.1/openapi/gpd.json)
 {% endopenapi %}
 
-!\[]\(../../.gitbook/assets/updatePD (1).png)
+<figure><img src="../../.gitbook/assets/updatePD.png" alt=""><figcaption></figcaption></figure>
 
 During the update phase, in addition to the already mentioned checks during creation, a check is made that the position exists and can be updated.
 
@@ -76,7 +76,7 @@ It is important to pay particular attention to the \`notificationFee\` field, wh
 [https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.4.1/openapi/gpd.yaml](https://raw.githubusercontent.com/pagopa/pagopa-api/SANP3.4.1/openapi/gpd.yaml)
 {% endopenapi %}
 
-!\[]\(../../.gitbook/assets/deletePD (1).png)
+<figure><img src="../../.gitbook/assets/deletePD (1).png" alt=""><figcaption></figcaption></figure>
 
 Canceling a debt position requires checking both its existence (IUPD) and state (for example, a debt position cannot be canceled if it was already paid)
 
@@ -84,7 +84,7 @@ Canceling a debt position requires checking both its existence (IUPD) and state 
 
 <mark style="color:green;">`POST`</mark> `undefined/organizations/{organizationfiscalcode}/debtpositions/{iupd}/publish`
 
-!\[]\(../../.gitbook/assets/publishPD (1).png)
+<figure><img src="../../.gitbook/assets/publishPD.png" alt=""><figcaption></figcaption></figure>
 
 Publishing a debt position makes it possible to switch from the `DRAFT` status to the `PUBLISHED` status.
 

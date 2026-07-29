@@ -42,6 +42,6 @@ Each PSP can define 3 types of commission packages
 
 For more information regarding the use of the functions, refer to:
 
-Manual for the creditors -> [https://developer.pagopa.it/pago-pa/guides/manuale-bo-ec/manuale-operativo-back-office-pagopa-creditor/funzionalita/gestione-evoluta-commissioni](https://developer.pagopa.it/pago-pa/guides/manuale-bo-ec/manuale-operativo-back-office-pagopa-creditor/funzionalita/gestione-evoluta-commissioni)
+Manual for the creditors -> [https://developer.pagopa.it/it/pago-pa/guides/manuale-bo-ec/v1.0/readme/funzionalita/gestione-evoluta-commissioni](https://developer.pagopa.it/it/pago-pa/guides/manuale-bo-ec/v1.0/readme/funzionalita/gestione-evoluta-commissioni)
 
-Manual for the PSPs -> [https://developer.pagopa.it/pago-pa/guides/manuale-bo-psp/manuale-operativo-pagamenti-pagopa-payment-service-provider/funzionalita/gestione-evoluta-commissioni](https://developer.pagopa.it/pago-pa/guides/manuale-bo-psp/manuale-operativo-pagamenti-pagopa-payment-service-provider/funzionalita/gestione-evoluta-commissioni)
+Manual for the PSPs ->[https://developer.pagopa.it/it/pago-pa/guides/manuale-bo-ec/v1.0/readme/funzionalita/gestione-evoluta-commissioni](https://developer.pagopa.it/it/pago-pa/guides/manuale-bo-ec/v1.0/readme/funzionalita/gestione-evoluta-commissioni)

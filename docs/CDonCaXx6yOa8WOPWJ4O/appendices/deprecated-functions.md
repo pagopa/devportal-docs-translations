@@ -16,7 +16,7 @@ The information related to accounts to be credited will be managed using the new
 {% hint style="info" %}
 The _counterparty table_ and the _credit account disclosure_ has been replaced by new APIs in the pagoPA BackOffice.
 
-For more information, refer to what is described in the [PT Back Office Manual](https://docs.pagopa.it/manuale-back-office-pagopa/v/manuale-bo-pagopa-pt/manuale-operativo-back-office-pagopa-partner-tecnologico/funzionalita/external-api) and the [PSP Back Office Manual](https://docs.pagopa.it/manuale-back-office-pagopa/v/manuale-bo-pagopa-psp/manuale-operativo-pagamenti-pagopa-payment-service-provider/funzionalita/external-api)[ ](https://app.gitbook.com/s/BnqUVJHM26TaVUpNXC9J/readme/funzionalita/external-api).
+For more information, refer to what is described in the [PT Back Office Manual](https://docs.pagopa.it/manuale-back-office-pagopa/v/manuale-bo-pagopa-pt/manuale-operativo-back-office-pagopa-partner-tecnologico/funzionalita/external-api) and the [PSP Back Office Manual ](https://docs.pagopa.it/manuale-back-office-pagopa/v/manuale-bo-pagopa-pt/manuale-operativo-back-office-pagopa-partner-tecnologico/funzionalita/external-api).
 {% endhint %}
 
 ## Connection to pagoPA via the SPC Infranet

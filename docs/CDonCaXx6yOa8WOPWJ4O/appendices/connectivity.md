@@ -13,6 +13,8 @@ An entity can connect directly to the pagoPA platform using connectivity via int
 * use of the https transport protocol with a channel encoded and authenticated by Transport Layer Security (TLS) version 1.2 or higher, enabling mutual authentication between the parties (client authentication) for what concerns the connectivity from the Payment node and using an api-key for what concerns the connectivity to the payment node. For this purpose, it is mandatory to use x.509 digital certificates for the creation of the TLS channel. Keep in mind that in the pagoPA system, the directly connected entity will be authenticated by the pagoPA platform both when receiving the requests (api-key), as well as when sending them (server authentication);
 * use of a connection suitable for supporting compliance of the expected LdS considering the volume of transactions the entity expects to have.
 
+<figure><img src="../.gitbook/assets/connettività.png" alt=""><figcaption></figcaption></figure>
+
 ## Connection activation procedure
 
 ### Server payment node

@@ -3,7 +3,7 @@
 The use cases that must be managed on the PSP side are as follows:
 
 * [single total option](single-option-total.md);
-* [multiple payment options with different due dates;](../../../../PmBz3R5ejc6lLp80K94Z/payment-service-provider/payment-options/use-cases/piu-payment-options-con-scadenze-differenti.md)
+* [multiple payment options with different due dates;](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/payment-service-provider/payment-options/use-cases/piu-payment-options-con-scadenze-differenti.md)
 * [single installment plan](single-installment-plan.md);
 * [total option and installment plan (single)](total-option-and-single-installment-plan.md);
 * [options with multiple installment plans (with or without the total option)](options-with-multiple-installment-plans-with-or-without-the-total-option.md);

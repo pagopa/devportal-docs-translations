@@ -9,8 +9,10 @@ The actions indicated below can come from 2 sources:
 
 ## Debt position
 
+<figure><img src="../../.gitbook/assets/FSM-PD-DebtPosition.drawio.png" alt=""><figcaption></figcaption></figure>
+
 ## Payment option
 
-!\[]\(../../.gitbook/assets/image (9).png)
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 ## Payment

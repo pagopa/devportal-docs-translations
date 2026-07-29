@@ -49,7 +49,7 @@ For details see [https://github.com/pagopa/pagopa-api/tree/SANP3.9.1](https://gi
 
 {% endtab %}
 
-{% tab title="undefined" %}
+{% tab %}
 ```xml
 <soapenv:Envelope>
   <soapenv:Header />
@@ -75,7 +75,7 @@ For details see [https://github.com/pagopa/pagopa-api/tree/SANP3.9.1](https://gi
 ```
 {% endtab %}
 
-{% tab title="undefined" %}
+{% tab %}
 \{% endtab %
 {% endtab %}
 

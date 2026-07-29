@@ -132,7 +132,7 @@ Patch version issued to resolve some elements of ambiguity indicated below
 * Addition of _idCart_ and _allCCP_ for [integration-of-creditor-touch-point-with-checkout.md](../creditor/integration-methods/integration-of-creditor-touch-point-with-checkout.md "mention")
 * Clarifications about the _paymentNote_ tag in [#fase-di-attivazione](../creditor/integration-methods/best-practice.md#fase-di-attivazione "mention")
 * Use of the [#bollettino-postale-pa](../creditor/integration-methods/best-practice.md#bollettino-postale-pa "mention") in the case of [payment-at-frontend-of-creditor.md](../use-cases/payment-at-frontend-of-creditor.md "mention")
-* Clarifications about [digital-stamp-duty.md](../../PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md "mention")
+* Clarifications about [https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md "mention")
 * Addition [#backoffice-pagopa](../payment-service-provider/registration.md#backoffice-pagopa "mention") in [registration.md](../payment-service-provider/registration.md "mention") of the PSP
 * Removed references to the whitelist in [#nodo-dei-pagamenti-client](../appendices/connectivity.md#nodo-dei-pagamenti-client "mention")
 * Updated the definition of the _paymentNote_ tag in [#pagetpayment](../appendices/primitive.md#pagetpayment "mention")
@@ -159,11 +159,11 @@ Patch version issued to resolve some elements of ambiguity indicated below
 
 * Updated the flow in [life-cycle-of-a-payment.md](general-operation/life-cycle-of-a-payment.md "mention")
 * Inserted a new page [overview-of-the-components.md](general-operation/overview-of-the-components.md "mention") that represents the macro application architecture of the pagoPA platform
-* Expanded the description of the [service-catalog-md](../../PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/ "mention")
+* Expanded the description of the [https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md "mention")
 * Update of the amount in [#title-text-2](../creditor/integration-methods/best-practice.md#title-text-2 "mention")
 * Distinction between the integration methods for the creditors in [integration-via-synchronous-api.md](../creditor/integration-methods/integration-via-synchronous-api.md "mention") and [integration-via-asynchronous-api.md](../creditor/integration-methods/integration-via-asynchronous-api.md "mention")
 * Correct the links to the guidelines in [generation-of-univocal-payment-identifier.md](../creditor/generation-of-univocal-payment-identifier.md "mention")
-* Addition of the section [Dati canale pagamento](https://app.gitbook.com/s/u6YdY319vyFX9MIvnKBa/dati-canale-pagamento "mention") in the [Dizionario dei metadata](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/u6YdY319vyFX9MIvnKBa/ "mention")
+* Addition of the section [Dati canale pagamento](https://app.gitbook.com/s/u6YdY319vyFX9MIvnKBa/dati-canale-pagamento "mention") in the [Fabrick](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/u6YdY319vyFX9MIvnKBa/ "mention")
 * New method for selecting the PSP for amounts below 50 euros in [offer-payment-systems-on-pagopa-s.p.a.-touchpoints.md](../payment-service-provider/integration-methods/offer-payment-systems-on-pagopa-s.p.a.-touchpoints.md "mention")
 * Added details regarding the non-modifiability of the outcome sent by the PSP in [#fase-di-invio-dellesito-del-pagamento](../payment-service-provider/integration-methods/integration-via-api.md#fase-di-invio-dellesito-del-pagamento "mention")
 * Updated the procedure in [#nodo-dei-pagamenti-server](../appendices/connectivity.md#nodo-dei-pagamenti-server "mention")
@@ -180,14 +180,14 @@ Patch version issued to resolve some elements of ambiguity indicated below
 
 ### 3.2.1 (November 2022)
 
-* Added details for the correct use of the _transferCategory_ tag regarding the [digital-stamp-duty.md](../../PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md "mention")
+* Added details for the correct use of the _transferCategory_ tag regarding the [https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md "mention")
 * Updated the swagger [#ec-checkout-api](../appendices/primitive.md#ec-checkout-api "mention")
 * Updated the swaggers in [available-operations.md](../appendices/debt-positions/available-operations.md "mention")
 
 ### 3.2.0 (October 2022)
 
 * Updated the specifications for [payment-at-frontend-of-creditor.md](../use-cases/payment-at-frontend-of-creditor.md "mention") and [integration-of-creditor-touch-point-with-checkout.md](../creditor/integration-methods/integration-of-creditor-touch-point-with-checkout.md "mention")
-* [digital-stamp-duty.md](../../PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md "mention")
+* [https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/creditor/digital-stamp-duty.md "mention")
 * Added details for the correct use of the [#payment-token](../payment-service-provider/integration-methods/best-practice.md#payment-token "mention") in regard to the multiple invocation of the sendPaymentOutcome
 * Modification of the [primitive.md](../appendices/primitive.md "mention") for Advanced Commission Management
 
@@ -200,7 +200,7 @@ Patch version issued to resolve some elements of ambiguity indicated below
 * [advanced-commission-management.md](../appendices/advanced-commission-management.md "mention")
 * [connectivity.md](../appendices/connectivity.md "mention")
 * Clarifications regarding [spontaneous-payment-via-psp](../use-cases/spontaneous-payment-via-psp/ "mention")
-* Addition of a data structure example in [service-catalog-md](../../PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/ "mention")
+* Addition of a data structure example in [https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md "mention")
 * Addition of a data structure example in [car-property-tax.md](../use-cases/spontaneous-payment-via-psp/car-property-tax.md "mention")
 * Specific use cases in [multi-beneficiary-taxes.md](../creditor/multi-beneficiary-taxes.md "mention")
 * [account-reconciliation.md](../creditor/account-reconciliation.md "mention")

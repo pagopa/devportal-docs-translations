@@ -1,28 +1,32 @@
 # Quality indicators for registered entities
 
-{% content-ref url="creditor-service-levels.md" %} [creditor-service-levels.md](creditor-service-levels.md) {% endcontent-ref %}
+{% content-ref url="creditor-service-levels.md" %}
+[creditor-service-levels.md](creditor-service-levels.md)
+{% endcontent-ref %}
 
-{% content-ref url="psp-service-levels.md" %} [psp-service-levels.md](psp-service-levels.md) {% endcontent-ref %}
+{% content-ref url="psp-service-levels.md" %}
+[psp-service-levels.md](psp-service-levels.md)
+{% endcontent-ref %}
 
 ## Response time
 
 The following chart shows the lead times of the pagoPA platform
 
-![](../../.gitbook/assets/Nuovi LdS-Globale.png)
+<figure><img src="../../.gitbook/assets/Nuovi LdS-Globale.png" alt=""><figcaption></figcaption></figure>
 
 * the _Processing time_ represents what is indicated in [#livelli-di-servizio-dei-metodi-degli-ec](creditor-service-levels.md#livelli-di-servizio-dei-metodi-degli-ec "mention");
 * _Node Timeout_ represents what is indicated in [#gestione-dei-timeout-verso-gli-ec](creditor-service-levels.md#gestione-dei-timeout-verso-gli-ec "mention") or [#gestione-dei-timeout-verso-i-psp](psp-service-levels.md#gestione-dei-timeout-verso-i-psp "mention"), depending on the nature of the _Called Node_;
-* the _Node Caller Timeout_ represents what is indicated in [#gestione-dei-timeout-del-nodo](./#gestione-dei-timeout-del-nodo "mention") for the synchronous methods. 
+* the _Node Caller Timeout_ represents what is indicated in [#gestione-dei-timeout-del-nodo](./#gestione-dei-timeout-del-nodo "mention") for the synchronous methods.
 
 The following chart shows the times in which the pagoPA platform acts as a server in the case of non-synchronous methods
 
-![](../../.gitbook/assets/Nuovi LdS-Metodi Sincroni (3).png)
+<figure><img src="../../.gitbook/assets/Nuovi LdS-Metodi Sincroni (3).png" alt=""><figcaption></figcaption></figure>
 
-* the _Node Caller Timeout_ represents what is indicated in [#gestione-dei-timeout-del-nodo](./#gestione-dei-timeout-del-nodo "mention") for the non-synchronous methods. 
+* the _Node Caller Timeout_ represents what is indicated in [#gestione-dei-timeout-del-nodo](./#gestione-dei-timeout-del-nodo "mention") for the non-synchronous methods.
 
 The following chart shows the times in which the pagoPA platform acts as a client
 
-![](../../.gitbook/assets/Nuovi LdS-Timeout del Nodo.png)
+<figure><img src="../../.gitbook/assets/Nuovi LdS-Timeout del Nodo.png" alt=""><figcaption></figcaption></figure>
 
 * the _Processing time_ represents what is indicated in [#livelli-di-servizio-dei-metodi-degli-ec](creditor-service-levels.md#livelli-di-servizio-dei-metodi-degli-ec "mention") or [#livelli-di-servizio-dei-metodi-dei-psp](psp-service-levels.md#livelli-di-servizio-dei-metodi-dei-psp "mention"), depending on the nature of the _Called Node_;
 * _Node Timeout_ represents what is indicated in [#gestione-dei-timeout-verso-gli-ec](creditor-service-levels.md#gestione-dei-timeout-verso-gli-ec "mention") or [#gestione-dei-timeout-verso-i-psp](psp-service-levels.md#gestione-dei-timeout-verso-i-psp "mention"), depending on the nature of the _Called Node._

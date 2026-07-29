@@ -14,8 +14,8 @@ Usually once the user has entered the essential data for the service needed for 
 
 To manage the errors, refer to [Gestione degli errori](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/mU2qgiLV1G3m9z1VjAOc/ "mention").
 
-{% content-ref url="../../../PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/" %}
-[service-catalog-md](../../../PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/)
+{% content-ref url="https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md" %}
+[https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md)
 {% endcontent-ref %}
 
 {% content-ref url="car-property-tax.md" %}

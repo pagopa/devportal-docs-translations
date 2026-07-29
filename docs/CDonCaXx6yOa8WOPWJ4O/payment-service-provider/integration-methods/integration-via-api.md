@@ -15,7 +15,7 @@ The [demandPaymentNotice](../../appendices/primitive.md#demandpaymentnotice) can
 
 This phase is mandatory in the case of spontaneous payments activated at the PSPs.
 
-The PSPs can recover the data of the specific service via the [service-catalog-md](../../../PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/ "mention").
+The PSPs can recover the data of the specific service via the [https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/use-cases/spontaneous-payment-via-psp/service-catalog-md/README.md "mention").
 
 ## Verification phase
 
@@ -82,7 +82,7 @@ If the PSP sends an OK in the response, it must send an OK _outcome_ in the [sen
 * faultString _semantic error_
 * description _discordant outcome_
 
-To be able to use the _metadata_ in a correct and standardized manner, a [Dizionario dei metadata](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/u6YdY319vyFX9MIvnKBa/ "mention") has been prepared that contains a section dedicated to information about the payment channel present in _additionalPaymentInformations_ of [pspNotifyPayment vers. 2](../../appendices/primitive.md#versione-2-4).
+To be able to use the _metadata_ in a correct and standardized manner, a [Fabrick](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/u6YdY319vyFX9MIvnKBa/ "mention") has been prepared that contains a section dedicated to information about the payment channel present in _additionalPaymentInformations_ of [pspNotifyPayment vers. 2](../../appendices/primitive.md#versione-2-4).
 
 ## Payment outcome sending phase
 

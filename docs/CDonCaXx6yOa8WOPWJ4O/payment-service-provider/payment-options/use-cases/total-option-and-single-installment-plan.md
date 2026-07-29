@@ -1,8 +1,10 @@
 # Total option and installment plan (single)
 
-This scenario provides the citizen with the option to pay the debt position by means of a total option or an installment plan. 
+This scenario provides the citizen with the option to pay the debt position by means of a total option or an installment plan.
 
-{% hint style="info" %} The selection by the citizen of one of the two available **OdP** (total option or installment plan), disables the other **OdP** which will become no longer payable. {% endhint %}
+{% hint style="info" %}
+The selection by the citizen of one of the two available **OdP** (total option or installment plan), disables the other **OdP** which will become no longer payable.
+{% endhint %}
 
 Example of a response that the EC must provide and that the PSP must expose for this case:
 

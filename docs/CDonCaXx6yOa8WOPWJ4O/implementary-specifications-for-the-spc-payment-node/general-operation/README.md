@@ -30,6 +30,6 @@ The enabling infrastructure that permits the technical dialog between the credit
 [registration-with-the-pagopa-platform.md](registration-with-the-pagopa-platform.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../PmBz3R5ejc6lLp80K94Z/implementary-specifications-for-the-spc-payment-node/general-operation/use-of-the-pagopa-logo-md/" %}
-[use-of-the-pagopa-logo-md](../../../PmBz3R5ejc6lLp80K94Z/implementary-specifications-for-the-spc-payment-node/general-operation/use-of-the-pagopa-logo-md/)
+{% content-ref url="https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/implementary-specifications-for-the-spc-payment-node/general-operation/use-of-the-pagopa-logo-md/README.md" %}
+[https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/implementary-specifications-for-the-spc-payment-node/general-operation/use-of-the-pagopa-logo-md/README.md](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/PmBz3R5ejc6lLp80K94Z/implementary-specifications-for-the-spc-payment-node/general-operation/use-of-the-pagopa-logo-md/README.md)
 {% endcontent-ref %}
