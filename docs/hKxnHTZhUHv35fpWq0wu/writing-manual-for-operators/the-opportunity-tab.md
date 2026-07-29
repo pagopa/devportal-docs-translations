@@ -6,7 +6,7 @@ The description of the opportunity must provide more details about the discount:
 
 #### **Editorial rules:**
 
-:white_check_mark: **DO'S**
+✅**DO'S**
 
 * Do not exceed 250 characters;
 * Write one or two clear and concise phrases that explain the main aspects of the opportunity;
@@ -19,9 +19,9 @@ The description of the opportunity must provide more details about the discount:
 
 #### **Some examples:**
 
-| ✅ Correct| ❌ Incorrect|
-|----------|----------|
-| Receive a discount of up to 20% when purchasing accommodation in Italy.| PURCHASE YOUR DISCOUNTED ACCOMODATION FOR TRAVELLING WITHIN THE NATIONAL BORDERS. THE DISCOUNT DOES NOT INCLUDE SERVICE TAXES OR OTHER ADDITIONAL SERVICES (E.G. CHANGE OF SHEETS, ADDITIONAL BED, EXTRA CLEANING)|
+| ✅ Correct                                                               | ❌ Incorrect                                                                                                                                                                                                        |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Receive a discount of up to 20% when purchasing accommodation in Italy. | PURCHASE YOUR DISCOUNTED ACCOMODATION FOR TRAVELLING WITHIN THE NATIONAL BORDERS. THE DISCOUNT DOES NOT INCLUDE SERVICE TAXES OR OTHER ADDITIONAL SERVICES (E.G. CHANGE OF SHEETS, ADDITIONAL BED, EXTRA CLEANING) |
 
 ## Conditions <a href="#condizioni" id="condizioni"></a>
 
@@ -29,7 +29,7 @@ Do the conditions need to provide details about possible limitations to access t
 
 #### **Editorial rules:**
 
-:white_check_mark: **DO'S**
+✅ **DO'S**
 
 * Indicate the conditions of the opportunity in a clear and concise manner;
 * Write short phrases;
@@ -44,8 +44,7 @@ Do the conditions need to provide details about possible limitations to access t
 
 #### **Some examples:**
 
-| ✅ Correct| ❌ Incorrect|
-|----------|----------|
-| The opportunity is active for accesses starting from February 26, 2022. View the calendar and opening hours on our website.| Holders of the CGN card must view the calendar with opening hours at https://miosito.it. The opportunity will be active starting on February 26, 2022.|
-| The offer is only valid in stores \<Brandname> and for new customers.| The offer is only valid in stores \<Brandname>, communicating the code “DISCOUNTCODE_CGN”. Offer valid for new customers.|
-
+| ✅ Correct                                                                                                                   | ❌ Incorrect                                                                                                                                            |
+| --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| The opportunity is active for accesses starting from February 26, 2022. View the calendar and opening hours on our website. | Holders of the CGN card must view the calendar with opening hours at https://miosito.it. The opportunity will be active starting on February 26, 2022. |
+| The offer is only valid in stores \<Brandname> and for new customers.                                                       | The offer is only valid in stores \<Brandname>, communicating the code “DISCOUNTCODE\_CGN”. Offer valid for new customers.                             |
