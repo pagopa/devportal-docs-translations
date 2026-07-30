@@ -1,12 +1,16 @@
-# ⚠️ Submit a Message passing the user fiscal_code as path parameter
+# ⚠️ Submit a Message passing the user fiscal\_code as path parameter
 
-{% hint style="danger" %} **Attention**: the following API will be soon be deprecated, therefore it should not be used. {% endhint %}
+{% hint style="danger" %}
+**Attention**: the following API will be soon be deprecated, therefore it should not be used.
+{% endhint %}
 
 ## Description
 
 API equivalent to [submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md](submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md "mention")
 
-{% openapi src="https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml" path="/messages/{fiscal_code}" method="post" %} [https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml](https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml) {% endopenapi %}
+{% openapi src="https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml" path="/messages/{fiscal_code}" method="post" %}
+[https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml](https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml)
+{% endopenapi %}
 
 ## Examples
 

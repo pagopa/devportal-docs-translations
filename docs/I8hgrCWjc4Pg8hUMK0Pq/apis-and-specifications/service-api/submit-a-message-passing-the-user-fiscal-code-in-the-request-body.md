@@ -5,14 +5,14 @@
 This API makes it possible to send messages to a citizen identified by the fiscal code. Before sending a message, you must [check](get-a-user-profile-using-post.md) that the citizen is registered with IO and that the service can send communications to the citizen.
 
 {% hint style="info" %}
-To use this API you must add to the call the header \`Ocp-Apim-Subscription-Key\` containing the \[primary]\(../../function/publish-a-service/mandatory-data/attributes.md#primary\_key) or \[secondary]\(../../function/publish-a-service/mandatory-data/attributes.md#secondary\_key) "use" key of the service chosen to send the message
+To use this API you must add to the call the header \``Ocp-Apim-Subscription-Key` containing the [primary](../../function/publish-a-service/mandatory-data/attributes.md#primary_key) or [secondary](../../function/publish-a-service/mandatory-data/attributes.md#secondary_key) "use" key of the service chosen to send the message
 {% endhint %}
 
 {% openapi src="https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml" path="/messages" method="post" %}
 [https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml](https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml)
 {% endopenapi %}
 
-## **`fiscal_code`**<mark style="color:red;">**`\*`**</mark>
+## **`fiscal_code`**<mark style="color:red;">**`*`**</mark>
 
 <table data-header-hidden><thead><tr><th width="186"></th><th></th></tr></thead><tbody><tr><td><strong>Description</strong></td><td>Fiscal code of the message recipient</td></tr><tr><td><strong>Mandatory</strong></td><td>Yes</td></tr><tr><td><strong>Type</strong></td><td>String</td></tr><tr><td><strong>Example</strong></td><td><code>AAAAAA00A00A000A</code></td></tr></tbody></table>
 
@@ -28,14 +28,14 @@ To use this API you must add to the call the header \`Ocp-Apim-Subscription-Key\
 
 <table data-header-hidden><thead><tr><th width="210"></th><th></th></tr></thead><tbody><tr><td><strong>Description</strong></td><td>Indicates if the message is sent within the scope of a <strong>Premium</strong> subscription, or if it is to be considered a standard message</td></tr><tr><td><strong>Mandatory</strong></td><td>No</td></tr><tr><td><strong>Default</strong></td><td><code>STANDARD</code></td></tr><tr><td><strong>Type</strong></td><td>Enumerated string</td></tr><tr><td><strong>Accepted values</strong></td><td><ul><li><code>STANDARD</code> -> the message is considered a normal IO message</li><li><code>ADVANCED</code> -> additional advanced information is correlated with the message. This value can be specified only if you have a Premium subscription.</li></ul></td></tr><tr><td><strong>Example</strong></td><td><code>ADVANCED</code></td></tr></tbody></table>
 
-## **` content`` `` `**<mark style="color:red;">**`\*`**</mark>
+## **` content`` `` `**<mark style="color:red;">**`*`**</mark>
 
-### **` subject`` `` `**<mark style="color:red;">**`\*`**</mark>
+### **` subject`` `` `**<mark style="color:red;">**`*`**</mark>
 
 <table data-header-hidden><thead><tr><th width="186"></th><th></th></tr></thead><tbody><tr><td><strong>Description</strong></td><td>Subject of the message, whose length must be between 10 and 120 characters</td></tr><tr><td><strong>Mandatory</strong></td><td>Yes</td></tr><tr><td><strong>Type</strong></td><td>String</td></tr><tr><td><strong>Example</strong></td><td><code>Rinnova la tua carta d'identità</code></td></tr></tbody></table>
 
 {% hint style="info" %}
-If you are sending a \*\*message with remote content\*\*, refer to \[#important-information-about-the-subject-title-of-the-message]\(../../function/send-a-message/send-a-message-a-contenuto-remoto.md#informazioni-importanti-circa-il-titolo-subject-del-messaggio "mention")
+If you are sending a **message with remote content**, refer to \[#important-information-about-the-subject-title-of-the-message]\(../../function/send-a-message/send-a-message-a-contenuto-remoto.md#informazioni-importanti-circa-il-titolo-subject-del-messaggio "mention")
 {% endhint %}
 
 {% hint style="warning" %}

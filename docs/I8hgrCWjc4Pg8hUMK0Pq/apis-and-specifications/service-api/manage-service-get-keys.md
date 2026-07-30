@@ -5,7 +5,7 @@
 This API makes it possible to retrieve the API keys for a service; which makes it possible to use it to [send-a-message](../../function/send-a-message/ "mention")for example. To function correctly, it requires entering the `service_id` as the path parameter.
 
 {% hint style="info" %}
-You must use the new key \[manage-keys.md]\(../../function/publish-a-service/manage-key/manage-key.md "mention") for managing the services
+You must use the new key [API menage](../../function/publish-a-service/manage-key/manage-key.md) for managing the services
 {% endhint %}
 
 {% openapi src="https://raw.githubusercontent.com/pagopa/io-functions-services/master/openapi/index.yaml" path="/manage/services/{serviceId}/keys" method="get" %}

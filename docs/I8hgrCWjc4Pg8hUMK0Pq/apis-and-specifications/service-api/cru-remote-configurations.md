@@ -7,11 +7,11 @@ This API allows your Organization to register with IO as a remote content _provi
 Registration has as its object the **configurations,** that is, the set of information useful to create communication between IO and your Organization's infrastructure, according to the protocol defined in the paragraph [remote-content messages](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md).
 
 {% hint style="info" %}
-For more information you can consult the \[dedicated page]\(../../initial-setup/remote-configuration.md) in the \*\*Initial setup section\*\*
+For more information you can consult [the dedicated page](../../initial-setup/remote-configuration.md) in the **Initial setup section**
 {% endhint %}
 
 {% hint style="info" %}
-All the APIs described on this page refer to the activities of the Institution via the \[Reserved Area]\(https://app.gitbook.com/s/axttcUGV65V2IVRggmvR/) and are based on obtaining and using the \["manage” key]\(../../function/publish-a-service/manage-key/manage-key.md) which you can \[retrieve]\(../../function/publish-a-service/manage-key/manage-key.md#recupera-la-manage-key) in the IO Services management area.
+All the APIs described on this page refer to the activities of the Institution via the Reserved Are and are based on obtaining and using the[ manage key](../../function/publish-a-service/manage-key/manage-key.md)] which you can [retrieve](../../function/publish-a-service/manage-key/manage-key.md#get-the-manage-key) in the IO Services management area.
 {% endhint %}
 
 The available operations include:
@@ -46,7 +46,7 @@ This API allows you to update an existing configuration, identified by the `conf
 {% endopenapi %}
 
 {% hint style="danger" %}
-In order to ensure consistency and proper in-app operation of remote-content messages over time, the onus is on the sender \*\*to promptly adjust the configurations\*\* whenever necessary, using the management API described here.
+In order to ensure consistency and proper in-app operation of remote-content messages over time, the onus is on the sender **to promptly adjust the configurations** whenever necessary, using the management API described here.
 {% endhint %}
 
 ## Defined configurations retrieval API
@@ -103,10 +103,10 @@ The field **`has_precondition`** regulates the interpretation, by IO, of the cor
 <table data-header-hidden><thead><tr><th width="296"></th><th></th></tr></thead><tbody><tr><td>[not specified]</td><td>The preconditions when opening the message will be shown consistently with the setting of <code>has_precondition</code> <a href="submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_precondition">at the individual message level</a></td></tr><tr><td><code>has_precondition: NONE</code></td><td>If the field <code>has_precondition</code> is not specified <a href="submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_precondition">at the individual message level</a>, this will not have preconditions to its opening; otherwise these will be displayed consistently with that value</td></tr><tr><td><code>has_precondition: ONCE</code></td><td>If the field <code>has_precondition</code> is not specified <a href="submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_precondition">at the individual message level</a>, this will have preconditions to its opening, displayed only until the message itself is read by the recipient; otherwise, the preconditions will be displayed consistently with the value indicated for that specific message.</td></tr><tr><td><code>has_precondition: ALWAYS</code></td><td>If the field <code>has_precondition</code> is not specified <a href="submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_precondition">at the individual message level</a>, the preconditions to its opening will always be displayed at every opening, consistently with the value indicated for that specific message.</td></tr></tbody></table>
 
 {% hint style="info" %}
-Remember to always set the value of the field \*\*\`details\_authentication.type\`\*\* with the constant \`"API-KEY\`"
+Remember to always set the value of the field  **`details_authentication.type`** with the constant **`API-KEY`**\`
 {% endhint %}
 
-In response you will obtain, in the field `"configuration_id`", the **identifier of the configuration** that you should use in all following calls, including those for the[creation of remote-content messages](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md) which need to be served by it.
+In response you will obtain, in the field **`configuration_id`**, the **identifier of the configuration** that you should use in all following calls, including those for the[creation of remote-content messages](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md) which need to be served by it.
 
 {% code title="Esempio di risposta attesa" overflow="wrap" %}
 ```

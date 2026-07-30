@@ -19,11 +19,11 @@ The following table summarizes the components of an IO message and indicates whe
 When you submit the message delivery request through the [dedicated endpoint](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md), the server response will contain the message identifier. You can use it together with the recipient's Fiscal Code to **check the message delivery outcome**.
 
 {% hint style="info" %}
-If you have signed the Premium agreement, you will also be able to check the recipient's **read and payment status**. For more information, see the [Send messages](https://app.gitbook.com/s/xWONfJmawghGo2ekuaKh/che-cosa-puo-fare-un-servizio-su-io/inviare-messaggi "mention") page in the [Services manual](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/xWONfJmawghGo2ekuaKh/).
+If you have signed the Premium agreement, you will also be able to check the recipient's **read and payment status**. For more information, see the [Services manual](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/5bOyAHeFhNe1cgBkhyaW/).
 {% endhint %}
 
 {% hint style="success" %}
-Remember that before sending a message, you must verify that the citizen is registered with IO and that the service is authorized to send communications to them. For more information, see the [get-a-user-profile-using-post.md](../../api-e-specifiche/api-messaggi/get-a-user-profile-using-post.md "mention") API.
+Remember that before sending a message, you must verify that the citizen is registered with IO and that the service is authorized to send communications to them. For more information, see the [API](../../apis-and-specifications/service-api/get-a-user-profile.md).
 {% endhint %}
 
 ### Message access phase
@@ -40,6 +40,6 @@ The email contains the opening portion of the message body—the first 134 chara
 
 Here is an example of a forwarded email:
 
-![](https://665034208-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsUBZStlCQZzLI6ZesbND%2Fuploads%2FQezZGa89PwMyc0gLhryW%2Fimage.png?alt=media\&token=14c33ef0-a96d-4b9d-b8c9-394164135b66)\
+![](https://665034208-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsUBZStlCQZzLI6ZesbND%2Fuploads%2FQezZGa89PwMyc0gLhryW%2Fimage.png?alt=media\&token=14c33ef0-a96d-4b9d-b8c9-394164135b66)\\
 
 </details>

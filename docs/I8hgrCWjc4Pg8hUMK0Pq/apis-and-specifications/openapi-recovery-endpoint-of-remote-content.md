@@ -1,32 +1,26 @@
 # OpenAPI recovery endpoint of remote content
 
 {% hint style="info" %}
-Read \[this page]\(../function/send-a-message/send-a-message-a-contenuto-remoto.md) to learn more about messages with remote content.
+Read [this page](../function/send-a-message/send-a-message-with-remote-content.md) to learn more about messages with remote content.
 {% endhint %}
 
 {% hint style="warning" %}
-Before sending messages with remote content it is necessary to follow the procedure illustrated in \[remote-configuration.md]\(../initial-setup/remote-configuration.md "mention")
+Before sending messages with remote content it is necessary to follow the procedure illustrated [here](../initial-setup/remote-configuration.md).
 {% endhint %}
 
 In the case of sending a message traditionally on IO, the institution calls the exposed API for the creation of the message and IO proceeds with its complete management in app:
 
 The following diagram shows the sequence of events that involve your system and the IO system for exchanging information with the recipient of a **message with remote content**:
 
-<details>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-<summary>Detailed diagram</summary>
+The diagram below shows the sequence of events involving your system and IO’s systems as they exchange information with the recipient of a remote-content message:
 
-The sequence of events that make up the life cycle of a remote content message are shown below in more detail:
-
-\<img src="../.gitbook/assets/\[Sequence] Messaggi con contenuto remoto.png" alt=\` data-size="original">
-
-The following chapters show the detailed sequence of each phase.
-
-</details>
+![](<../.gitbook/assets/image (2).png>)<br>
 
 ## Retrieval endpoint of preconditions when opening the message
 
-If during the [https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md#creazione-del-messaggio-con-contenuto-remoto](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md#creazione-del-messaggio-con-contenuto-remoto "mention") you included the field [#has\_precondition](service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_precondition "mention") (or if you had indicated it in the [remote-configuration.md](../initial-setup/remote-configuration.md "mention")) phase, at the time when the message is opened by the recipient, IO will retrieve the preconditions through a `GET` call to your systems, containing the following parameters in input:
+If during the [ creation of a remote content](../function/send-a-message/send-a-message-with-remote-content.md) you included the field [#has\_precondition](service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_precondition "mention") (or if you had indicated it in the [remote-configuration.md](../initial-setup/remote-configuration.md "mention")) phase, at the time when the message is opened by the recipient, IO will retrieve the preconditions through a `GET` call to your systems, containing the following parameters in input:
 
 * The remote correlation `id` you indicated in the [#third\_party\_data](service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#third_party_data "mention") block when sending the message;
 * the fiscal code of the recipient (as the header).

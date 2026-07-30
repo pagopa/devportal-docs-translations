@@ -9,7 +9,7 @@ You must use the new key [`manage`](../../function/publish-a-service/manage-key/
 {% endhint %}
 
 {% hint style="warning" %}
-A \[specific authorization]\(../../enabling/manage-services.md) is needed to use this API.
+A [specific authorization](../../enabling/manage-services.md) is needed to use this API.
 {% endhint %}
 
 {% openapi src="https://raw.githubusercontent.com/pagopa/io-functions-services/master/openapi/index.yaml" path="/manage/services" method="post" %}
