@@ -1,120 +1,123 @@
-# #️⃣ Guide to the Markdown
+# #️⃣ Markdown guide
 
-IO allows the content of messages and service boards to be enriched with formatted text, links and other active elements in order to offer the citizen a more complete and clearer experience.
+IO allows you to enrich the content of messages and service details with formatted text, links, and other interactive elements, providing citizens with a clearer and more complete experience.
 
-To this end, the IO app supports a variant of the popular Markdown format. You can find all the information for its correct use here.
+For this purpose, the IO app supports a variant of the popular Markdown format. This page provides all the information you need to use it correctly. 
 
-## Text Formatting
+## Text formatting
 
-With the IO app you can enrich the text of communications by highlighting parts in bold and italics, creating bullet-pointed lists and separating it with headings.
+With the IO app, you can enhance communication content by highlighting text in bold or italics, creating bulleted lists, and organizing it with headings.
 
-<table><thead><tr><th width="182">Formatting</th><th width="272">Syntax</th><th>Result</th></tr></thead><tbody><tr><td>bold</td><td>Text in **bold**<br>Text in __bold__</td><td></td></tr><tr><td>italics</td><td><p>Text in *italics*</p><p>Text in_italics_</p></td><td></td></tr><tr><td>bold/italics</td><td>Text in ***bold/italics***</td><td></td></tr><tr><td>fixed spacing<br>(note the <em>backtick</em>!)</td><td><strong>""</strong>Fixed-spacing text<strong>""</strong></td><td></td></tr><tr><td>bullet-point lists</td><td>* First element\n<br>* Second element\n<br>* Indented element\n</td><td></td></tr><tr><td>headings</td><td># Heading 1\n<br>## Heading 2\n<br>### Heading 3\n</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="182">Formatting</th><th width="272">Syntax</th><th>Result</th></tr></thead><tbody><tr><td>bold</td><td>Text in **bold**<br>Text in __bold__</td><td><img src="../.gitbook/assets/image (26).png" alt="" data-size="original"></td></tr><tr><td>italics</td><td><p>Text in *italics*</p><p>Text in _italics_</p></td><td><img src="../.gitbook/assets/image (27).png" alt="" data-size="original"></td></tr><tr><td>bold/italics</td><td>Text in ***bold/italics***</td><td><img src="../.gitbook/assets/image (28).png" alt="" data-size="original"></td></tr><tr><td>monospace<br>(note the <em>backtick</em>!)</td><td><strong>`</strong>Monospace text<strong>`</strong></td><td><img src="../.gitbook/assets/image (30).png" alt="" data-size="original"></td></tr><tr><td>bulleted lists</td><td>* First item\n<br>* Second item\n<br>  * Indented item\n</td><td><img src="../.gitbook/assets/image (29).png" alt="" data-size="original"></td></tr><tr><td>headings</td><td># Heading 1\n<br>## Heading 2\n<br>### Heading 3\n</td><td><img src="../.gitbook/assets/image (31).png" alt="" data-size="original"></td></tr></tbody></table>
 
 {% hint style="info" %}
-To obtain the \_backtick\_ required for fixed-spacing text you can use the key combination:
+To enter the backtick required for monospace text, you can use the following keyboard shortcuts:
 
-* `ALT+096` (from the numeric keypad) if you use Windows
-* Option + \`\` if you use Mac
-* `ALTgr+'` if you use Linux \{% endhint %\}
+* `ALT+096` using the numeric keypad on Windows
+* Option + `\` on Mac
+* `ALTgr+'` on Linux
+  {% endhint %}
 
-\{% hint style="info" %\} Remember to add `\\n` at the end of each bullet-pointed list item to allow the correct interpretation of the next character `*`, as well as at the end of each heading \{% endhint %\}
-
-### Start a new line
-
-The Markdown of the IO app supports two ways of “starting a new line”:
-
-1. **a single \n preceded by two spaces** (" `\\n`") allows you to simply start a new line with a line break
-2. **a double** `"\\n\\n`" allows you to start a new line by creating a new paragraph (with spacing from the previous one)
-
-\{% hint style="info" %\} When composing text in Markdown, the use of special characters such as superscript (`'`), double superscript (`'`), or backslash (`'`), can introduce issues related to text interpretation by Markdown tools or systems that process Markdown. Understanding how to manage these characters is essential for maintaining the clarity and accuracy of the document. Some guidelines are outlined below:
-
-* **Superscript and Double Superscript (`'` " ):** These characters can be interpreted as string delimiters in many programming languages. When including text that requires the use of these characters in a code context, it may be necessary to double them or use escape characters to avoid conflicts. For example, to include a superscript in a string delimited by superscripts, one might have to write `''` or `'`.
-* **Backslash (\`\`)**: The backslash is typically used as an escape character in Markdown and many programming languages. To include a literal backslash in a Markdown document, it is often necessary to double it (e.g. `\\`).
-
-**Also, do not use escape sequences or sub-alphanumeric hexadecimal characters to format the text.**
-
-These precautions ensure that the Markdown text is interpreted and displayed as desired across various tools and platforms, preventing misunderstandings or formatting errors.
+{% hint style="info" %}
+Remember to add `\n` at the end of each item in a bulleted list so that the following `*` character is interpreted correctly. You should also add it at the end of each heading.
 {% endhint %}
 
-## Link
+## Line breaks
 
-The Markdown of the IO app supports standard notation for links: `[text](link)`. For example, the Markdown `"Click [here](https://io.italia.it) to go to the IO site`" will produce the following result:\
-\<img src="../.gitbook/assets/image (32).png" alt=\` data-size="original">
+The IO app's Markdown supports two types of line break:
 
-\{% hint style="info" %\} For security reasons, links are automatically removed or made unclickable in email forwards of messages sent on the IO app. \{% endhint %\}
+1. **a single \n preceded by two spaces** ("  `\n`") inserts a simple line break
+2. **a double** "`\n\n`" starts a new paragraph, adding spacing from the previous one
 
-## Call to Action Buttons (CTA)
+{% hint style="info" %}
+When writing Markdown text, special characters such as the apostrophe (`'`), quotation mark (`"`), or backslash (`\`) may cause interpretation issues in Markdown tools or systems that process Markdown. Understanding how to handle these characters is essential to preserve the clarity and accuracy of the document. Some guidelines are provided below:
 
-The IO app supports the optional addition of up to two buttons at the bottom of the message, which can be associated with customized links.
+* **Apostrophes and quotation marks (`' "` )**: These characters may be interpreted as string delimiters in many programming languages. When including text that uses these characters within code, you may need to double them or use escape characters to avoid conflicts. For example, to include an apostrophe in a string delimited by apostrophes, you may need to write `''` or `\'`.
+* **Backslash (`\`)**: The backslash is commonly used as an escape character in Markdown and in many programming languages. To include a literal backslash in a Markdown document, you may need to double it, for example `\\`. 
 
-In order to present the buttons (CTA) within a message, you must incorporate a **front-matter** with the following structure:
+**Also, avoid using escape sequences or sub-alphanumeric hexadecimal characters to format text.**
+
+These precautions help ensure that Markdown text is interpreted and displayed as intended across different tools and platforms, preventing misunderstandings or formatting errors.
+{% endhint %}
+
+## Links
+
+The IO app's Markdown supports standard link notation: `[text](link)`. For example, the Markdown "`Click [here](https://io.italia.it) to visit the IO website`" produces the following result: <img src="../.gitbook/assets/image (32).png" alt="" data-size="original">
+
+{% hint style="info" %}
+For security reasons, links are automatically removed or made non-clickable in email forwards of messages sent through the IO app. 
+{% endhint %}
+
+## Call-to-action buttons (CTAs)
+
+The IO app optionally supports up to two buttons at the bottom of a message, each associated with a custom link.
+
+To display buttons, or CTAs, within a message, you must include **front matter** using the following structure:
 
 ```markdown
 ---
-
-it:  
-cta_1:  
-text: "Write"  
-action: "iohandledlink://mailto:name.surname@email.com"  
-cta_2:  
-text: "IO Italy"  
-action: "iohandledlink://https://io.italia.it/"  
-en:  
-cta_1:  
-text: "Write email"  
-action: "iohandledlink://mailto:name.surname@email.com"  
-cta_2:  
-text: "IO Italy site"  
-action: "iohandledlink://https://io.italia.it/"
+it:
+    cta_1: 
+        text: "Scrivi"
+        action: "iohandledlink://mailto:nome.cognome@email.com"
+    cta_2: 
+        text: "IO Italia"
+        action: "iohandledlink://https://io.italia.it/"
+en:
+    cta_1: 
+        text: "Write email"
+        action: "iohandledlink://mailto:nome.cognome@email.com"
+    cta_2: 
+        text: "IO Italia site"
+        action: "iohandledlink://https://io.italia.it/"
 ---
 
-# The content of the message starts here
-
+# The message content starts here
 ```
 
-The front-matter is a structured section of metadata **placed at the beginning of the content**; its placement is crucial as it precedes the main body of the content and it is **delimited by the --- separators**.
+Front matter is a structured metadata section **placed at the beginning of the content**. Its position is essential because it must precede the main body and be **enclosed by the `---` separators**.
 
 {% hint style="warning" %}
-Take care to respect \*\*the indentation\*\* of the front-matter components as shown in the example: when composing the markdown string, remember to insert the necessary spaces (one is sufficient, but for readability we recommend inserting two or four).
+Make sure you preserve the **indentation** of the front-matter components as shown in the example. When composing the Markdown string, remember to include the required spaces. One space is sufficient, but for readability we recommend using two or four.
 
-E.g. `"---\\nit:\\n` `cta_1:\\n` `text: "Write"\\n action: "iohandledlink://mailto:name.surname[...]`"
+Example: `"---\nit:\n`    `cta_1:\n`        `text: \"Scrivi\"\n        action: \"iohandledlink://mailto:nome.cognome[...]"`
 {% endhint %}
 
-The system allows you to define a maximum of two languages used for translations, i.e. **it** and **en**. For each language, you can include a maximum of two CTAs, identified respectively as **cta\_1** which is mandatory and **cta\_2** which is optional.
+The system supports a maximum of two languages for translations: **it** and **en**. For each language, you can include up to two CTAs, identified respectively as **cta_1**, which is mandatory, and **cta_2**, which is optional.
 
 {% hint style="info" %}
-In the event that the user has set an unsupported language, such as German, the system will use the app's default language, i.e. \*\*it\*\*. However, if the default language is not defined in the front-matter, the CTAs will not be recognized and displayed.
+If the user has selected an unsupported language, such as German, the system uses the app's default language, which is **it**. However, if the default language is not defined in the front matter, the CTAs will not be recognized or displayed.
 {% endhint %}
 
-Two properties are defined for each CTA:
+Each CTA has two properties:
 
-1. **text** representing the text that will be displayed in the CTA
-2. **action** which represents the action that will be triggered on tapping the CTA
+1. **text**, representing the text displayed in the CTA
+2. **action**, representing the action triggered when the user taps the CTA
 
-### Possible actions
+### Available actions
 
-For the action, protocols are defined for the creation of routes within the IO app and the interaction with certain features of the operating system of the device in use.
+The `action` property supports protocols for creating internal routes within the IO app and interacting with certain features of the device's operating system.
 
-#### CTA with Link
+#### CTA with a link
 
-To obtain a CTA with a link to a site external to IO, as in the case of a normal link, you must use the protocol `iohandledlink://` followed by the full Internet address of the destination site, e.g. `iohandledlink://https://io.italia.it`
+To create a CTA that links to a website outside IO, as with a standard link, use the `iohandledlink://` protocol followed by the complete URL of the destination website, for example `iohandledlink://https://io.italia.it`. 
 
 {% hint style="warning" %}
-You must add the protocol `https://` between `iohandledlink://` and the site address
+You must include the `https://` protocol between `iohandledlink://` and the website address.
 {% endhint %}
 
 #### Special actions
 
-In order to enrich your messages while facilitating their use by the recipient, IO supports the creation of CTAs capable of
+To enrich your messages while making them easier for recipients to use, IO supports CTAs that can:
 
-1. initiating the **creation of an SMS** to a telephone number: in this case, you must use the syntax `iohandledlink://sms:+393211234567` where"+393211234567" is the recipient's number
-2. initiating the **creation of an email** to an email address: in this case, you must use the syntax `iohandledlink://mailto:name.surname@email.com` where "name.surname@email.com" is the destination email address
-3. initiating a **call to a telephone number**: in this case, you must use the syntax `iohandledlink://tel:+39061234567` where "+39061234567" is the telephone number to be called
+1. start the **creation of an SMS** to a telephone number. In this case, use the syntax `iohandledlink://sms:+393211234567`, where "+393211234567" is the recipient's telephone number
+2. start the **creation of an email** to an email address. In this case, use the syntax `iohandledlink://mailto:nome.cognome@email.com`, where "[nome.cognome@email.com](mailto:nome.cognome@email.com)" is the destination email address
+3. start a **call to a telephone number**. In this case, use the syntax `iohandledlink://tel:+39061234567`, where "+39061234567" is the telephone number to call
 
 {% hint style="info" %}
-In all cases, the actual sending of the SMS, email or call will take place within the app set up for this purpose in the user's device, subject to confirmation by the user
+In all cases, the SMS, email, or call will be sent or started from the appropriate app installed on the user's device, subject to the user's confirmation.
 {% endhint %}
 
 {% hint style="warning" %}
-Please note that these special actions are only available for CTAs: text links activating them are currently not supported
+Remember that these special actions are available only for CTAs. Links in the message body that trigger these actions are not currently supported.
 {% endhint %}
