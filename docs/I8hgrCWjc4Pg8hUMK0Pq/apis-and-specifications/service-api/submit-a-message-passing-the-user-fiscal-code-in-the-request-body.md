@@ -60,7 +60,7 @@ You can format text and enable special functions in your messages using \[the Ma
 
 ### **`require_secure_channels`**
 
-<table data-header-hidden><thead><tr><th width="210"></th><th></th></tr></thead><tbody><tr><td><strong>Description</strong></td><td>Indicates that the message contains sensitive and/or confidential information; if set to <code>true</code> anonymized push notifications will be produced and email copies of the message will not be forwarded</td></tr><tr><td><strong>Mandatory</strong></td><td>No</td></tr><tr><td><strong>Default</strong></td><td>If you do not include this field, the fallback is the service configuration (refer to <a data-mention href="../../function/attributes.md#require_secure_channels">#require_secure_channels</a>)</td></tr><tr><td><strong>Type</strong></td><td>Boolean</td></tr><tr><td><strong>Example</strong></td><td><code>true</code></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="210"></th><th></th></tr></thead><tbody><tr><td><strong>Description</strong></td><td>Indicates that the message contains sensitive and/or confidential information; if set to <code>true</code> anonymized push notifications will be produced and email copies of the message will not be forwarded</td></tr><tr><td><strong>Mandatory</strong></td><td>No</td></tr><tr><td><strong>Default</strong></td><td>If you do not include this field, the fallback is the service configuration (refer to <a data-mention href="../../function/publish-a-service/mandatory-data/attributes.md#require_secure_channels">#require_secure_channels</a>)</td></tr><tr><td><strong>Type</strong></td><td>Boolean</td></tr><tr><td><strong>Example</strong></td><td><code>true</code></td></tr></tbody></table>
 
 ### **`due_date`**
 

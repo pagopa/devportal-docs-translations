@@ -3,7 +3,7 @@
 When the service is approved, you can manage its visibility in the IO app.
 
 {% hint style="info" %}
-An \*\*approved\*\* service can be \*\*published\*\* (and therefore made \_public in the IO app)\_ or \*\*unpublished\*\* (and therefore made \_private in the IO app\_) whenever you want.
+An **approved** service can be **published** (and therefore made \_public in the IO app)\_ or **unpublished** (and therefore made \_private in the IO app\_) whenever you want.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -25,7 +25,7 @@ Each service for which [review is requested](service-review.md) via the Reserved
 Two methods are available:
 
 * When you are sending a review request you can ask for automatic publication and in the case of approval it will be published automatically.
-* You can use the '[specific `service release` API](../apis-and-specifications/service-api/manage-service-release.md) to publish an approved service.
+* You can use the '[specific `service release` API](../../apis-and-specifications/service-api/manage-service-release.md) to publish an approved service.
 
 ### Unpublish a service from the IO app
 
@@ -93,6 +93,6 @@ Make sure to retrieve the `service id` of the service you want to unpublish in I
 
 <summary><mark style="color:blue;">Step 2</mark>- Perform the call</summary>
 
-1. Perform the call to the API to [unpublish the service](../apis-and-specifications/service-api/manage-service-unpublish.md)
+1. Perform the call to the API to [unpublish the service](../../apis-and-specifications/service-api/manage-service-unpublish.md)
 
 </details>

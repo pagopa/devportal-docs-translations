@@ -19,7 +19,7 @@ To check that the logo of the institution was loaded correctly, you can query th
 
 `markup https://assets.cdn.io.italia.it/logos/organizations/\<ORGANIZATION_FISCAL_CODE>.png`
 
-of which **`\<ORGANIZATION_FISCAL_CODE>`** is the [`organization_fiscal_code`](../../function/attributes.md#organization_fiscal_code) **without any initial zeros** of the institution's fiscal code.
+of which **`\<ORGANIZATION_FISCAL_CODE>`** is the [`organization_fiscal_code`](../../function/publish-a-service/mandatory-data/attributes.md#organization_fiscal_code) **without any initial zeros** of the institution's fiscal code.
 
 {% openapi src="https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml" path="/organizations/{organization_fiscal_code}/logo" method="put" %}
 [https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml](https://raw.githubusercontent.com/teamdigitale/io-functions-services/master/openapi/index.yaml)

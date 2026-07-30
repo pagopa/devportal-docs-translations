@@ -18,7 +18,7 @@ Consult the [Reserved Area Operating Manual](https://docs.pagopa.it/area-riserva
 As the administrator of an institution, by creating a group of users for the IO product, you can:
 
 * **Associate one or more services with an active group**. In this way, the users (operators) of that group can work, via the back-office, only with the services associated with them.
-* **Create specific Manage API keys for that group.** The users (operators) of the group working via API will not be able to view the general [manage-key-1.md](manage-key-1.md "mention"), rather only the those specific to that group, which allow them to work only with the services “connected” to their group.
+* **Create specific Manage API keys for that group.** The users (operators) of the group working via API will not be able to view the general [manage-key.md](manage-key/manage-key.md "mention"), rather only the those specific to that group, which allow them to work only with the services “connected” to their group.
 
 {% hint style="warning" %}
 Keep in mind that for security reasons, when you remove a user from a group you should rotate any associated API Key. For more information, refer to \[manage-key]\(manage-key/ "mention").

@@ -31,7 +31,7 @@ To check that the logo of the service was loaded correctly, you can query the fo
 
 `markup https://assets.cdn.io.italia.it/logos/services/\<SERVICE_ID>.png`
 
-where **`\<SERVICE_ID>`** is the [service id](../../function/attributes.md#service_id) in lowercase.
+where **`\<SERVICE_ID>`** is the [service id](../../function/publish-a-service/mandatory-data/attributes.md#service_id) in lowercase.
 
 ## Examples
 

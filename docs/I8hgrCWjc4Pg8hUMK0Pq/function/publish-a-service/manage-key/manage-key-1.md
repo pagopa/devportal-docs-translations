@@ -1,6 +1,6 @@
 # Use API key
 
-The API Key `use` is the key of the service with which you can [send-a-message.md](send-a-message.md "mention")via API.
+The API Key `use` is the key of the service with which you can [send-a-message](../../send-a-message/ "mention")via API.
 
 ## Get the "use” key
 
@@ -24,5 +24,5 @@ The API Key `use` is the key of the service with which you can [send-a-message.m
 
 ### Via API
 
-1. Use the API [manage-service-get-keys.md](../apis-and-specifications/service-api/manage-service-get-keys.md "mention").
+1. Use the API [manage-service-get-keys.md](../../../apis-and-specifications/service-api/manage-service-get-keys.md "mention").
 2. View and copy the key to be able to use it in your integration.

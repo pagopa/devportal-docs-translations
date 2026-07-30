@@ -2,7 +2,7 @@
 
 ## Description
 
-This API makes it possible to retrieve the API keys for a service; which makes it possible to use it to [send-a-message.md](../../function/send-a-message.md "mention")for example. To function correctly, it requires entering the `service_id` as the path parameter.
+This API makes it possible to retrieve the API keys for a service; which makes it possible to use it to [send-a-message](../../function/send-a-message/ "mention")for example. To function correctly, it requires entering the `service_id` as the path parameter.
 
 {% hint style="info" %}
 You must use the new key \[manage-keys.md]\(../../function/publish-a-service/manage-key/manage-key.md "mention") for managing the services

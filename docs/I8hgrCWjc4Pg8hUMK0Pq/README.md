@@ -14,16 +14,16 @@ description: >-
 
 ### Function
 
-{% content-ref url="function/publish-a-service.md" %}
-[publish-a-service.md](function/publish-a-service.md)
+{% content-ref url="function/publish-a-service/" %}
+[publish-a-service](function/publish-a-service/)
 {% endcontent-ref %}
 
-{% content-ref url="function/send-a-message.md" %}
-[send-a-message.md](function/send-a-message.md)
+{% content-ref url="function/send-a-message/" %}
+[send-a-message](function/send-a-message/)
 {% endcontent-ref %}
 
-{% content-ref url="function/add-attachments.md" %}
-[add-attachments.md](function/add-attachments.md)
+{% content-ref url="function/send-a-message/add-attachments.md" %}
+[add-attachments.md](function/send-a-message/add-attachments.md)
 {% endcontent-ref %}
 
 ### API

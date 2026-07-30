@@ -2,8 +2,8 @@
 
 This configuration is necessary if you want to use one of the following functions:
 
-1. [Send remote message](../function/send-a-message-with-remote-content.md)
-2. [Add attachemnts](../function/add-attachments.md)
+1. [Send remote message](../function/send-a-message/send-a-message-with-remote-content.md)
+2. [Add attachemnts](../function/send-a-message/add-attachments.md)
 
 For both functions, it is in fact necessary to \*\*provide a\*\*_**REST web service**_ in compliance with [the relative OpenAPI.](../apis-and-specifications/openapi-recovery-endpoint-of-remote-content.md)
 
@@ -41,7 +41,7 @@ Once ready, use the API described in [cru-remote-configurations.md](../apis-and-
 
 * the **base URL** that IO will use to dial the addresses of the _endpoints_ exposed by your Organization (for more information refer to the examples given in [openapi-recovery-endpoint-of-remote-content.md](../apis-and-specifications/openapi-recovery-endpoint-of-remote-content.md "mention")
 * the\*\* API key\*\* that IO will use to authenticate to your systems and its expected header
-* the default preference, if any, related to preconditions to opening messages (for more information on preconditions refer to  [Send remote message](../function/send-a-message-with-remote-content.md))
+* the default preference, if any, related to preconditions to opening messages (for more information on preconditions refer to  [Send remote message](../function/send-a-message/send-a-message-with-remote-content.md))
 
 {% hint style="warning" %}
 In order to ensure consistency and proper in-app operation of remote-content messages over time \*\*it is not possible to delete a configuration\*\* once defined.

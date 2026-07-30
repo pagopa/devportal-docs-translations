@@ -5,7 +5,7 @@
 This API makes it possible to create a service.
 
 {% hint style="info" %}
-You must use the new key [`manage`](../../function/manage-key-1.md) for managing the services.
+You must use the new key [`manage`](../../function/publish-a-service/manage-key/manage-key.md) for managing the services.
 {% endhint %}
 
 {% hint style="warning" %}

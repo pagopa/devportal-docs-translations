@@ -8,7 +8,7 @@ Here are the steps to follow to create a service.
 
 <summary><mark style="color:blue;">Step 1</mark>- Discover what is a service</summary>
 
-Consult the [Service manual for the IO app](https://docs.pagopa.it/manuale-servizi/) to discover:
+Consult the [Service manual for the IO](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/CoF8C6y7ayX0FEzySKSo/) app to discover:
 
 * **what is meant by a service** in the context of IO;
 * what are the **types of services** that can be provided on IO and **which functions** can be used;
@@ -37,7 +37,7 @@ Before publishing a service in app, view the service tab in app to make sure eve
 
 <summary><mark style="color:blue;">Step 4</mark>- Send a test message</summary>
 
-If you want, you can send a test message. To learn more about messages and how to send text messages, read how to [send-a-message.md](send-a-message.md "mention")and send [test-messages.md](test-messages.md "mention")
+If you want, you can send a test message. To learn more about messages and how to send text messages, read how to [send-a-message](../send-a-message/ "mention")and send [test-messages.md](../send-a-message/test-messages.md "mention")
 
 </details>
 

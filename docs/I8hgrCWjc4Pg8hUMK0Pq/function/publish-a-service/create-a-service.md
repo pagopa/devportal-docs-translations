@@ -24,7 +24,7 @@ Is your institution still on the Developer Portal? As soon as it is available, y
 
 <summary><mark style="color:blue;">Step 2</mark>- Enter the requested data</summary>
 
-To publish the service in production mode, enter the data found in the section [mandatory-data.md](mandatory-data.md "mention").
+To publish the service in production mode, enter the data found in the section [mandatory-data](mandatory-data/ "mention").
 
 </details>
 
@@ -66,7 +66,7 @@ Not currently available for aggregators or aggregated institutions.
 
 <summary><mark style="color:blue;">Step 1</mark>- Get the specific api-key</summary>
 
-Discover what the [`manage key`](manage-key-1.md) is and [how to get it](manage-key-1.md#recupera-la-manage-key).
+Discover what the [`manage key`](manage-key/manage-key.md) is and [how to get it](manage-key/manage-key.md#recupera-la-manage-key).
 
 </details>
 
@@ -74,9 +74,9 @@ Discover what the [`manage key`](manage-key-1.md) is and [how to get it](manage-
 
 <summary><mark style="color:blue;">Step 2</mark>- Prepare the service tab</summary>
 
-1. Get the [specific APIs](../apis-and-specifications/service-api/manage-service-create.md) and read the suggestions carefully
+1. Get the [specific APIs](../../apis-and-specifications/service-api/manage-service-create.md) and read the suggestions carefully
 2. Prepare the payload for the service tab you want to create
-3. Use [manage-service-create.md](../apis-and-specifications/service-api/manage-service-create.md "mention") with your `manage` key
+3. Use [manage-service-create.md](../../apis-and-specifications/service-api/manage-service-create.md "mention") with your `manage` key
 
 </details>
 
@@ -86,6 +86,6 @@ Discover what the [`manage key`](manage-key-1.md) is and [how to get it](manage-
 
 Perform the call and take note of the serviceId of the service just created.
 
-To get the keys for the created service, refer to [Manage Service: Get keys.](../apis-and-specifications/service-api/manage-service-get-keys.md)
+To get the keys for the created service, refer to [Manage Service: Get keys.](../../apis-and-specifications/service-api/manage-service-get-keys.md)
 
 </details>

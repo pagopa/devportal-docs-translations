@@ -86,7 +86,7 @@ Before sending the request, make sure that the service is complete and compliant
 
 <summary><mark style="color:blue;">Step 1</mark>- Get the specific api-key</summary>
 
-Discover what the [`manage key`](manage-key-1.md) is and [how to get it](manage-key-1.md#recupera-la-manage-key).
+Discover what the [`manage key`](manage-key/manage-key.md) is and [how to get it](manage-key/manage-key.md#recupera-la-manage-key).
 
 </details>
 
@@ -95,7 +95,7 @@ Discover what the [`manage key`](manage-key-1.md) is and [how to get it](manage-
 <summary><mark style="color:blue;">Step 2</mark>- Send the request to evaluate the service</summary>
 
 1. Identify and recover the id of the service you want to submit for review;
-2. Query the API to [request the review](../apis-and-specifications/service-api/manage-service-request-review.md). You can select to proceed with the automatic publication of the service if it is approved.
+2. Query the API to [request the review](../../apis-and-specifications/service-api/manage-service-request-review.md). You can select to proceed with the automatic publication of the service if it is approved.
 
 </details>
 
@@ -103,7 +103,7 @@ Discover what the [`manage key`](manage-key-1.md) is and [how to get it](manage-
 
 <summary><mark style="color:blue;">Step 3</mark>- Consult the result</summary>
 
-1. Query the API to [read the details of a service](../apis-and-specifications/service-api/manage-service-get.md);
+1. Query the API to [read the details of a service](../../apis-and-specifications/service-api/manage-service-get.md);
 2. Consult the `status.value` field to see the result of the review;
 3. Understand what the [service statuses](service-status.md) can be.
 
