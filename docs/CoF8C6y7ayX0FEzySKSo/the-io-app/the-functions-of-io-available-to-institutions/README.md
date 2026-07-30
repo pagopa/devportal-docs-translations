@@ -83,5 +83,5 @@ With IO, citizens can activate and make use of subsidies and credits granted by 
 For more information, [read annex 3](https://trasparenza.agid.gov.it/moduli/downloadFile.php?file=oggetto_allegati/213121604430O__OLG+Punto+accesso+telematico+servizi+PA_3.11.2021.pdf) of the guidelines about the telematic access point to the services of the Public Administration.
 
 {% hint style="info" %}
-For more details, [read](/broken/pages/mXvdcfRN91A4m2DbzngF)&#x20;
+For more details, [read](https://app.gitbook.com/s/CoF8C6y7ayX0FEzySKSo/the-io-app)&#x20;
 {% endhint %}

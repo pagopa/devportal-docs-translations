@@ -1,16 +1,18 @@
 # Validation, publication and modification of a service
 
-To create a service, it is necessary to access the IO back office (from the developer portal or reserved area) and use the interface or integration via API. In any case, the **service tab must be completed** and the service **must be sent for review**. 
+To create a service, it is necessary to access the IO back office (from the developer portal or reserved area) and use the interface or integration via API. In any case, the **service tab must be completed** and the service **must be sent for review**.
 
-To discover how to do this, [<mark style="color:blue;">**go to the technical guide -->**</mark> ](https://docs.pagopa.it/io-guida-tecnica/?)
+To discover how to do this, [<mark style="color:blue;">**go to the technical guide -->**</mark>](https://developer.pagopa.it/en/app-io/guides/io-technical-guide/v6.0)
 
-{% hint style="warning" %} **The Developer Portal will be discontinued**
+{% hint style="warning" %}
+\*\*The Developer Portal will be discontinued\*\*
 
-The [Developer Portal](https://developer.io.italia.it/) is still functioning, but will be discontinued in the upcoming months in favor of the back office that can be accessed from the **[Reserved Area](https://www.pagopa.it/it/area-riservata/). The migration process will be gradual and institutions will have all the time they need to switch to the new portal. {% endhint %}
+The [Developer Portal](https://developer.io.italia.it/) is still functioning, but will be discontinued in the upcoming months in favor of the back office that can be accessed from the \*\*[Reserved Area](https://www.pagopa.it/it/area-riservata/). The migration process will be gradual and institutions will have all the time they need to switch to the new portal.
+{% endhint %}
 
 ### Review and validation
 
-The created services are sent for a review process that guarantees their quality. Therefore they can be published only if considered valid, that is if they **respect the technical and content requirements** indicated in this operating manual. 
+The created services are sent for a review process that guarantees their quality. Therefore they can be published only if considered valid, that is if they **respect the technical and content requirements** indicated in this operating manual.
 
 **A service will not be approved, for example, if:**
 
@@ -22,7 +24,7 @@ If the service has a title and description that are not correlated, or a descrip
 
 ❌ An example of what not to do:
 
- `TARI` (tax on waste)
+`TARI` (tax on waste)
 
 `The service allows citizens to receive updates about the activities carried out by the municipality.`
 
@@ -34,7 +36,7 @@ If the service has a title and description that are not correlated, or a descrip
 
 If the service coincides partially or fully with another service of the institution already published on IO, it will not be approved.
 
-❌ The same institution cannot indicate on IO two different services that concern TARI, such as “Issue of TARI payment` and `TARI payment deadline notification`
+❌ The same institution cannot indicate on IO two different services that concern TARI, such as “Issue of TARI payment`and`TARI payment deadline notification\`
 
 </details>
 
@@ -58,6 +60,6 @@ In this case, the link on “Visit the website” opens the “Payments and coll
 
 ### Modification
 
-The institution can **modify a service tab** at any time, regardless of whether it is a draft or active and published on the app. 
+The institution can **modify a service tab** at any time, regardless of whether it is a draft or active and published on the app.
 
 The service is validated again after being modified in order to guarantee its quality.

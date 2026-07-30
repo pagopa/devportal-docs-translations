@@ -15,7 +15,7 @@ These messages must:
 * if necessary, **refer to an external site** and/or a reserved area for more details.
 
 {% tabs %}
-{% tab title="✅ Un messaggio informativo ben scritto" %}
+{% tab title="✅ A well-written informational message" %}
 \*\*\`Title\`\*\* \`New digital TV: resynchronize channels or decoder\`
 
 **`Message`**\
@@ -34,7 +34,7 @@ These messages must:
 ✅ provides a link for more information.
 {% endtab %}
 
-{% tab title="❌ Un messaggio informativo da migliorare" %}
+{% tab title="❌ Needs improvement" %}
 \*\*\`Title\`\*\* \`Result of the request\`
 
 **`Message`**\

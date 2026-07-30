@@ -54,7 +54,7 @@ The ranking list for \<type of service> for \<name> \<surname> is available.
 
 If you wish to relinquish your position, you have time until \<dd/mm/yyyyy>.
 
-To see your position in the rankings list[ \[visit this website](../../../0CzUJl7JGjlcE5YDoYgw/what-a-service-can-do-with-io/the-most-frequent-messages/URL/).
+To see your position in the rankings list[ \[visit this website](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/0CzUJl7JGjlcE5YDoYgw/what-a-service-can-do-with-io/the-most-frequent-messages/URL/README.md).
 
 **🪄 Button**: Go to the rankings list
 

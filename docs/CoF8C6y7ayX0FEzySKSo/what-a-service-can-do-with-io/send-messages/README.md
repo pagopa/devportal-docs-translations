@@ -45,7 +45,7 @@ In addition to the categorizations previously described, messages can be identif
 * **Traditional messages**, i.e. messages whose content is invariable over time and defined at the time they are sent;
 * **Messages with remote content**, i.e. messages whose content is not managed directly by IO but provided by your systems at the time of their use by the recipient. Messages with remote content are intended in particular for communications that send sensitive information.
 
-You can find detailed information on remote content messages in the [dedicated section of the IO Technical Guide](https://app.gitbook.com/s/sUBZStlCQZzLI6ZesbND/funzionalita/inviare-un-messaggio/inviare-un-messaggio-a-contenuto-remoto).
+You can find detailed information on remote content messages in the [dedicated section of the IO Technical Guide](https://developer.pagopa.it/en/app-io/guides/io-technical-guide/v6.0/function/send-a-message-with-remote-content).
 
 {% hint style="danger" %}
 \*\*Be careful with sensitive information\*\*

@@ -9,7 +9,7 @@ First of all, check if the service is included among the [models of the most com
 * **must not contain the tools or steps** that are required for it, or words such as "Payment(s)", "Deadline(s)", "Communication(s)”, "Notification(s)", "Information", "Check(s)", "Invitation(s)", "Registration(s)", "Concession(s)" and "Request(s)". These words can be part of any service and therefore must not be used in the title.
 
 {% hint style="info" %}
-\*\*The evolution of services\*\*
+**The evolution of services**
 
 This rule is important also from the point of view of the evolution of the service: in the future, the service can do much more than help make a payment. Think about the title as described above, so it remains current even in the case of future changes and evolutions.
 {% endhint %}

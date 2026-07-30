@@ -9,7 +9,7 @@ There are two types of IO services: **standard** and **special**. Institutions c
 Standard services can use all the functions provided by IO. The state of communication of these services follows the general configuration (fast or manual) or can be managed service by service on the relative tab.
 
 {% hint style="info" %}
-You can find more information on the two configuration methods in the paragraph "What can citizens do with the services IO?" in section \[\*\*Who are the recipients of the services in\*\* \*\*IO\*\*]\(../io-service-providers-and-users/who-are-the-recipients-of-the-services-on-io.md).
+You can find more information on the two configuration methods in the paragraph "What can citizens do with the services IO?" in section [**Who are the recipients of the services in IO**](../io-service-providers-and-users/who-are-the-recipients-of-the-services-on-io.md) .
 {% endhint %}
 
 ### Special services

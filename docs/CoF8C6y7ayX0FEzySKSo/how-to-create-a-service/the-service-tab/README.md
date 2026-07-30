@@ -3,7 +3,7 @@
 IO contains more than 230,000 services provided by more than 15,000 institutions (number updated as of September 2023). Services are divided into **local** and **national** and shown in the Services section, where they can be searched by the name of the institution offering them.
 
 {% hint style="info" %}
-For more information, \[read the usage statistics]\(https://io.italia.it/dashboard) for the app.
+For more information, [read the usage statistics](https://ioapp.it/numeri/) for the app.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>

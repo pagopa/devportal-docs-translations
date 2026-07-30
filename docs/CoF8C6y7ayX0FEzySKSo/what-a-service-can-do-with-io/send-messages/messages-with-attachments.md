@@ -2,6 +2,8 @@
 
 Institutions can send messages with attached documents.
 
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
 These attachments:
 
 * must be in **pdf/A format**;
@@ -10,5 +12,5 @@ These attachments:
 * must have a **clear and concise** name, for example “CIE (Electronic Identity Card) request form”, or "School cafeteria menu".
 
 {% hint style="info" %}
-For more information about sending messages with attachments, refer to the \[dedicated section]\(https://docs.pagopa.it/io-guida-tecnica/funzionalita/inviare-un-messaggio/aggiungere-allegati) in the IO technical guide. For more information on how to create accessible attachments, \[read this document]\(https://www.agid.gov.it/sites/default/files/repository\_files/linee\_guida\_accessibilita\_versione\_rettifica\_del\_23\_luglio\_2020\_002.pdf).
+For more information about sending messages with attachments, refer to the[ dedicated section](https://app.gitbook.com/s/I8hgrCWjc4Pg8hUMK0Pq/function/send-a-message) in the IO technical guide. For more information on how to create accessible attachments, [read this document](https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_accessibilita_versione_rettifica_del_23_luglio_2020_002.pdf).
 {% endhint %}

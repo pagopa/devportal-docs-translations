@@ -20,7 +20,7 @@ Institutions can work with the app autonomously or be supported by:
 ### Public bodies
 
 Public Administrations (PA) is the largest type of institution in the app. In the IO Services section, Public Administrations and other public bodies are divided between “national” and “local”.\
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 #### **National public bodies**
 

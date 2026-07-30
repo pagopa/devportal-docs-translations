@@ -11,7 +11,7 @@ These messages must:
 * clearly specify the **date by which the payment must be made**.
 
 {% tabs %}
-{% tab title="✅ Un messaggio di pagamento ben scritto" %}
+{% tab title="✅ A well-written informational message" %}
 \*\*\`Title\`\*\* \`Violation of the traffic code\`
 
 **`Message`**\
@@ -41,7 +41,7 @@ These messages must:
 ✅ makes it possible to receive more information via an external link;
 {% endtab %}
 
-{% tab title="❌ Un messaggio di pagamento da migliorare" %}
+{% tab title="❌ Needs improvement" %}
 \*\*\`Title\`\*\* \`CITY OF IPAZIA\`
 
 **`Message`**\

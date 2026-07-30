@@ -2,6 +2,8 @@
 
 These messages contain a **deadline or a reminder**, such as a reminder for the expiration date of a document to be renewed or the deadline for requesting a bonus. For these types of messages, use the `due_date` field in the message payload. The data format supported by the system is UTC (ISO 8601).
 
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 In addition to the manual conversion option, there are some websites that **automatically convert** dates into the desired format, such as the [DenCode Converter](https://dencode.com/date/iso8601) or [Timestamp Converter](https://www.timestamp-converter.com/).
 
 {% hint style="warning" %}
@@ -11,9 +13,9 @@ If the expiration date does not have a specific time, usually it refers to the e
 
 **Example:**
 
-✅ January 12 (23:59:59) --> the user can pay by January 12
+✅ January 12 (23hh59mm59ss) --> the user can pay by January 12
 
-❌ January 12 (00:00:01) --> the user can pay by January 11
+❌ January 12 (00hh00mm01ss) --> the user can pay by January 11
 {% endhint %}
 
 {% hint style="info" %}

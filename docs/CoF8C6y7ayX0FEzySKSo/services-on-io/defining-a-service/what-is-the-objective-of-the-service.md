@@ -3,11 +3,11 @@
 To define a service to be integrated in IO, we recommend starting with this question: **what is the benefit citizens obtain from this service?** It is not necessary to think about how the institution sees the service, but how the citizens see it: don't think about the type of procedure, but what the people obtain.
 
 {% tabs %}
-{% tab title=" ✅ Obiettivi per i cittadini" %}
+{% tab title=" ✅  Target for citizens" %}
 Receive a copy of the birth certificate for their daughter, obtain a request for citizenship, renew the electronic identity card.
 {% endtab %}
 
-{% tab title="❌ Obiettivi per gli enti" %}
+{% tab title="❌ Target for public bodies" %}
 Pay the fees upon expiration of the identity card, open a 5672 procedure, collect an amount.
 {% endtab %}
 {% endtabs %}
@@ -33,7 +33,7 @@ Let's imagine that the municipality of Ipazia joins IO with the “Day care” s
 This service sends **two types of communications**: it informs the parents that registration is open for day care and sends a payment notification to those who already registered their child.
 
 {% tabs %}
-{% tab title="✅ È giusto fare così" %}
+{% tab title="✅ Right to do it " %}
 The municipality of Ipazia creates a service called "\*\*Day care\*\*".
 
 The service can:
@@ -42,8 +42,8 @@ The service can:
 * at the end of the registration process using channels other than IO, send a message to the parents who already registered their child with the payment notice, which can be paid directly in-app.
 {% endtab %}
 
-{% tab title="❌ È sbagliato fare così" %}
-The municipality of Ipazia creates two services called "\*\*Day care registration\*\*" and "\*\*Day care registration payment\*\*".
+{% tab title="❌ Don't do it " %}
+The municipality of Ipazia creates two services called "**Day care registration**" and "**Day care registration payment**".
 
 The "**Day care registration**" service can:
 
