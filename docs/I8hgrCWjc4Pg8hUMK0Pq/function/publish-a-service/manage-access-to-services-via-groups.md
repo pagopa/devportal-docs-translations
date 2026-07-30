@@ -33,13 +33,13 @@ A service can be associated with only one group.
 As the administrator user, by using groups you can limit the cone of visibility and operation for the operator users for some IO services.
 
 {% hint style="info" %}
-As an \*\*administrator\*\* you will always have full visibility, regardless of your membership in one or more groups.
+As an **administrator** you will always have full visibility, regardless of your membership in one or more groups.
 {% endhint %}
 
 As an operator user, you can see and manage only the services that were assigned to the groups to which you belong.
 
 {% hint style="info" %}
-As an \*\*operator\*\* that is not a member of any group, you will see all of the institution's services, without restrictions.
+As an **operator** that is not a member of any group, you will see all of the institution's services, without restrictions.
 {% endhint %}
 
 ## What does it mean to suspend a group?
@@ -50,7 +50,7 @@ As an institution administrator, in the Reserved Area you can suspend a group, a
 * Block all the actions on services by operators belonging to that group.
 
 {% hint style="info" %}
-As an \*\*operator\*\* associated with a suspended group, you will not have access to the services associated with that group or to the other services of the institution. However, if you are associated with other active groups, you will still be able to access the services of those groups.
+As an **operator** associated with a suspended group, you will not have access to the services associated with that group or to the other services of the institution. However, if you are associated with other active groups, you will still be able to access the services of those groups.
 {% endhint %}
 
 ## **Who can manage the groups?** <a href="#chi-puo-gestire-i-gruppi" id="chi-puo-gestire-i-gruppi"></a>

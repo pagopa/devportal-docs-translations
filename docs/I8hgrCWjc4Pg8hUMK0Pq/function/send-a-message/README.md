@@ -4,7 +4,7 @@
 
 Messages are personal communications directed to a specific citizen, identified by means of their fiscal code. It is currently not possible to send messages to multiple citizens with a single call.
 
-To learn more, consult the page [Inviare messaggi](https://app.gitbook.com/s/xWONfJmawghGo2ekuaKh/che-cosa-puo-fare-un-servizio-su-io/inviare-messaggi "mention") in the [Service manual](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/xWONfJmawghGo2ekuaKh/).
+To learn more, consult the [Service manual](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/5bOyAHeFhNe1cgBkhyaW/).
 
 ## How are messages sent?
 
@@ -57,7 +57,7 @@ If you signed the Premium agreement, you can also know the reading and payment s
 </details>
 
 {% hint style="info" %}
-Some of the mentioned functions require signing a Premium agreement: consult the \[Service manual]\(https://app.gitbook.com/s/xWONfJmawghGo2ekuaKh/che-cosa-puo-fare-un-servizio-su-io/inviare-messaggi#messaggi-premium) for more information.
+Some of the mentioned functions require signing a Premium agreement: consult the [Service manual ](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/CoF8C6y7ayX0FEzySKSo/)for more information.
 {% endhint %}
 
 ## Sending method
@@ -76,7 +76,11 @@ This is a message whose information is recovered by the systems of the sending i
 
 [Discover how to send a message with remote content ->](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md)
 
-\{% hint style="info" %\} At the moment of sending, the institutions that joined the Premium offer can indicate, for each message to send, whether or not to use the additional functions provided by the agreement. \{% endhint %\}
+
+
+{% hint style="info" %}
+At the moment of sending, the institutions that joined the Premium offer can indicate, for each message to send, whether or not to use the additional functions provided by the agreement.
+{% endhint %}
 
 ## Error management
 
