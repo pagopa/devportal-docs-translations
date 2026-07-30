@@ -40,7 +40,7 @@ For more information, discover the APIs [get-a-user-profile-using-post.md](../ap
 
 To do so, use the API [submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md](../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md "mention").
 
-If you intend to [send a message with remote content](../../ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md), follow the [relative instructions](../../ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md#come-funziona-linvio-di-un-messaggio-a-contenuto-remoto) on how to be integrated.
+If you intend to [send a message with remote content](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md), follow the [relative instructions](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md#come-funziona-linvio-di-un-messaggio-a-contenuto-remoto) on how to be integrated.
 
 You can also add [PDF/A attachments](add-attachments.md). For more information read the [relative instructions](add-attachments.md).
 
@@ -74,7 +74,7 @@ This is the simplest form of communication and that requires fewer integrations:
 
 This is a message whose information is recovered by the systems of the sending institution **each time** the message is used by the final user. The messages with remote content are intended in particular for communications that send sensitive information.
 
-[Discover how to send a message with remote content ->](../../ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md)
+[Discover how to send a message with remote content ->](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md)
 
 \{% hint style="info" %\} At the moment of sending, the institutions that joined the Premium offer can indicate, for each message to send, whether or not to use the additional functions provided by the agreement. \{% endhint %\}
 

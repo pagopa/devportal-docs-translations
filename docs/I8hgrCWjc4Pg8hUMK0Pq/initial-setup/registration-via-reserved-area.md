@@ -2,6 +2,8 @@
 
 Before being able to use the IO API, your institution must first have an active basic registration. If it is not registered, the first step is to perform the [_IO app onboarding process_](https://selfcare.pagopa.it/onboarding/prod-io) in the Reserved Area.
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 During the registration process, enter the data for:
 
 1. a **legal representative** of the institution;

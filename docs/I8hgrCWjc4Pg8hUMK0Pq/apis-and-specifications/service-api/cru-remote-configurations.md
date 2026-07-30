@@ -4,7 +4,7 @@
 
 This API allows your Organization to register with IO as a remote content _provider_ and manage the registration over time.
 
-Registration has as its object the **configurations,** that is, the set of information useful to create communication between IO and your Organization's infrastructure, according to the protocol defined in the paragraph [remote-content messages](../../../ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md).
+Registration has as its object the **configurations,** that is, the set of information useful to create communication between IO and your Organization's infrastructure, according to the protocol defined in the paragraph [remote-content messages](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md).
 
 {% hint style="info" %}
 For more information you can consult the \[dedicated page]\(../../initial-setup/remote-configuration.md) in the \*\*Initial setup section\*\*
@@ -31,7 +31,7 @@ Refer to the paragraph \[#examples]\(cru-remote-configurations.md#esempi "mentio
 
 ### “Create” API
 
-With this API you can create a new configuration to obtain the `configuration_id` for use in all subsequent calls, including the [creation of remote-content messages](../../../ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md).
+With this API you can create a new configuration to obtain the `configuration_id` for use in all subsequent calls, including the [creation of remote-content messages](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md).
 
 {% openapi src="https://raw.githubusercontent.com/pagopa/io-functions-service-messages/master/openapi/index_external.yaml" path="/remote-contents/configurations" method="post" %}
 [https://raw.githubusercontent.com/pagopa/io-functions-service-messages/master/openapi/index_external.yaml](https://raw.githubusercontent.com/pagopa/io-functions-service-messages/master/openapi/index_external.yaml)
@@ -106,7 +106,7 @@ The field **`has_precondition`** regulates the interpretation, by IO, of the cor
 Remember to always set the value of the field \*\*\`details\_authentication.type\`\*\* with the constant \`"API-KEY\`"
 {% endhint %}
 
-In response you will obtain, in the field `"configuration_id`", the **identifier of the configuration** that you should use in all following calls, including those for the[creation of remote-content messages](../../../ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md) which need to be served by it.
+In response you will obtain, in the field `"configuration_id`", the **identifier of the configuration** that you should use in all following calls, including those for the[creation of remote-content messages](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md) which need to be served by it.
 
 {% code title="Esempio di risposta attesa" overflow="wrap" %}
 ```
@@ -164,7 +164,7 @@ curl --request POST --location 'https://api.io.pagopa.it/api/v1/messages-sending
 ```
 {% endcode %}
 
-In response you will obtain, in the field `"configuration_id`", the **identifier of the configuration** that you should use in all following calls, including those for the[creation of remote-content messages](../../../ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md) which need to be served by it.
+In response you will obtain, in the field `"configuration_id`", the **identifier of the configuration** that you should use in all following calls, including those for the[creation of remote-content messages](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md) which need to be served by it.
 
 {% code title="Esempio di risposta attesa" overflow="wrap" %}
 ```

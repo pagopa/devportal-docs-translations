@@ -18,7 +18,7 @@ To guarantee the accessibility and security of the documents, you \_must\_ use a
 
 <summary><mark style="color:blue;">Step 1</mark>- Define a remote configuration</summary>
 
-To permit IO to know your systems dedicated to attachments, **you must define at least one** [**Remote Configuration**](../initial-setup/remote-configuration.md), which you will indicate later [when sending each message](../../ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md).
+To permit IO to know your systems dedicated to attachments, **you must define at least one** [**Remote Configuration**](../initial-setup/remote-configuration.md), which you will indicate later [when sending each message](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md).
 
 </details>
 

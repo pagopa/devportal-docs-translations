@@ -40,8 +40,6 @@ description: >-
 
 ### Useful resources
 
-[**API specifications ->**](https://developer.io.italia.it/openapi.html)
-
-[**Support for institutions ->**](https://docs.pagopa.it/kb-enti)
+[**API specifications ->**](https://developer.io.italia.it/openapi.html)[**Support for institutions ->**](https://docs.pagopa.it/kb-enti)
 
 [**Glossary ->**](useful-resources/glossary.md)
