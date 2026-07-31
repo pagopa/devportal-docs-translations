@@ -21,7 +21,7 @@ You cannot have multiple drafts of the same e-service concurrently.
 
 Specify access requirements (attributes) that the subscriber must meet to register for and use the e-service.
 
-### Step 4: Upload the interface file and the technical documentation
+### Step 3: Upload the interface file and the technical documentation
 
 Upload the API specification file for this e-service version, which is an OpenAPI file for REST services and a WSDL for SOAP services, as per the ModI security perimeter.
 
