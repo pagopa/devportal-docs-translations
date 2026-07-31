@@ -97,88 +97,111 @@ The lifecycle of a remote content message consists of two main stages:
 Both phases require integration between your systems and IO's.
 
 ### Message sending phase
+#### Creating a remote-content message
 
-#### Creation of the remote content message
+At this stage, your systems integrated with IO request the creation—and therefore the sending—of a new message to a specific recipient. For more information about sending a message through IO, see [.](./ "mention").
 
-In this phase, it is your systems integrated with IO that request the creation (and therefore the sending) of a new message to a specific recipient. For more information on sending a message on IO, refer to [send a message.](./)
+The following table summarises the main components of an IO message that can be served remotely:
 
-The following table summarizes the main remotable components of an IO message:
+<table><thead><tr><th width="197">Component</th><th>Flag to set</th><th>Notes</th><th data-hidden data-type="checkbox">Can be served remotely?</th></tr></thead><tbody><tr><td>preconditions</td><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_precondition">#has_precondition</a></td><td>These are <em>optional</em> information displayed <em>before the message details are opened</em>.</td><td>false</td></tr><tr><td>title (subject)</td><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_remote_content">#has_remote_content</a></td><td>This is the title displayed <em>when the message is opened</em>. It differs from the title shown in the message list, which cannot be served remotely.</td><td>true</td></tr><tr><td>body (markdown)</td><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_remote_content">#has_remote_content</a></td><td>This is the text content of the message.</td><td>true</td></tr><tr><td>payment notice details</td><td></td><td>These are already served remotely through integration with the pagoPA node.</td><td>true</td></tr><tr><td>attachments (PDF)</td><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_attachments">#has_attachments</a></td><td>This content can only be managed remotely. You can include it if you have signed the Premium Agreement. PDF is the accepted format.</td><td>true</td></tr></tbody></table>
 
+<details>
 
+<summary>Important information about preconditions displayed before opening a message</summary>
 
-As a sending entity, you can decide that the opening of the message must be preceded by content aimed at informing the recipient about specific aspects or circumstances related to the message itself.
+As the sending organisation, you can require the opening of a message to be preceded by content intended to inform the recipient about specific aspects or circumstances relating to the message itself.
 
-Preconditions are an intermediate screen between the message list and the selected message details. The user accesses the message details only if they select the "Continue" button.
+Preconditions are displayed on an intermediate screen between the message list and the details of the selected message. The user can access the message details only by selecting the "Continue" button.&#x20;
 
-In fact, viewing the preconditions **leads to an interruption in the reading flow of a message**. Therefore, it is best to use them only in scenarios where they actually add value to your communication or are otherwise required by current regulations, in order not to degrade the user experience.
+<img src="../../.gitbook/assets/Precondizioni.jpg" alt="" data-size="original">
 
-**When to use them:**
+Displaying preconditions **interrupts the message-reading flow**. You should therefore use them only when they provide real value to your communication or are required by applicable legislation, so as not to degrade the user experience.
 
-When it is necessary to draw the citizen's attention to fundamental information, and in any case when required by applicable legislation, for example in communications with legal value where opening the message produces effects in the citizen's legal sphere.
+**When to use them:**\
+When it is necessary to draw the citizen's attention to essential information, and whenever required by applicable legislation—for example, in legally binding communications where opening the message has legal effects for the citizen.
 
-**When not to use them:**
+**When not to use them:** \
+To provide notices that are not strictly related to the message content, or to add detailed information that can be included within the message or provided at another stage of the user experience.
 
-To transmit notices not strictly related to the content of the message or to add detailed information that can be provided within it or at other moments of the user experience.
+</details>
 
-The message title is used by the IO app on three occasions:
+<details>
 
-1. as the visible title in the received message list;
-2. as the header of the message details, once opened;
-3. in the text of the push notifications linked to the message (where enabled by the user and where the message / service are not marked by you as conveying sensitive information)
+<summary>Important information about the message title (subject) in relation to the "has_remote_content" flag</summary>
 
-Depending on the value of the [#has\_remote\_content](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23has_remote_content) flag that you will specify in [#third\_party\_data](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23third_party_data) (see later in this chapter) the **message title** will behave differently:
+The message title is used by the IO app in three situations:
 
-* if [#has\_remote\_content](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23has_remote_content)`=true`, the [#subject](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23subject) field indicated when creating the message is used by IO in the received messages list, as the text of the push notification and as the subject of any message forwarding email, but not in the message detail view in the app: this is instead retrieved later (see [#what-happens-when-the-recipient-opens-a-remote-message](https://www.google.com/search?q=inviare-un-messaggio-a-contenuto-remoto.md%23cosa-succede-quando-il-destinatario-apre-un-messaggio-remotizzato)). **This means that the recipient might see different texts in the message details and outside**. We recommend not differentiating the title substantially, so as to maintain informational consistency between the two texts. Furthermore, we remind you that according to the IO Guidelines, it is not possible to include sensitive information in the message title.
-* if [#has\_remote\_content](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23has_remote_content)`=false` or if you do not include the flag, the [#subject](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23subject) field has the standard functionality of a traditional (non-remote) message: the same textual content is used in the message detail and in all the other contexts mentioned above.
+1. as the title displayed in the list of received messages;
+2. as the heading of the message details after the message is opened;
+3. in the text of push notifications associated with the message, where enabled by the user and provided that you have not marked the message or service as containing sensitive information.
 
-When creating a remote content message ( [#has\_remote\_content](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23has_remote_content)`=true`) , it is still necessary, in compliance with the IO API interface, to define a **non-remote "courtesy" text (markdown)**, which will be used to compose the message forwarding email that IO users can choose to receive when a message is delivered in the app.
+Depending on the value of the [#has\_remote\_content](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_remote_content "mention") flag specified in [#third\_party\_data](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#third_party_data "mention")—see later in this chapter—the **message title** behaves differently:
 
-**Markdown limits for forwarding purposes:** min 80, max 134 characters, beyond which the system truncates with an ellipsis.
+* if [#has\_remote\_content](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_remote_content "mention")`=true`, the [#subject](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#subject "mention") field specified when creating the message is used by IO in the list of received messages, as the push-notification text and as the subject of any message-forwarding email. However, it is not used in the message-details view in the app, where the title is retrieved at a later stage (see [#cosa-succede-quando-il-destinatario-apre-un-messaggio-remotizzato](inviare-un-messaggio-a-contenuto-remoto.md#cosa-succede-quando-il-destinatario-apre-un-messaggio-remotizzato "mention")).\
+  \
+  **This means that the recipient may see different text inside and outside the message-details view**. We recommend that you do not make substantial changes to the title, so that the two versions remain consistent. Please also remember that, under the IO Guidelines, sensitive information cannot be included in the message title.
+* if [#has\_remote\_content](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_remote_content "mention")`=false`, or if you do not include the flag, the [#subject](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#subject "mention") field follows the standard behaviour of a traditional, non-remote message: the same text is used in the message details and in all the other contexts listed above.
 
-**Note on forwarding messages via email:** If enabled by the end user, a message sent via IO can be forwarded to their email address. The email contains the beginning of the message body (the first 134 characters), as well as an invitation to open the app to access the full content via a CTA that redirects them. Here is an example of a forwarding email:
+</details>
+
+<details>
+
+<summary>Important information about the message body (markdown)</summary>
+
+When creating a remote-content message ([#has\_remote\_content](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_remote_content "mention")`=true`), you must still comply with the IO API interface by providing a **non-remote fallback text in markdown**. This text is used to compose the message-forwarding email that IO users can choose to receive when a message is delivered to them in the app.
+
+**Markdown limits for forwarding:** minimum 80 and maximum 134 characters. Any additional text is truncated and replaced with an ellipsis.
+
+**Note about forwarding messages by email:** If enabled by the end user, a message sent through IO can be forwarded to their email address. The email contains the beginning of the message body—the first 134 characters—together with an invitation to open the app and access the complete content through a redirect CTA. The following is an example of a forwarding email:
+
+![](<../../.gitbook/assets/image (12).png>)
+
+</details>
 
 {% hint style="info" %}
-**Note on attachments (Premium)**
-
-If you have signed the Premium Agreement, your messages can also include **attachments** in PDF format: these will also be transmitted directly from your systems to the app when the recipient opens the message. For more information, refer to [aggiungere-allegati.md](https://www.google.com/search?q=aggiungere-allegati.md)
+**Note about attachments (Premium)**\
+If you have signed the Premium Agreement, your messages can also include **PDF attachments**. These are sent directly from your systems to the app when the recipient opens the message. For more information, see [aggiungere-allegati.md](aggiungere-allegati.md "mention").
 {% endhint %}
 
-For remote content messages, it is _mandatory_ to insert the following additional information in the [#third\_party\_data](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23third_party_data) block:
+For remote-content messages, you _must_ include the following additional information in the [#third\_party\_data](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#third_party_data "mention") block:
+
+<table><thead><tr><th width="237">Field</th><th>Field description</th></tr></thead><tbody><tr><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#id">#id</a></td><td>This is the <strong>remote correlation identifier</strong>, which uniquely identifies a specific message addressed to a specific recipient. The identifier is <strong>defined by you</strong> and consists of a string that <strong>allows the APIs to</strong> retrieve the remote content for that specific message.</td></tr><tr><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#configuration_id">#configuration_id</a></td><td>Enter the identifier you received during <a data-mention href="../../setup-iniziale/configurazione-remota.md">configurazione-remota.md</a>. IO uses this value to determine the information required to call the REST <em>endpoints</em> exposed by your organisation, which provide the remote data for the message.</td></tr><tr><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_precondition">#has_precondition</a></td><td><p>Set this field only if, when the message is opened in the app, you want the recipient to see text—with a related title—containing <strong>contextual information</strong> that you provide at that time. For more information, see <a data-mention href="../../api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md#endpoint-di-recupero-delle-precondizioni-allapertura-del-messaggio">#endpoint-di-recupero-delle-precondizioni-allapertura-del-messaggio</a>. After reading the text, <strong>the recipient can choose whether to continue opening the message</strong> or return to the list of received messages. The possible values for this field are:</p><ul><li><code>NEVER</code> (default)</li><li><code>ONCE</code> (the preconditions are displayed only the first time the recipient tries to open the message)</li><li><code>ALWAYS</code> (the preconditions are displayed every time, even if the message has already been read)</li></ul></td></tr><tr><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_remote_content">#has_remote_content</a></td><td>Set this field to <code>true</code> <strong>if you want the message title (subject) and body to be served remotely</strong>. When IO requests them through the dedicated API that you have exposed, you must respond with a text string for the title and markdown for the body, just as you would have specified them when creating a traditional message. The default value for this field is <code>false</code>.<br>For more information and to understand the role of the title in a remote-content message, see <a data-mention href="../../api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md#endpoint-di-recupero-dei-dettagli-del-messaggio">#endpoint-di-recupero-dei-dettagli-del-messaggio</a>.</td></tr><tr><td><a data-mention href="../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_attachments">#has_attachments</a></td><td>Set this field to <code>true</code> if you want to <strong>attach one or more PDF documents</strong> to the message. As described in <a data-mention href="../../api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md#endpoint-di-recupero-dei-dettagli-del-messaggio">#endpoint-di-recupero-dei-dettagli-del-messaggio</a>, when IO requests the message details, you must provide the attachment metadata—name and corresponding URL. When the recipient selects an attachment in the app, IO retrieves the bytes from your systems through the dedicated API described in <a data-mention href="../../api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md#endpoint-di-recupero-dei-byte-del-singolo-allegato">#endpoint-di-recupero-dei-byte-del-singolo-allegato</a>.<br>Remember that you can set this flag only if the organisation has signed the IO Premium Agreement.</td></tr></tbody></table>
 
 {% hint style="warning" %}
-Regardless of whether it is remotable, if the message conveys **sensitive information**, you _must always_ set the [#require\_secure\_channels](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23require_secure_channels)`=true` flag
+Regardless of whether its content is served remotely, if the message contains **sensitive information**, you _must always_ set the [#require\_secure\_channels](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#require_secure_channels "mention") flag to `true`.
 {% endhint %}
 
-### Message fruition phase
+### Message access phase
 
-#### What happens when the recipient opens a remote content message?
+#### What happens when the recipient opens a remote-content message?
 
-In this phase, IO uses the flags you indicated during the creation phase to determine how to compose the message in the app, and then proceeds with the possible retrieval of remote data and its integration with the data already in its possession to present the final result to the recipient.
+At this stage, IO uses the flags specified when the message was created to determine how to compose it in the app. Where necessary, IO retrieves the remote data and combines it with the information it already holds before presenting the final result to the recipient.
 
 {% hint style="info" %}
-Each call from IO to your systems is identified by the remote correlation [#id](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23id) you indicated during the [#creation-of-the-remote-content-message](https://www.google.com/search?q=inviare-un-messaggio-a-contenuto-remoto.md%23creazione-del-messaggio-remotizzato) and, as a _header_, the recipient's [#fiscal\_code](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23fiscal_code).
+Each call from IO to your systems is identified by the remote correlation [#id](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#id "mention") specified during [#creazione-del-messaggio-remotizzato](inviare-un-messaggio-a-contenuto-remoto.md#creazione-del-messaggio-remotizzato "mention") and includes the recipient's [#fiscal\_code](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#fiscal_code "mention") as a request _header_.
 {% endhint %}
 
-In particular, if in the [#creation-of-the-remote-content-message](https://www.google.com/search?q=inviare-un-messaggio-a-contenuto-remoto.md%23creazione-del-messaggio-remotizzato) phase you had indicated [#has\_precondition](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23has_precondition) with a value of `ONCE` or `ALWAYS`, as soon as the recipient selects the message from the message list in the app, having never read it yet (`=ONCE`) or every time (`=ALWAYS`), IO will retrieve the endpoint to call from the configuration information, and **will invoke your systems** to **obtain in response the title and text of the preconditions** to be shown in the pop-up panel of the [#opening-preconditions](https://www.google.com/search?q=inviare-un-messaggio-a-contenuto-remoto.md%23precondizioni-allapertura).
+In particular, if you set [#has\_precondition](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_precondition "mention") to `ONCE` or `ALWAYS` during [#creazione-del-messaggio-remotizzato](inviare-un-messaggio-a-contenuto-remoto.md#creazione-del-messaggio-remotizzato "mention"), when the recipient selects the message from the in-app message list—only if they have never opened it before for `ONCE`, or every time for `ALWAYS`—IO retrieves the endpoint to call from the configuration information and **calls your systems** to **obtain the precondition title and text** to display in the [#precondizioni-allapertura](inviare-un-messaggio-a-contenuto-remoto.md#precondizioni-allapertura "mention") pop-up panel.
 
-In response to the API call to the [#endpoint-for-retrieving-the-opening-preconditions-of-the-message](https://www.google.com/search?q=../../api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md%23endpoint-di-recupero-delle-precondizioni-allapertura-del-messaggio), you will need to respond as in the example:
+In response to a call to the [#endpoint-di-recupero-delle-precondizioni-allapertura-del-messaggio](../../api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md#endpoint-di-recupero-delle-precondizioni-allapertura-del-messaggio "mention") API endpoint, return a response such as the following:
 
 {% code overflow="wrap" %}
 ```json
 {
-    "title": "This is the title of the preconditions",
-    "markdown": "This is the text of the preconditions in **markdown** format"
+    "title": "This is the precondition title",
+    "markdown": "This is the precondition text in **markdown** format"
 }
-
 ```
 {% endcode %}
 
-The preconditions panel presents two buttons: "Cancel" and "Continue".
+The precondition panel contains two buttons: "Cancel" and "Continue".
 
-If the recipient selects "**Continue**", IO will proceed with displaying the message in the app; otherwise, the user will be returned to the message list.
+If the recipient selects "**Continue**", IO displays the message in the app. Otherwise, the user is returned to the message list.
 
-If in the [#creation-of-the-remote-content-message](https://www.google.com/search?q=inviare-un-messaggio-a-contenuto-remoto.md%23creazione-del-messaggio-remotizzato) phase you had indicated [#has\_remote\_content](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23has_remote_content)`=true`, the title and body of the message will be retrieved at the time of opening via a call that IO will make to the API you exposed (for details refer to [#endpoint-for-retrieving-the-message-details](https://www.google.com/search?q=../../api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md%23endpoint-di-recupero-dei-dettagli-del-messaggio)).
+If you set [#has\_remote\_content](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#has_remote_content "mention")`=true` during [#creazione-del-messaggio-remotizzato](inviare-un-messaggio-a-contenuto-remoto.md#creazione-del-messaggio-remotizzato "mention"), the message title and body are retrieved when the message is opened, through a call made by IO to the API you exposed. For details, see [#endpoint-di-recupero-dei-dettagli-del-messaggio](../../api-e-specifiche/openapi-endpoint-di-recupero-dei-contenuti-remotizzati.md#endpoint-di-recupero-dei-dettagli-del-messaggio "mention").
 
 {% hint style="info" %}
-As in the traditional model, you can also add an expiration date ([#due\_date](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23due_date)) and data referring to a debt position ([#payment\_data](https://www.google.com/search?q=../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md%23payment_data)) to a remote content message; this information is already remote thanks to the integration with the pagoPA node.
+As with a traditional message, you can add a due date ([#due\_date](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#due_date "mention")) and payment-position data ([#payment\_data](../../api-e-specifiche/api-messaggi/submit-a-message-passing-the-user-fiscal_code-in-the-request-body.md#payment_data "mention")) to a remote-content message. This information is already served remotely through integration with the pagoPA node.
 {% endhint %}
+
+
