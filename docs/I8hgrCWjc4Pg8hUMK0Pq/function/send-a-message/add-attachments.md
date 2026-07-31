@@ -1,12 +1,14 @@
 # Add attachments
 
 {% hint style="info" %}
-This function is reserved to institutions who have signed up for the \[Premium program]\(../../enabling/premium-function.md).
+This function is reserved to institutions who have signed up for the [Premium program](../../enabling/subscription-feed.md).
 {% endhint %}
 
 ## What are attachments
 
 They are PDF documents shown at the bottom of the message content. These attachments are retrieved by the systems of the sending institution **each time** the user accesses the resource in the IO app.
+
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 To guarantee the accessibility and security of the documents, you \_must\_ use attachments in \*\*PDF/A-2a format:\*\* make sure to observe this rule.
