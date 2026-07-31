@@ -42,7 +42,7 @@ First, the producer extracts the **voucher** issued by PDND from the **header of
 
 #### Header fields
 
-<table><thead><tr><th width="126.71563720703125">Field</th><th>Meaning</th></tr></thead><tbody><tr><td><code>kid</code></td><td>ID of the key used to sign the voucher, retrievable from PDND’s <em>well-known</em> endpoint (see <a href="https://chatgpt.com/c/68ee1500-942c-8331-97a2-9e2e3b898249#signature-verification">Signature verification</a>).</td></tr><tr><td><code>alg</code></td><td>Algorithm used to sign the JWT (<code>RS256</code>).</td></tr><tr><td><code>typ</code></td><td>Type of object being sent (<code>at+jwt</code>).</td></tr></tbody></table>
+<table><thead><tr><th width="126.71563720703125">Field</th><th>Meaning</th></tr></thead><tbody><tr><td><code>kid</code></td><td>ID of the key used to sign the voucher, retrievable from PDND’s <em>well-known</em> endpoint (see <a href="checks-on-a-bearer-voucher-by-a-producer.md#signature-verification">Signature verification</a>).</td></tr><tr><td><code>alg</code></td><td>Algorithm used to sign the JWT (<code>RS256</code>).</td></tr><tr><td><code>typ</code></td><td>Type of object being sent (<code>at+jwt</code>).</td></tr></tbody></table>
 
 #### Payload fields
 

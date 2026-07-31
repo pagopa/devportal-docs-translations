@@ -1,6 +1,6 @@
 # How to request a Bearer voucher for PDND APIs
 
-For a list of all APIs made available by PDND, see [here](https://app.gitbook.com/o/KXYtsf32WSKm6ga638R3/s/zwqHiUqrZCs3zNnHdc9A/).
+For a list of all APIs made available by PDND, see [here](https://developer.pagopa.it/en/pdnd-interoperability/api).
 
 More information on this implementation is available in the [dedicated section](../../technical-references/utilizzare-i-voucher/types-of-voucher-requests.md#bearer-token-spendibile-presso-le-api-di-pdnd-interoperabilita).
 
