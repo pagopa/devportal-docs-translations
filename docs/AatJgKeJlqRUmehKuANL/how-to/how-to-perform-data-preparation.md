@@ -31,7 +31,7 @@ It must be invoked in order to correctly set up the service based on your needs.
 
 It is possible to perform multiple invocations of the API in order to create multiple entities, for example.
 
-Refer to the paragraph[TUTORIAL ](../../LDdc6ctJEIh2yYM8c5WE/how-to/broken-reference/)for a concrete example of data preparation.
+Refer to the paragraph TUTORIAL for a concrete example of data preparation.
 
 ## Step 2: Data recovery
 
@@ -67,7 +67,7 @@ Each provider can in fact add additional levels of security for its services.
 
 This requires a phase of configuration and exchange of this information in order to guarantee the correct invocation of the entire flow provided by the service.
 
-Refer to the paragraph [TUTORIAL ](../../LDdc6ctJEIh2yYM8c5WE/how-to/broken-reference/)for a concrete example.
+Refer to the paragraph TUTORIAL for a concrete example.
 
 Keep in mind that the certification environment is a simulation environment, therefore the data used in all the phases must not be real.
 
