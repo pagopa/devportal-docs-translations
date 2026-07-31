@@ -30,7 +30,7 @@ Before going into production mode, you can test the content of the messages. Rea
 
 Every time you send a message, you must make sure that the recipient exists and provided their consent to receive communications for that specific service.
 
-For more information, discover the APIs [get-a-user-profile-using-post.md](../../apis-and-specifications/service-api/get-a-user-profile-using-post.md "mention") and [get-subscriptions-feed.md](../../apis-and-specifications/service-api/get-subscriptions-feed.md "mention").
+For more information, discover the APIs [get-a-user-profile-using-post.md](../../apis-and-specifications/message-api/get-a-user-profile-using-post.md "mention") and [get-subscriptions-feed.md](../../apis-and-specifications/message-api/get-subscriptions-feed.md "mention").
 
 </details>
 
@@ -38,7 +38,7 @@ For more information, discover the APIs [get-a-user-profile-using-post.md](../..
 
 <summary><mark style="color:blue;">Step 4</mark>- Send the message</summary>
 
-To do so, use the API [submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md](../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md "mention").
+To do so, use the API [submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md](../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md "mention").
 
 If you intend to [send a message with remote content](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md), follow the [relative instructions](https://github.com/pagopa/devportal-docs-translations/blob/main/docs/ANXt6QCrv0dAzEXy2ZBa/function/send-a-message/send-a-message-a-contenuto-remoto.md#come-funziona-linvio-di-un-messaggio-a-contenuto-remoto) on how to be integrated.
 
@@ -50,7 +50,7 @@ You can also add [PDF/A attachments](add-attachments.md). For more information r
 
 <summary><mark style="color:blue;">Step 5</mark>- Check the result</summary>
 
-Query the API [get-message.md](../../apis-and-specifications/service-api/get-message.md "mention"), using the fiscal code of the recipient and the identifier of the message obtained in the previous step.
+Query the API [get-message.md](../../apis-and-specifications/message-api/get-message.md "mention"), using the fiscal code of the recipient and the identifier of the message obtained in the previous step.
 
 If you signed the Premium agreement, you can also know the reading and payment status of the recipients.
 
@@ -68,7 +68,7 @@ There are two methods for sending messages that are useful depending on the type
 
 This is the simplest form of communication and that requires fewer integrations: the sender defines the content of the message and sends it.
 
-[Discover how to send a traditional message ->](../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md)
+[Discover how to send a traditional message ->](../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md)
 
 ### Message with remote content
 

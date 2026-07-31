@@ -18,7 +18,7 @@ You can define a configuration, retrieve it later, list the defined configuratio
 {% hint style="info" %}
 You can also define \*\*more than one configuration\*\*, within the \[manage key ]\(../function/publish-a-service/manage-key/manage-key.md)in use.
 
-For example, if your Organization uses multiple Technology Partners that each expose a REST web service to serve remote features, a different configuration identifier can be defined for each one of them to be used later to [send the messages](../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md) it is tasked with sending.
+For example, if your Organization uses multiple Technology Partners that each expose a REST web service to serve remote features, a different configuration identifier can be defined for each one of them to be used later to [send the messages](../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md) it is tasked with sending.
 {% endhint %}
 
 {% hint style="success" %}
@@ -37,7 +37,7 @@ The exposed service must consist of a variable number of _endpoints_, depending 
 For details about how to design the \_endpoints\_ and the relative API shown, refer to \[openapi-recovery-endpoint-of-remote-content.md]\(../api-and-specifications/openapi-recovery-endpoint-of-remote-content.md "mention").
 {% endhint %}
 
-Once ready, use the API described in [cru-remote-configurations.md](../apis-and-specifications/service-api/cru-remote-configurations.md "mention") to register the necessary data with the IO systems, including:
+Once ready, use the API described in [cru-remote-configurations.md](../apis-and-specifications/message-api/cru-remote-configurations.md "mention") to register the necessary data with the IO systems, including:
 
 * the **base URL** that IO will use to dial the addresses of the _endpoints_ exposed by your Organization (for more information refer to the examples given in [openapi-recovery-endpoint-of-remote-content.md](../apis-and-specifications/openapi-recovery-endpoint-of-remote-content.md "mention")
 * the\*\* API key\*\* that IO will use to authenticate to your systems and its expected header
@@ -46,5 +46,5 @@ Once ready, use the API described in [cru-remote-configurations.md](../apis-and-
 {% hint style="warning" %}
 In order to ensure consistency and proper in-app operation of remote-content messages over time \*\*it is not possible to delete a configuration\*\* once defined.
 
-In addition, for the same reason, it is the sender's responsibility **to promptly adjust the configurations** whenever necessary, using the management API described in [cru-remote-configurations.md](../apis-and-specifications/service-api/cru-remote-configurations.md "mention").
+In addition, for the same reason, it is the sender's responsibility **to promptly adjust the configurations** whenever necessary, using the management API described in [cru-remote-configurations.md](../apis-and-specifications/message-api/cru-remote-configurations.md "mention").
 {% endhint %}

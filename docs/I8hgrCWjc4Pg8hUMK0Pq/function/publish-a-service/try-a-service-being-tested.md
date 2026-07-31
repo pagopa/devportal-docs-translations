@@ -18,7 +18,7 @@ If you have not yet done so, discover how [.](./ "mention").
 
 <summary><mark style="color:blue;">Step 2</mark>- Send a message</summary>
 
-Send a message through the [specific endpoint](../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md) to your fiscal code using the service that was just created.
+Send a message through the [specific endpoint](../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md) to your fiscal code using the service that was just created.
 
 </details>
 

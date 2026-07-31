@@ -36,25 +36,25 @@ To include the attachments in a message, in addition to the steps indicated in [
 
 <details>
 
-<summary><mark style="color:blue;">Step 3</mark>- Include the block <a data-mention href="../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#third_party_data">#third_party_data</a></summary>
+<summary><mark style="color:blue;">Step 3</mark>- Include the block <a data-mention href="../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#third_party_data">#third_party_data</a></summary>
 
-Include the [#third\_party\_data](../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#third_party_data "mention") block, specifying the reference [remote-configuration.md](../../initial-setup/remote-configuration.md "mention") and the remote correlation `id`, which IO returns to you when it asks you for the metadata and, subsequently, the bytes of the attachments to the particular message you are sending.
-
-</details>
-
-<details>
-
-<summary><mark style="color:blue;">Step 4</mark>- Specify the value <code>TRUE</code> in the field <a data-mention href="../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_attachments">#has_attachments</a></summary>
-
-Specify the value `true` in the field [#has\_attachments](../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_attachments "mention") present in the block [#third\_party\_data](../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#third_party_data "mention").
+Include the [#third\_party\_data](../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#third_party_data "mention") block, specifying the reference [remote-configuration.md](../../initial-setup/remote-configuration.md "mention") and the remote correlation `id`, which IO returns to you when it asks you for the metadata and, subsequently, the bytes of the attachments to the particular message you are sending.
 
 </details>
 
 <details>
 
-<summary><mark style="color:blue;">Step 5</mark>- Specify the value <code>ADVANCED</code> in the field <a data-mention href="../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#feature_level_type">#feature_level_type</a></summary>
+<summary><mark style="color:blue;">Step 4</mark>- Specify the value <code>TRUE</code> in the field <a data-mention href="../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_attachments">#has_attachments</a></summary>
 
-Specify the value `ADVANCED` in the field [#feature\_level\_type](../../apis-and-specifications/service-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#feature_level_type "mention") present in the request.
+Specify the value `true` in the field [#has\_attachments](../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#has_attachments "mention") present in the block [#third\_party\_data](../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#third_party_data "mention").
+
+</details>
+
+<details>
+
+<summary><mark style="color:blue;">Step 5</mark>- Specify the value <code>ADVANCED</code> in the field <a data-mention href="../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#feature_level_type">#feature_level_type</a></summary>
+
+Specify the value `ADVANCED` in the field [#feature\_level\_type](../../apis-and-specifications/message-api/submit-a-message-passing-the-user-fiscal-code-in-the-request-body.md#feature_level_type "mention") present in the request.
 
 </details>
 

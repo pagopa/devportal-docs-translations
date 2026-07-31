@@ -23,7 +23,7 @@ If you have signed the Premium agreement, you will also be able to check the rec
 {% endhint %}
 
 {% hint style="success" %}
-Remember that before sending a message, you must verify that the citizen is registered with IO and that the service is authorized to send communications to them. For more information, see the [API](../../apis-and-specifications/service-api/get-a-user-profile.md).
+Remember that before sending a message, you must verify that the citizen is registered with IO and that the service is authorized to send communications to them. For more information, see the [API](../../apis-and-specifications/message-api/get-a-user-profile.md).
 {% endhint %}
 
 ### Message access phase

@@ -14,9 +14,9 @@ The changes indicated as a \`minor\` version (the number to the right of the dot
 
 ### Version 5.1 (May 13, 2024)
 
-* Addition of the field `configuration_id` to the structure `third_party_data` in the section [API Messages](apis-and-specifications/service-api/message-api.md)
+* Addition of the field `configuration_id` to the structure `third_party_data` in the section [API Messages](apis-and-specifications/message-api/)
 * Updated the section [Send a message with remote content](function/send-a-message/#message-with-remote-content)
-* Added the section [CRUs, remote configurations](apis-and-specifications/service-api/cru-remote-configurations.md)
+* Added the section [CRUs, remote configurations](apis-and-specifications/message-api/cru-remote-configurations.md)
 * Added the section [Guide to the Markdown](useful-resources/guide-to-markdown.md)
 * Minor corrections
 
