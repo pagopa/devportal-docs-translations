@@ -1,0 +1,34 @@
+---
+metaLinks:
+  alternates:
+    - >-
+      https://app.gitbook.com/s/EnBg5c1okkV2J4KL0TcG/ente-creditore/bollo-digitale/servizio-e.bollo
+---
+
+# @e.bollo Service
+
+Through the pagoPA platform, it is possible to request payments for debt positions that include a digital revenue stamp (@e.bollo).
+
+This functionality is available only for the [pagamento-presso-frontend-dellec.md](../../casi-duso/pagamento-presso-frontend-dellec.md "mention") use case.
+
+<figure><img src="../../.gitbook/assets/flussoMBD_EC_PSP.png" alt=""><figcaption></figcaption></figure>
+
+To be able to request the activation of an _expected payment_ for a revenue stamp, the EC must fill in the _richiestaMarcaDaBollo_ tag within the response to the [paGetPaymentV2](../../appendix/Primitives/Creditor-Entity/api-soap.md#pagetpayment-versione-2) call, making sure to enter:
+
+- _tipoBollo_: type of revenue stamp;
+- _hashDocumento_: contains the computer fingerprint (digest), in base64 format, of the electronic document or protocol record to which the digital revenue stamp is associated;
+- _provinciaResidenza_: acronym of the payer's province of residence.
+
+The _richiestaMarcaDaBollo_ tag must be used as an alternative to the _IBAN_ tag in each _transfer_; the revenue stamp amount must be entered in the _transferAmount_ tag. No validation of the entered amount is performed by the Payments Node, while in the _transferCategory_ tag, a taxonomic code attributable to the digital revenue stamp must be entered ([tassonomia-dei-servizi-di-incasso.md](../tassonomia-dei-servizi-di-incasso.md "mention")).
+
+Once the payment transaction is completed, the PSP must fill in the _marcheDaBollo_ tag within the [sendPaymentOutcomeV2](../../appendix/Primitives/psp/soap-api.md#sendpaymentoutcome-versione-2) request, making sure to enter the following for each digital revenue stamp (_marcaDaBollo_ tag):
+
+- _paymentToken_: the paymentToken with which the digital revenue stamp request arrived;
+- _idTransfer_: the identifier of the transfer that contains the _richiestaMarcaDaBollo_ data
+- _MDBAttachment_: the XML document containing the digital revenue stamp, in base64 format.
+
+As indicated in the guidelines published by the Italian Revenue Agency, _"Public Administrations that receive the digital revenue stamp and its associated certificate from citizens, directly or indirectly, perform the validity check using local control software..."_; therefore, the validation of the XML document containing the digital revenue stamp is the responsibility of the EC that receives it via the [paSendRTV2](../../appendix/Primitives/Creditor-Entity/api-soap.md#pasendrt-versione-2).
+
+The amounts related to digital revenue stamps are not included in the [Reporting Flows](../../implementation-Specifications-of-the-SPC-Payments-Hub/general-operation/reporting-and-cashflow.md) sent by PSPs.
+
+For more details on the @e.bollo service, its validity, and related use cases, please refer to the dedicated section on the [Italian Revenue Agency website](https://www.agenziaentrate.gov.it/portale/web/guest/schede/pagamenti/imposta-di-bollo-per-le-istanze-trasmesse-alla-pa-ebollo-cittadini/che-cose-cittadini).

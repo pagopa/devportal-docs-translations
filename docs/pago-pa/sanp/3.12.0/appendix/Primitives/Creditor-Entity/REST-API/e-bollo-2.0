@@ -1,0 +1,11 @@
+---
+metaLinks:
+  alternates:
+    - >-
+      https://app.gitbook.com/s/EnBg5c1okkV2J4KL0TcG/appendici/primitive/ente-creditore/api-rest/e-bollo-2.0
+---
+
+# E-bollo 2.0
+
+- [getMbd](https://developer.pagopa.it/pago-pa/api/e-bollo#/pago-pa/api/operations/getMdb)​
+- ​[getPaymentReceipt](https://developer.pagopa.it/pago-pa/api/e-bollo#/pago-pa/api/operations/getPaymentReceipts)​

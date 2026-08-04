@@ -10,7 +10,7 @@
           "directory": true,
           "children": {
             "io-guida-tecnica": {
-              "label": "IO technical guide",
+              "label": "io technical guide",
               "directory": true,
               "children": {
                 "v7.2": {
@@ -342,7 +342,7 @@
           }
         },
         "pago-pa": {
-          "label": "pagoPA",
+          "label": "pago-pa",
           "directory": true,
           "children": {
             "sanp": {
@@ -514,7 +514,7 @@
                                   "directory": true,
                                   "children": {
                                     "archivio-centralizzato-avvisi-aca.md": {
-                                      "label": "Centralized Notices Archive (ACA)",
+                                      "label": "centralized notices archive ACA",
                                       "directory": false
                                     },
                                     "backoffice.md": {
