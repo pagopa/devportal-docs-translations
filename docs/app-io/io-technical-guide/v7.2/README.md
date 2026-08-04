@@ -7,7 +7,7 @@ description: >-
 
 ### First steps
 
-{% content-ref url="../../../5uSKCP8mvg5tKATILDRb/initial-setup/" %}
+{% content-ref url="../Initial-Setup" %}
 [initial-setup](../../../5uSKCP8mvg5tKATILDRb/initial-setup/)
 {% endcontent-ref %}
 
