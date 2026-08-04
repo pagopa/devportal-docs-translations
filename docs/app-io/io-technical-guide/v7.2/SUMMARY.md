@@ -1,8 +1,8 @@
 # Summary
 
 - [🏠 Technical guide](README.md)
-- [🕗 Changelog](../../../5uSKCP8mvg5tKATILDRb/changelog.md)
-- [🔢 Initial setup](../../../5uSKCP8mvg5tKATILDRb/setup-iniziale/README.md)
+- [🕗 Changelog](changelog.md)
+- [🔢 Initial setup](Initial-Setup/README.md)
   - [Onboarding via the Reserved Area](../../../5uSKCP8mvg5tKATILDRb/setup-iniziale/adesione-tramite-larea-riservata.md)
   - [Registration to the Developer Portal](../../../5uSKCP8mvg5tKATILDRb/setup-iniziale/iscrizione-al-developer-portal.md)
   - [Remote configuration](../../../5uSKCP8mvg5tKATILDRb/setup-iniziale/configurazione-remota.md)
