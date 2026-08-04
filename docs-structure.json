@@ -6,7 +6,7 @@
       "directory": true,
       "children": {
         "app-io": {
-          "label": "App IO",
+          "label": "app io",
           "directory": true,
           "children": {
             "io-guida-tecnica": {
